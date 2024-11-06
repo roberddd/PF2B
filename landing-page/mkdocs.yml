@@ -8,7 +8,7 @@ theme:
     - navigation.top
 
 extra_css:
-  - extra.css
+  - landing-page/extra.css
 
 nav: []
 
