@@ -55,7 +55,7 @@ jobs:
       - name: Deploy subsite (landing-page) to /landing-page folder in gh-pages
         run: |
           # Clone the gh-pages branch using GITHUB_TOKEN for authentication
-          git clone --branch gh-pages https://github.com/${{ github.repository }}.git gh-pages
+          git clone --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
           cd gh-pages
           # Copy subsite build into the /landing-page folder
           mv ../site-sub/* landing-page/
