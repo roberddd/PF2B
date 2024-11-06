@@ -57,6 +57,8 @@ jobs:
           # Clone the gh-pages branch using GITHUB_TOKEN for authentication
           git clone --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
           cd gh-pages
+          # Ensure landing-page directory exists
+          mkdir -p landing-page
           # Copy subsite build into the /landing-page folder
           mv ../site-sub/* landing-page/
           # Commit and push changes using the default GitHub token
