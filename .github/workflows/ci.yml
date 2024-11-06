@@ -44,7 +44,7 @@ jobs:
         run: |
           ghp-import -n -p -f site-main
 
-      # Build the subsite
+      # Build the subsite (landing-page)
       - name: Build subsite (landing-page)
         run: |
           cd landing-page
@@ -54,12 +54,12 @@ jobs:
       # Deploy the subsite to the /landing-page folder in gh-pages using ghp-import
       - name: Deploy subsite (landing-page) to /landing-page folder in gh-pages
         run: |
-          # Clone the gh-pages branch
-          git clone --branch gh-pages https://github.com/roberddd/PF2B.git gh-pages
-          # Copy subsite build into the /landing-page folder
-          mv site-sub/* gh-pages/landing-page/
+          # Clone the gh-pages branch using GITHUB_TOKEN for authentication
+          git clone --branch gh-pages https://github.com/${{ github.repository }}.git gh-pages
           cd gh-pages
-          # Commit and push changes
+          # Copy subsite build into the /landing-page folder
+          mv ../site-sub/* landing-page/
+          # Commit and push changes using the default GitHub token
           git add .
           git commit -m "Deploy subsite (landing-page)"
-          git push origin gh-pages
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
