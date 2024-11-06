@@ -1,0 +1,65 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-glightbox
+
+      # Build the main site
+      - name: Build main site
+        run: mkdocs build -d site-main
+
+      # Deploy the main site using ghp-import
+      - name: Deploy main site to gh-pages
+        run: |
+          ghp-import -n -p -f site-main
+
+      # Build the subsite
+      - name: Build subsite (landing-page)
+        run: |
+          cd landing-page
+          mkdocs build -d ../site-sub
+          cd ..
+
+      # Deploy the subsite to the /landing-page folder in gh-pages using ghp-import
+      - name: Deploy subsite (landing-page) to /landing-page folder in gh-pages
+        run: |
+          # Clone the gh-pages branch
+          git clone --branch gh-pages https://github.com/roberddd/PF2B.git gh-pages
+          # Copy subsite build into the /landing-page folder
+          mv site-sub/* gh-pages/landing-page/
+          cd gh-pages
+          # Commit and push changes
+          git add .
+          git commit -m "Deploy subsite (landing-page)"
+          git push origin gh-pages

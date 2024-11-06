@@ -1,0 +1,79 @@
+site_name: PF2B Documentation
+#site_url: https://pf2b.roberd.net/
+theme:
+  name: material
+  custom_dir: overrides #Remember to save mkdocs.yml to refresh the overrides
+  favicon: icons/favicon.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: green
+      accent: orange
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: green
+      accent: orange
+  icon:
+    logo: material/pine-tree-box
+
+extra_css:
+  - extra/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - Importing: import.md
+  - Preferences: preferences.md
+
+plugins:
+  - search
+  - glightbox:
+      manual: true #So that not every image is added to the lightbox, add images manually with 'on-glb' class.
+  - tags:
+      tags: false #Hides tags being displayed on top of the pages but they still work for searches.
+
+extra:
+  social:
+    - icon: material/web
+      link: https://roberd.net
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - pymdownx.emoji: #Used for icons
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons/ #Icons can be a bit slow to update when adding new
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+copyright: |
+  &copy; 2024 <a href="https://roberd.net" target="_blank" rel="noopener">Roberd Palm</a>
