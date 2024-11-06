@@ -1,17 +1,9 @@
-# Welcome to MkDocs
+---
+hide:
+  - navigation
+  - toc
+  - title
+  - footer
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+**PF2B** (PlantFactory to Blender) is an addon that enables the direct import of plants created in [The PlantFactory](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } by e-on software into [Blender](https://www.blender.org/){ target="_blank" }. PF2B automates the setup process, allowing you to transfer detailed vegetation assets from PlantFactory to Blender with minimal manual configuration.

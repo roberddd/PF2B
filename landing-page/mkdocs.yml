@@ -1,1 +1,29 @@
-site_name: My Docs
+site_name: PF2B Landing Page
+theme:
+  name: material
+  custom_dir: overrides #Remember to save mkdocs.yml to refresh the overrides
+  favicon: favicon.svg
+  language: en
+  features:
+    - navigation.top
+
+extra_css:
+  - extra.css
+
+nav: []
+
+extra:
+  generator: false #Hide footer
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji: #Used for icons
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons/ #Icons can be a bit slow to update when adding new
