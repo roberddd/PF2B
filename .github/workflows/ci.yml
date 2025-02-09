@@ -34,6 +34,8 @@ jobs:
 
       - run: pip install mkdocs-material
       - run: pip install mkdocs-glightbox
+      - run: pip install mkdocs-redirects
+
 
       # Build the main site
       - name: Build main site

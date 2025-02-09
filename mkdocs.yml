@@ -1,5 +1,5 @@
 site_name: PF2B Documentation
-#site_url: https://pf2b.roberd.net/
+site_url: https://pf2b.roberd.net/
 theme:
   name: material
   custom_dir: overrides #Remember to save mkdocs.yml to refresh the overrides
@@ -9,7 +9,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.instant
-    - toc.integrate
+   # - toc.integrate
+    - toc.follow
     - navigation.top
     - search.suggest
     - search.highlight
@@ -37,17 +38,39 @@ extra_css:
   - extra/extra.css
 
 nav:
-  - Home: index.md
+  - Home:
+    - Welcome: index.md
+    - gallery.md
+    - changelog.md
   - Getting Started: getting_started.md
-  - Importing: import.md
-  - Preferences: preferences.md
+  - Workflow:
+    - workflow.md
+    - Import:
+      - workflow/browse_via_blender.md
+      - workflow/browse_via_plantfactory.md
+      - workflow/import_settings.md
+      - workflow/material_settings.md
+    - Post Processing: workflow/post_processing.md
+  - Preferences:
+    - preferences/general.md
+    - preferences/plant_library.md
+    - preferences/misc.md
+  - Support:
+    - Support and Feedback: support.md
+    - FAQ: support/faq.md
 
 plugins:
   - search
   - glightbox:
       manual: true #So that not every image is added to the lightbox, add images manually with 'on-glb' class.
+      background: none
+      shadow: false
   - tags:
       tags: false #Hides tags being displayed on top of the pages but they still work for searches.
+  - redirects:
+      redirect_maps:
+        'preferences.md': 'preferences/general.md'
+
 
 extra:
   social:

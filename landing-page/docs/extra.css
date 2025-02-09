@@ -3,7 +3,7 @@
   --md-primary-fg-color:#ec6628;
   --md-accent-fg-color: #EE0F0F;
 
-  /* BatchGenie specific */
+  /* PF2B specific */
   --main-accent-color-red: #E0425D;
   --main-accent-color-green: #15ac59;
   --main-accent-color-blue: #4952d3;
@@ -39,50 +39,8 @@
   margin-bottom: .9em;
 
 }
+
 /* ######## < CUSTOM GRID > ######## */
-
-/* Custom Grid - General styling */
-/* .md-typeset .grid_custom>ul>li {
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  color: white;
-  display: block;
-} */
-
-/* Custom Grid - Unique backgrounds for each card */
-/* .md-typeset .grid_custom>ul>li:nth-child(1) {
-  background-color: #F4A261;
-}
-
-.md-typeset .grid_custom>ul>li:nth-child(2) {
-  background-color: #2A9D8F;
-}
-
-.md-typeset .grid_custom>ul>li:nth-child(3) {
-  background-color: #E87EA1;
-} */
-
-
-/* .md-typeset .grid_custom .middle {
-  background-color: transparent !important;
-} */
-
-/* links inside */
-/* .md-typeset .grid_custom a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.md-typeset .grid_custom a:hover {
-  color: #f0f0f0;
-  text-decoration: underline;
-}
-.md-typeset .grid_custom a:active {
-  color: #cccccc;
-} */
-
-
 .md-typeset .grid_custom>ul>li:hover {
   border: .05rem solid rgb(155, 155, 155) !important;
 }
