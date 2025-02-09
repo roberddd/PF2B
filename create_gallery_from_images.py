@@ -22,6 +22,10 @@ for image in images:
     thumb_path = f"{thumb_dir}/{image}".replace("docs/", "")  # Remove "docs/"
     full_path = f"{base_dir}/{image}".replace("docs/", "")
 
+    # Ensure forward slashes are used
+    thumb_path = thumb_path.replace("\\", "/")
+    full_path = full_path.replace("\\", "/")
+
     description = image.replace(".webp", "").replace("_", " ")
 
     if remove_brackets:
