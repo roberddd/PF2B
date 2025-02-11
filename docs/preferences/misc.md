@@ -1,4 +1,4 @@
-![Preferences - Misc](../images/preferences_misc.png){ .img-box align=left }
+![Preferences - Misc](../images/preferences_misc.webp){ .img-box align=left }
 
 ## Troubleshooting
 

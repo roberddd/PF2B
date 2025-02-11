@@ -36,7 +36,7 @@
 
 PF2B is located in the N-Panel inside the `3D Viewport` under a tab named `PF2B`, as shown in the image below.
 
-![Addon Location](images/addon-location.png){ .img-box align=left }
+![Addon Location](images/addon-location.webp){ .img-box align=left }
 
 Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace. Some areas also have an extra :octicons-question-24: icon, which opens a popup with additional information and a link to the relevant section of the documentation for further instructions.
 
@@ -49,15 +49,16 @@ For more comprehensive guidance, you can access the full documentation by clicki
 
 ## First time use & Importing cache
 
-![Addon Location](images/import-cache-example.png){ .img-box .on-glb align=right width=40%  }
+![Addon Location](images/import-cache-example.webp){ .img-box .on-glb align=right width=40%  }
 
 To get the most out of the PF2B addon and browse plants directly within the addon, you need to import the thumbnail and presets cache.
 
 1. Download the cache file provided alongside the addon from the store where you purchased it.
-2. Inside Blender, navigate to the addon preferences by clicking the :blender_icon_preferences: icon in the PF2B panel. Alternatively, go to `Edit > Preferences`, find PF2B under the Add-ons tab.
-3. In the `Plant Library` tab, click the "**Import Cache**" button.
-4. Locate and select the downloaded cache file, which should be named `PF2B Cache Complete.pf2b` or something similar.
-5. Once imported, you are ready to start using the addon.
+- Inside Blender, navigate to the addon preferences by clicking the :blender_icon_preferences: icon in the PF2B panel. Alternatively, go to `Edit > Preferences`, find PF2B under the Add-ons tab.
+- In the `Plant Library` tab, click the "**Import Cache**" button.
+- Locate and select the downloaded cache file, which should be named `PF2B Cache Complete.pf2b` or something similar.
+- Once the import is complete, click the 'Verify' button on all caches to ensure everything is properly cached.
+- Now you're ready to start using the addon!
 
 
 <div style="clear:both"></div>
@@ -67,7 +68,7 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 
 ## Tips
 
-![Addon Location](images/pf_welcome-screen.png){ .img-box .on-glb align=right width=20% }
+![Addon Location](images/pf_welcome-screen.webp){ .img-box .on-glb align=right width=20% }
 
 - To ensure a smoother workflow, it’s **recommended** to disable the "**Welcome**" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "Don’t show again" in the bottom-left corner.
 
@@ -75,4 +76,4 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 
 - For a slight speed boost during imports, you can set the **Mesh Preview** option in PlantFactory to **Draft Only**, as shown in the screenshot below.
 
-    ![Addon Location](images/pf_mesh-preview.png){ .img-box }
+    ![Addon Location](images/pf_mesh-preview.webp){ .img-box }

@@ -4,3 +4,17 @@ If you encounter any issues or have suggestions for new features, please contact
 ## Updates
 
 My priority is ensuring compatibility with Blender's Long-Term Support (LTS) releases, but I will also strive to maintain functionality with other Blender updates whenever possible. For details on the current version, check the [Changelog](changelog.md).
+
+
+
+## Community
+
+Explore these communities and resources to get help and inspiration for creating plants with PlantFactory:
+
+- [:simple-facebook: **The Plant Factory - Facebook Community**](https://www.facebook.com/groups/496656864047261)
+- [:simple-discord: **Vue and Plant Factory Hub - Discord Community**](https://discord.gg/FBAwhzdP)
+
+### YouTube Channels & Playlists
+
+- [**e-on software**](https://www.youtube.com/@eonsoftware)
+- [**Complete Plant Factory Course 2024**](https://www.youtube.com/playlist?list=PLaH1PMiI_7AhRqzwscAZdxZHyAJpAvNEs) by Vladimir Chopine [GeekatPlay]

@@ -1,8 +1,8 @@
 ---
 hide:
   - toc
-glightbox.auto_caption: true
 ---
+
 ### PlantCatalog
 
 > All 191 High Poly variants of the plant species are available in the 'PlantCatalog' library.

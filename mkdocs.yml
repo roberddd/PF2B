@@ -40,6 +40,7 @@ extra_css:
 nav:
   - Home:
     - Welcome: index.md
+    - plants.md
     - gallery.md
     - changelog.md
   - Getting Started: getting_started.md
@@ -65,6 +66,7 @@ plugins:
       manual: true #So that not every image is added to the lightbox, add images manually with 'on-glb' class.
       background: none
       shadow: false
+      slide_effect: none
   - tags:
       tags: false #Hides tags being displayed on top of the pages but they still work for searches.
   - redirects:

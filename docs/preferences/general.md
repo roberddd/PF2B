@@ -1,4 +1,4 @@
-![Preferences - General](../images/preferences_general.png){ .img-box align=left }
+![Preferences - General](../images/preferences_general.webp){ .img-box align=left }
 
 ## Interface
 

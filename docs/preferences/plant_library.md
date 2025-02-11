@@ -1,10 +1,13 @@
-![Preferences - Plant Library](../images/preferences_plant-library.png){ .img-box align=left }
+![Preferences - Plant Library](../images/preferences_plant-library.webp){ .img-box align=left }
 
 ## Library Location
 
 This is the location of the PlantLibrary root folder, which should contain both PlantFactory and PlantCatalog folders. The interface will indicate whether the PlantCatalog, PlantFactory, or both libraries are found.
 
 - **Personal Library**: Enable this option if you have custom plants to include, and select the folder containing them. This folder can contain subfolders to organize the plants into categories.
+
+    !!! info2 "Note"
+        Only plants that are saved in `.tpf` file format are handled, so if you have plants that you have saved in the default PlantFactory `.tpfp` format, please save them inside PlantFactory as a `.tpf` file by going to `File > Export > Export as Species`.
 
 <div style="clear:both"></div>
 
@@ -26,18 +29,18 @@ The **Presets Cache** and **Plant Thumbnails Cache** are required, while the **P
 
 - **Verify**: Checks if all presets in your Plant Library are cached and provides an estimate of the time required to generate any missing presets. Shows a popup where you can specify which libraries to check.
 
-    ![Cache Verify](../images/cache_verify.png){ .img-box }
+    ![Cache Verify](../images/cache_verify.webp){ .img-box }
 
     ??? abstract "Examples"
         Here are a few examples of different states: first, with a full cache and no missing thumbnails, then with a few missing thumbnails, and finally with no cache at all.
 
-        ![Cache Verify](../images/cache_presets_verified-no-missing.png){ .img-box align=left }
-        ![Cache Verify](../images/cache_presets_verified-few-missing.png){ .img-box align=left }
-        ![Cache Verify](../images/cache_presets_verified-all-missing.png){ .img-box align=left }
+        ![Cache Verify](../images/cache_presets_verified-no-missing.webp){ .img-box align=left }
+        ![Cache Verify](../images/cache_presets_verified-few-missing.webp){ .img-box align=left }
+        ![Cache Verify](../images/cache_presets_verified-all-missing.webp){ .img-box align=left }
 
 - **Cache Missing Plants**: Will show a prompt to select which libraries to target and then launches PlantFactory to check your plants and cache any missing presets.
 
-    ![Cache Missing Presets](../images/cache_presets_cache-missing-plants.png){ .img-box  }
+    ![Cache Missing Presets](../images/cache_presets_cache-missing-plants.webp){ .img-box  }
 
 
 #### Thumbnails Cache
@@ -45,34 +48,34 @@ The **Presets Cache** and **Plant Thumbnails Cache** are required, while the **P
 === "Plants"
     - **Verify**: Checks the thumbnails cache for any missing plant thumbnails and provides an estimate of the time required to generate them.  Shows a popup where you can specify which libraries to check.
 
-        ![Cache Verify](../images/cache_verify.png){ .img-box }
+        ![Cache Verify](../images/cache_verify.webp){ .img-box }
 
         ??? abstract "Examples"
             Here are a few examples of different states: first, with a full cache and no missing thumbnails, then with a few missing thumbnails, and finally with no cache at all.
 
-            ![Cache Verify](../images/cache_thumbnails_plants_verified_no-missing.png){ .img-box align=left }
-            ![Cache Verify](../images/cache_thumbnails_plants_verified_few-missing.png){ .img-box align=left }
-            ![Cache Verify](../images/cache_thumbnails_plants_verified_all-missing.png){ .img-box align=left }
+            ![Cache Verify](../images/cache_thumbnails_plants_verified_no-missing.webp){ .img-box align=left }
+            ![Cache Verify](../images/cache_thumbnails_plants_verified_few-missing.webp){ .img-box align=left }
+            ![Cache Verify](../images/cache_thumbnails_plants_verified_all-missing.webp){ .img-box align=left }
 
     - **Create Missing**: Generates thumbnails for all missing items. Generating thumbnails involves PlantFactory rendering each plant or preset individually and saving the results as thumbnail images. Preset thumbnails also include details like plant height and polygon count.
 
-        ![Cache Missing Plants](../images/cache_thumbnails_plants_create-missing.png){ .img-box  }
+        ![Cache Missing Plants](../images/cache_thumbnails_plants_create-missing.webp){ .img-box  }
 
 === "Presets (Optional)"
     - **Verify**: Checks the thumbnails cache for any missing preset thumbnails and provides an estimate of the time required to generate them.  Shows a popup where you can specify which libraries to check.
 
-        ![Cache Verify](../images/cache_verify.png){ .img-box }
+        ![Cache Verify](../images/cache_verify.webp){ .img-box }
 
         ??? abstract "Examples"
             Here are a few examples of different states: first, with a full cache and no missing thumbnails, then with a few missing thumbnails, and finally with no cache at all.
 
-            ![Cache Verify](../images/cache_thumbnails_presets_verified-no-missing.png){ .img-box align=left }
-            ![Cache Verify](../images/cache_thumbnails_presets_verified-few-missing.png){ .img-box align=left }
-            ![Cache Verify](../images/cache_thumbnails_presets_verified-all-missing.png){ .img-box align=left }
+            ![Cache Verify](../images/cache_thumbnails_presets_verified-no-missing.webp){ .img-box align=left }
+            ![Cache Verify](../images/cache_thumbnails_presets_verified-few-missing.webp){ .img-box align=left }
+            ![Cache Verify](../images/cache_thumbnails_presets_verified-all-missing.webp){ .img-box align=left }
 
     - **Create Missing**: Generates thumbnails for all missing items. Generating thumbnails involves PlantFactory rendering each plant or preset individually and saving the results as thumbnail images. Preset thumbnails also include details like plant height and polygon count.
 
-        ![Cache Missing Plants](../images/cache_thumbnails_presets-create-missing.png){ .img-box  }
+        ![Cache Missing Plants](../images/cache_thumbnails_presets-create-missing.webp){ .img-box  }
 
 
 #### Import / Export Cache

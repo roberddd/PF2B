@@ -1,6 +1,6 @@
 These settings are shared between both Import modes.
 
-![Material Settings](../images/import-settings.png){ .img-box}
+![Material Settings](../images/import-settings.webp){ .img-box}
 
 - **Pack Textures**: Packs the textures of the imported plants into the current Blend file ensuring that your plants retain their appearance without the need for external texture files. **Cannot be disabled**.
 - **Mark as Asset**: Marks imported plants as Assets, making them easily accessible in Blender's Asset Browser for future use.

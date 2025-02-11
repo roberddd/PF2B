@@ -8,7 +8,7 @@ PF2B offers two modes for importing plants from **PlantFactory** into Blender, e
 
 ### [Mode 1: Browse via Blender](browse_via_blender)
 
-![Browse via Blender](images/browse-via-blender-panel.png){ .img-box align=left width=30% }
+![Browse via Blender](images/browse-via-blender-panel.webp){ .img-box align=left width=30% }
 
 This mode is tailored for users who focus on a Blender-centric workflow and do not require PlantFactory running continuously in the background. PF2B caches all plant assets and presets, allowing users to browse and import vegetation directly into Blender as needed.
 <!-- This mode is useful for users who prefer a Blender-centric workflow but occasionally need to add PlantFactory vegetation to their scenes. -->
@@ -20,7 +20,7 @@ This mode is tailored for users who focus on a Blender-centric workflow and do n
 
 ### [Mode 2: Browse via PlantFactory](browse_via_plantfactory)
 
-![Browse via PlantFactory](images/browse-via-plantfactory_bridge-connected.png){ .img-box align=left width=30% }
+![Browse via PlantFactory](images/browse-via-plantfactory_bridge-connected.webp){ .img-box align=left width=30% }
 
 In this mode, PF2B connects Blender to a running instance of PlantFactory, enabling you to work on plant designs in PlantFactory and seamlessly import them into Blender for testing or use without needing to close PlantFactory
 <!-- This mode is ideal for scenarios where you’re actively working on plant designs in PlantFactory and want to test or use them in Blender without closing PlantFactory. -->
