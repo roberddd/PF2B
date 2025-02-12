@@ -38,7 +38,7 @@ PF2B is located in the N-Panel inside the `3D Viewport` under a tab named `PF2B`
 
 ![Addon Location](images/addon-location.webp){ .img-box align=left }
 
-Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace. Some areas also have an extra :octicons-question-24: icon, which opens a popup with additional information and a link to the relevant section of the documentation for further instructions.
+Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace.
 
 For more comprehensive guidance, you can access the full documentation by clicking the :blender_icon_help:icon in the main panel.
 
@@ -53,10 +53,10 @@ For more comprehensive guidance, you can access the full documentation by clicki
 
 To get the most out of the PF2B addon and browse plants directly within the addon, you need to import the thumbnail and presets cache.
 
-1. Download the cache file provided alongside the addon from the store where you purchased it.
+1. Download the cache files provided alongside the addon from the store where you purchased it.
 - Inside Blender, navigate to the addon preferences by clicking the :blender_icon_preferences: icon in the PF2B panel. Alternatively, go to `Edit > Preferences`, find PF2B under the Add-ons tab.
 - In the `Plant Library` tab, click the "**Import Cache**" button.
-- Locate and select the downloaded cache file, which should be named `PF2B Cache Complete.pf2b` or something similar.
+- Locate and select the downloaded cache file, which should be named `PF2B Cache Base.pf2b` or something similar.
 - Once the import is complete, click the 'Verify' button on all caches to ensure everything is properly cached.
 - Now you're ready to start using the addon!
 

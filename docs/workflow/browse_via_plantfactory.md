@@ -2,14 +2,32 @@
 
 In this mode, PF2B connects Blender to a running instance of PlantFactory, enabling you to work on plant designs in PlantFactory and seamlessly import them into Blender for testing or use without needing to close PlantFactory.
 
-=== "Not connected"
-    ![Browse via PlantFactory](../images/browse-via-plantfactory_bridge-disconnected.webp){ .img-box align=left }
-=== "Connected"
-    ![Browse via PlantFactory](../images/browse-via-plantfactory_bridge-connected.webp){ .img-box align=left }
+![Browse via PlantFactory](../images/browse-via-plantfactory_bridge-disconnected_cropped.webp){ .img-box align=left }
 
-##### Settings
+- **Start Bridge**: launch the PF2B Bridge along with PlantFactory that lets you import plants from PlantFactory.
 
-- Click on the `Start Bridge` button to launch the PF2B Bridge along with PlantFactory and keep it running in the background
+<div style="clear:both"></div>
+
+Once the bridge has started, the interface will look like this:
+
+
+
+![Browse via PlantFactory](../images/browse-via-plantfactory_bridge-connected.webp){ .img-box align=left }
+
+##### General Settings
+
+At the top, the scene or plant name is displayed (shown as `My Plant` in the example).
+
+- **Import**:
+    - **Current Plant**
+    - **All Presets**
+    - **Quantity**
+- **Seed**:
+    - **Random**: Generates a new seed for the import. *NOTE: this updates the seed of your current plant.*
+    - **Current**: Keeps the current seed of your plant
+    - **Custom**
+- :blender_icon_import: **Import Plant**: Starts importing the selected plant.
+
 <!-- - **Batch Import Options**:
   - **Randomized Imports**: PF2B can generate multiple versions of the same plant, each with a unique random seed, for added variety.
   - **Preset Variants**: If the selected plant has multiple preset variations, you can choose to import all available presets at once. -->
@@ -18,6 +36,8 @@ In this mode, PF2B connects Blender to a running instance of PlantFactory, enabl
 
 
 #### Bridge
+
+Below the main PF2B panel is the Bridge panel, which displays information about the bridge status.
 
 === "Connected"
     ![Bridge](../images/bridge_connected.webp){ .img-box }

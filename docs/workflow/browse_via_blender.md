@@ -2,7 +2,7 @@
 
 ![Browse via Blender](../images/browse-via-blender-panel.webp){ .img-box align=left }
 
-##### Settings
+##### General Settings
 
 - **Library**:
     - PlantCatalog
@@ -26,8 +26,6 @@
 
 <div style="clear:both"></div>
 
----
-
 - **Import**:
     - **Current Preset**
     - **All Presets**
@@ -35,10 +33,7 @@
 - **Seed**:
     - **Random**
     - **Custom**
-
----
-
-- **Import Plant**: Starts importing the selected plant(s).
+- :blender_icon_import: **Import Plant**: Starts importing the selected plant(s).
 - :octicons-stack-24:: **Use import Queue**, see the next section for details.
 
 
@@ -65,7 +60,7 @@ The queue system lets you add multiple plants to a queue, which you can then imp
 
 ### Gallery View
 
-In this view, you can see all available plants and presets.
+In this view, you can see all available plants and presets. To exit the gallery view, click the `X` in the top right corner or press `Escape` on your keyboard.
 
 !!! info2 inline "Plants"
     ![Plant Gallery](../images/gallery_plants.webp){ .img-box .on-glb align=left }
