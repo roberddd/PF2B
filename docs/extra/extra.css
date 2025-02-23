@@ -166,18 +166,34 @@ h3 small { /* Date */
 
 
 /* ######## < LIBRARY > ######## */
-/* Compact view for library details */
-.library h3{
-  margin-top: 0.5em;
-  margin-bottom:-0.5em;
+.library .plant li,
+.library ul li {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.md-typeset .library>ul>li:first-child {
-  margin-top: -1.0em;
+.library .plant strong { /* Target the detail level in bold */
+  color: var(--md-default-fg-color--light);
+  margin-left: 0.5em;
+  letter-spacing: 0.02em;
+  font-weight: normal;
 }
-.md-typeset .library>ul>li {
-  margin-top: -0.1em;
-  margin-bottom:0.0em;
+.library .plant em { /* Target the presets in italic */
+  color: var(--md-default-fg-color--light);
+  margin-left: 0.5em;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
 
+.library table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+.library table tr {
+  line-height: 0.8;
+}
+.md-typeset__table {
+  margin-bottom:0;
 }
 /* ######## </ LIBRARY > ######## */
 
@@ -186,35 +202,39 @@ h3 small { /* Date */
 }
 
 
-.library .plant li {
-  margin-top: 0;
-  margin-bottom: 0;
+/* ######## < IMAGE & Video > ######## */
+.img-box, video{
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 }
-
-.library .plant strong { /* Target the detail level in bold */
-  color: var(--md-default-fg-color--light);
-  margin-left: 0.5em;
-  letter-spacing: 0.02em;
-  font-weight: normal;
+video {
+  height: auto; /* Keep the aspect ratio intact */
+  max-width: 1920px;
+  /* margin: 1em 0.75em 1em 0; */
+  border-left: 6px solid rgb(29, 99, 45);
 }
-
-.library .plant em { /* Target the presets in italic */
-  color: var(--md-default-fg-color--light);
-  margin-left: 0.5em;
-  letter-spacing: 0.02em;
-  font-style: normal;
+.video-wrapper {
+  position: relative;
+  display: inline-block;
 }
-
-
-/* Target tables only within the .library class */
-.library table {
-  width: 100%; /* Ensure full width */
-  border-collapse: collapse; /* Collapsing borders for a cleaner, more compact look */
-  margin-bottom: 1rem; /* Space below the table */
+.video-wrapper video{ /* Override the setting for wrapped videos */
+  border-radius: 0px 4px 4px 4px;
 }
-
-
-/* Optional: Reduce spacing between rows */
-.library table tr {
-  line-height: 1.1; /* Tighter row height */
+.video-wrapper::before {
+  content: 'Video';
+  position: absolute;
+  top: -25px;
+  /* left: -10px; */
+  background-color: rgb(29, 99, 45);
+  color: white;
+  font-size: 12px;
+  padding: 3px 18px;
+  border-radius: 4px 4px 0 0;
+  /* transform: rotate(-5deg); */
 }
+/* Hide the label on hover */
+/* .video-wrapper:hover::before {
+  content: '';
+} */
+
+/* ######## </ IMAGE & Video > ######## */

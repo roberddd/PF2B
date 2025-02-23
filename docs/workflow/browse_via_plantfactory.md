@@ -49,5 +49,5 @@ Below the main PF2B panel is the Bridge panel, which displays information about 
     ![Bridge](../images/bridge_disconnected_pf-running.webp){ .img-box }
 
 - :blender_icon_file_refresh:: Check Bridge status.
-- **Close Bridge**: Closes the PF2B Bridge between Blender and PlantFactory. To import plants again, you will need to restart the bridge along with a new instance of PlantFactory
-- **Close PlantFactory**: Force close all PlantFactory instances
+- **Close Bridge**: Closes the PF2B Bridge between Blender and PlantFactory. To import plants again, you will need to restart the bridge along with a new instance of PlantFactory.
+- **Close PlantFactory**: Force close all PlantFactory instances.

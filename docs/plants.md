@@ -29,7 +29,7 @@ Each plant may have different detail levels available:
 - **RT**: Real-Time (65 plants)
 - **FG**: Full Geometry (12 plants)
 
-*When accounting for all detail level variants, the library totals 450 plants and 23,193 presets.*
+*When accounting for all detail level variants, the library totals **450** plants and **23,193** presets.*
 
 #### Detailed Catalog
 
@@ -264,14 +264,18 @@ Each plant may have different detail levels available:
 ---
 
 ### PlantFactory Library
-Includes **41 plant species** with **22 unique presets**.
 
-**Categories**
+Includes **41** plant species with **22** unique presets, primarily in Low Poly detail level.
 
-- **Bushes**
-- **Flowers**
-- **Grasses**
-- **Palms**
-- **Sci-Fi**
-- **Trees**
+| Category | Number of Plants | Number of Presets
+|----------|-----------------|-----------------|
+| Bushes| 1 | 0
+| Flowers | 12 | 18
+| Grasses | 3 | 4
+| Palms | 4 | 0
+| Sci-Fi | 2 | 0
+| Trees | 19 | 0
+
+While the library includes some non-plant objects, PF2B filters them out.
+
 </div> <!-- /Library -->

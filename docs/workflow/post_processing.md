@@ -3,7 +3,10 @@ This panel allows you to edit the visuals of your already imported plants. It pr
 
 ## Instructions
 
-Select a plant in the `3D Viewport`, and you will be presented with the detected material types, as shown below. Clicking on a material type, such as "Leaf", will open a popup that allows you to edit the material properties for that type.
+Select a plant in the `3D Viewport`, and the detected material types will be displayed, as shown below. Clicking on a material type, such as "Leaf," opens a popup where you can edit its material properties.
+
+The checkboxes to the left of each property allow you to enable or disable updates for that specific value when applying changes. For example, if you only want to update **Translucency**, you can uncheck all other boxes and click **OK** to apply only that change.
+
 
 ![Post Processing](../images/post-processing.webp){ .img-box align=left }
 
@@ -11,9 +14,12 @@ Select a plant in the `3D Viewport`, and you will be presented with the detected
 
 <div style="clear:both"></div>
 
-<h5>Plant Details</h5>
-The Plant Details section shows details of the imported plant.
 
-- **Open**: Open this plant in the Plant Browser.
+#### Plant Details
+
+The Plant Details section displays information about the imported plant.
+
+- **Open**: Opens this plant in the Plant Browser. Useful if you want to import additional instances of the same plant type into the scene.
+
 
 

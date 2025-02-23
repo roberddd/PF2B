@@ -5,6 +5,18 @@
 - Operating System: Windows
 
 
+## Notes Before Purchasing
+
+!!! warning ""
+    PF2B does **not** guarantee 100% compatibility with all plants. With over [23,000](plants.md) presets, it is impractical to manually test and verify each one.
+
+    However, if you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](support.md). I will do my best to resolve them by adding plant-specific configurations to the addon.
+
+    In general, the `PlantCatalog` library, which includes the majority of assets from Bentley's distributed plants, works well, with an estimated **95% compatibility** requiring no manual intervention. The `PlantFactory` library, which contains the original built-in plants, has a lower compatibility rate, primarily due to inconsistent texture naming.
+
+    **For more details, see the [PF2B: Under the Hood](support/pf2b_under_the_hood.md) page.**
+
+
 
 
 ## Installation
@@ -13,6 +25,7 @@
     To start using PF2B, you need to install the add-on in Blender. Follow these steps:
 
     1. Download the PF2B add-on zip file from the store you purchased it from.
+    ![Addon Location](images/addon-install.webp){ .img-box .on-glb align=right width=31% }
     2. Open Blender and go to `Edit > Preferences`.
     3. In the Preferences window, navigate to the `Add-ons` tab.
     4. Locate the `Add-ons Settings` (:octicons-chevron-down-12: icon) in the top right corner.
@@ -21,11 +34,10 @@
     !!! info2 "Updates"
         For updates, simply download the updated add-on manually from the store where you purchased it, uninstall the old version and reinstall the new using the same steps outlined in the instructions above.
 
-
 === "PlantFactory & Libraries"
     Follow these steps to install PlantFactory and the necessary libraries:
 
-    1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/).
+    1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/) and follow the on-screen instructions to complete the installation.
     2. The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
     3. For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq).
 
@@ -38,7 +50,7 @@ PF2B is located in the N-Panel inside the `3D Viewport` under a tab named `PF2B`
 
 ![Addon Location](images/addon-location.webp){ .img-box align=left }
 
-Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace.
+Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace. Some areas also have an extra :octicons-question-24: icon, which opens a popup with additional information and a link to the relevant section of the documentation for further instructions.
 
 For more comprehensive guidance, you can access the full documentation by clicking the :blender_icon_help:icon in the main panel.
 
@@ -60,7 +72,6 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 - Once the import is complete, click the 'Verify' button on all caches to ensure everything is properly cached.
 - Now you're ready to start using the addon!
 
-
 <div style="clear:both"></div>
 
 
@@ -72,8 +83,10 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 
 - To ensure a smoother workflow, it’s **recommended** to disable the "**Welcome**" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "Don’t show again" in the bottom-left corner.
 
-<!-- <div style="clear:both"></div> -->
 
 - For a slight speed boost during imports, you can set the **Mesh Preview** option in PlantFactory to **Draft Only**, as shown in the screenshot below.
 
     ![Addon Location](images/pf_mesh-preview.webp){ .img-box }
+
+
+

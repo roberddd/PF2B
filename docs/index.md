@@ -9,65 +9,8 @@ hide:
 
 With PF2B, you gain access to over **200 plant species** and more than **10,000 unique presets**, with each plant procedurally generated using a customizable seed to guarantee a truly one-of-a-kind specimen every time. Available in both low-poly and high-poly variations to suit different performance and visual fidelity needs, PF2B offers a seamless workflow for bringing rich, realistic vegetation into Blender.
 
-<!-- See the [plants](plants.md) & [Gallery](gallery.md) for more details. -->
-
-<!-- ??? info2 "Detailed Library Info"
-    <div class="library" markdown>
-
-    ### PlantCatalog Library
-
-    **450 plant species** with a total of **23,193 unique presets**.
-
-    **Categories**
-
-    - **Broadleaf Trees**
-    - **Bushes**
-    - **Climbers**
-    - **Coniferous**
-    - **Ferns**
-    - **Grass**
-    - **Ground Covers**
-    - **Mushrooms**
-    - **Palms**
-    - **Perennials**
-    - **Succulents**
-
-    **Detail Levels**<br>
-    Plants in the catalog are also categorized based on their detail level to suit different performance needs:
-
-    - **Full Geometry** – 12 plants
-    - **High Detail** – 191 plants
-    - **Low Detail** – 182 plants
-    - **Real-Time** – 65 plants
-
-    Many species include multiple versions to support both **high-poly** and **low-poly** workflows. If we consider only the **high-poly** versions, the catalog features **191 unique plant species**.
-
-    ---
-
-    ### PlantFactory Library
-    Includes **41 plant species** with **22 unique presets**.
-
-    **Categories**
-
-    - **Bushes**
-    - **Flowers**
-    - **Grasses**
-    - **Palms**
-    - **Sci-Fi**
-    - **Trees**
-
-    </div> /Changelog -->
 
 
-
-
-
-<!-- ## Key Features
-
-- **Direct Import**: Bring PlantFactory-generated plants directly into Blender without complicated export/import steps.
-- **Automatic Asset Setup**: PF2B configures imported plant assets with optimized shaders and textures, preserving the intricate details of PlantFactory plants.
-
- -->
 
 ## Where to get the add-on?
 
