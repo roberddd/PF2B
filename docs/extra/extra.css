@@ -11,6 +11,11 @@
   max-width: 1440px;
 }
 
+h5 {
+  margin-bottom:-1em !important;
+}
+
+
 /* ######## < IMAGE > ######## */
 .img-box{
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
@@ -39,6 +44,7 @@
 }
 /* ######## </ MOBILE > ######## */
 
+
 /* ######## < SHOP BUTTONS > ######## */
 .md-typeset .md-button--stretch {
   width: 99%;
@@ -53,6 +59,7 @@
   color: rgb(31, 31, 31);
 }
 /* ######## </ SHOP BUTTONS > ######## */
+
 
 /* ######## < GRID > ######## */
 /* Light mode */
@@ -72,6 +79,7 @@
   }
 }
 /* ######## </ GRID > ######## */
+
 
 /* ######## < FOOTER > ########  */
 /* Replace the Social in the footer */
@@ -98,6 +106,7 @@
   }
 }
 /* ######## </ FOOTER > ########  */
+
 
 /* ######## < ADMONITION > ########  */
 /* Custom 'info2' */
@@ -137,6 +146,7 @@
           mask-image: var(--md-admonition-icon--plant);
 }
 /* ######## </ ADMONITION > ########  */
+
 
 /* ######## < CHANGELOG > ######## */
 /* Compact */
@@ -187,7 +197,6 @@ h3 small { /* Date */
 .library table {
   width: 100%;
   border-collapse: collapse;
-
 }
 .library table tr {
   line-height: 0.8;
@@ -231,9 +240,6 @@ h3 small { /* Date */
 .md-typeset__table {
   margin-bottom:0;
 }
-.compact h5 {
-  margin-bottom:-1em;
-}
 
 /* ######## < /Material Page > ######## */
 
@@ -272,5 +278,4 @@ video {
 /* .video-wrapper:hover::before {
   content: '';
 } */
-
 /* ######## </ IMAGE & Video > ######## */

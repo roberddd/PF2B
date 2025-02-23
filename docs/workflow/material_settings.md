@@ -204,6 +204,8 @@ If it's hard to see the effects of the roughness adjustments:
 
 Here is a demonstration showcasing the preview of roughness and how to adjust the values. It's straightforward to modify the settings to achieve the desired look, whether you want a fully inverted roughness map to make certain areas of the material glossy or to emphasize details like the veins in the leaf.
 
+<div style="clear:both"></div>
+
 
 ---
 
@@ -239,10 +241,12 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
 === "Add Shader"
     [![plant](../images/plants/material/shaders/overview/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" }
 
-<div class="compact" markdown>
+
 
 
 <h5>Front Angle</h5>
+
+<div class="compact" markdown>
 
 === "Mix Shader"
     | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
@@ -264,8 +268,11 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
     |-----------------|-----------------|-----------------|
     | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
 
+</div><!-- /compact class -->
 
 <h5>Back Angle</h5>
+
+<div class="compact" markdown>
 
 === "Mix Shader"
     | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
@@ -290,12 +297,13 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
 </div><!-- /compact class -->
 
 
-
 ## Shaders
 
 The materials use carefully crafted custom Node Groups that are highly customizable.
 
 ![Shaders](../images/shaders.webp){ .img-box .on-glb width=50% }
+
+
 
 
 #### Logic
@@ -322,6 +330,8 @@ The shader nodes has logic built in to handle various different scenarios with v
 
         - Roughness handling:
             - The `Roughness texture` input is used for both the front & backface and follows the same logic above with either dynamic/static value will be used if no roughness texture is connected.
+
+
 
 
 #### Previews
