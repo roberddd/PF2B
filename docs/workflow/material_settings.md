@@ -79,7 +79,7 @@ These settings allows you to configure the default settings that are used when i
     These settings affect all material types.
 
     - **Color Variation By Location**: Introduces subtle hue variations based on plant location to reduce uniformity and enhance realism when multiple plants of the same species are nearby.
-    - **Import Translucency Map**: Uses the translucency texture(if found) instead of a static translucency value. Note: if the output looks odd see [The translucency for my plant looks off](../support/faq.md#the-translucency-for-my-plant-looks-off-what-can-i-do) in the FAQ.
+    - **Import Translucency Map**: Uses the translucency texture(if found) instead of a static translucency value. Note: if the output looks odd see [The translucency for my plant looks off](../support/faq.md#the-translucency-looks-off) in the FAQ.
     - **User 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
     - **Handle Vertex Colors**: Automatically adds a 'Color Attribute' node to the materials of plants with a 'Vertex Color Set' setup in PlantFactory.
 
@@ -209,7 +209,6 @@ These settings allows you to configure the default settings that are used when i
     <div class="compact" markdown>
 
     **Front Angle**
-
     === "Mix Shader"
         | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
         |-----------------|-----------------|-----------------|
@@ -231,7 +230,6 @@ These settings allows you to configure the default settings that are used when i
         | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
 
     **Back Angle**
-
     === "Mix Shader"
         | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
         |-----------------|-----------------|-----------------|
@@ -293,4 +291,6 @@ The shader nodes has logic built in to handle various different scenarios with v
 
 ![Shader outputs](../images/shader-top.webp){ .img-box align=right}
 
-Each shader features multiple outputs designed to help you efficiently build and preview your materials. At the top of each shader, you'll find dedicated outputs for Color, Roughness, and Normals, allowing you to view each channel separately. You can easily preview these channels by holding **Shift + Ctrl** and left-clicking on the desired output. Note that this functionality requires the built-in '[Node Wrangler](https://docs.blender.org/manual/en/latest/addons/node/node_wrangler.html)' addon to be enabled.
+Each shader features multiple outputs designed to help you efficiently build and preview your materials. At the top of each shader, you'll find dedicated outputs for Color, Roughness, and Normals, allowing you to view each channel separately.
+!!! info2 ""
+    Preview these channels by holding **Shift + Ctrl** and left-clicking on the desired output. Note that this functionality requires the built-in '[Node Wrangler](https://docs.blender.org/manual/en/latest/addons/node/node_wrangler.html)' addon to be enabled.

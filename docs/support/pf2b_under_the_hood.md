@@ -36,7 +36,7 @@ For successful automatic setup, **textures** should contain recognizable keyword
 Additionally, **materials** inside PlantFactory should include a keyword that indicates the type of material they represent. Recognized keywords include terms such as leaf, bark, flower, fruit, and other variants. Including these keywords helps the addon correctly identify and process materials during import.
 
 !!! info2 ""
-    If you suspect missing textures due to inconsistent naming, refer to the [Plant Fixes System](#plant-fixes-system) section below for further details. That section explains how PF2B corrects common issues, and you can also find troubleshooting steps in the [FAQ: My plant materials look off. What can I do?](support/faq.md#my-plant-materials-looks-off-what-can-i-do).
+    If you suspect missing textures due to inconsistent naming, refer to the [Plant Fixes System](#plant-fixes-system) section below for further details. That section explains how PF2B corrects common issues, and you can also find troubleshooting steps in the [FAQ: My plant materials look off. What can I do?](../support/faq.md#my-plant-materials-looks-off-what-can-i-do).
 
 ---
 

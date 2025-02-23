@@ -32,7 +32,7 @@
 ### I receive a "Are you sure you want to abort the export" popup during import
 
 :    ![Preferences - Misc](../images/abort-export-popup.webp){ .img-box align=right }
-:   This is usually caused by PlantFactory not having enough time to load the geometry of the plant before the export is attempted. Try adjusting the [Geometry Load Buffer](../preferences.md#misc) under preferences to resolve this issue. As an alternative workaround, in cases where this persists, hold down the "Escape" key for 2-3 seconds to make the popup disappear.
+:   This is usually caused by PlantFactory not having enough time to load the geometry of the plant before the export is attempted. Try adjusting the [Geometry Load Buffer](../preferences/misc.md#import) under preferences to resolve this issue. As an alternative workaround, in cases where this persists, hold down the "Escape" key for 2-3 seconds to make the popup disappear.
 
 
 ---
@@ -91,7 +91,7 @@
 
 <div style="clear:both"></div>
 
-#### Other Textures Look Off / Missing Textures
+#### Other Textures Look off / Missing Textures / Wrong Textures
 
 This might be caused by inconsistent texture names, as mentioned under [PF2B: Under the Hood](../support/pf2b_under_the_hood.md#automated-setup). Please try to troubleshoot the issue using the [Troubleshoot Guide: Missing or Incorrect Textures](../support/guides.md#missing-or-incorrect-textures) first to pinpoint the problem.
 
