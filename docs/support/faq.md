@@ -68,6 +68,16 @@
 ---
 
 
+### I want to create my own plants. What should I keep in mind?
+
+:   To ensure materials are set up correctly when importing them with PF2B, name your materials properly inside PlantFactory. Specifically, include a keyword that indicates the type of material they represent. Recognized keywords include `leaf`, `bark`, `flower`, `fruit`, and other relevant terms. This allows the addon to correctly identify and process materials during import.
+
+    For more details, check the '**Automated Setup**' section in [PF2B: Under the Hood](../support/pf2b_under_the_hood.md#automated-setup).
+
+
+---
+
+
 ### My plant Materials looks off. What can I do?
 
 #### The translucency looks off
