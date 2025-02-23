@@ -206,31 +206,35 @@ h3 small { /* Date */
 .compact table {
   width: 100%;
   border-collapse: collapse;
-
 }
 /* .compact table img {
   width: auto;
   height: auto;
   object-fit: contain;
 } */
-
 .compact table img {
   border-radius: 4px;
 }
-
 .compact table tr {
-  line-height: 0;
+  line-height: 0.5;
   padding: 0;
 
 }
-/* body > div.md-container > main > div > div.md-content > article > details:nth-child(15) > div.compact > div:nth-child(4) > div.tabbed-content > div:nth-child(1) > div > div > table > tbody > tr > td:nth-child(1) */
+@media (max-width: 768px) {
+  .compact table tr { /* Fix issue with linebreak on mobile */
+    line-height: 1;
+  }
+}
 .compact table td {
   padding: 0;
 }
 .md-typeset__table {
   margin-bottom:0;
-
 }
+.compact h5 {
+  margin-bottom:-1em;
+}
+
 /* ######## < /Material Page > ######## */
 
 

@@ -1,6 +1,4 @@
 ---
-tags:
-  - Release history
 hide:
   - toc
 ---

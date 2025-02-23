@@ -101,156 +101,193 @@ These settings allows you to configure the default settings that are used when i
 
 
 
-## Examples of Settings
+## Settings Explained with Examples
 
-???+ abstract "Color Variation Random Per Leaf/Flower/Fruit"
-    As seen here, it is first set to the maximum value of **1.0**, where clear color variations appear on the leaf. In the next example, it is set to **0**, ensuring no color variation is applied and only the raw color from the leaf texture is used for the color.
+### Color Variation Random Per Leaf/Flower/Fruit
 
-    [![plant](../images/plants/material/thumbs/color-variation-by-island_1.webp)](../images/plants/material/color-variation-by-island_1.webp){ .glightbox data-description="Color variation set to 1.0" }
-    [![plant](../images/plants/material/thumbs/color-variation-by-island_0.webp)](../images/plants/material/color-variation-by-island_0.webp){ .glightbox data-description="Color variation set to 0.0" }
+> Applies subtle hue variations to each **Leaf/Flower/Fruit** using random colors per geometry island, enhancing natural diversity.
 
-    This setting is available for **leaf**, **flower**, and **fruit** materials. The default value is set approximately in the middle to provide subtle variation, but it's worth experimenting to find the best setting for your case.
+As seen here, it is first set to the maximum value of **1.0**, where clear color variations appear on the leaf. In the next example, it is set to **0**, ensuring no color variation is applied and only the raw color from the leaf texture is used for the color.
+
+[![plant](../images/plants/material/thumbs/color-variation-by-island_1.webp)](../images/plants/material/color-variation-by-island_1.webp){ .glightbox data-description="Color variation set to 1.0" }
+[![plant](../images/plants/material/thumbs/color-variation-by-island_0.webp)](../images/plants/material/color-variation-by-island_0.webp){ .glightbox data-description="Color variation set to 0.0" }
+
+This setting is available for **leaf**, **flower**, and **fruit** materials. The default value is set approximately in the middle to provide subtle variation, but it's worth experimenting to find the best setting for your case.
 
 
-???+ abstract "Wetness"
-    The first example shows the wetness parameter set to **1.0** for a fully wet leaf, while the second example has it set to the minimum for a dry leaf. This setting is available for **leaf**, **stalk**, **flower**, and **fruit** materials.
+---
+
+
+### Wetness
+
+!!! info2 ""
+    The Wetness parameter simulates the effect of moisture on the stalk surface by reducing roughness. As wetness increases, the surface becomes smoother and glossier.
+
+The first example shows the wetness parameter set to **1.0** for a fully wet leaf, while the second example has it set to the minimum for a dry leaf. This setting is available for **leaf**, **stalk**, **flower**, and **fruit** materials.
+
+!!! warning ""
+    Please note that the wetness is set at a high value just to demonstrate the effect and may not represent the ideal setting for every situation. It's worth experimenting to find the best setting for your case.
+
+=== "Wetness 1.0"
+    <video width="100%" loop muted controls>
+        <source src="../../videos/material-example_wetness_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+=== "Wetness 0.0"
+    <video width="100%" loop muted controls>
+        <source src="../../videos/material-example_wetness_0.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+---
+
+
+### Wetness affected by Normal
+
+!!! info2 ""
+    Determines whether the wetness effect is influenced by the surface orientation. When enabled, the shader adjusts the roughness based on the surface's normal, applying the effect primarily to top-facing surfaces (along the positive Z-axis). When disabled, the wetness effect is applied uniformly across all surfaces regardless of their orientation.
+
+In these videos, you’ll see examples of how the roughness of a leaf is influenced by its orientation when the `Wetness Affected by Normal` setting is enabled. As in real life, a more vertical leaf accumulates less water on its surface. By default, this setting is enabled for leaves, but it's worth experimenting to find the best setting for your case.
+
+=== "Roughness Preview"
+    This video focuses solely on the roughness texture of the leaf to showcase how it changes with varying wetness levels. The brighter areas of the leaf indicate a rougher texture, while the darker areas represent higher wetness, resulting in a smoother, glossier appearance.
+
+    <video width="100%" loop muted controls>
+        <source src="../../videos/material-example_wetness-affected-by-normal_roughness.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+=== "Full Shader Preview"
+    This video demonstrates the leaf with its complete texture, illustrating how wetness subtly affects its appearance. While the effect may be difficult to discern in the video, it contributes to the overall realism when applied to a full plant with multiple leaves.
 
     !!! warning ""
-        Please note that the wetness is set at a high value just to demonstrate the effect and may not represent the ideal setting for every situation. It's worth experimenting to find the best setting for your case.
+        Please note that the wetness is set at a high value just to demonstrate the effect and may not represent the ideal setting for every situation.
 
-    === "Wetness 1.0"
-        <video width="100%" loop muted controls>
-            <source src="../../videos/material-example_wetness_1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-    === "Wetness 0.0"
-        <video width="100%" loop muted controls>
-            <source src="../../videos/material-example_wetness_0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-
-???+ abstract "Wetness affected by Normal"
-    In these videos, you’ll see examples of how the roughness of a leaf is influenced by its orientation when the `Wetness Affected by Normal` setting is enabled. As in real life, a more vertical leaf accumulates less water on its surface. By default, this setting is enabled for leaves, but it's worth experimenting to find the best setting for your case.
-
-    === "Roughness Preview"
-        This video focuses solely on the roughness texture of the leaf to showcase how it changes with varying wetness levels. The brighter areas of the leaf indicate a rougher texture, while the darker areas represent higher wetness, resulting in a smoother, glossier appearance.
-
-        <video width="100%" loop muted controls>
-            <source src="../../videos/material-example_wetness-affected-by-normal_roughness.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-    === "Full Shader Preview"
-        This video demonstrates the leaf with its complete texture, illustrating how wetness subtly affects its appearance. While the effect may be difficult to discern in the video, it contributes to the overall realism when applied to a full plant with multiple leaves.
-
-        !!! warning ""
-            Please note that the wetness is set at a high value just to demonstrate the effect and may not represent the ideal setting for every situation.
-
-        <video width="100%" loop muted controls>
-            <source src="../../videos/material-example_wetness-affected-by-normal.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-
-???+ abstract "Roughness from Color"
-    When enabled, a Roughness map is generated from the Color texture, breaking the uniform roughness. Since not all PlantFactory assets do not include dedicated Roughness maps and have a static value set, this feature provides an effective solution.
-
-    ![Shaders](../images/roughness-from-color_sliders.webp){ .img-box align=right }
-
-    **Adjusting Roughness**
-
-    To adjust the roughness of a specific material:
-
-    1. Open the material in the `Shader Editor`.
-    2. Locate the Shader, and find the `Roughness from Color` section at the bottom.
-    3. Make adjustments until the material looks right to you or fits your use case, as there are no strict rules.
-
-    **Previewing Roughness**
-
-    If it's hard to see the effects of the roughness adjustments:
-
-    - Temporarily connect to the "Roughness Preview" output, as described in the [shader previews](#previews) section. In this view, you will see a raw output of the roughness channel, where pure white color indicates full roughness (resulting in a matte finish), while darker shades indicate less roughness.
-
-    **Example**
-
-    <video width="42%" loop muted controls style="float:left; margin: 0 1em 1em 0;">
-        <source src="../../videos/material-example_roughness-from-color.mp4" type="video/mp4">
+    <video width="100%" loop muted controls>
+        <source src="../../videos/material-example_wetness-affected-by-normal.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    Here is a demonstration showcasing the preview of roughness and how to adjust the values. It's straightforward to modify the settings to achieve the desired look, whether you want a fully inverted roughness map to make certain areas of the material glossy or to emphasize details like the veins in the leaf.
+
+---
 
 
-???+ abstract "Color Variation By Location"
+### Roughness from Color
+
+!!! info2 ""
+    Generates a Roughness map from the Color texture, breaking the uniform roughness. Since not all PlantFactory assets do not include dedicated Roughness maps and have a static value set, this feature provides an effective solution.
+
+![Shaders](../images/roughness-from-color_sliders.webp){ .img-box align=right }
+
+**Adjusting Roughness**
+
+To adjust the roughness of a specific material:
+
+1. Open the material in the `Shader Editor`.
+2. Locate the Shader, and find the `Roughness from Color` section at the bottom.
+3. Make adjustments until the material looks right to you or fits your use case, as there are no strict rules.
+
+**Previewing Roughness**
+
+If it's hard to see the effects of the roughness adjustments:
+
+- Temporarily connect to the "Roughness Preview" output, as described in the [shader previews](#previews) section. In this view, you will see a raw output of the roughness channel, where pure white color indicates full roughness (resulting in a matte finish), while darker shades indicate less roughness.
+
+**Example**
+
+<video width="42%" loop muted controls style="float:left; margin: 0 1em 1em 0;">
+    <source src="../../videos/material-example_roughness-from-color.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+Here is a demonstration showcasing the preview of roughness and how to adjust the values. It's straightforward to modify the settings to achieve the desired look, whether you want a fully inverted roughness map to make certain areas of the material glossy or to emphasize details like the veins in the leaf.
+
+
+---
+
+
+### Color Variation By Location
+
+!!! info2 ""
     Introduces subtle hue variations based on the location of the plant, enhancing realism and reducing uniformity, especially when multiple plants of the same species are nearby.
 
-    Below is a video demonstrating the effect as a plant moves, showcasing changes in hue and brightness. While these changes may be subtle in the video, they significantly enhance the visual diversity of closely situated plants.
+Below is a video demonstrating the effect as a plant moves, showcasing changes in hue and brightness. While these changes may be subtle in the video, they significantly enhance the visual diversity of closely situated plants.
 
-    <video loop muted controls>
-        <source src="../../videos/material-example_color-variation-by-location.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<video loop muted controls>
+    <source src="../../videos/material-example_color-variation-by-location.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
-???+ abstract "Use 'add shader'"
+
+---
+
+
+### Use 'add shader'
+
+!!! info2 ""
     Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior.
 
-    Below is a gallery showcasing comparisons between the **Mix Shader** and **Add Shader**. Notice how, in the front-facing examples, the **Mix Shader** absorbs more light as translucency increases, creating a more realistic effect, while the **Add Shader** does the opposite, making the surface appear brighter.
+Below is a gallery showcasing comparisons between the **Mix Shader** and **Add Shader**. Notice how, in the front-facing examples, the **Mix Shader** absorbs more light as translucency increases, creating a more realistic effect, while the **Add Shader** does the opposite, making the surface appear brighter.
 
-    By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, striking a good balance for realism. However, feel free to experiment, depending on your lighting conditions, using an **Add Shader** may provide more visually striking results that better suit your use case.
+By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, striking a good balance for realism. However, feel free to experiment, depending on your lighting conditions, using an **Add Shader** may provide more visually striking results that better suit your use case.
 
-    === "Mix Shader"
-        [![plant](../images/plants/material/shaders/overview/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" }
+=== "Mix Shader"
+    [![plant](../images/plants/material/shaders/overview/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" }
 
-    === "Add Shader"
-        [![plant](../images/plants/material/shaders/overview/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" }
+=== "Add Shader"
+    [![plant](../images/plants/material/shaders/overview/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" }
 
-    <div class="compact" markdown>
+<div class="compact" markdown>
 
-    **Front Angle**
-    === "Mix Shader"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.0.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.0.webp){ .glightbox  data-description="mix-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.5.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.5.webp){ .glightbox data-description="mix-shader translucency 0.5" } |
 
-    === "Add Shader"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0.webp){ .glightbox data-description="add-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5.webp){ .glightbox data-description="add-shader translucency 0.5" } |
+<h5>Front Angle</h5>
 
-    === "Mix Shader (no-bg)"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.0_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.3_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.5_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.5 (no background)" } |
+=== "Mix Shader"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.0.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.0.webp){ .glightbox  data-description="mix-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.5.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.5.webp){ .glightbox data-description="mix-shader translucency 0.5" } |
 
-    === "Add Shader (no-bg)"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
+=== "Add Shader"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0.webp){ .glightbox data-description="add-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5.webp){ .glightbox data-description="add-shader translucency 0.5" } |
 
-    **Back Angle**
-    === "Mix Shader"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.0.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.0.webp){ .glightbox data-description="mix-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.5.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.5.webp){ .glightbox data-description="mix-shader translucency 0.5" } |
+=== "Mix Shader (no-bg)"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.0_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.3_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.5_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.5 (no background)" } |
 
-    === "Add Shader"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.0.webp)](../images/plants/material/shaders/back/add-shader_translucency0.0.webp){ .glightbox data-description="add-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/back/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.5.webp)](../images/plants/material/shaders/back/add-shader_translucency0.5.webp){ .glightbox data-description="add-shader translucency 0.5" } |
+=== "Add Shader (no-bg)"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
 
-    === "Mix Shader (no-bg)"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.0_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.3_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.5_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.5 (no background)" } |
 
-    === "Add Shader (no-bg)"
-        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
-        |-----------------|-----------------|-----------------|
-        | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
+<h5>Back Angle</h5>
 
-    </div><!-- /compact class -->
+=== "Mix Shader"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.0.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.0.webp){ .glightbox data-description="mix-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.5.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.5.webp){ .glightbox data-description="mix-shader translucency 0.5" } |
+
+=== "Add Shader"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.0.webp)](../images/plants/material/shaders/back/add-shader_translucency0.0.webp){ .glightbox data-description="add-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/back/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.5.webp)](../images/plants/material/shaders/back/add-shader_translucency0.5.webp){ .glightbox data-description="add-shader translucency 0.5" } |
+
+=== "Mix Shader (no-bg)"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.0_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.3_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.5_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.5 (no background)" } |
+
+=== "Add Shader (no-bg)"
+    | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+    |-----------------|-----------------|-----------------|
+    | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
+
+</div><!-- /compact class -->
 
 
 
