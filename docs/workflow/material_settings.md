@@ -105,7 +105,8 @@ These settings allows you to configure the default settings that are used when i
 
 ### Color Variation Random Per Leaf/Flower/Fruit
 
-> Applies subtle hue variations to each **Leaf/Flower/Fruit** using random colors per geometry island, enhancing natural diversity.
+!!! info2 ""
+    Applies subtle hue variations to each **Leaf/Flower/Fruit** using random colors per geometry island, enhancing natural diversity.
 
 As seen here, it is first set to the maximum value of **1.0**, where clear color variations appear on the leaf. In the next example, it is set to **0**, ensuring no color variation is applied and only the raw color from the leaf texture is used for the color.
 

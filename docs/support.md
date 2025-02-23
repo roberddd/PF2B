@@ -13,7 +13,7 @@ Explore these communities and resources to get help and inspiration for creating
 
 - [:simple-facebook: **The Plant Factory - Facebook Community**](https://www.facebook.com/groups/496656864047261)
 - [:simple-facebook: **Vue Galleries - Facebook Community**](https://www.facebook.com/groups/vuegalleries)
-- [:simple-discord: **Vue and Plant Factory Hub - Discord Community**](https://discord.gg/FBAwhzdP)
+- [:simple-discord: **Vue and Plant Factory Hub - Discord Community**](https://discord.gg/4GNwBAbcQY)
 
 
 ### YouTube Channels & Playlists
