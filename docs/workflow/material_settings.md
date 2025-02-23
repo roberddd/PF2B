@@ -6,6 +6,8 @@ These settings allows you to configure the default settings that are used when i
 
 <div style="clear:both"></div>
 
+### Settings
+
 === "Leaf"
     ![Material Settings](../images/material-settings_leaf.webp){ .img-box align=left }
 
@@ -72,12 +74,17 @@ These settings allows you to configure the default settings that are used when i
     - **Roughness from Color**: Generates a Roughness map from the Color texture, breaking uniform roughness. Since most PlantFactory assets do not include dedicated Roughness maps and have a static value set, this feature provides an effective solution.
 
 === "General Settings"
+    ![Material Settings](../images/material-settings_general.webp){ .img-box align=left }
+
     These settings affect all material types.
 
     - **Color Variation By Location**: Introduces subtle hue variations based on plant location to reduce uniformity and enhance realism when multiple plants of the same species are nearby.
     - **Import Translucency Map**: Uses the translucency texture(if found) instead of a static translucency value. Note: if the output looks odd see [The translucency for my plant looks off](../support/faq.md#the-translucency-for-my-plant-looks-off-what-can-i-do) in the FAQ.
     - **User 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
     - **Handle Vertex Colors**: Automatically adds a 'Color Attribute' node to the materials of plants with a 'Vertex Color Set' setup in PlantFactory.
+
+        !!! abstract inline end "Example"
+            ![Vertex Color example](../images/vertex-colors_example.webp){ .img-box .on-glb data-description="Example vertex color node setup" }
         - **Add Vertex Color Node Groups**: Adds node groups to assist with color randomization based on Vertex Colors.
         - **Smart Vertex Identification**: Enable smarter vertex color identification by detecting meaningful (non-uniform) vertex colors. When disabled, a simpler algorithm checks for any use of vertex colors, which may include single-color meshes.
 
@@ -105,7 +112,6 @@ These settings allows you to configure the default settings that are used when i
     This setting is available for **leaf**, **flower**, and **fruit** materials. The default value is set approximately in the middle to provide subtle variation, but it's worth experimenting to find the best setting for your case.
 
 
-
 ???+ abstract "Wetness"
     The first example shows the wetness parameter set to **1.0** for a fully wet leaf, while the second example has it set to the minimum for a dry leaf. This setting is available for **leaf**, **stalk**, **flower**, and **fruit** materials.
 
@@ -124,12 +130,12 @@ These settings allows you to configure the default settings that are used when i
             Your browser does not support the video tag.
         </video>
 
-???+ abstract "Wetness affected by Normal"
-    In these videos, you’ll see examples of how the roughness of a leaf is influenced by its orientation when the `Wetness Affected by Normal` setting is enabled. As in real life, a more vertical leaf accumulates less water on its surface. The brighter areas of the leaf indicate a rougher texture, while the darker areas represent higher wetness, resulting in a smoother, glossier appearance. By default, this setting is enabled for leaves, but it's worth experimenting to find the best setting for your case.
 
+???+ abstract "Wetness affected by Normal"
+    In these videos, you’ll see examples of how the roughness of a leaf is influenced by its orientation when the `Wetness Affected by Normal` setting is enabled. As in real life, a more vertical leaf accumulates less water on its surface. By default, this setting is enabled for leaves, but it's worth experimenting to find the best setting for your case.
 
     === "Roughness Preview"
-        This video focuses solely on the roughness texture of the leaf to showcase how it changes with varying wetness levels.
+        This video focuses solely on the roughness texture of the leaf to showcase how it changes with varying wetness levels. The brighter areas of the leaf indicate a rougher texture, while the darker areas represent higher wetness, resulting in a smoother, glossier appearance.
 
         <video width="100%" loop muted controls>
             <source src="../../videos/material-example_wetness-affected-by-normal_roughness.mp4" type="video/mp4">
@@ -177,7 +183,6 @@ These settings allows you to configure the default settings that are used when i
     Here is a demonstration showcasing the preview of roughness and how to adjust the values. It's straightforward to modify the settings to achieve the desired look, whether you want a fully inverted roughness map to make certain areas of the material glossy or to emphasize details like the veins in the leaf.
 
 
-
 ???+ abstract "Color Variation By Location"
     Introduces subtle hue variations based on the location of the plant, enhancing realism and reducing uniformity, especially when multiple plants of the same species are nearby.
 
@@ -188,6 +193,66 @@ These settings allows you to configure the default settings that are used when i
         Your browser does not support the video tag.
     </video>
 
+???+ abstract "Use 'add shader'"
+    Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior.
+
+    Below is a gallery showcasing comparisons between the **Mix Shader** and **Add Shader**. Notice how, in the front-facing examples, the **Mix Shader** absorbs more light as translucency increases, creating a more realistic effect, while the **Add Shader** does the opposite, making the surface appear brighter.
+
+    By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, striking a good balance for realism. However, feel free to experiment, depending on your lighting conditions, using an **Add Shader** may provide more visually striking results that better suit your use case.
+
+    === "Mix Shader"
+        [![plant](../images/plants/material/shaders/overview/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" }
+
+    === "Add Shader"
+        [![plant](../images/plants/material/shaders/overview/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/overview/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" }
+
+    <div class="compact" markdown>
+
+    **Front Angle**
+
+    === "Mix Shader"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.0.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.0.webp){ .glightbox  data-description="mix-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.5.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.5.webp){ .glightbox data-description="mix-shader translucency 0.5" } |
+
+    === "Add Shader"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0.webp){ .glightbox data-description="add-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5.webp){ .glightbox data-description="add-shader translucency 0.5" } |
+
+    === "Mix Shader (no-bg)"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.0_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.3_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/mix-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/mix-shader_translucency0.5_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.5 (no background)" } |
+
+    === "Add Shader (no-bg)"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/front/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/front/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
+
+    **Back Angle**
+
+    === "Mix Shader"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.0.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.0.webp){ .glightbox data-description="mix-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.3.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.3.webp){ .glightbox data-description="mix-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.5.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.5.webp){ .glightbox data-description="mix-shader translucency 0.5" } |
+
+    === "Add Shader"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.0.webp)](../images/plants/material/shaders/back/add-shader_translucency0.0.webp){ .glightbox data-description="add-shader translucency 0.0" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.3.webp)](../images/plants/material/shaders/back/add-shader_translucency0.3.webp){ .glightbox data-description="add-shader translucency 0.3" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.5.webp)](../images/plants/material/shaders/back/add-shader_translucency0.5.webp){ .glightbox data-description="add-shader translucency 0.5" } |
+
+    === "Mix Shader (no-bg)"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.0_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.3_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/mix-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/back/mix-shader_translucency0.5_no-bg.webp){ .glightbox data-description="mix-shader translucency 0.5 (no background)" } |
+
+    === "Add Shader (no-bg)"
+        | Translucency 0.0 | Translucency 0.3 | Translucency 0.5 |
+        |-----------------|-----------------|-----------------|
+        | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.0_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.0_no-bg.webp){ .glightbox data-description="add-shader translucency 0.0 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.3_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.3_no-bg.webp){ .glightbox data-description="add-shader translucency 0.3 (no background)" } | [![plant](../images/plants/material/shaders/back/thumbs/add-shader_translucency0.5_no-bg.webp)](../images/plants/material/shaders/back/add-shader_translucency0.5_no-bg.webp){ .glightbox data-description="add-shader translucency 0.5 (no background)" } |
+
+    </div><!-- /compact class -->
 
 
 
@@ -229,5 +294,3 @@ The shader nodes has logic built in to handle various different scenarios with v
 ![Shader outputs](../images/shader-top.webp){ .img-box align=right}
 
 Each shader features multiple outputs designed to help you efficiently build and preview your materials. At the top of each shader, you'll find dedicated outputs for Color, Roughness, and Normals, allowing you to view each channel separately. You can easily preview these channels by holding **Shift + Ctrl** and left-clicking on the desired output. Note that this functionality requires the built-in '[Node Wrangler](https://docs.blender.org/manual/en/latest/addons/node/node_wrangler.html)' addon to be enabled.
-
-

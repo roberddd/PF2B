@@ -19,14 +19,11 @@ When a plant is imported, **PF2B** follows these steps:
 
 ### Materials
 
-PF2B automatically sets up **additional textures** from **PlantFactory** that are **not** included in the `.fbx` file but exist in the texture folder. These include:
+PF2B automatically sets up **additional textures** from **PlantFactory** that are **not** included in the `.fbx` file (the exchange format between PlantFactory and Blender) but exist in the texture folder. These include:
 
 - **Roughness Textures**
 - **Back Textures** (Base Color & Normal)
 - **Translucency Textures**
-
-
-<!-- **Texture Matching Logic** -->
 
 Since this process relies on texture names, PF2B uses logic-based matching to identify them. This works well in **99% of cases**, but exceptions occur if textures do not follow a consistent naming scheme.
 
