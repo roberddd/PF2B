@@ -43,6 +43,8 @@ Additionally, **materials** inside PlantFactory should include a keyword that in
 ## Plant Fixes System
 
 The **Plant Fixes System** is an automated compatibility layer designed to correct issues that may arise when importing plants.
+!!! warning ""
+    Please note that the **Plant Fixes System** is only active when using the "[Browse Via Blender](../workflow/browse_via_blender.md)" mode and is not applied when using the "[Browse via PlantFactory](../workflow/browse_via_plantfactory.md)" mode.
 
 ### Automated Adjustments for Common Issues
 

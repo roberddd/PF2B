@@ -93,10 +93,10 @@
 
 #### Other Textures Look off / Missing Textures / Wrong Textures
 
-This might be caused by inconsistent texture names, as mentioned under [PF2B: Under the Hood](../support/pf2b_under_the_hood.md#automated-setup). Please try to troubleshoot the issue using the [Troubleshoot Guide: Missing or Incorrect Textures](../support/guides.md#missing-or-incorrect-textures) first to pinpoint the problem.
+:   This might be caused by inconsistent texture names, as mentioned under [PF2B: Under the Hood](../support/pf2b_under_the_hood.md#automated-setup). Please try to troubleshoot the issue using the [Troubleshoot Guide: Missing or Incorrect Textures](../support/guides.md#missing-or-incorrect-textures) first to pinpoint the problem.
 
-!!! info2 ""
-    If there are textures that are not connected or are incorrectly connected for a specific plant, please [get in touch](../support.md) with me and provide the plant details, such as the name of the plant and the preset used, and I'll investigate further.
+    !!! info2 ""
+        If there are textures that are not connected or are incorrectly connected for a specific plant, please [get in touch](../support.md) with me and provide the plant details, such as the name of the plant and the preset used, and I'll investigate further.
 
 
 
