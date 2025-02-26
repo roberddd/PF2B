@@ -79,8 +79,8 @@ These settings allows you to configure the default settings that are used when i
     These settings affect all material types.
 
     - **Color Variation By Location**: Introduces subtle hue variations based on plant location to reduce uniformity and enhance realism when multiple plants of the same species are nearby.
-    - **Import Translucency Map**: Uses the translucency texture(if found) instead of a static translucency value. Note: if the output looks odd see [The translucency for my plant looks off](../support/faq.md#the-translucency-looks-off) in the FAQ.
-    - **User 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
+    - **Import Translucency Map**: Uses the translucency texture (if found) instead of a static translucency value. If you want more control over translucency, you can disable this option and adjust the static value slider instead. Note: If the output looks odd, see [The translucency for my plant looks off](../support/faq.md#the-translucency-looks-off) in the FAQ.
+    - **Use 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
     - **Handle Vertex Colors**: Automatically adds a 'Color Attribute' node to the materials of plants with a 'Vertex Color Set' setup in PlantFactory.
 
         !!! abstract inline end "Example"
@@ -227,7 +227,7 @@ Below is a video demonstrating the effect as a plant moves, showcasing changes i
 ---
 
 
-### Use 'add shader'
+### Use 'Add Shader'
 
 !!! info2 ""
     Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior.

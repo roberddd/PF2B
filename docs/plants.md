@@ -1,14 +1,18 @@
 <div class="library" markdown>
 
-### PlantCatalog Library
+Both libraries below are free to download. For installation instructions, see [this guide](getting_started.md#installation-plantfactory--libraries).
 
-The plantCatalog library contains **194** unique plant species across 11 categories, with a total of **10,377** unique presets.
 
-#### Overview
+## PlantCatalog Library
+
+The **PlantCatalog** library includes **194** unique plant species across **11** categories, with a total of **10,377** presets. When factoring in multiple detail levels, this expands to **450** plants and **23,193** presets.
+
+
+<!-- #### Overview { style="margin-bottom:-0.75em"} -->
 
 Total number of unique plants by category:
 
-| Category | Number of Plants | Number of Presets
+| Category | Plants | Presets
 |----------|-----------------|-----------------|
 | Broadleaf Trees | 45 | 2637
 | Bushes | 38 | 2154
@@ -22,20 +26,18 @@ Total number of unique plants by category:
 | Perennials | 29 | 663
 | Succulents | 11 | 414
 
-Each plant may have different detail levels available:
+<div style="margin-bottom:-0.5em;">Most plants are available in multiple detail levels:</div>
 
 - **HD**: High Detail (191 plants)
 - **LD**: Low Detail (182 plants)
 - **RT**: Real-Time (65 plants)
 - **FG**: Full Geometry (12 plants)
 
-*When accounting for all detail level variants, the library totals **450** plants and **23,193** presets.*
 
-#### Detailed Catalog
+<!-- #### Detailed Catalog { style="margin-bottom:-0.75em"} -->
 
 ??? plant "Full Catalog"
     Each plant listing shows available detail levels in brackets [HD, LD, RT, FG].
-
 
     === "Broadleaf Trees"
         1. Adansonia digitata **[HD, LD, RT]** *[20 presets]*
@@ -166,11 +168,9 @@ Each plant may have different detail levels available:
         - Thuja plicata **[HD, LD, RT]** *[27 presets]*
         - Tsuga mertensiana **[HD, LD]** *[43 presets]*
 
-
     === "Ferns"
         1. Dryopteris filix-mas **[HD, LD, RT]** *[50 presets]*
         - Polypodium vulgare **[HD, LD, RT]** *[55 presets]*
-
 
     === "Grass"
         1. Cyperus alternifolius **[HD, LD]** *[60 presets]*
@@ -185,18 +185,15 @@ Each plant may have different detail levels available:
         - Phragmites australis **[HD, LD]** *[60 presets]*
         - Typha latifolia **[HD, LD]** *[60 presets]*
 
-
     === "Ground Covers "
         1. Arachis duranensis **[HD, LD, RT]** *[5 presets]*
         - Hedera helix ground cover green **[HD, LD, RT]** *[25 presets]*
         - Vinca minor **[RT]** *[3 presets]*
 
-
     === "Mushrooms"
         1. Boletus edulis **[HD, LD, RT]** *[18 presets]*
         - Fomitopsis pinicola **[HD, LD, RT]** *[15 presets]*
         - Quercus lichen **[RT]** *[13 presets]*
-
 
     === "Palms"
         1. Adonidia merrillii **[HD, LD]** *[35 presets]*
@@ -214,7 +211,6 @@ Each plant may have different detail levels available:
         - Washingtonia filifera **[HD, LD, RT]** *[25 presets]*
         - Washingtonia robusta V2 **[HD, LD]** *[10 presets]*
         - Washingtonia robusta **[HD, LD, RT]** *[10 presets]*
-
 
     === "Perennials"
         1. Asplenium scolopendrium **[HD, LD]** *[21 presets]*
@@ -247,7 +243,6 @@ Each plant may have different detail levels available:
         - Vriesea splendens **[HD, LD]** *[36 presets]*
         - Zantedeschia aethiopica **[HD, LD, RT]** *[12 presets]*
 
-
     === "Succulents"
         1. Beaucarnea recurvata **[HD, LD]** *[40 presets]*
         - Carnegiea gigantea V2 **[HD, LD]** *[30 presets]*
@@ -263,11 +258,11 @@ Each plant may have different detail levels available:
 
 ---
 
-### PlantFactory Library
+## PlantFactory Library
 
-Includes **41** plant species with **22** unique presets, primarily in Low Poly detail level.
+Includes **41** plant species with **22** unique presets, most of which are in Low Poly detail level, making them suitable for large-scale scenes or performance-sensitive applications.
 
-| Category | Number of Plants | Number of Presets
+| Category | Plants | Presets
 |----------|-----------------|-----------------|
 | Bushes| 1 | 0
 | Flowers | 12 | 18

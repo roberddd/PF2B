@@ -9,6 +9,7 @@
 
 .md-grid {
   max-width: 1440px;
+  /* max-width: 75%; */
 }
 
 h5 {
@@ -193,13 +194,13 @@ h3 small { /* Date */
   letter-spacing: 0.02em;
   font-style: normal;
 }
-
 .library table {
   width: 100%;
   border-collapse: collapse;
+  margin-top:-1em;
 }
 .library table tr {
-  line-height: 0.8;
+  line-height: 0.5;
 }
 .md-typeset__table {
   margin-bottom:0;

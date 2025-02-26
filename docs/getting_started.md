@@ -8,11 +8,9 @@
 ## Notes Before Purchasing
 
 !!! warning ""
-    PF2B does **not** guarantee 100% compatibility with all plants. With over [23,000](plants.md) presets, it is impractical to manually test and verify each one.
+    PF2B does **not** guarantee 100% compatibility with all plants. With over [23,000](plants.md) presets, it is impractical to manually test and verify each one. However, most plants should import correctly without manual intervention.
 
-    However, if you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](support.md). I will do my best to resolve them by adding plant-specific configurations to the addon.
-
-    In general, the `PlantCatalog` library, which includes the majority of assets from Bentley's distributed plants, works well, with an estimated **95% compatibility** requiring no manual intervention. The `PlantFactory` library, which contains the original built-in plants, has a lower compatibility rate, primarily due to inconsistent texture naming.
+    If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](support.md). I will do my best to resolve them by adding plant-specific configurations to the addon.
 
     **For more details, see the [PF2B: Under the Hood](support/pf2b_under_the_hood.md) page.**
 
