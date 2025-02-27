@@ -34,16 +34,16 @@ hide:
 Bring the power of **PlantFactory** to **Blender** with **PF2B** and take your vegetation workflow to the next level! 🌿
 
 
+<div class="section-box" markdown>
 
-<div class="section-box accent-blue" markdown>
+## One-click to Import
 
-## :material-fit-to-screen:{style="color:var(--main-accent-color-blue);"} Interface
-
-Just One Click to Import!
 <video width="100%" loop autoplay muted>
     <source src="videos/import-single.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
+
+## Queue import
 
 Or take advantage of the queue system to efficiently import your plants in batches!
 <video width="100%" loop autoplay muted>
@@ -51,21 +51,40 @@ Or take advantage of the queue system to efficiently import your plants in batch
     Your browser does not support the video tag.
 </video>
 
-Effortlessly Adjust Your Plants to Fit Any Scene!
-<video width="100%" loop autoplay muted>
-    <source src="videos/postprocessing.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+> *Note: The import processes shown in the videos have been sped up for demonstration purposes. Actual speed vary depending on your computer's processing power.*
 
-PF2B features an intuitive, easy-to-use interface with a custom-built Plant Browser, allowing you to effortlessly navigate through the 20,000+ plant presets. The browser includes robust search and filtering functions to help you quickly preview different species and variations, simplifying the process of finding the perfect vegetation for your scene.
+</div> <!-- section end -->
+
+
+<div class="section-box" markdown>
+
+## Plant Browser
+
+Custom-built Plant Browser, allowing you to effortlessly navigate through the 20,000+ plant presets. The browser includes robust search and filtering functions to help you quickly preview different species and variations, simplifying the process of finding the perfect vegetation for your scene.
 
 <video width="100%" loop autoplay muted>
     <source src="videos/gallery.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
+</div> <!-- section end -->
 
-> *Note: The import processes shown in the videos have been sped up for demonstration purposes. Actual speed vary depending on your computer's processing power.*
+
+
+<div class="section-box" markdown>
+
+## Adjust
+
+Effortlessly Adjust Your Plants to Fit Any Scene!
+<video width="100%" loop autoplay muted>
+    <source src="videos/postprocessing.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
+
+!!! info2 "Go Further: Edit Your Plants Directly in PlantFactory"
+    If you want to take customization to the next level, you can always edit your plants directly inside **PlantFactory** to harness the full power of procedural generation. Modify parameters, adjust growth patterns, tweak materials, or even create entirely new variations, giving you complete control over your vegetation. Whether you need highly detailed hero assets or optimized low-poly versions for large environments, **PlantFactory** offers the flexibility to refine your plants exactly as you need.
 
 </div> <!-- section end -->
 
@@ -87,7 +106,7 @@ Additionally, the regular **PlantFactory** library features **41** plant species
 === "Example Presets"
     Each plant species comes with numerous presets, allowing for customization and versatility. Below is an example showcasing all **115 presets** for the 'Quercus robur forest HD' plant:
 
-    ![PlantCatalog](images/presets.webp)
+    ![Presets](images/presets.webp)
 
 </div> <!-- section end -->
 
