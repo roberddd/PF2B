@@ -264,17 +264,20 @@ video {
   border-radius: 0px 4px 4px 4px;
 }
 .video-wrapper::before {
-  content: 'Video';
+  content: attr(data-label);
   position: absolute;
-  top: -25px;
+  top: -10px;
   /* left: -10px; */
   background-color: rgb(29, 99, 45);
   color: white;
   font-size: 12px;
   padding: 3px 18px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 4px 0;
   /* transform: rotate(-5deg); */
 }
+
+
+
 /* Hide the label on hover */
 /* .video-wrapper:hover::before {
   content: '';
