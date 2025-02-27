@@ -34,6 +34,8 @@ For successful automatic setup, **textures** should contain recognizable keyword
 - **Translucency Textures** → contain `"translucency"` or `"backlight"`.
 
 Additionally, **materials** inside PlantFactory should include a keyword that indicates the type of material they represent. Recognized keywords include terms such as `leaf`, `bark`, `flower`, `fruit`, and other variants. Including these keywords helps the addon correctly identify and process materials during import.
+Depending on the identification, a different shader is assigned to the material that is best suited for its purpose. Materials that are not recognized or do not fall into the above categories are assigned a generic all-purpose shader. For details about the available shaders, see the [shaders](../workflow/material_settings.md#shaders) section under the workflow section.
+
 
 !!! info2 ""
     If you suspect missing textures due to inconsistent naming, refer to the [Plant Fixes System](#plant-fixes-system) section below for further details. That section explains how PF2B corrects common issues, and you can also find troubleshooting steps in the [FAQ: My plant materials look off. What can I do?](../support/faq.md#my-plant-materials-looks-off-what-can-i-do).

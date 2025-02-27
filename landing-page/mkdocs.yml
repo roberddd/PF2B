@@ -27,3 +27,6 @@ markdown_extensions:
       options:
         custom_icons:
           - overrides/.icons/ #Icons can be a bit slow to update when adding new
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
