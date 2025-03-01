@@ -127,15 +127,15 @@ Additionally, the regular **PlantFactory** library features **41** plant species
 !!! warning ""
     PF2B does **not** guarantee 100% compatibility with all plants. With over 23,000 presets, it is impractical to manually test and verify each one. However, most plants should import correctly without manual intervention.
 
-    If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](https://pf2b.roberd.net/support/). I will do my best to resolve them by adding plant-specific configurations to the addon.
+    If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](https://pf2b.roberd.net/support/){ target="_blank" }. I will do my best to resolve them by adding plant-specific configurations to the addon.
 
-    **For more details, see the [PF2B: Under the Hood](https://pf2b.roberd.net/support/pf2b_under_the_hood/) page.**
+    **For more details, see the [PF2B: Under the Hood](https://pf2b.roberd.net/support/pf2b_under_the_hood/){ target="_blank" } page.**
 
 ---
 
 ## Documentation
 
-Extensive documentation is available [here](https://pf2b.roberd.net/){target="_blank"}. If you have any questions about how this all works or how to set things up, please refer to the '**Getting Started**' section in the documentation. You'll also find detailed information about all the available settings and troubleshooting guides.
+Extensive documentation is available [here](https://pf2b.roberd.net/){ target="_blank" }. If you have any questions about how this all works or how to set things up, please refer to the '**Getting Started**' section in the documentation. You'll also find detailed information about all the available settings and troubleshooting guides.
 
 
 ---
