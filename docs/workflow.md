@@ -6,7 +6,7 @@
 PF2B offers two modes for importing plants from **PlantFactory** into Blender, each tailored for different workflows. You can either work directly with PlantFactory in the background or manage imports entirely from within Blender. Here’s how each mode works:
 
 
-### [Mode 1: Browse via Blender](browse_via_blender)
+### [Mode 1: Browse via Blender](./workflow/browse_via_blender.md)
 
 ![Browse via Blender](images/browse-via-blender-panel.webp){ .img-box align=left width=30% }
 
@@ -18,7 +18,7 @@ This mode is tailored for users who focus on a Blender-centric workflow and do n
 
 
 
-### [Mode 2: Browse via PlantFactory](browse_via_plantfactory)
+### [Mode 2: Browse via PlantFactory](./workflow/browse_via_plantfactory.md)
 
 ![Browse via PlantFactory](images/browse-via-plantfactory_bridge-connected.webp){ .img-box align=left width=30% }
 
@@ -33,6 +33,6 @@ In this mode, PF2B connects Blender to a running instance of PlantFactory, enabl
 
 ## After the Import
 
-### [Post Processing](post_processing)
+### [Post Processing](./workflow/post_processing.md)
 
 After importing your plants, you can use the ´Post Processing´ panel to edit the visuals of your plants.
