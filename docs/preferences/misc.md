@@ -36,7 +36,10 @@ Read more about it under the [PF2B: Under the Hood](../support/pf2b_under_the_ho
 #### Import
 
 - **Remove Non-Mesh Elements**: This is useful for cleaning up imported plant assets that may have unnecessary elements like empties or other non-mesh objects attached.
-- **Geometry Load Buffer**: Adds extra time (in seconds) before exporting to allow PlantFactory to fully load the geometry. This helps prevent the "*[Are you sure you want to abort the export?](../support/faq.md#i-receive-a-are-you-sure-you-want-to-abort-the-export-popup-during-import)*" popup that may appear if the geometry isn't fully loaded before the export starts. This setting affects only the [Browse via Blender](../workflow/browse_via_blender.md) mode and while importing one plant at a time without the queue functionality. Type in a custom value to go below or above the minimum or maximum value
+- **Geometry Load Buffer**: Adds extra time (in seconds) before exporting to allow PlantFactory to fully load the geometry. This helps prevent the "*[Are you sure you want to abort the export?](../support/faq.md#i-receive-a-are-you-sure-you-want-to-abort-the-export-popup-during-import)*" popup that may appear if the geometry isn't fully loaded before the export starts. Type in a custom value to go below or above the minimum or maximum value.
+
+    !!! info2 ""
+        This setting affects only the [Browse via Blender](../workflow/browse_via_blender.md) mode and while importing **one** plant at a time without the queue functionality.
 
 
 #### Bridge

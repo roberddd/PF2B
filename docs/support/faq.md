@@ -74,6 +74,9 @@
 
     For more details, check the '**Automated Setup**' section in [PF2B: Under the Hood](../support/pf2b_under_the_hood.md#automated-setup).
 
+    !!! info2 "Tip"
+        Check out the [Community](../support.md#community) section for guides and resources on getting started with creating your own plants.
+
 
 ---
 
