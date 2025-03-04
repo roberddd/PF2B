@@ -10,8 +10,6 @@ In this mode, PF2B connects Blender to a running instance of PlantFactory, enabl
 
 Once the bridge has started, the interface will look like this:
 
-
-
 ![Browse via PlantFactory](../images/browse-via-plantfactory_bridge-connected.webp){ .img-box align=left }
 
 ##### General Settings
@@ -20,17 +18,13 @@ At the top, the scene or plant name is displayed (shown as `My Plant` in the exa
 
 - **Import**:
     - **Current Plant**
-    - **All Presets**
+    - **All Presets**: Import all available preset variations for the selected plant. When enabled, the number of presets will be displayed below.
     - **Quantity**
 - **Seed**:
     - **Random**: Generates a new seed for the import. *NOTE: this updates the seed of your current plant.*
     - **Current**: Keeps the current seed of your plant
     - **Custom**
 - :blender_icon_import: **Import Plant**: Starts importing the selected plant.
-
-<!-- - **Batch Import Options**:
-  - **Randomized Imports**: PF2B can generate multiple versions of the same plant, each with a unique random seed, for added variety.
-  - **Preset Variants**: If the selected plant has multiple preset variations, you can choose to import all available presets at once. -->
 
 <div style="clear:both"></div>
 

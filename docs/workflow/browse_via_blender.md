@@ -28,7 +28,7 @@
 
 - **Import**:
     - **Current Preset**
-    - **All Presets**
+    - **All Presets**: Import all available preset variations for the selected plant. When enabled, the number of presets will be displayed below.
     - **Quantity**
 - **Seed**:
     - **Random**
@@ -45,12 +45,9 @@ The queue system lets you add multiple plants to a queue, which you can then imp
 
 ![plant gallery top panel](../images/queue.webp){ .img-box align=left }
 
-
-
 - :octicons-info-16:: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/queue_info-popup.webp){ .img-box .on-glb align=right width=27% data-description="Info Popup"}
     - **Open**: Open this plant in the Plant Browser.
     - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
-
 - **Quantity**: The number field lets you specify how many of this plant will be imported.
 - :fontawesome-regular-trash-can:: Delete the plant from the queue.
 - **Clear Queue**: Removes all plants from the queue.
@@ -114,9 +111,6 @@ If we look at an individual presets inside the gallery we are presented with dep
 
     - **Select**: Selects the plant and closes down the plant gallery.
     - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_presets_preset-example_popup.webp){ .img-box  }
-        - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
-
-
 
 === "With 'Queue' button"
     ![Preset example with queue button](../images/gallery_presets_preset-example-with-queue-button.webp){ .img-box align=left  }
@@ -124,9 +118,3 @@ If we look at an individual presets inside the gallery we are presented with dep
     - **Add to Queue**: Adds the preset to the queue. For more information about the queue system, please see the [Queue](#queue) section.
     - **Select**: Selects the plant and closes down the plant gallery.
     - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_presets_preset-example_popup.webp){ .img-box  }
-        - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
-
-
-<!-- - **Batch Import Options**:
-  - **Randomized Imports**: As with the first mode, you can import multiple unique variations of a plant by applying random seeds.
-  - **Preset Variants**: You can also import all preset variations for a selected plant if available. -->
