@@ -51,6 +51,7 @@ The queue system lets you add multiple plants to a queue, which you can then imp
 - **Quantity**: The number field lets you specify how many of this plant will be imported.
 - :fontawesome-regular-trash-can:: Delete the plant from the queue.
 - **Clear Queue**: Removes all plants from the queue.
+
 <div style="clear:both"></div>
 
 

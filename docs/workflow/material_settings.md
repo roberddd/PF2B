@@ -298,6 +298,21 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
 </div><!-- /compact class -->
 
 
+### Vertex Color Node Groups
+
+!!! info2 ""
+    Adds node groups to assist with color randomization based on Vertex Colors.
+
+Below is a simple example of a "Plant" with vertex colors applied. You can download the file [here](../examples/Vertex-color-example_Linear-value-0-to-1-from-bottom-to-top.tpfp) (629KB) to test it yourself. This example demonstrates a linear gradient from 1 to 0, moving from bottom to top.
+
+![Vertex Color example](../images/vertex-colors_example-pf-scene.webp){ .img-box .on-glb data-description="Scene inside PlantFactory." width=50%  }
+
+Once imported into Blender, it should look like this:
+
+![Vertex Color example](../images/vertex-colors_example-pf-scene-imported.webp){ .img-box .on-glb data-description="Scene imported into blender." width=50%  }
+
+<div style="clear:both"></div>
+
 ## Shaders
 
 The materials use carefully crafted custom Node Groups that are highly customizable.

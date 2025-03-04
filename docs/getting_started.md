@@ -53,7 +53,9 @@ PF2B is located in the N-Panel inside the `3D Viewport` under a tab named `PF2B`
 
 ![Addon Location](images/addon-location.webp){ .img-box align=left }
 
-Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace. Some areas also have an extra :octicons-question-24: icon, which opens a popup with additional information and a link to the relevant section of the documentation for further instructions.
+Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace.
+
+Some areas also have an extra :octicons-question-24: icon, which opens a popup with additional information and a link to the relevant section of the documentation for further instructions.
 
 For more comprehensive guidance, you can access the full documentation by clicking the :blender_icon_help:icon in the main panel.
 
