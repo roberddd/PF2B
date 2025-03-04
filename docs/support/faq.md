@@ -120,4 +120,19 @@
 
 :   Please [get in touch](../support.md) with me and provide the plant details, and I'll investigate further.
 
+
+---
+
+
+### PIL error in console
+
+:   If you receive errors such as:
+
+    - `cannot import name '_imaging' from 'PIL' (C:\Users\USERNAME\AppData\Roaming\Blender Foundation\Blender\4.3\scripts\addons\PidgeonToolBag-main\python_modules\PIL\__init__.py)`
+    - `ImportError: cannot import name '_version' from partially initialized module 'PIL'`
+
+     or similar error in the console when installing the addon:
+
+    This issue occurs due to conflicts between multiple addons that use the [PILLOW](https://pypi.org/project/pillow/) Python library. Some addon combinations seem to cause import issues or circular dependencies with PIL. From my testing, this issue often disappears when you **disable and then re-enable** the affected addons. For example, in the above case where the "PidgeonToolBag" addon is clashing, try disabling and re-enabling **both PF2B and PidgeonToolBag**, which should hopefully resolve the issue. <br>I am looking into a permanent solution for this problem. If you encounter this error, please [get in touch](../support.md) and let me know!
+
 </div>
