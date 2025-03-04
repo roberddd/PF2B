@@ -33,11 +33,16 @@
         For updates, simply download the updated add-on manually from the store where you purchased it, uninstall the old version and reinstall the new using the same steps outlined in the instructions above.
 
 === "PlantFactory & Libraries"
+    Since the addon relies on the PlantFactory application for importing plants, it must be installed. Additionally, there are free plant libraries that can be installed. While these libraries are optional, they provide a significant portion of the available functionality, and skipping them may limit your experience.
+
     Follow these steps to install PlantFactory and the necessary libraries:
 
     1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/) and follow the on-screen instructions to complete the installation.
     2. The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
     3. For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq).
+
+
+After installing everything above, make sure to **read the sections below**, as they contain important information about required cache files for the addon.
 
 
 
