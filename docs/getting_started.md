@@ -88,10 +88,8 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 
 - To ensure a smoother workflow, it’s **recommended** to disable the "**Welcome**" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "Don’t show again" in the bottom-left corner.
 
-
+<!--
 - For a slight speed boost during imports, you can set the **Mesh Preview** option in PlantFactory to **Draft Only**, as shown in the screenshot below.
 
     ![Addon Location](images/pf_mesh-preview.webp){ .img-box }
-
-
-
+ -->

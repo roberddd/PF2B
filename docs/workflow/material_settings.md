@@ -2,20 +2,25 @@
 
 These settings allows you to configure the default settings that are used when importing the plants. Just click on any of the tabs to maximize them to see the settings as seen below.
 
-
-
 <div style="clear:both"></div>
 
+
+
 ### Settings
+
+The materials are categorized into `Leaf`, `Stalk`, `Flower`, `Fruit`, and `Bark`. Any materials that do not fit these categories will receive a generic shader, which can be adjusted later in the [Post Processing](post_processing.md) panel.
 
 === "Leaf"
     ![Material Settings](../images/material-settings_leaf.webp){ .img-box align=left }
 
-    - **Translucency**
+    - **Translucency**: Controls how much light passes through, affecting its brightness and realism when backlit.
     - **Hue**
     - **Saturation**
     - **Brightness**
     - **Color Variation Random Per Leaf**: Applies subtle hue variations to each leaf using random colors per geometry island, enhancing natural diversity.
+
+    <div style="clear:both"></div>
+
     - **Normal Strength:** This controls the Normal or Bump Strength. If no Normal is present, it uses Bump. If no Bump is present, it derives Bump from the Color texture.
     - **Wetness**: The Wetness parameter simulates the effect of moisture on the leaf surface by reducing roughness. As wetness increases, the leaf's surface becomes smoother and glossier, mimicking the appearance of a wet leaf.
     - **Wetness affected by Normal**: Determines whether the wetness effect is influenced by the surface orientation. When enabled, the shader adjusts the roughness based on the surface's normal, applying the effect primarily to top-facing surfaces (along the positive Z-axis). When disabled, the wetness effect is applied uniformly across all surfaces regardless of their orientation.
@@ -24,13 +29,16 @@ These settings allows you to configure the default settings that are used when i
 === "Stalk"
     ![Material Settings](../images/material-settings_stalk.webp){ .img-box align=left }
 
-    - **Translucency**
+    - **Translucency**: Controls how much light passes through, affecting its brightness and realism when backlit.
     - **Subsurface Weight**
     - **Subsurface Scale**
     - **Hue**
     - **Saturation**
     - **Brightness**
     - **Normal Strength:** This controls the Normal or Bump Strength. If no Normal is present, it uses Bump. If no Bump is present, it derives Bump from the Color texture.
+
+    <div style="clear:both"></div>
+
     - **Wetness**: The Wetness parameter simulates the effect of moisture on the stalk surface by reducing roughness. As wetness increases, the stalk's surface becomes smoother and glossier.
     - Wetness affected by Normal
     - **Roughness from Color**: Generates a Roughness map from the Color texture, breaking uniform roughness. Since most PlantFactory assets do not include dedicated Roughness maps and have a static value set, this feature provides an effective solution.
@@ -38,11 +46,14 @@ These settings allows you to configure the default settings that are used when i
 === "Flower"
     ![Material Settings](../images/material-settings_flower.webp){ .img-box align=left }
 
-    - **Translucency**
+    - **Translucency**: Controls how much light passes through, affecting its brightness and realism when backlit.
     - **Hue**
     - **Saturation**
     - **Brightness**
     - **Color Variation Random Per Flower**: Applies subtle hue variations to each flower using random colors per geometry island, enhancing natural diversity.
+
+    <div style="clear:both"></div>
+
     - Normal Strength
     - **Wetness**: The Wetness parameter simulates the effect of moisture on the stalk surface by reducing roughness. As wetness increases, the stalk's surface becomes smoother and glossier.
     - Wetness affected by Normal
@@ -51,13 +62,16 @@ These settings allows you to configure the default settings that are used when i
 === "Fruit"
     ![Material Settings](../images/material-settings_fruit.webp){ .img-box align=left }
 
-    - **Translucency**
+    - **Translucency**: Controls how much light passes through, affecting its brightness and realism when backlit.
     - **Subsurface Weight**
     - **Subsurface Scale**
     - **Hue**
     - **Saturation**
     - **Brightness**
     - **Color Variation Random Per Fruit**: Applies subtle hue variations to each fruit using random colors per geometry island, enhancing natural diversity.
+
+    <div style="clear:both"></div>
+
     - **Normal Strength:** This controls the Normal or Bump Strength. If no Normal is present, it uses Bump. If no Bump is present, it derives Bump from the Color texture.
     - **Wetness**: The Wetness parameter simulates the effect of moisture on the flower surface by reducing roughness. As wetness increases, the flower's surface becomes smoother and glossier. This wetness effect is applied on top of any other roughness adjustments made to the material.
     - Wetness affected by Normal
@@ -70,6 +84,9 @@ These settings allows you to configure the default settings that are used when i
     - **Saturation**
     - **Brightness**
     - **Normal Strength**: This controls the Normal Strength. If no Normal is present, it uses Bump. If no Bump is present, it derives Bump from the Color texture.
+
+    <div style="clear:both"></div>
+
     - **No Normal: Bump Strength**: This controls the Bump Strength if no Normal map is present.
     - **Roughness from Color**: Generates a Roughness map from the Color texture, breaking uniform roughness. Since most PlantFactory assets do not include dedicated Roughness maps and have a static value set, this feature provides an effective solution.
 
@@ -80,6 +97,9 @@ These settings allows you to configure the default settings that are used when i
 
     - **Color Variation By Location**: Introduces subtle hue variations based on plant location to reduce uniformity and enhance realism when multiple plants of the same species are nearby.
     - **Import Translucency Map**: Uses the translucency texture (if found) instead of a static translucency value. If you want more control over translucency, you can disable this option and adjust the static value slider instead. Note: If the output looks odd, see [The translucency for my plant looks off](../support/faq.md#the-translucency-looks-off) in the FAQ.
+
+    <div style="clear:both"></div>
+
     - **Use 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
     - **Handle Vertex Colors**: Automatically adds a 'Color Attribute' node to the materials of plants with a 'Vertex Color Set' setup in PlantFactory.
 
