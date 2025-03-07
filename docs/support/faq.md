@@ -23,7 +23,7 @@
 :   ![Addon Location](../images/pf_display-preview.webp){ .img-box align=right  }
 :   Check that the **"Preview"** window under **"Display"** in PlantFactory is enabled, as shown in the screenshot here:
 
-<div style="clear:both"></div>
+    <div style="clear:both"></div>
 
 
 ---
@@ -33,7 +33,7 @@
 
 :    ![Preferences - Misc](../images/abort-export-popup.webp){ .img-box align=right }
 :   This is usually caused by PlantFactory not having enough time to load the geometry of the plant before the export is attempted. Try adjusting the [Geometry Load Buffer](../preferences/misc.md#import) under preferences to resolve this issue. As an alternative workaround, in cases where this persists, hold down the "Escape" key for 2-3 seconds to make the popup disappear.
-
+    <div style="clear:both"></div>
 
 ---
 
@@ -134,5 +134,27 @@
      or similar error in the console when installing the addon:
 
     This issue occurs due to conflicts between multiple addons that use the [PILLOW](https://pypi.org/project/pillow/) Python library. Some addon combinations seem to cause import issues or circular dependencies with PIL. From my testing, this issue often disappears when you **disable and then re-enable** the affected addons. For example, in the above case where the "PidgeonToolBag" addon is clashing, try disabling and re-enabling **both PF2B and PidgeonToolBag**, which should hopefully resolve the issue. <br>I am looking into a permanent solution for this problem. If you encounter this error, please [get in touch](../support.md) and let me know!
+
+
+---
+
+
+### There are missing plants / empty thumbnails shown when browsing plants
+
+:   Please run both the `Re-Index Plants` and `Reload Thumbnails` tools found in [Preferences > Misc](../preferences/misc.md#plants-thumbnails).
+
+
+---
+
+
+### Why does my my plants show 'No Presets'?
+
+:   This issue is likely caused by a missing or incomplete Preset cache.
+
+    - If this occurs with plants from the PlantCatalog & PlantFactory libraries, you can download and install the cache as described [here](../getting_started.md#first-time-use--importing-cache).
+    - If this affects other plants, you can regenerate the cache using the tools available in [Preferences > Plant Library](../preferences/plant_library.md#library-cache).
+
+    **Note:** Not all plants in the *'PlantFactory library'* have presets available.
+
 
 </div>
