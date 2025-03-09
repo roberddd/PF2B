@@ -8,7 +8,7 @@
     - Always
     - Never
 - **Plant Thumbnail Size**: Adjust the size of the plant & preset thumbnails in the main Panel. This does not affect the thumbnail size in the Gallery view as it has its own setting directly available when browsing.
-- **Use Preset Thumbnails**: Enable to display presets with thumbnails. If thumbnail browsing impacts performance, disable this option to show presets as a simple list.
+- **Use Preset Thumbnails**: Enable to display presets with thumbnails. Disable this option to show presets as a simple list.
 
 ## PlantFactory Location
 
