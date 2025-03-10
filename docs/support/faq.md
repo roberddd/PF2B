@@ -124,7 +124,7 @@
 ---
 
 
-### PIL error in console
+<!-- ### PIL error in console
 
 :   If you receive errors such as:
 
@@ -136,7 +136,7 @@
     This issue occurs due to conflicts between multiple addons that use the [PILLOW](https://pypi.org/project/pillow/) Python library. Some addon combinations seem to cause import issues or circular dependencies with PIL. From my testing, this issue often disappears when you **disable and then re-enable** the affected addons. For example, in the above case where the "PidgeonToolBag" addon is clashing, try disabling and re-enabling **both PF2B and PidgeonToolBag**, which should hopefully resolve the issue. <br>I am looking into a permanent solution for this problem. If you encounter this error, please [get in touch](../support.md) and let me know!
 
 
----
+--- -->
 
 
 ### There are missing plants / empty thumbnails shown when browsing plants
@@ -151,7 +151,7 @@
 
 :   This issue is likely caused by a missing or incomplete Preset cache.
 
-    - If this occurs with plants from the PlantCatalog & PlantFactory libraries, you can download and install the cache as described [here](../getting_started.md#first-time-use--importing-cache).
+    - If this occurs with plants from the PlantCatalog & PlantFactory libraries, you can download and install the cache as described [here](../getting_started.md#first-time-use-importing-cache).
     - If this affects other plants, you can regenerate the cache using the tools available in [Preferences > Plant Library](../preferences/plant_library.md#library-cache).
 
     **Note:** Not all plants in the *'PlantFactory library'* have presets available.

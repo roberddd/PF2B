@@ -101,19 +101,26 @@ The materials are categorized into `Leaf`, `Stalk`, `Flower`, `Fruit`, and `Bark
     <div style="clear:both"></div>
 
     - **Use 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
-    - **Handle Vertex Colors**: Automatically adds a 'Color Attribute' node to the materials of plants with a 'Vertex Color Set' setup in PlantFactory.
+    - **Handle Vertex Colors**: When enabled, this checks for any 'Vertex Colors' and adds a 'Color Attribute' node to the identified materials.
 
         !!! abstract inline end "Example"
             ![Vertex Color example](../images/vertex-colors_example.webp){ .img-box .on-glb data-description="Example vertex color node setup" }
         - **Add Vertex Color Node Groups**: Adds node groups to assist with color randomization based on Vertex Colors.
         - **Smart Vertex Identification**: Enable smarter vertex color identification by detecting meaningful (non-uniform) vertex colors. When disabled, a simpler algorithm checks for any use of vertex colors, which may include single-color meshes.
 
+        !!! warning "Vertex Colors"
+            Note that none of the plants in the PlantCatalog and PlantFactory libraries have vertex colors applied by default. If you're only using plants from these libraries, you can leave these settings disabled. However, you can enable vertex colors on a per-plant basis by using the [Browse via PlantFactory](../workflow/browse_via_plantfactory.md) mode.
+
+            If you're using custom plants, these settings may be useful to customize the appearance of your assets.
+
+            For more details, see the [example usage](#vertex-colors) below on how to use these features.
+
 
 !!! info2  "Tips"
     - You can reset the settings to default by clicking on :blender_icon_recover_last: in the top right corner.
     -  Remember that you can always edit these settings for the plants after import by going to the [Post Processing](post_processing.md) panel.
 
-!!! info2 "Note"
+!!! info2 "Note on Roughness"
     As you might have noticed, the roughness slider is not available here. This is because the value is imported from PlantFactory and should not be set manually during import. However, you can modify it after import via the [Post Processing](post_processing.md) panel if needed.
 
     Keep in mind that this static roughness value will be overridden if a roughness texture is used or if the "Roughness from Color" option is enabled.
@@ -318,12 +325,27 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
 </div><!-- /compact class -->
 
 
-### Vertex Color Node Groups
+### Vertex Colors
 
 !!! info2 ""
-    Adds node groups to assist with color randomization based on Vertex Colors.
+    Vertex colors can be used to create various color variations on a plant, allowing for more detailed control over its appearance, such as adding gradients or simulating natural color transitions across different parts of the plant.
 
-Below is a simple example of a "Plant" with vertex colors applied. You can download the file [here](../examples/Vertex-color-example_Linear-value-0-to-1-from-bottom-to-top.tpfp) (629KB) to test it yourself. This example demonstrates a linear gradient from 1 to 0, moving from bottom to top.
+!!! warning ""
+    Note that none of the plants in the PlantCatalog & PlantFactory libraries use/have vertex colors applied by default. However, you can enable vertex colors on a per-plant basis by using the [Browse via PlantFactory](../workflow/browse_via_plantfactory.md) mode.
+
+
+Here is a video from Bentley that demonstrates how to set up Vertex Colors:
+<div class="youtube-wrapper">
+    <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/watch?v=JhcHUNDKzdE?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<br>
+<h5>Add Vertex Color Node Groups</h5>
+
+If you want to use the `Add Vertex Color Node Groups` option to add some color variations, which adds node groups to assist with color randomization based on Vertex Colors, see this simple example:
+
+This example demonstrates a linear gradient from 1 to 0, moving from bottom to top. You can download the file [here](../examples/Vertex-color-example_Linear-value-0-to-1-from-bottom-to-top.tpfp) (629KB) to test it yourself.
 
 ![Vertex Color example](../images/vertex-colors_example-pf-scene.webp){ .img-box .on-glb data-description="Scene inside PlantFactory." width=50%  }
 

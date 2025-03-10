@@ -34,8 +34,6 @@ Total number of unique plants by category:
 - **FG**: Full Geometry (12 plants)
 
 
-<!-- #### Detailed Catalog { style="margin-bottom:-0.75em"} -->
-
 ??? plant "Full Catalog"
     Each plant listing shows available detail levels in brackets [HD, LD, RT, FG].
 
@@ -85,7 +83,6 @@ Total number of unique plants by category:
         - Salix babylonica **[HD, LD]** *[129 presets]*
         - Salix babylonica pollarded **[HD, LD]** *[63 presets]*
         - Vachellia tortilis **[HD, LD]** *[15 presets]*
-
 
     === "Bushes"
         1. Brugmansia x insignis **[HD, LD]** *[5 presets]*
