@@ -336,7 +336,7 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
 
 Here is a video from Bentley that demonstrates how to set up Vertex Colors:
 <div class="youtube-wrapper">
-    <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/watch?v=JhcHUNDKzdE?rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/JhcHUNDKzdE?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
