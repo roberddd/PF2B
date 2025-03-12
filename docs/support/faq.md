@@ -2,6 +2,17 @@
 
 <div class="faq" markdown>
 
+
+### What is the PF2B cache?
+
+:   The PF2B cache consists of thumbnails and JSON files that store information about the plants and presets, such as plant height, polygon count, and other details. This cache is used to display the plants and presets inside the gallery, allowing you to browse them easily within the addon.
+
+    For more details on setting up the cache, see the [First Time Use & Importing Cache](../getting_started.md#first-time-use-importing-cache) section. Additional details can be found in the [Preferences](../preferences/plant_library.md#library-cache) page.
+
+
+---
+
+
 ### Why is my Plant Gallery View so small when using the "Browse Via Blender" mode?
 
 :   Check that your `3D View` is large enough, as the gallery size depends on it. If you have the view split (for example, with the `Shader Editor`), it may cause the gallery to appear smaller.
