@@ -186,8 +186,7 @@ Lets check the plant inside PlantFactory to see how what the textures are sbeing
     !!! info2 "Verdict"
         In this case it looks like everything is connected correctly so we don't need to do anything.
 
-        - Notes:
-            - As you might have noticed the '**color texture**' is only connected to the '**frontface color**' socket and not the '**backface color**' = This is not an issue as the PF2B shaders has logic to handle this and uses the front-color for the back texture if nothing is connected to the backface color. See more details about the shader logic [here](../workflow/material_settings.md#shaders).
+        **Notes**:<br>As you might have noticed the '**color texture**' is only connected to the '**frontface color**' socket and not the '**backface color**' = This is not an issue as the PF2B shaders has logic to handle this and uses the front-color for the back texture if nothing is connected to the backface color. See more details about the shader logic [here](../workflow/material_settings.md#shaders).
 
 
       **if** there are any missing textures here in your case you can also follow the next step [Check Exported textures](#check-exported-textures) to try to locate these.

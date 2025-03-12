@@ -73,7 +73,7 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 1. Download the cache files provided alongside the addon from the store where you purchased it.
 - Inside Blender, navigate to the addon preferences by clicking the :blender_icon_preferences: icon in the PF2B panel. Alternatively, go to `Edit > Preferences`, find PF2B under the Add-ons tab.
 - In the `Plant Library` tab, click the "**Import Cache**" button.
-- Locate and select the downloaded cache file, which should be named `PF2B Cache Base.pf2b` or something similar.
+- Locate and select the downloaded cache file, which should be named `PF2B Cache - Complete Base.pf2b`.
 - Once the import is complete, click the 'Verify' button on all caches to ensure everything is properly cached.
 - Now you're ready to start using the addon!
 

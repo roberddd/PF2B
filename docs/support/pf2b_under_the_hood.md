@@ -53,7 +53,7 @@ The **Plant Fixes System** is an automated compatibility layer designed to corre
 - Uses a **database of known issues** to fix **material, texture, or geometry problems**. To view the database, check the '[Plant Fixes](../preferences/misc.md#plant-fixes)' section in the preferences.
 - Adjustments include:
     - Connecting, disconnecting, or remapping textures to the correct material sockets.
-    - Modifying material socket values (e.g., adjusting roughness strength, tweaking specular intensity, fine-tuning normal map influence).
+    - Modifying material socket values.
     - Adjusting geometry, such as scaling or applying transformations, to ensure correct proportions.
     - Applying other custom fixes as needed based on plant-specific issues.
 
