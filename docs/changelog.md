@@ -11,7 +11,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
-### 1.0.0 <small>2025-03-xx</small>
+### 1.0.0 <small>2025-03-12</small>
 
   > Compatibility: Blender 4.2 LTS, 4.3, 4.4
 

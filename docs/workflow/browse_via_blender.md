@@ -16,7 +16,7 @@
     - **LD Only**: Show low detail only.
     - **RT Only**: Show real-time detail only.
 - **Plant Browser**:
-    <br>Above the thumbnail, the plant name is displayed (`Adansonia digita HD`), and below it, the preset name appears (`Standard (0)`).
+    <br>Above the thumbnail, the plant name is displayed (`Ficus carica HD`) along with its English name (`Common Fig Tree`), and below it, the preset name (`Standard (0)`).
     - :blender_icon_snap_vertex:: Opens the plant gallery, see [gallery view](#gallery-view) below.
     - :blender_icon_preset:: Opens the preset gallery, see [gallery view](#gallery-view) below.
     - :octicons-triangle-left-24:: Navigates to the previous plant or preset.
@@ -77,6 +77,8 @@ Below is a breakdown of every button and function inside the gallery.
 At the top, you'll find the same library and filtering section as in the main panel, along with these additional settings:
 
 - **Size**: Adjusts the thumbnail size of the plants and presets in the gallery.
+    - Example of zoom set to a lower number:<br>
+        ![Preset Gallery](../images/gallery_plants_zoomed.webp){ .img-box .on-glb  width=35% }
 - **Search**: Lets you perform a free-text search to filter items.
 
 <br>

@@ -25,13 +25,26 @@ hide:
 <div class="feature-list" markdown>
 
 - **Procedural variety** – Access over **200 plant species** and more than **10,000 unique presets** with infinite procedural variations.
-- **Optimized for performance** – Choose between **low-poly** and **high-poly** plant versions based on your project’s needs.
+- **Optimized for performance** – Choose between **low-poly** and **high-poly** plant versions based on your project's needs.
 - **Instant setup** – No need to manually assign materials or textures.
 - **No additional cost for PlantFactory** – [PlantFactory](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } is now freely available as a **perpetual version**, so you can generate and use plants freely.
 
 </div>
 
 Bring the power of **PlantFactory** to **Blender** with **PF2B** and take your vegetation workflow to the next level! 🌿
+
+
+
+<div class="section-box accent-red" markdown>
+
+# Limited Time Offer: Save 40%!
+
+<span style="font-size:1.25em">
+For a limited time, you can get **PF2B** at a special introductory price of just **$8**, a significant discount off the regular price of **$14**! This offer is valid until **April 12th**, after which the price will increase. Don't miss out, secure your copy today and take your Blender scenes to the next level with realistic plants!
+</span>
+
+</div> <!-- section end -->
+
 
 
 <div class="section-box" markdown>
