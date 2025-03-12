@@ -18,7 +18,7 @@ You can buy PF2B in the following stores:
 
 [:simple-gumroad:{ .gumroad } Gumroad](https://roberd.gumroad.com/l/PF2B){ .md-button .md-button--stretch }
 
-[:blender_market: BlenderMarket](https://blendermarket.com/creators/roberd){ .md-button .md-button--stretch }
+[:blender_market: BlenderMarket](https://blendermarket.com/products/pf2b){ .md-button .md-button--stretch }
 
 </div>
 
