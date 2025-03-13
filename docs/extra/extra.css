@@ -194,6 +194,13 @@ h3 small { /* Date */
   letter-spacing: 0.02em;
   font-style: normal;
 }
+.library .plant strong em,
+.library .plant em strong { /* Target the presets in bold & italic */
+  color: var(--main-accent-color-green);
+  margin-left: 0em;
+  font-weight: normal;
+  font-style: normal;
+}
 .library table {
   width: 100%;
   border-collapse: collapse;
@@ -206,6 +213,7 @@ h3 small { /* Date */
   margin-bottom:0;
 }
 /* ######## </ LIBRARY > ######## */
+
 
 .gslide-desc{  /* Glightbox description */
   text-align: center;
