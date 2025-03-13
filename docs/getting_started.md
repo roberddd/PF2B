@@ -77,6 +77,9 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 - Once the import is complete, click the 'Verify' button on all caches to ensure everything is properly cached.
 - Now you're ready to start using the addon!
 
+
+*For more details about the cache, see [What is the PF2B cache?](support/faq.md#what-is-the-pf2b-cache).*
+
 <div style="clear:both"></div>
 
 

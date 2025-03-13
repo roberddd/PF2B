@@ -5,9 +5,11 @@
 
 ### What is the PF2B cache?
 
-:   The PF2B cache consists of thumbnails and JSON files that store information about the plants and presets, such as plant height, polygon count, and other details. This cache is used to display the plants and presets inside the gallery, allowing you to browse them easily within the addon.
+:   The PF2B cache consists of thumbnails and JSON files that store information about the plants and presets, such as plant height, polygon count, and other details. It is used to display the plants and presets inside the gallery, allowing you to browse them easily within the addon.
 
-    For more details on setting up the cache, see the [First Time Use & Importing Cache](../getting_started.md#first-time-use-importing-cache) section. Additional details can be found in the [Preferences](../preferences/plant_library.md#library-cache) page.
+    The cache that is shipped with PF2B includes a total of **23,678 thumbnails** (491 plant thumbnails and 23,187 preset thumbnails) and is approximately **309 MB** in size. It covers all plants and presets from both the **PlantCatalog** and **PlantFactory** libraries.
+
+    For more details on setting up the cache, see the [First Time Use & Importing Cache](../getting_started.md#first-time-use-importing-cache) section. Additional configuration options can be found in the [Preferences](../preferences/plant_library.md#library-cache) page.
 
 
 ---
