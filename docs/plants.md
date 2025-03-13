@@ -5,7 +5,7 @@ Both libraries below are free to download. For installation instructions, see [t
 
 ## PlantCatalog Library
 
-The **PlantCatalog** library includes **194** unique plant species across **11** categories, with a total of **10,377** presets. When factoring in multiple detail levels, this expands to **450** plants and **23,193** presets.
+The **PlantCatalog** library includes **194** unique plant species across **11** categories, with a total of **10,377** unique presets. When factoring in multiple detail levels, this expands to **450** plants and **23,193** presets.
 
 
 <!-- #### Overview { style="margin-bottom:-0.75em"} -->
