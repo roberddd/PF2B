@@ -11,6 +11,17 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.0.2 <small>2025-03-17</small>
+
+- **Interface**:
+    - Miscellaneous minor interface tweaks.
+- **Bugfixes**:
+    - The `Open` button in the "Post Processing > Plant Details" now works with plants without presets.
+- **Other**
+    - The Python library **psutil** bundled with the addon did not load properly on some systems due to Blender incorrectly interpreting the Python version number for this package. The version has now been renamed to reflect that it is intended for Python 3.11, as used in Blender.
+
+---
+
 ### 1.0.1 <small>2025-03-16</small>
 
 - **Interface**:
