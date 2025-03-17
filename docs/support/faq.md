@@ -15,6 +15,16 @@
 ---
 
 
+### Can I use the plants commercially?
+
+:   Yes, you can use the plants commercially, including in games, client work, and project files. However, while you can modify and resell assets created from scratch in PlantFactory, you cannot resell models derived from PlantCatalog content. For the exact terms and the most up-to-date details, please check the [official PlantFactory FAQ](https://www.bentley.com/software/e-on-software-free-downloads/#faq).
+
+    All plants exported with PF2B use custom shaders, which you are free to use in your projects, but you may not sell the shaders themselves.
+
+
+---
+
+
 ### Why is my Plant Gallery View so small when using the "Browse Via Blender" mode?
 
 :   Check that your `3D View` is large enough, as the gallery size depends on it. If you have the view split (for example, with the `Shader Editor`), it may cause the gallery to appear smaller.
