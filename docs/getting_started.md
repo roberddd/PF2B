@@ -37,9 +37,9 @@
 
     Follow these steps to install PlantFactory and the necessary libraries:
 
-    1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/) and follow the on-screen instructions to complete the installation.
+    1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } and follow the on-screen instructions to complete the installation.
     2. The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
-    3. For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq).
+    3. For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
 
 
 After installing everything above, make sure to **read the sections below**, as they contain important information about required cache files for the addon.
