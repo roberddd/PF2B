@@ -61,6 +61,10 @@ h5 {
 }
 /* ######## </ SHOP BUTTONS > ######## */
 
+.md-typeset .md-button--social {
+  width: 15em;
+  text-align: center;
+}
 
 /* ######## < GRID > ######## */
 /* Light mode */

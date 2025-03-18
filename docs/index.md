@@ -22,6 +22,14 @@ You can buy PF2B in the following stores:
 
 </div>
 
+
+
+
+## Inspire and Get Inspired
+
+If you create any awesome artwork with PF2B plants, I’d love to see it! 🌿 Tag your work with **#pf2b** on social media or feel free to share it with me directly, it’s always inspiring to see what you create!
+
+
 <br>
 
 *PF2B is a third-party addon and is not an official product of Bentley Systems, E-on Software, or PlantFactory. It is not affiliated with or endorsed by these companies.*{style="color:var(--md-default-fg-color--light)"}
