@@ -29,6 +29,22 @@ tags:
 ---
 
 
+### What operating systems does PF2B support?
+
+:   PF2B is only supported on **Windows**. It requires the Windows version of PlantFactory and is not compatible with macOS or Linux.
+
+
+---
+
+
+### Which versions of PlantFactory are supported?
+
+:   PF2B only supports **PlantFactory 2024**. Older versions are not compatible with the add-on.
+
+
+---
+
+
 ### Why is my Plant Gallery View so small when using the "Browse Via Blender" mode?
 
 :   Check that your `3D View` is large enough, as the gallery size depends on it. If you have the view split (for example, with the `Shader Editor`), it may cause the gallery to appear smaller.
