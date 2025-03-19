@@ -3,7 +3,7 @@
 
 ## Version Check
 
-- **Check for Latest Version**: Checks if a newer version of the add-on is available. If a newer version is found, a download link to the latest version on BlenderMarket and Gumroad is provided. ![Preferences - General](../images/check-version_example.webp){ .img-box }
+- **Check Version Status**: Checks if a newer version of the add-on is available. If a newer version is found, a download link to the latest version on BlenderMarket and Gumroad is provided. ![Preferences - General](../images/check-version_example.webp){ .img-box }
 !!! info2 ""
     Note: PF2B does not download or install updates automatically and requires "**Allow Online Access**" to be enabled under `Edit > Preferences > System > Network`.
 

@@ -1,3 +1,7 @@
+---
+tags:
+  - Support
+---
 ## Requirements
 
 - Blender 4.2 or newer

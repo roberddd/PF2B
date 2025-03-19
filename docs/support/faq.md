@@ -1,3 +1,7 @@
+---
+tags:
+  - Support
+---
 # Frequently Asked Questions
 
 <div class="faq" markdown>
