@@ -3,6 +3,7 @@ tags:
   - Release history
 hide:
   - toc
+# NOTE TO SELF: Remember to update version in version.json
 ---
 Here, you can find a list of all updates, enhancements, and bug fixes made to PF2B over time. Date Format: YYYY-MM-DD.
 
@@ -10,6 +11,15 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 ### Versions
 
 <div class="changelog" markdown>
+
+### 1.0.3 <small>2025-03-19</small>
+
+- **New Functionality**
+    - Added a `Check for Latest Version` button in the preferences to check for available updates. If a newer version is found, a download link to the latest version on BlenderMarket and Gumroad will be provided. [More info](preferences/general.md#version-check)
+- **Interface**
+    - Improved error reporting in the interface. Now also displays error messages if the operating system is not supported or if the wrong PlantFactory version is installed.
+
+---
 
 ### 1.0.2 <small>2025-03-17</small>
 
