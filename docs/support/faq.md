@@ -7,18 +7,6 @@ tags:
 <div class="faq" markdown>
 
 
-### What is the PF2B cache?
-
-:   The PF2B cache consists of thumbnails and JSON files that store information about the plants and presets, such as plant height, polygon count, and other details. It is used to display the plants and presets inside the gallery, allowing you to browse them easily within the addon.
-
-    The cache that is shipped with PF2B includes a total of **23,678 thumbnails** (491 plant thumbnails and 23,187 preset thumbnails) and is approximately **309 MB** in size. It covers all plants and presets from both the **PlantCatalog** and **PlantFactory** libraries.
-
-    For more details on setting up the cache, see the [First Time Use & Importing Cache](../getting_started.md#first-time-use-importing-cache) section. Additional configuration options can be found in the [Preferences](../preferences/plant_library.md#library-cache) page.
-
-
----
-
-
 ### Can I use the plants commercially?
 
 :   Yes, you can use the plants commercially, including in games, client work, and project files. However, while you can modify and resell assets created from scratch in PlantFactory, you cannot resell models derived from PlantCatalog content. For the exact terms and the most up-to-date details, please check the [official PlantFactory FAQ](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
@@ -40,6 +28,18 @@ tags:
 ### Which versions of PlantFactory are supported?
 
 :   PF2B only supports **PlantFactory 2024**. Older versions are not compatible with the add-on.
+
+
+---
+
+
+### What is the PF2B cache?
+
+:   The PF2B cache consists of thumbnails and JSON files that store information about the plants and presets, such as plant height, polygon count, and other details. It is used to display the plants and presets inside the gallery, allowing you to browse them easily within the addon.
+
+    The cache that is shipped with PF2B includes a total of **23,678 thumbnails** (491 plant thumbnails and 23,187 preset thumbnails) and is approximately **309 MB** in size. It covers all plants and presets from both the **PlantCatalog** and **PlantFactory** libraries.
+
+    For more details on setting up the cache, see the [First Time Use & Importing Cache](../getting_started.md#first-time-use-importing-cache) section. Additional configuration options can be found in the [Preferences](../preferences/plant_library.md#library-cache) page.
 
 
 ---
