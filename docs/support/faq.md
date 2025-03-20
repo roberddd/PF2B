@@ -7,6 +7,13 @@ tags:
 <div class="faq" markdown>
 
 
+### What is PlantFactory?
+:   PlantFactory is a powerful 3D vegetation modeling software originally developed by e-on software (now part of Bentley Systems). It allows users to create highly detailed, procedural plant models using an intuitive node-based workflow. The software also includes a vast library of pre-made plants, offering a wide range of species with adjustable parameters for easy customization. Read more about it [here](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" }.
+
+
+---
+
+
 ### Can I use the plants commercially?
 
 :   Yes, you can use the plants commercially, including in games, client work, and project files. However, while you can modify and resell assets created from scratch in PlantFactory, you cannot resell models derived from PlantCatalog content. For the exact terms and the most up-to-date details, please check the [official PlantFactory FAQ](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
