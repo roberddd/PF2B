@@ -12,6 +12,13 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+<!-- ### 1.0.4 <small>2025-03-xx</small>
+
+- **Improved Functionality**
+    - The info button, available when browsing plants in the Gallery View or using the queue function, now shows if plant fixes are available and includes a button to display the specific fixes applied to the plant.
+
+--- -->
+
 ### 1.0.3 <small>2025-03-19</small>
 
 - **New Functionality**

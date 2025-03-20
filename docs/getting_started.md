@@ -28,10 +28,10 @@ tags:
 
     1. Download the PF2B add-on zip file from the store you purchased it from.
     ![Addon Location](images/addon-install.webp){ .img-box .on-glb align=right width=31% }
-    2. Open Blender and go to `Edit > Preferences`.
-    3. In the Preferences window, navigate to the `Add-ons` tab.
-    4. Locate the `Add-ons Settings` (:octicons-chevron-down-12: icon) in the top right corner.
-    5. Click on `Install from Disk` and select the downloaded PF2B zip file.
+    - Open Blender and go to `Edit > Preferences`.
+    - In the Preferences window, navigate to the `Add-ons` tab.
+    - Locate the `Add-ons Settings` (:octicons-chevron-down-12: icon) in the top right corner.
+    - Click on `Install from Disk` and select the downloaded PF2B zip file.
 
     !!! info2 "Updates"
         For updates, simply download the updated add-on manually from the store where you purchased it, uninstall the old version and reinstall the new using the same steps outlined in the instructions above.
@@ -42,9 +42,14 @@ tags:
     Follow these steps to install PlantFactory and the necessary libraries:
 
     1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } and follow the on-screen instructions to complete the installation.
-    2. The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
-    3. For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
+    - The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
+    - For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
 
+    !!! warning ""
+        If you install PlantFactory or the libraries in a **non-default location**, you need to adjust the paths in the preferences:
+
+        - `Preferences > General > PlantFactory Location` – Set the path to the PlantFactory application.
+        - `Preferences > Plant Library > Libraries` – Set the path to the root folder containing both the PlantCatalog and PlantFactory libraries.
 
 After installing everything above, make sure to **read the sections below**, as they contain important information about required cache files for the addon.
 
