@@ -398,4 +398,4 @@ The shader nodes has logic built in to handle various different scenarios with v
 
 Each shader features multiple outputs designed to help you efficiently build and preview your materials. At the top of each shader, you'll find dedicated outputs for Color, Roughness, and Normals, allowing you to view each channel separately.
 !!! info2 ""
-    Preview these channels by holding **Shift + Ctrl** and left-clicking on the desired output. Note that this functionality requires the built-in '[Node Wrangler](https://docs.blender.org/manual/en/latest/addons/node/node_wrangler.html)' addon to be enabled.
+    Preview these channels by holding **Shift + Ctrl** and left-clicking on the shader to switch between the outputs. Note that this functionality requires the built-in '[Node Wrangler](https://docs.blender.org/manual/en/latest/addons/node/node_wrangler.html)' addon to be enabled.
