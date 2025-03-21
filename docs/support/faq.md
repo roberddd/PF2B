@@ -175,21 +175,6 @@ tags:
 ---
 
 
-<!-- ### PIL error in console
-
-:   If you receive errors such as:
-
-    - `cannot import name '_imaging' from 'PIL' (C:\Users\USERNAME\AppData\Roaming\Blender Foundation\Blender\4.3\scripts\addons\PidgeonToolBag-main\python_modules\PIL\__init__.py)`
-    - `ImportError: cannot import name '_version' from partially initialized module 'PIL'`
-
-     or similar error in the console when installing the addon:
-
-    This issue occurs due to conflicts between multiple addons that use the [PILLOW](https://pypi.org/project/pillow/) Python library. Some addon combinations seem to cause import issues or circular dependencies with PIL. From my testing, this issue often disappears when you **disable and then re-enable** the affected addons. For example, in the above case where the "PidgeonToolBag" addon is clashing, try disabling and re-enabling **both PF2B and PidgeonToolBag**, which should hopefully resolve the issue. <br>I am looking into a permanent solution for this problem. If you encounter this error, please [get in touch](../support.md) and let me know!
-
-
---- -->
-
-
 ### There are missing plants / empty thumbnails shown when browsing plants
 
 :   Please run both the `Re-Index Plants` and `Reload Thumbnails` tools found in [Preferences > Misc](../preferences/misc.md#plants-thumbnails).
@@ -206,6 +191,18 @@ tags:
     - If this affects other plants, you can regenerate the cache using the tools available in [Preferences > Plant Library](../preferences/plant_library.md#library-cache).
 
     **Note:** Not all plants in the *'PlantFactory library'* have presets available.
+
+
+---
+
+
+### I receive 'Unable to find plant' error when trying to import
+
+:   ![Error Unable to find plant](../images/troubleshooting/unable-to-find-plant.webp){ .img-box align=right }
+:   This error means PlantFactory is unable to locate the specific `.tpf` file for the plant.
+    If the missing plants are from the **PlantCatalog** library, please verify that you have installed all PlantCatalog files as described in the [Getting Started > Installation](../getting_started.md#installation-plantfactory--libraries).
+
+    If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
 
 
 </div>

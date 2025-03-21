@@ -12,6 +12,10 @@ tags:
 ## Notes Before Purchasing
 
 !!! warning ""
+    Before purchasing, please ensure you fully understand what this addon does and its requirements. This addon relies on third-party software called **PlantFactory** (approximately 1.6 GB) to function. While PlantFactory is free, setting it up requires some additional steps, which are clearly outlined in the sections below. For full functionality, it is also recommended to install the **PlantCatalog** library (approximately 20 GB), which significantly enhances the range of plants available for use but may take some time to download and install.
+
+
+!!! warning ""
     PF2B does **not** guarantee 100% compatibility with all plants. With over [23,000](plants.md) presets, it is impractical to manually test and verify each one. However, most plants should import correctly without manual intervention.
 
     If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](support.md). I will do my best to resolve them by adding plant-specific configurations to the addon.
@@ -41,7 +45,7 @@ tags:
 
     Follow these steps to install PlantFactory and the necessary libraries:
 
-    1. If you haven’t already installed PlantFactory, download it from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } and follow the on-screen instructions to complete the installation.
+    1. If you haven’t already installed PlantFactory, download it (approximately 1.6 GB in size) from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } and follow the on-screen instructions to complete the installation.
     - The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
     - For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
 

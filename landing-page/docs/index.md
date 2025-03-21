@@ -138,6 +138,10 @@ Additionally, the regular **PlantFactory** library features **41** plant species
 ## Notes Before Purchasing
 
 !!! warning ""
+    Before purchasing, please ensure you fully understand what this addon does and its requirements. This addon relies on third-party software called **PlantFactory** (approximately 1.6 GB) to function. While PlantFactory is free, setting it up requires some additional steps, which are clearly outlined in the sections below. For full functionality, it is also recommended to install the **PlantCatalog** library (approximately 20 GB), which significantly enhances the range of plants available for use but may take some time to download and install.
+
+
+!!! warning ""
     PF2B does **not** guarantee 100% compatibility with all plants. With over 23,000 presets, it is impractical to manually test and verify each one. However, most plants should import correctly without manual intervention.
 
     If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](https://pf2b.roberd.net/support/){ target="_blank" }. I will do my best to resolve them by adding plant-specific configurations to the addon.
