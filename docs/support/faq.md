@@ -205,4 +205,13 @@ tags:
     If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
 
 
+---
+
+
+### How can I hide PlantCatalog plants if I don’t want to install the full library?
+
+:   If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
+
+
+
 </div>
