@@ -99,7 +99,7 @@ Since the addon relies on the PlantFactory application for importing plants, it 
     1. Download the `PlantCatalog` Library files from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" }. The library is divided into multiple parts, requiring 19.6 GB of space. To ensure full functionality, download all **13 parts** of the library.<br>
     ![PlantCatalog Library installation](images/installation/plantcatalog_installers.webp){ .img-box width=40% }
 
-    - After downloading, you should have multiple `.zip` files. Each `.zip` contains an installer for the library.
+    - After downloading, you should have multiple `.zip` files. Each `.zip` contains an installer for the library.<br>
     ![PlantFactory installation](images/installation/plantcatalog_installer_zip.webp){ .img-box }
 
     - **Extract the contents** of each `.zip` file. Right-click on each `.zip` file and choose "Extract" (or use a third-party program like 7-Zip, if preferred).
