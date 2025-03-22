@@ -1,6 +1,6 @@
 <div class="library" markdown>
 
-Both libraries below are free to download. For installation instructions, see [this guide](getting_started.md#installation-plantfactory--libraries).
+Both libraries below are free to download. For installation instructions, see [this guide](getting_started.md#installation).
 
 
 ## PlantCatalog Library

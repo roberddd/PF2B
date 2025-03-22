@@ -4,7 +4,7 @@
 
 Here you can adjust the locations of your plant libraries. These usually don’t need to be changed if you’ve installed everything in the default location, but you can adjust them if needed. The interface will indicate if the libraries are found.
 
-- **PlantCatalog**: The location of the PlantCatalog library folder, which should contain categorized subfolders for each plant type. Within these subfolders, you should find the actual `.tpf` plant files. Read more [here](../getting_started.md#installation-plantfactory--libraries) about how to install this library.
+- **PlantCatalog**: The location of the PlantCatalog library folder, which should contain categorized subfolders for each plant type. Within these subfolders, you should find the actual `.tpf` plant files. Read more [here](../getting_started.md#installation-plantcatalog-plant-library) about how to install this library.
 - **PlantFactory**: The location of the PlantFactory library folder, which should contain multiple subfolders, including the `Species` folder that holds the actual `.tpf` plant files. This library contains the plants that ship with the PlantFactory application itself.
 - **Personal**: Enable this option if you have custom plants to include, and select the folder containing them. This folder can contain subfolders to organize the plants into categories.
 

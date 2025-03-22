@@ -200,7 +200,7 @@ tags:
 
 :   ![Error Unable to find plant](../images/troubleshooting/unable-to-find-plant.webp){ .img-box align=right }
 :   This error means PlantFactory is unable to locate the specific `.tpf` file for the plant.
-    If the missing plants are from the **PlantCatalog** library, please verify that you have installed all PlantCatalog files as described in the [Getting Started > Installation](../getting_started.md#installation-plantfactory--libraries).
+    If the missing plants are from the **PlantCatalog** library, please verify that you have installed all PlantCatalog files as described in the [Getting Started > Installation](../getting_started.md#installation-plantcatalog-plant-library).
 
     If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
 
