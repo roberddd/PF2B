@@ -208,6 +208,14 @@ tags:
 ---
 
 
+### Do I have to install the entire PlantCatalog library?
+
+:   No, installing the full library is not required. If you only plan to use the [Browse via PlantFactory](../workflow/browse_via_plantfactory.md) mode, you can skip the installation entirely. However, if you plan to use the [Browse via Blender](../workflow/browse_via_blender.md) mode, you can install only the parts of the library you need. See [How can I hide PlantCatalog plants if I don’t want to install the full library?](#how-can-i-hide-plantcatalog-plants-if-i-dont-want-to-install-the-full-library) for more details.
+
+
+---
+
+
 ### How can I hide PlantCatalog plants if I don’t want to install the full library?
 
 :   If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.

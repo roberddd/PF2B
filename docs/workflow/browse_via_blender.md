@@ -45,8 +45,9 @@ The queue system lets you add multiple plants to a queue, which you can then imp
 
 ![plant gallery top panel](../images/queue.webp){ .img-box align=left }
 
-- :octicons-info-16:: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/queue_info-popup.webp){ .img-box .on-glb align=right width=27% data-description="Info Popup"}
+- :octicons-info-16:: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/queue_info-popup.webp){ .img-box .on-glb align=right width=27% data-description="Info popup"}
     - **Open**: Open this plant in the Plant Browser.
+    - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
     - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
 - **Quantity**: The number field lets you specify how many of this plant will be imported.
 - :fontawesome-regular-trash-can:: Delete the plant from the queue.
@@ -90,6 +91,7 @@ If we look at an individual plant inside the gallery we have the following butto
 - **Presets**: Opens the presets gallery for this plant.
 - **Select**: Selects the plant and closes down the plant gallery.
 - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_plants_plant-example_popup.webp){ .img-box }
+    - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
     - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
 
 <div style="clear:both"></div>
@@ -114,6 +116,7 @@ If we look at an individual presets inside the gallery we are presented with dep
 
     - **Select**: Selects the plant and closes down the plant gallery.
     - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_presets_preset-example_popup.webp){ .img-box  }
+        - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
 
 === "With 'Queue' button"
     ![Preset example with queue button](../images/gallery_presets_preset-example-with-queue-button.webp){ .img-box align=left  }
@@ -121,3 +124,4 @@ If we look at an individual presets inside the gallery we are presented with dep
     - **Add to Queue**: Adds the preset to the queue. For more information about the queue system, please see the [Queue](#queue) section.
     - **Select**: Selects the plant and closes down the plant gallery.
     - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_presets_preset-example_popup.webp){ .img-box  }
+        - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.

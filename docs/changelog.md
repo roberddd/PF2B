@@ -12,12 +12,26 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
-<!-- ### 1.0.4 <small>2025-03-xx</small>
+### 1.0.4 <small>2025-03-22</small>
 
 - **Improved Functionality**
-    - The info button, available when browsing plants in the Gallery View or using the queue function, now shows if plant fixes are available and includes a button to display the specific fixes applied to the plant.
+    - **Improved Info Button:** The info button, available when browsing plants in the Gallery View or using the queue function, now shows if plant fixes are available and includes a button to display the specific fixes applied to the plant.
+    - **Separate Plant Library Paths**: The Plant Library paths for PlantCatalog and PlantFactory are now separated, allowing you to store them in different locations while still using them within PF2B.
+    - **Improved Cache Creation**: Creating Plant & Preset Cache now automatically triggers plant re-indexing and thumbnail reloading. Previously, only the "Verify" function triggered this. This should provide a smoother user experience by eliminating the need to manually perform these steps after caching custom plants.
+- **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Broadleaf Trees > Bauhinia blakeana HD V2`
+        - `PlantCatalog > Broadleaf Trees > Bauhinia blakeana LD V2`
+        - `PlantCatalog > Broadleaf Trees > Rhizophora forest HD`
+        - `PlantCatalog > Broadleaf Trees > Rhizophora forest LD`
+        - `PlantCatalog > Broadleaf Trees > Rhizophora lone HD`
+        - `PlantCatalog > Broadleaf Trees > Rhizophora lone LD`
+        - `PlantCatalog > Broadleaf Trees > Rhizophora seedling HD`
+        - `PlantCatalog > Broadleaf Trees > Rhizophora seedling LD`
+        - `PlantCatalog > Climbers > Hedera helix wall climber green HD`
+        - `PlantCatalog > Climbers > Hedera helix wall climber green LD`
 
---- -->
+---
 
 ### 1.0.3 <small>2025-03-19</small>
 

@@ -1,10 +1,12 @@
 ![Preferences - Plant Library](../images/preferences_plant-library.webp){ .img-box align=left }
 
-## Library Location
+## Libraries
 
-This is the location of the PlantLibrary root folder, which should contain both PlantFactory and PlantCatalog folders. The interface will indicate whether the PlantCatalog, PlantFactory, or both libraries are found.
+Here you can adjust the locations of your plant libraries. These usually don’t need to be changed if you’ve installed everything in the default location, but you can adjust them if needed. The interface will indicate if the libraries are found.
 
-- **Personal Library**: Enable this option if you have custom plants to include, and select the folder containing them. This folder can contain subfolders to organize the plants into categories.
+- **PlantCatalog**: The location of the PlantCatalog library folder, which should contain categorized subfolders for each plant type. Within these subfolders, you should find the actual `.tpf` plant files. Read more [here](../getting_started.md#installation-plantfactory--libraries) about how to install this library.
+- **PlantFactory**: The location of the PlantFactory library folder, which should contain multiple subfolders, including the `Species` folder that holds the actual `.tpf` plant files. This library contains the plants that ship with the PlantFactory application itself.
+- **Personal**: Enable this option if you have custom plants to include, and select the folder containing them. This folder can contain subfolders to organize the plants into categories.
 
     !!! info2 "Note"
         Only plants that are saved in `.tpf` file format are handled, so if you have plants that you have saved in the default PlantFactory `.tpfp` format, please save them inside PlantFactory as a `.tpf` file by going to `File > Export > Export as Species`.

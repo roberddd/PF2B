@@ -27,8 +27,10 @@ tags:
 
 ## Installation
 
+Since the addon relies on the PlantFactory application for importing plants, it must be installed. Additionally, there are free plant libraries that can be installed. While these libraries are optional, they provide a significant portion of the available functionality, and skipping them may limit your experience.
+
 === "Addon"
-    To start using PF2B, you need to install the add-on in Blender. Follow these steps:
+    To install PF2B inside Blender. Follow these steps:
 
     1. Download the PF2B add-on zip file from the store you purchased it from.
     ![Addon Location](images/addon-install.webp){ .img-box .on-glb align=right width=31% }
@@ -40,20 +42,97 @@ tags:
     !!! info2 "Updates"
         For updates, simply download the updated add-on manually from the store where you purchased it, uninstall the old version and reinstall the new using the same steps outlined in the instructions above.
 
-=== "PlantFactory & Libraries"
-    Since the addon relies on the PlantFactory application for importing plants, it must be installed. Additionally, there are free plant libraries that can be installed. While these libraries are optional, they provide a significant portion of the available functionality, and skipping them may limit your experience.
 
-    Follow these steps to install PlantFactory and the necessary libraries:
+=== "PlantFactory Application"
+    Follow these steps to install PlantFactory:
 
-    1. If you haven’t already installed PlantFactory, download it (approximately 1.6 GB in size) from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } and follow the on-screen instructions to complete the installation.
-    - The `PlantCatalog` Library can also be downloaded from the same link. It is divided into multiple parts and requires 19.6 GB of space. I highly recommend downloading all parts to access the full plant library.
-    - For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }.
+    1. Download PlantFactory (approximately 1.6 GB in size) from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" }. For additional information about PlantFactory, check out Bentley's FAQ section [here](https://www.bentley.com/software/e-on-software-free-downloads/#faq){ target="_blank" }
+    ![PlantFactory installation](images/installation/plantfactory_installer.webp){ .img-box .on-glb width=40% }
+
+    - After downloading, you should have a `.zip` file containing the installer.
+    ![PlantFactory installation](images/installation/plantfactory_installer_zip.webp){ .img-box .on-glb }
+
+    - Extract the contents of the `.zip` file. To do this, right-click on the file and choose "Extract" (or use a third-party program such as 7-Zip if you prefer).
+
+    - After extracting, you should see the installer file named "**Setup (Win).exe**". Run this installer and follow the on-screen instructions to complete the installation.
+    ![PlantFactory installation](images/installation/plantfactory_installer_extracted.webp){ .img-box .on-glb }
+
+        ??? info2 "Detailed Installer Instructions"
+            When running the installer, you will be presented with the following steps. Any steps without options can be skipped by simply clicking "Next."
+
+            ![PlantFactory installation](images/installation/installer_step1.webp){ .img-box .on-glb }
+
+            <br>
+
+            **Installation Folders**:<br>
+            Here, you can select where to install the **PlantFactory application**. At the bottom (inside the red box), you’ll see the location of the **PlantFactory plant library**, which contains the plants that come with the application. It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.
+            !!! warning ""
+                Please note that if you change these paths, you must update the paths in the addon preferences to point to the correct installation locations. See the bottom of these instructions for more details on how to do this.
+
+            ![PlantFactory installation](images/installation/installer_pf-library-path.webp){ .img-box .on-glb }
+
+            <br>
+
+            **Plug-ins**:<br>
+            At this stage, you’ll be presented with options to install PlantFactory plug-ins for other 3D software such as 3DS Max, Cinema 4D, Maya, or Unreal Engine. If you use any of these programs, you can select the appropriate options, and the installer will add Eon Software's plug-ins for integration with those applications. Note that Blender is not listed here, as it is handled by the PF2B add-on. Installing or selecting any of these plugins will not affect PF2B, so feel free to choose the options that suit your needs.
+
+            ![PlantFactory installation](images/installation/installer_plugins.webp){ .img-box .on-glb }
+
+            <br>
+
+            After these steps, there may be a few more "Next" clicks, and then the installation will begin.
+
+    - Once installation is completed, proceed to the next section to install the [PlantCatalog Plant Library](#installation-plantcatalog-plant-library).
+
+
 
     !!! warning ""
         If you install PlantFactory or the libraries in a **non-default location**, you need to adjust the paths in the preferences:
 
         - `Preferences > General > PlantFactory Location` – Set the path to the PlantFactory application.
         - `Preferences > Plant Library > Libraries` – Set the path to the root folder containing both the PlantCatalog and PlantFactory libraries.
+
+
+=== "PlantCatalog Plant Library"
+    The PlantCatalog is the primary plant library used in PF2B and contains most of the plants. You can read more about the library [here](plants.md#plantcatalog-library) and see this FAQ question: [Do I have to install the entire PlantCatalog library?](support/faq.md#do-i-have-to-install-the-entire-plantcatalog-library). Follow these steps to install the PlantCatalog plant library:
+
+    1. Download the `PlantCatalog` Library files from [Bentley’s official website](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" }. The library is divided into multiple parts, requiring 19.6 GB of space. To ensure full functionality, download all **13 parts** of the library.<br>
+    ![PlantCatalog Library installation](images/installation/plantcatalog_installers.webp){ .img-box width=40% }
+
+    - After downloading, you should have multiple `.zip` files. Each `.zip` contains an installer for the library.
+    ![PlantFactory installation](images/installation/plantcatalog_installer_zip.webp){ .img-box }
+
+    - **Extract the contents** of each `.zip` file. Right-click on each `.zip` file and choose "Extract" (or use a third-party program like 7-Zip, if preferred).
+
+    - **Repeat** this extraction process for all 13 `.zip` files. After extracting, you will find the installer file named "**Setup (Win).exe**" in each folder.
+
+    - **Run each installer** individually by double-clicking on the "**Setup (Win).exe**" file and follow the on-screen instructions to complete the installation. You will need to repeat this for each `.zip` file.
+    ![PlantFactory installation](images/installation/plantcatalog_installer_extracted.webp){ .img-box }
+
+        ??? info2 "Detailed Installer Instructions"
+            When running the installer, you will be presented with the following steps. Any steps without options can be skipped by simply clicking "Next."
+
+            ![PlantFactory installation](images/installation/plantcatalog_installer_step1.webp){ .img-box }
+
+            <br>
+
+            **Installation Folders**:<br>
+            Here, you can select where to install the **PlantCatalog Library**. It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.
+            !!! warning ""
+                - If you choose to change the installation path, make sure to install all remaining parts of the library **in the same director**y to ensure everything is properly organized.
+                - Please note that if you change the installation path, you must update the path in the addon preferences to point to the correct installation location.
+
+            ![PlantFactory installation](images/installation/plantcatalog_installer_library-path.webp){ .img-box }
+
+    - Once installation is completed for all the `.zip` files, proceed to the next section as you are now done with all installation steps.
+
+    !!! warning ""
+        If you install PlantFactory or the libraries in a **non-default location**, you need to adjust the paths in the preferences:
+
+        - `Preferences > General > PlantFactory Location` – Set the path to the PlantFactory application.
+        - `Preferences > Plant Library > Libraries` – Set the path to the root folder containing both the PlantCatalog and PlantFactory libraries.
+
+
 
 After installing everything above, make sure to **read the sections below**, as they contain important information about required cache files for the addon.
 
