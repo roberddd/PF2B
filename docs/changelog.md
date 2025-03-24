@@ -13,7 +13,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 <div class="changelog" markdown>
 
 
-### 1.0.5 <small>2025-03-24/small>
+### 1.0.5 <small>2025-03-24</small>
 
 - **Bugfixes**
     - The previous `Separate Plant Library Paths` change caused issues when plant libraries were installed in custom folders, preventing the cache and indexing from working properly. This issue has now been fixed.
