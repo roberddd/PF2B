@@ -221,5 +221,26 @@ tags:
 :   If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
 
 
+---
+
+
+### How do I update to a new version?
+
+:   To update to the latest version, follow these steps:
+
+    1. **Download the latest version**:
+        - :simple-gumroad: **Gumroad users**: Go to your [library](https://gumroad.com/library?query=PF2B){ target="_blank" } and locate PF2B.
+        - :blender_market: **BlenderMarket users**: Go to your [orders](https://blendermarket.com/account/orders_search?utf8=%E2%9C%93&orders_search%5Bq%5D=PF2B){ target="_blank" } and locate PF2B.
+    - **Remove the old version**:
+        ![Addon Location](../images/addon-update.webp){ .img-box .on-glb align=right width=37% }
+        - Open Blender, go to `Edit > Preferences > Get Extensions`.
+        - Search for "PF2B".
+        - Locate the arrow (:octicons-chevron-down-12: icon) in the top right corner.
+        - Click on `Uninstall`.
+    - **Restart Blender** to clear any cached data.
+    - **Install the new version**:
+        - Follow the default [installation instructions](../getting_started.md#installation).
+
+---
 
 </div>

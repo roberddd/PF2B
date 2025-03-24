@@ -40,7 +40,7 @@ Since the addon relies on the PlantFactory application for importing plants, it 
     - Click on `Install from Disk` and select the downloaded PF2B zip file.
 
     !!! info2 "Updates"
-        For updates, simply download the updated add-on manually from the store where you purchased it, uninstall the old version and reinstall the new using the same steps outlined in the instructions above.
+        To update to a newer version, follow [these instructions](support/faq.md#how-do-i-update-to-a-new-version).
 
 
 === "PlantFactory Application"
@@ -65,9 +65,14 @@ Since the addon relies on the PlantFactory application for importing plants, it 
             <br>
 
             **Installation Folders**:<br>
-            Here, you can select where to install the **PlantFactory application**. At the bottom (inside the red box), you’ll see the location of the **PlantFactory plant library**, which contains the plants that come with the application. It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.
-            !!! warning ""
-                Please note that if you change these paths, you must update the paths in the addon preferences to point to the correct installation locations. See the bottom of these instructions for more details on how to do this.
+            Here, you can select where to install the **PlantFactory application**. At the bottom (inside the red box), you’ll see the location of the **PlantFactory plant library** (shown as "Content folder" in the screenshot below), which contains the plants that come with the application. And below that, you need to set the installation location for the **"PlantCatalog"** library (explained in the next step on how to install the full library). It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.
+            !!! warning "Note"
+                **If you choose to change the installation paths for either the application or the libraries**:
+
+                - After installation, you must update the paths in the addon preferences to point to the correct installation locations. See the bottom of these instructions for more details on how to do this.
+                - **If you choose to change the installation path for the Libraries**:
+                    - **Content folder (PlantFactory library):** The installation destination folder **must be named "Plantfactory"** (case does not matter; both "PlantFactory" and "plantfactory" will work).
+                    - **PlantCatalog folder**: The installation destination folder **must be named "Plantcatalog"** (case does not matter; both "PlantCatalog" and "plantcatalog" will work).
 
             ![PlantFactory installation](images/installation/installer_pf-library-path.webp){ .img-box .on-glb }
 
@@ -118,9 +123,14 @@ Since the addon relies on the PlantFactory application for importing plants, it 
 
             **Installation Folders**:<br>
             Here, you can select where to install the **PlantCatalog Library**. It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.
-            !!! warning ""
-                - If you choose to change the installation path, make sure to install all remaining parts of the library **in the same director**y to ensure everything is properly organized.
-                - Please note that if you change the installation path, you must update the path in the addon preferences to point to the correct installation location.
+            !!! warning "Note"
+                **If you choose to change the installation path**:
+
+                - The installation destination folder **must be named "Plantcatalog"** (case does not matter; both "PlantCatalog" and "plantcatalog" will work).
+                - Ensure that **all remaining parts of the library are installed in the same directory** to keep everything properly organized.
+                - After installation, you must update the path in the addon preferences to point to the correct installation location. See the bottom of these instructions for more details on how to do this.
+
+
 
             ![PlantFactory installation](images/installation/plantcatalog_installer_library-path.webp){ .img-box }
 
@@ -182,9 +192,3 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 ![Addon Location](images/pf_welcome-screen.webp){ .img-box .on-glb align=right width=20% }
 
 - To ensure a smoother workflow, it’s **recommended** to disable the "**Welcome**" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "Don’t show again" in the bottom-left corner.
-
-<!--
-- For a slight speed boost during imports, you can set the **Mesh Preview** option in PlantFactory to **Draft Only**, as shown in the screenshot below.
-
-    ![Addon Location](images/pf_mesh-preview.webp){ .img-box }
- -->
