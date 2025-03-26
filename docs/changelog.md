@@ -12,6 +12,17 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+<!-- - **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Broadleaf Trees > Aesculus pavia HD` -->
+
+### 1.0.7 <small>2025-03-26</small>
+
+- **Bugfixes**
+    - Fixed issues with plant libraries that were not installed in the default location, where their paths were not being used correctly, which prevented you from using the plants.
+
+---
+
 ### 1.0.6 <small>2025-03-26</small>
 
 - **Other**
