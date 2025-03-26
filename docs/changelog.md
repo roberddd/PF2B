@@ -12,6 +12,18 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.0.6 <small>2025-03-26</small>
+
+- **Other**
+    - The `Re-Index Plants` function no longer indexes the personal library by default; it is now only indexed when the personal library is enabled.
+- **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Broadleaf Trees > Adansonia digitata HD`
+        - `PlantCatalog > Broadleaf Trees > Adansonia digitata LD`
+- **Bugfixes**
+    - Fixed an issue where the `PlantFactory` library plants were incorrectly indexed by the re-index function (also affecting the 'verify' cache function), which prevented you from using the plants.
+
+---
 
 ### 1.0.5 <small>2025-03-24</small>
 
