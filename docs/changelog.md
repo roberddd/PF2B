@@ -12,9 +12,28 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
-<!-- - **Plant-Fixes**:
+### 1.0.8 <small>2025-03-27</small>
+
+- **Plant-Fixes**:
     - **New**:
-        - `PlantCatalog > Broadleaf Trees > Aesculus pavia HD` -->
+        - `PlantCatalog > Broadleaf Trees > Aesculus pavia HD`
+        - `PlantCatalog > Broadleaf Trees > Aesculus pavia LD`
+        - `PlantCatalog > Broadleaf Trees > Aesculus x carnea HD`
+        - `PlantCatalog > Broadleaf Trees > Aesculus x carnea LD`
+        - `PlantCatalog > Broadleaf Trees > Bauhinia blakeana HD`
+        - `PlantCatalog > Broadleaf Trees > Bauhinia blakeana LD`
+        - `PlantCatalog > Broadleaf Trees > Citrus x limon HD`
+        - `PlantCatalog > Broadleaf Trees > Citrus x limon LD`
+        - `PlantCatalog > Broadleaf Trees > Delonix regia HD`
+        - `PlantCatalog > Broadleaf Trees > Delonix regia RT`
+        - `PlantCatalog > Bushess > Brugmansia x insignis HD`
+        - `PlantCatalog > Bushess > Brugmansia x insignis LD`
+        - `PlantCatalog > Bushess > Duranta repens HD`
+        - `PlantCatalog > Bushess > Duranta repens LD`
+        - `PlantCatalog > Bushess > Hedera helix 'Erecta' HD`
+        - `PlantCatalog > Bushess > Hedera helix 'Erecta' LD`
+
+---
 
 ### 1.0.7 <small>2025-03-26</small>
 
