@@ -12,6 +12,16 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.0.9 <small>2025-03-29</small>
+
+- **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Palms > Adonidia merrillii HD.`
+- **Bugfixes**
+    - Fixed an issue where, for some users, the library cache was not detected when starting a new file in Blender. Previously, you had to manually go to the preferences and click "Verify" or update the path to resolve this. This should no longer be necessary.
+
+---
+
 ### 1.0.8 <small>2025-03-27</small>
 
 - **Plant-Fixes**:
