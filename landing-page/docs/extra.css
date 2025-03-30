@@ -61,9 +61,9 @@
 .section-box {
   background-color: var(--main-box-bg);
   border: 1px solid var(--main-box-border-color);
-  border-radius: .1rem;
+  border-radius: .4rem;
   display: block;
-  padding: .6em .5em .6em .9em;
+  padding: .1em .5em .1em .9em;
   position: relative;
   margin: 2em 0;
 }
@@ -131,9 +131,9 @@
 .img-box, video{
   border-radius: 4px;
 }
-.img-box-top, video{
+/* .img-box-top, video{
   border-radius: 4px 4px 0px 0px;
-}
+} */
 video {
   height: auto; /* Keep the aspect ratio intact */
   max-width: 1920px;
