@@ -1,4 +1,4 @@
-If you encounter any issues or have suggestions for new features, please contact me primarily via the BlenderMarket inbox or by email (for Gumroad buyers). Alternatively, you may use the [Issues](https://github.com/roberddd/PF2B/issues) and [Discussions](https://github.com/roberddd/PF2B/discussions) pages on GitHub.
+If you encounter any issues or have suggestions for new features, please contact me primarily via the SuperHive (BlenderMarket) inbox or by email (for Gumroad buyers). Alternatively, you may use the [Issues](https://github.com/roberddd/PF2B/issues) and [Discussions](https://github.com/roberddd/PF2B/discussions) pages on GitHub.
 
 
 ## Updates

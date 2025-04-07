@@ -230,7 +230,7 @@ tags:
 
     1. **Download the latest version**:
         - :simple-gumroad: **Gumroad users**: Go to your [library](https://gumroad.com/library?query=PF2B){ target="_blank" } and locate PF2B.
-        - :blender_market: **BlenderMarket users**: Go to your [orders](https://blendermarket.com/account/orders_search?utf8=%E2%9C%93&orders_search%5Bq%5D=PF2B){ target="_blank" } and locate PF2B.
+        - :blender_market: **SuperHive (BlenderMarket) users**: Go to your [orders](https://superhivemarket.com/account/orders_search?utf8=%E2%9C%93&orders_search%5Bq%5D=PF2B){ target="_blank" } and locate PF2B.
     - **Remove the old version**:
         ![Addon Location](../images/addon-update.webp){ .img-box .on-glb align=right width=37% }
         - Open Blender, go to `Edit > Preferences > Get Extensions`.

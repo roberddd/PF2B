@@ -12,6 +12,37 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.1.0 <small>2025-04-07</small>
+
+- **Interface**:
+    - `Check Version Status` link label has been updated to say "SuperHive" to match the new name of BlenderMarket.
+    - Miscellaneous minor interface tweaks.
+- **Other**
+    - Improved error handling for edge cases when displaying presets in the interface.
+- **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Broadleaf Trees > Eucalyptus pauciflora RT`
+        - `PlantCatalog > Broadleaf Trees > Vachellia tortilis HD`
+        - `PlantCatalog > Coniferous > Picea abies HD`
+        - `PlantCatalog > Coniferous > Picea abies LD`
+        - `PlantCatalog > Coniferous > Picea engelmannii HD`
+        - `PlantCatalog > Coniferous > Picea engelmannii LD`
+        - `PlantCatalog > Coniferous > Picea mariana HD`
+        - `PlantCatalog > Coniferous > Picea mariana LD`
+        - `PlantCatalog > Coniferous > Picea pungens HD`
+        - `PlantCatalog > Coniferous > Picea pungens LD`
+        - `PlantCatalog > Coniferous > Picea pungens 'Koster' HD`
+        - `PlantCatalog > Coniferous > Picea pungens 'Koster' LD`
+        - `PlantCatalog > Coniferous > Pinus jeffreyi lone HD`
+        - `PlantCatalog > Coniferous > Pinus jeffreyi lone LD`
+        - `PlantCatalog > Coniferous > Tsuga mertensiana HD`
+        - `PlantCatalog > Ground Covers > Hedera helix ground cover green HD`
+        - `PlantCatalog > Ground Covers > Hedera helix ground cover green LD`
+        - `PlantCatalog > Perennials > Vinca minor HD`
+        - `PlantCatalog > Perennials > Vinca minor LD`
+
+---
+
 ### 1.0.9 <small>2025-03-29</small>
 
 - **Plant-Fixes**:
