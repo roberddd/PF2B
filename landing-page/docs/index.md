@@ -32,17 +32,7 @@ hide:
 
 Bring the power of **PlantFactory** to **Blender** with **PF2B** and take your vegetation workflow to the next level! 🌿
 
-
-
-<div class="section-box accent-red" markdown>
-
-# 🎉 Limited Time Offer: Save 40%! 🎉 { style="font-size: 2.55em; color: var(--main-accent-color-red)" }
-
-<span style="font-size:1.25em">
-For a limited time, you can get **PF2B** at a special introductory price of just **$8**, a significant discount off the regular price of **$14**! This offer is valid until **April 12th**, after which the price will increase. Don't miss out, secure your copy today and take your Blender scenes to the next level with realistic plants!
-</span>
-
-</div> <!-- section end -->
+---
 
 <video width="100%" loop autoplay muted style="border-radius: .4rem; margin:-1em 0 -1.5em 0">
     <source src="videos/turntable.mp4" type="video/mp4">
