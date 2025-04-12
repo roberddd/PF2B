@@ -5,11 +5,11 @@ hide:
   - title
   - footer
 ---
-
+<div style="text-align: center;" markdown>
 
 **PF2B** (PlantFactory to Blender) is an addon that enables the direct import of plants created in [PlantFactory](https://www.bentley.com/software/e-on-software-free-downloads/){ target="_blank" } by e-on software into Blender. PF2B automates the setup process, allowing you to transfer detailed vegetation assets to Blender with minimal manual configuration.
 
-
+</div>
 
 
 # **Who is this for?**
@@ -153,4 +153,8 @@ Extensive documentation is available [here](https://pf2b.roberd.net/){ target="_
 
 ---
 
-<center>*PF2B is a third-party addon and is not an official product of Bentley Systems, E-on Software, or PlantFactory. It is not affiliated with or endorsed by these companies.*{style="color:var(--md-default-fg-color--light)"}</center>
+<div style="text-align: center;" markdown>
+
+*PF2B is a third-party addon and is not an official product of Bentley Systems, E-on Software, or PlantFactory. It is not affiliated with or endorsed by these companies.*{style="color:var(--md-default-fg-color--light)"}
+
+</div>
