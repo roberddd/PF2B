@@ -153,8 +153,4 @@ Extensive documentation is available [here](https://pf2b.roberd.net/){ target="_
 
 ---
 
-<center markdown>
-
-*PF2B is a third-party addon and is not an official product of Bentley Systems, E-on Software, or PlantFactory. It is not affiliated with or endorsed by these companies.*{style="color:var(--md-default-fg-color--light)"}
-
-</center>
+<center>*PF2B is a third-party addon and is not an official product of Bentley Systems, E-on Software, or PlantFactory. It is not affiliated with or endorsed by these companies.*{style="color:var(--md-default-fg-color--light)"}</center>
