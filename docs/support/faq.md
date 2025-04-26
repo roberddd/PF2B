@@ -52,6 +52,14 @@ tags:
 ---
 
 
+### What does the number in parentheses mean in preset names?
+
+:   It indicates the plant's **maturity**, representing its current age as a percentage of its maximum potential age. A value of **0** means the plant is very young, while **100** means it has reached full maturity.
+
+
+---
+
+
 ### Why is my Plant Gallery View so small when using the "Browse Via Blender" mode?
 
 :   Check that your `3D View` is large enough, as the gallery size depends on it. If you have the view split (for example, with the `Shader Editor`), it may cause the gallery to appear smaller.

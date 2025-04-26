@@ -33,9 +33,42 @@
 - **Seed**:
     - **Random**
     - **Custom**
+- **Import Overrides** These settings allow you to manually define the Age/Maturity, Health and Season of imported plants. See the [Import Overrides](#import-overrides) section below for details.
 - :blender_icon_import: **Import Plant**: Starts importing the selected plant(s).
-- :octicons-stack-24:: **Use import Queue**, see the next section for details.
+- :octicons-stack-24:: **Use import Queue**, see the [Queue](#queue) section for details.
 
+
+### Import Overrides
+
+These settings allow you to manually define the **Age/Maturity**, **Health**, and **Season** of imported plants. Each property has its own **checkbox** and **slider**. To activate an override for a specific property, tick the checkbox next to it and adjust the slider to your desired value.
+
+![plant gallery top panel](../images/import-overrides.webp){ .img-box align=left }
+
+When an override is enabled, it will replace the plant's default preset value for that property during import. If left unticked, the original preset value will be used instead.
+
+- **Settings**:
+    - **Maturity**: Controls the plant's maturity, representing its current age as a ratio of its maximum potential age. A value of 0 represents a young plant, while 100 indicates the plant has reached its maximum age.
+    - **Health**: Controls the plant's health from 0 to 100. A value of 0 represents a dying plant, while 100 indicates a thriving, fully healthy plant.
+    - **Season**: Select the day of the year (1-365) to determine the season based on northern hemisphere meteorological standards.
+
+The override settings are stored in the [Plant Details](./post_processing.md#plant-details) section after import, in case you need to reference them later.
+
+!!! abstract "Override Examples"
+    Here is the **Ficus carica HD** plant exported with different override settings, all using the same seed for consistency. These are just examples, since you have fine-grained control over the override values, you can generate any variation in between.
+
+    **Maturity:**
+    ![Import Override example](../images/plants/overrides/Maturity.webp){ .on-glb data-description="Import Override: Maturity" }
+
+    **Health:**
+    ![Import Override example](../images/plants/overrides/Health.webp){ .on-glb data-description="Import Override: Health" }
+
+    **Season:**
+    ![Import Override example](../images/plants/overrides/Season.webp){ .on-glb data-description="Import Override: Season" }
+
+!!! info2 "Note"
+    When using these overrides, values such as plant height and polygon count shown in the preset descriptions may not be accurate, as the override settings affect how the plant is generated.
+
+<div style="clear:both"></div>
 
 
 
@@ -72,6 +105,7 @@ In this view, you can see all available plants and presets. To exit the gallery 
 Below is a breakdown of every button and function inside the gallery.
 
 
+
 #### Plants
 
 ![plant gallery top panel](../images/gallery_plants_top-panel.webp){ .img-box .on-glb }
@@ -95,6 +129,7 @@ If we look at an individual plant inside the gallery we have the following butto
     - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
 
 <div style="clear:both"></div>
+
 
 
 #### Presets

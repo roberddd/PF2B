@@ -12,6 +12,19 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.1.1 <small>2025-04-26</small>
+
+- **New Functionality**
+    - Added `Import Overrides` that allow you to manually define the Age/Maturity, Health and Season of imported plants. When enabled, the selected values will override the plant's default preset settings during import. [More info](workflow/browse_via_blender.md#import-overrides).
+- **Interface**:
+    - The `Plant Details` section and the information gathered from imported plants have been restructured for clarity. [More info](workflow/post_processing.md#plant-details). Examples include:
+        - `Age` and `Age Max`, previously shown as arbitrary values, are now used to derive the plant's **maturity** value (used internally by PlantFactory), which ranges from 0 to 100%.
+        - `Season` is no longer shown as a raw float (e.g., 1.0), but instead displayed as a **percentage** along with an **approximate day of the year** (1–365).
+        - `Health` is now shown as a **percentage from 0 to 100**, instead of a float like 1.0.
+        - If import overrides were used, the `Plant Details` section will now also display those override values for the selected plant.
+
+---
+
 ### 1.1.0 <small>2025-04-07</small>
 
 - **Interface**:
