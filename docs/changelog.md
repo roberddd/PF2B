@@ -12,6 +12,30 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.1.2 <small>2025-05-03</small>
+
+- **New Functionality**
+    - Added an `Import Name Settings` section that lets you customize how plant objects are named during import. You can now append details such as maturity, health, height, and more to the object name. [More info](workflow/import_settings.md#name-settings)
+- **Improved Functionality**
+    - The `Mark as Asset` option now also adds plant details (such as preset name, maturity, health, season, etc.) as asset tags for better organization and searchability. [More info](workflow/import_settings.md)
+- **Other**
+    - Plants imported via the bridge in `Browse via PlantFactory` mode no longer include the file extension (such as `.tpf` or `.tpfp`) in the imported name.
+- **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Broadleaf Trees > Populus nigra 'Italica' HD`
+        - `PlantCatalog > Broadleaf Trees > Populus nigra 'Italica' LD`
+        - `PlantCatalog > Coniferous > Pinus contorta dead forest HD`
+        - `PlantCatalog > Coniferous > Pinus contorta dead forest LD`
+        - `PlantCatalog > Coniferous > Pinus contorta dead lone HD`
+        - `PlantCatalog > Coniferous > Pinus contorta dead lone LD`
+        - `PlantCatalog > Coniferous > Pinus jeffreyi lone FG`
+    - **Updated**:
+        - `PlantCatalog > Broadleaf Trees > Eucalyptus camaldulensis HD`
+        - `PlantCatalog > Coniferous > Pinus jeffreyi lone HD`
+        - `PlantCatalog > Coniferous > Pinus jeffreyi lone LD`
+
+---
+
 ### 1.1.1 <small>2025-04-26</small>
 
 - **New Functionality**

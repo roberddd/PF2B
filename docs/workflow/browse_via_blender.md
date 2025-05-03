@@ -54,7 +54,7 @@ When an override is enabled, it will replace the plant's default preset value fo
 The override settings are stored in the [Plant Details](./post_processing.md#plant-details) section after import, in case you need to reference them later.
 
 !!! abstract "Override Examples"
-    Here is the **Ficus carica HD** plant exported with different override settings, all using the same seed for consistency. These are just examples, since you have fine-grained control over the override values, you can generate any variation in between.
+    Here is the **Ficus carica (Common Fig Tree)** plant exported with different override settings, all using the same seed for consistency. These are just examples, since you have fine-grained control over the override values, you can generate any variation in between.
 
     **Maturity:**
     ![Import Override example](../images/plants/overrides/Maturity.webp){ .on-glb data-description="Import Override: Maturity" }
