@@ -13,13 +13,16 @@ Explore these communities and resources to get help and inspiration for creating
 
 - [:simple-facebook: **The Plant Factory - Facebook Community**](https://www.facebook.com/groups/496656864047261)
 - [:simple-facebook: **Vue Galleries - Facebook Community**](https://www.facebook.com/groups/vuegalleries)
+- [:simple-facebook: **3d Digital Landscape Community - Facebook Community**](https://www.facebook.com/groups/3dDigitalLandscapers/)
+- [:simple-facebook: **New World Digital Art - Facebook Community**](https://www.facebook.com/NwdaGroup)
 - [:simple-discord: **Vue and Plant Factory Hub - Discord Community**](https://discord.gg/4GNwBAbcQY)
-
+- [:simple-blender: **PF2B Discussion - BlenderArtists**](https://blenderartists.org/t/pf2b-plantfactory-to-blender-procedural-plants/)
 
 ### YouTube Channels & Playlists
 
 - [**e-on software**](https://www.youtube.com/@eonsoftware)
 - [**Complete Plant Factory Course 2024**](https://www.youtube.com/playlist?list=PLaH1PMiI_7AhRqzwscAZdxZHyAJpAvNEs) by Vladimir Chopine [GeekatPlay]
+
 
 ### Other links
 
