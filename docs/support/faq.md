@@ -191,6 +191,14 @@ tags:
 ---
 
 
+### My custom plants are not showing up when enabling the 'Personal Library'.
+
+:   This is most likely caused by the plants not being cached. Please generate the cache by following the instructions under [Library Cache in Preferences](../preferences/plant_library.md#library-cache).
+
+
+---
+
+
 ### Why does my my plants show 'No Presets'?
 
 :   This issue is likely caused by a missing or incomplete Preset cache.

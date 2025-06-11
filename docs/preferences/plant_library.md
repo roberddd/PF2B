@@ -22,7 +22,7 @@ Here you can adjust the locations of your plant libraries. These usually don’t
 
 ## Library Cache
 
-To use the [Browse via Blender](../workflow/browse_via_blender.md) mode, a cache must be generated.  See the [First time use & Importing cache](../getting_started.md#first-time-use-importing-cache) for instructions.
+To use the [Browse via Blender](../workflow/browse_via_blender.md) mode, a cache must be generated. See [First time use & Importing cache](../getting_started.md#first-time-use-importing-cache) for instructions, and refer to [What is the PF2B cache?](../support/faq.md#what-is-the-pf2b-cache) in the FAQ for more details.
 
 The **Presets Cache** and **Plant Thumbnails Cache** are required, while the **Preset Thumbnails Cache** is optional. If not generated, presets will be displayed as a list instead of thumbnails.
 
