@@ -12,6 +12,15 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.1.3 <small>2025-08-05</small>
+
+> Compatibility: This version and previous versions have been verified to work with Blender 4.2 LTS, 4.3, 4.4, and 4.5 LTS.
+
+- **New Functionality**
+    - New option `Merge Duplicate Materials` to reduce material clutter when importing plants. When enabled, Blender will reuse existing materials with matching names instead of creating duplicates like Leaf.001, Bark.002, etc. This helps keep the scene cleaner and more optimized during batch imports. [More info](workflow/import_settings.md#general-settings)
+
+---
+
 ### 1.1.2 <small>2025-05-03</small>
 
 - **New Functionality**

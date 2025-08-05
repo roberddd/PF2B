@@ -21,6 +21,8 @@ Select a plant in the `3D Viewport`, and the detected material types will be dis
 
 The checkboxes to the left of each property allow you to enable or disable updates for that specific value when applying changes. For example, if you only want to update **Translucency**, you can uncheck all other boxes and click **OK** to apply only that change.
 
+For details about all material settings, see [Material Settings](../workflow/material_settings.md#settings) documentation."
+
 <div style="clear:both"></div>
 
 
