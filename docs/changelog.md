@@ -12,6 +12,30 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.1.4 <small>2025-08-17</small>
+
+- **New Functionality**
+    - **LODs**: Import models at different Levels of Detail to control polygon count and optimize performance, giving you more flexibility to fit plants into your scene. [More info](workflow/browse_via_blender.md#lods)
+    - **Improved Plant Info Popup**: Now shows information about the plant's global distribution, including continents and countries. [More info](workflow/browse_via_blender.md#plant-info-popup)
+    - **Queue Save & Load**: Added the ability to save and load the import queue from external `.pf2bqueue` files for easy backup and reuse. [More info](workflow/browse_via_blender.md#queue)
+    - **Grid Size Adjustment**: You can now control the distance between plants in the import grid when importing multiple plants at once. [More info](workflow/import_settings.md#general-settings)
+- **Improved Functionality**
+    - **Import Settings > Name Settings**: Added new options, including Seed and LOD.
+    - Seed is now added as an asset tag when using the `Mark as Asset` option.
+- **Interface**
+    - Improved visibility for active Import Overrides or LODs by adding an asterisk (*) to the interface box when they are active.
+    - The `Clear Queue` button has been moved to the new :material-menu:`Queue Actions` menu.
+    - Miscellaneous tooltip adjustments and fixes.
+    - **Seed**: Maximum seed value increased from 9,999,999 to 999,999,999.
+- **Other**
+    - Blender 4.5 has updated its 'preset' icon from :blender_icon_preset_old: to :blender_icon_preset:, so the documentation now uses the new icon as well.
+- **Plant-Fixes**:
+    - **New**:
+        - `PlantCatalog > Grass > Cyperus alternifolius HD`
+        - `PlantCatalog > Grass > Cyperus alternifolius LD`
+
+---
+
 ### 1.1.3 <small>2025-08-05</small>
 
 > Compatibility: This version and previous versions have been verified to work with Blender 4.2 LTS, 4.3, 4.4, and 4.5 LTS.

@@ -7,7 +7,7 @@ These settings are shared between both Import modes.
 - **Pack Textures**: Packs the textures of the imported plants into the current Blend file ensuring that your plants retain their appearance without the need for external texture files. **Cannot be disabled**.
 - **Mark as Asset**: Marks imported plants as assets, making them easily accessible in Blender's Asset Browser for future use.
     - When enabled, the asset will automatically have tags and metadata added for better organization and searchability within the Blender Asset Library. These include:
-        - Plant name (Latin & English, if available), Preset Description, Preset Name, Maturity, Health, Season, Height
+        - Plant name (Latin & English, if available), Preset Description, Preset Name, Maturity, Health, Season, Height, Seed, LOD.
     !!! inline abstract "Asset Tags Example"
         ![Asset Tags Example](../images/mark_as_asset-tags.webp){ .img-box .on-glb }
 
@@ -15,6 +15,11 @@ These settings are shared between both Import modes.
 
 - **Merge duplicate Materials**: When enabled, this option ensures that imported plants reuse existing materials in the scene if names match (e.g. Leaf, Bark). This prevents Blender from generating duplicates like Leaf.001, helping maintain a cleaner and more organized material list across multiple imports.
 - **Use a custom Export path**: Set a custom export path if you need to access the files exported from PlantFactory. If this setting is not enabled, the exported files will be removed from their temporary location once they are imported into Blender.
+- **Grid Spacing**: Controls the distance between plants in the import grid when importing multiple plants at once. When importing more than 10 plants, new rows are automatically created, and if `Import Extra LODs` is enabled, each LOD will be placed on its own row.
+    - Small
+    - Medium
+    - Large
+
 
 ### Name Settings
 
@@ -31,6 +36,8 @@ The animated GIF below shows an example of adding the "Maturity" parameter and h
     - **Add Health**
     - **Add Season Name**
     - **Add Height**
+    - **Add Seed**
+    - **Add LOD**: Only available when using the [Import Extra LODs](browse_via_blender.md#lods) feature.
 
 === "Browse via PlantFactory"
     ![Import Name Settings](../images/import_name_settings-via_plantfactory.gif){ .img-box align=left }

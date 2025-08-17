@@ -16,11 +16,13 @@
     - **LD Only**: Show low detail only.
     - **RT Only**: Show real-time detail only.
 - **Plant Browser**:
-    <br>Above the thumbnail, the plant name is displayed (`Ficus carica HD`) along with its English name (`Common Fig Tree`), and below it, the preset name (`Standard (0)`).
+    <br>Above the thumbnail, the plant name is displayed (`Plumeria rubra pink HD`) along with its English name (`Pink Frangipani`), and below it, the preset name (`Standard (0)`).
     - :blender_icon_snap_vertex:: Opens the plant gallery, see [gallery view](#gallery-view) below.
     - :blender_icon_preset:: Opens the preset gallery, see [gallery view](#gallery-view) below.
     - :octicons-triangle-left-24:: Navigates to the previous plant or preset.
     - :octicons-triangle-right-24:: Navigates to the next plant or preset
+    - :octicons-info-16:: Opens a popup displaying information about the plant. Read more in the [Plant Info Popup](#plant-info-popup) section.
+    <!-- ![plant gallery top panel](../images/plant-info-popup_plant.webp){ .img-box .on-glb align=right width=27% data-description="Plant Info Popup"} -->
     - **Browse Mode**: Plants or Presets.
     <!-- ![Browse via Blender](../images/browse-via-blender-panel_plant-browser.webp){ .img-box align=left } -->
 
@@ -36,6 +38,7 @@
 - **Import Overrides** These settings allow you to manually define the Age/Maturity, Health and Season of imported plants. See the [Import Overrides](#import-overrides) section below for details.
 - :blender_icon_import: **Import Plant**: Starts importing the selected plant(s).
 - :octicons-stack-24:: **Use import Queue**, see the [Queue](#queue) section for details.
+
 
 
 ### Import Overrides
@@ -72,19 +75,69 @@ The override settings are stored in the [Plant Details](./post_processing.md#pla
 
 
 
+### LODs
+
+When enabled, you can choose which Levels of Detail to import.
+
+![Queue](../images/lods.webp){ .img-box align=left }
+LOD 0 is the default, highest-detail geometry, while higher LOD numbers use progressively simpler geometry for performance optimization. You can enable or disable any combination of LODs, allowing you to import only the versions you need.
+
+!!! info2 "Notes"
+    - The available LODs depend on how the plant was set up in PlantFactory. Most plants provide LODs 0-3, but some may have fewer or more. Selecting a higher LOD does not guarantee it exists; only the plant's defined LODs will be imported.
+    - When the 'Extra LODs' feature is enabled, PlantFactory generates all available LODs internally, which requires additional processing time, regardless of which ones you select. PF2B will then only import the LODs you've chosen, but the processing time is the same no matter which or how many LODs you select.
+
+<h5>Examples</h5>
+
+Example of LODs with the `Adansonia digitata (Baobap Tree)` plant using the `Standard mat 25` preset, exported in all three available detail levels: HD (High Detail), LD (Low Detail), and RT (Realtime, which also uses billboards):
+
+=== "Wireframe"
+    ![LOD example](../images/plants/lods/wireframe/HD.webp){ .on-glb }
+
+    ![LOD example](../images/plants/lods/wireframe/LD.webp){ .on-glb }
+
+    ![LOD example](../images/plants/lods/wireframe/RT.webp){ .on-glb }
+
+=== "Rendered"
+    ![LOD example](../images/plants/lods/HD.webp){ .on-glb }
+
+    ![LOD example](../images/plants/lods/LD.webp){ .on-glb }
+
+    ![LOD example](../images/plants/lods/RT.webp){ .on-glb }
+
+!!! info2 ""
+    Note that polygon counts can vary greatly depending on the plant and preset. In this example, the `Standard mat 25` preset is used, where the "mat 25" indicates the plant’s **maturity**, representing its age as a percentage of its maximum potential. A value of **0** means the plant is very young, while **100** represents full maturity. For this tree, maturity has a huge impact on both height and polygon count: at 0% maturity it is roughly 5.5 m tall, while at full maturity it reaches about 16 m. At 25% maturity, as shown here, the plant is around 11 m tall. There are many other presets available for this plant, some of which reach even greater sizes.
+
+
 ### Queue
 
 The queue system lets you add multiple plants to a queue, which you can then import in a single batch, simplifying the process of importing various species and presets.
 
-![plant gallery top panel](../images/queue.webp){ .img-box align=left }
 
-- :octicons-info-16:: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/queue_info-popup.webp){ .img-box .on-glb align=right width=27% data-description="Info popup"}
-    - **Open**: Open this plant in the Plant Browser.
-    - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
-    - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
+The queue can be activated by pressing the :octicons-stack-24: icon to the right of the `Import` button. Once activated, the `Import` button changes to `Add to Queue`, and two new options appear below: an `Import All` button and the :material-menu: `Queue Actions` menu.
+
+You can now browse plants and use any of the `Add to Queue` buttons to add them to the queue.
+
+---
+
+![Queue](../images/queue_empty.webp){ .img-box align=right }
+
+- :blender_icon_import: **Import All**: Import all plants in the queue.
+- :material-menu: **Queue Actions**:
+    - **Save Queue**: Save the current plant import queue to an external `.pf2bqueue` file for backup or reuse. The file is small and easy to store.
+    - **Load Queue**: Load a plant import queue from an external `.pf2bqueue` file.
+    - **Clear Queue**: Remove all plants from the queue.
+
+---
+
+
+![Queue](../images/queue.webp){ .img-box align=left }
+
+Each queue item shows the following buttons:
+
+- :octicons-info-16:: Opens a popup displaying information about the plant. Read more in the [Plant Info Popup](#plant-info-popup) section.
+    ![plant gallery top panel](../images/plant-info-popup_preset-with-image.webp){ .img-box .on-glb align=right width=27% data-description="Plant Info Popup"}
 - **Quantity**: The number field lets you specify how many of this plant will be imported.
 - :fontawesome-regular-trash-can:: Delete the plant from the queue.
-- **Clear Queue**: Removes all plants from the queue.
 
 <div style="clear:both"></div>
 
@@ -124,9 +177,9 @@ If we look at an individual plant inside the gallery we have the following butto
 
 - **Presets**: Opens the presets gallery for this plant.
 - **Select**: Selects the plant and closes down the plant gallery.
-- **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_plants_plant-example_popup.webp){ .img-box }
-    - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
-    - **Search on Wikipedia**: lets you search for the plant species on Wikipedia; hold down Shift while clicking to search on DuckDuckGo instead.
+- :octicons-info-16:: Opens a popup displaying information about the plant. Read more in the [Plant Info Popup](#plant-info-popup) section.
+    ![plant gallery top panel](../images/plant-info-popup_plant.webp){ .img-box }
+
 
 <div style="clear:both"></div>
 
@@ -150,13 +203,49 @@ If we look at an individual presets inside the gallery we are presented with dep
     ![Preset example](../images/gallery_presets_preset-example.webp){ .img-box align=left  }
 
     - **Select**: Selects the plant and closes down the plant gallery.
-    - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_presets_preset-example_popup.webp){ .img-box  }
-        - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
+    - :octicons-info-16:: Opens a popup displaying information about the plant. Read more in the [Plant Info Popup](#plant-info-popup) section.
+        ![plant gallery top panel](../images/plant-info-popup_preset.webp){ .img-box  }
+
 
 === "With 'Queue' button"
     ![Preset example with queue button](../images/gallery_presets_preset-example-with-queue-button.webp){ .img-box align=left  }
 
     - **Add to Queue**: Adds the preset to the queue. For more information about the queue system, please see the [Queue](#queue) section.
     - **Select**: Selects the plant and closes down the plant gallery.
-    - **:octicons-info-16:**: Opens a popup that displays information about the plant. ![plant gallery top panel](../images/gallery_presets_preset-example_popup.webp){ .img-box  }
-        - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
+    - :octicons-info-16:: Opens a popup displaying information about the plant. Read more in the [Plant Info Popup](#plant-info-popup) section.
+        ![plant gallery top panel](../images/plant-info-popup_preset.webp){ .img-box  }
+
+
+
+
+### Plant Info Popup
+
+
+The Plant Info popup, accessible via the :octicons-info-16: button, appears in multiple places in the interface. Its appearance may vary depending on location, as some of the displayed content is context-specific. See the examples in the screenshots below.
+
+Common information shown includes:
+
+- Plant names
+- Preset details
+- Global distribution (continents and countries, with data from [GBIF.org](https://www.gbif.org/))
+- Function buttons
+
+=== "Plant"
+    ![plant gallery top panel](../images/plant-info-popup_plant.webp){ .img-box }
+
+=== "Preset"
+    ![plant gallery top panel](../images/plant-info-popup_preset.webp){ .img-box }
+
+=== "Preset with Image"
+    ![plant gallery top panel](../images/plant-info-popup_preset-with-image.webp){ .img-box }
+
+- **Function buttons**:
+    - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.
+    - **Open**: Opens this plant in the Plant Browser. Useful if you want to import additional instances of the same plant type into the scene.
+    - **Search Plant Info**: lets you search for information about a plant species online. Clicking it presents the following options:
+        - **[Wikipedia](https://www.wikipedia.org/)**
+        - **[Wikimedia Species](https://species.wikimedia.org/)**
+        - **[POWO](https://powo.science.kew.org/)**: Plants of the World Online, provided by the Royal Botanic Gardens, Kew.
+        - **[GBIF](https://www.gbif.org/)**: Global Biodiversity Information Facility, providing free and open access to biodiversity data.
+        - **[DuckDuckGo](https://duckduckgo.com/)**
+        - **[Google](https://www.google.com/)**
