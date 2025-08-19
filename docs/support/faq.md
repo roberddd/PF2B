@@ -212,13 +212,34 @@ tags:
 ---
 
 
-### I receive 'Unable to find plant' error when trying to import
+### I receive `Unable to find plant` error when trying to import
 
 :   ![Error Unable to find plant](../images/troubleshooting/unable-to-find-plant.webp){ .img-box align=right }
 :   This error means PlantFactory is unable to locate the specific `.tpf` file for the plant.
     If the missing plants are from the **PlantCatalog** library, please verify that you have installed all PlantCatalog files as described in the [Getting Started > Installation](../getting_started.md#installation-plantcatalog-plant-library).
 
     If you have not installed the full PlantCatalog library and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
+
+
+---
+
+
+### I receive `'Failed to import: ': Error: ASCII FBX files are not supported'` error when trying to import
+
+:   This error is caused by using the wrong FBX format setting in PlantFactory. Unfortunately, the addon cannot control this automatically, so you’ll need to set it manually. Luckily, it’s a quick fix:
+
+    1. Start **PlantFactory**.
+    - Go to **File > Export > Export As Mesh**.
+    <!-- ![Export as mesh](../images/troubleshooting/plantfactory-export-as-mesh.webp){ .img-box .on-glb align=right width=27% } -->
+
+    - Under the **Output Options** section:
+        - Make sure **File format** is set to `FBX`.
+            - If you don’t see the `FBX` option, change **Export for** to `Blender`. This should enable the correct format.
+        - Then, under **Format options**, change **FBX format** to `Binary FBX`.
+            ![FBX Format](../images/troubleshooting/PlantFactory-fbx-format.webp){ .img-box .on-glb width=85% }
+
+    - Click **Export** (bottom-right). You’re just exporting an empty scene here, this step saves the FBX setting.
+    - Close PlantFactory and try importing again via PF2B.
 
 
 ---
@@ -255,7 +276,7 @@ tags:
         - Click on `Uninstall`.
     - **Restart Blender** to clear any cached data.
     - **Install the new version**:
-        - Follow the default [installation instructions](../getting_started.md#installation).
+        - Follow the default [installation instructions](../getting_started.md#installation-addon).
 
 ---
 
