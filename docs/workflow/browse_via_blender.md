@@ -37,6 +37,14 @@
     - **Custom**
 - **Import Overrides** These settings allow you to manually define the Age/Maturity, Health and Season of imported plants. See the [Import Overrides](#import-overrides) section below for details.
 - :blender_icon_import: **Import Plant**: Starts importing the selected plant(s).
+
+    !!! info2 ""
+        While an import is in progress, this message is shown:
+
+        ![plant gallery top panel](../images/import-in-progress.webp){ .img-box }
+
+        - :octicons-x-circle-fill-12: **Reset Import**: soft-resets the import if it gets stuck, re-enabling the *Import Plant* button. It does **not** stop any PlantFactory process running in the background, you must cancel that manually.
+
 - :octicons-stack-24:: **Use import Queue**, see the [Queue](#queue) section for details.
 
 
@@ -167,7 +175,8 @@ At the top, you'll find the same library and filtering section as in the main pa
 - **Size**: Adjusts the thumbnail size of the plants and presets in the gallery.
     - Example of zoom set to a lower number:<br>
         ![Preset Gallery](../images/gallery_plants_zoomed.webp){ .img-box .on-glb  width=35% }
-- **Search**: Lets you perform a free-text search to filter items.
+- **Search**: Lets you perform a free-text search to filter items by Latin name, English name, or continent (Africa, Asia, Europe, North America, South America, Oceania).
+
 
 <br>
 
