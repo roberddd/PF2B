@@ -17,7 +17,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 - **Improved Functionality**
     - The **plant filter** now supports searching by Latin name, English name, and continent, making it easier to find plants. [More info](workflow/browse_via_blender.md#gallery-view)
     - The **Import Plant** button is now disabled during active imports, making it clearer when an import is already in progress.
-    - Added a new **Soft Import Reset** button to recover if an import gets stuck. [More info](workflow/browse_via_blender.md#general-settings)
+    - Added a new **Import Reset** button to recover if an import gets stuck. [More info](workflow/browse_via_blender.md#general-settings)
 - **Bug Fixes**
     - Fixed an incorrect documentation link for *LODs* in the interface.
 

@@ -25,3 +25,14 @@ Below, you'll find links to my social media profiles, where I share digital art 
 [:material-home: Website](https://roberd.net/){ .md-button .md-button--social target="_blank" }
 
 </div>
+
+
+## Other add-ons by me
+
+**BatchGenie**: An add-on designed to simplify and automate common Asset-related tasks.
+
+![BatchGenie Addon](images/other/batchgenie.webp){ .img-box align=left }
+
+  - [Gumroad](https://roberd.gumroad.com/l/BatchGenie)
+  - [SuperHive (BlenderMarket)](https://blendermarket.com/products/batchgenie)
+  - [Documentation](https://batchgenie.roberd.net/)
