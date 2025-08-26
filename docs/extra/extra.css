@@ -46,9 +46,13 @@ h5 {
 /* ######## </ MOBILE > ######## */
 
 
-/* ######## < SHOP BUTTONS > ######## */
+/* ######## < BUTTONS > ######## */
 .md-typeset .md-button--stretch {
   width: 99%;
+  text-align: center;
+}
+.md-typeset .md-button--social {
+  width: 15em;
   text-align: center;
 }
 /* Gumroad */
@@ -59,12 +63,8 @@ h5 {
 .md-button:hover .gumroad {
   color: rgb(31, 31, 31);
 }
-/* ######## </ SHOP BUTTONS > ######## */
+/* ######## </ BUTTONS > ######## */
 
-.md-typeset .md-button--social {
-  width: 15em;
-  text-align: center;
-}
 
 /* ######## < GRID > ######## */
 /* Light mode */

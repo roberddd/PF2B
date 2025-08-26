@@ -12,6 +12,30 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 1.1.6 <small>2025-08-26</small>
+
+- **New Functionality**
+    - Added a new **Categorize into Collections** option that automatically places imported plants into sub-collections (e.g. Broadleaf Trees, Bushes, Grass) for easier scene organization. [More info](workflow/import_settings.md#general-settings)
+- **Improved Functionality**
+    - **Import Settings > Name Settings**:
+        - Completely revamped with a clearer interface and additional options. You can now choose different wrappers `() [] <>` around parameters for better customization of plant names.
+        - Added an option to include the **Detail Level** in plant names. [More info](workflow/import_settings.md#name-settings)
+        - Added a new **XL** size to the **Grid Size Adjustment**. The hover tooltip has also been updated to clarify that this setting acts as a spacing multiplier. [More info](workflow/import_settings.md#general-settings)
+    - **Plant Info Popup**: [More info](workflow/browse_via_blender.md#plant-info-popup)
+        - Now displays plant maturity for presets.
+        - The **Info** button in the main interface is now context-dependent: it shows plant information if a plant is selected, and preset information if a plant preset is selected.
+        - Layout and design have been improved for consistency.
+    - The plant **Detail Level** (FG, HD, LD, RT) is now stored with the plant object and accessible via the **Plant Details** panel after import. [More info](workflow/post_processing.md#plant-details)
+    - **Asset Tags & Metadata**: [More info](workflow/import_settings.md#general-settings)
+        - The plant **Detail Level** (FG, HD, LD, RT) is now stored as an Asset Tag when using **Mark as Asset**.
+        - Asset tags and descriptions stored when using **Mark as Asset** have been improved for better searchability in the Asset Browser.
+            - The following values are no longer stored as tags (since they are rarely used for searching) but are now appended to the **Asset description** instead: *Maturity, Health, Height*.
+            - This makes the information easily accessible when hovering over an asset in the browser, as it is displayed directly in the description after the preset description.
+- **Bug Fixes**
+    - Fixed an issue in **Import Settings > Name Settings** where some options could incorrectly be highlighted in red even when there were no problems with the selected configuration.
+
+---
+
 ### 1.1.5 <small>2025-08-20</small>
 
 - **Improved Functionality**
@@ -31,7 +55,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
     - **Queue Save & Load**: Added the ability to save and load the import queue from external `.pf2bqueue` files for easy backup and reuse. [More info](workflow/browse_via_blender.md#queue)
     - **Grid Size Adjustment**: You can now control the distance between plants in the import grid when importing multiple plants at once. [More info](workflow/import_settings.md#general-settings)
 - **Improved Functionality**
-    - **Import Settings > Name Settings**: Added new options, including Seed and LOD.
+    - **Import Settings > Name Settings**: Added new options, including Seed and LOD. [More info](workflow/import_settings.md#name-settings)
     - Seed is now added as an asset tag when using the `Mark as Asset` option.
 - **Interface**
     - Improved visibility for active Import Overrides or LODs by adding an asterisk (*) to the interface box when they are active.

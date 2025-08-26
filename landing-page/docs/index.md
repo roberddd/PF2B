@@ -123,22 +123,21 @@ Additionally, the regular **PlantFactory** library features **41** plant species
 
 ---
 
-## Requirements
+
+## ⚠️ Notes Before Purchasing ⚠️
+
+### Requirements
 
 - Blender 4.2 or newer
 - PlantFactory 2024
 - Operating System: Windows
-
----
-
-## Notes Before Purchasing
 
 !!! warning ""
     Before purchasing, please ensure you fully understand what this addon does and its requirements. This addon relies on third-party software called **PlantFactory** (approximately 1.6 GB) to function. While PlantFactory is free, setting it up requires some additional steps, which are clearly outlined in 'Getting Started' guide. For full functionality, it is also recommended to install the **PlantCatalog** library (approximately 20 GB), which significantly enhances the range of plants available for use but may take some time to download and install.
 
 
 !!! warning ""
-    PF2B does **not** guarantee 100% compatibility with all plants. With over 23,000 presets, it is impractical to manually test and verify each one. However, most plants should import correctly without manual intervention.
+    PF2B does **not** guarantee 100% compatibility with all plants. With over 23,000 presets, it is not possible to manually test and verify each one. However, compatibility is very high, and approximately 99% of plants should import correctly without manual intervention.
 
     If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](https://pf2b.roberd.net/support/){ target="_blank" }. I will do my best to resolve them by adding plant-specific configurations to the addon.
 
@@ -153,8 +152,24 @@ Extensive documentation is available [here](https://pf2b.roberd.net/){ target="_
 
 ---
 
+<div class="section-box" markdown>
+
+## Other Add-ons by Me
+
+### BatchGenie {style="margin-bottom:0.1em;"}
+An add-on designed to simplify and automate common asset-related tasks in Blender.
+
+[![BatchGenie Addon](images/batchgenie.webp){ .img-box }](https://blendermarket.com/products/batchgenie)
+
+</div> <!-- section end -->
+
+---
+
+
 <div style="text-align: center;" markdown>
 
 *PF2B is a third-party addon and is not an official product of Bentley Systems, E-on Software, or PlantFactory. It is not affiliated with or endorsed by these companies.*{style="color:var(--md-default-fg-color--light)"}
 
 </div>
+
+

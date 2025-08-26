@@ -16,12 +16,11 @@ tags:
 
 
 !!! warning ""
-    PF2B does **not** guarantee 100% compatibility with all plants. With over [23,000](plants.md) presets, it is impractical to manually test and verify each one. However, most plants should import correctly without manual intervention.
+    PF2B does **not** guarantee 100% compatibility with all plants. With over [23,000](plants.md) presets, it is not possible to manually test and verify each one. However, compatibility is very high, and approximately 99% of plants should import correctly without manual intervention.
 
     If you encounter issues, such as incorrect texture settings or geometry problems, [please reach out](support.md). I will do my best to resolve them by adding plant-specific configurations to the addon.
 
     **For more details, see the [PF2B: Under the Hood](support/pf2b_under_the_hood.md) page.**
-
 
 
 
