@@ -159,7 +159,7 @@ Extensive documentation is available [here](https://pf2b.roberd.net/){ target="_
 ### BatchGenie {style="margin-bottom:0.1em;"}
 An add-on designed to simplify and automate common asset-related tasks in Blender.
 
-[![BatchGenie Addon](images/batchgenie.webp){ .img-box }](https://blendermarket.com/products/batchgenie)
+[![BatchGenie Addon](images/batchgenie.webp){ .img-box }](https://blendermarket.com/products/batchgenie){ target="_blank" }
 
 </div> <!-- section end -->
 
