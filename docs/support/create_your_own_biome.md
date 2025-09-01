@@ -193,6 +193,13 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
         So now you should have both `my_biome[LD].pf2bqueue` and `my_biome[HD].pf2bqueue` in the folder.
 
+        !!! info2 "Details"
+            PF2B uses the `.pf2bqueue` file as the **Master Record**, so to speak. It dictates which plants are exported into the biome.
+
+            During the build process, PF2B uses the **plant name** and **preset name** to cross-check which plants should go inside the biome. This means you can switch plant detail levels in the queue file without needing to manually create multiple biomes for different detail levels.
+            <br>For example, even if you build your biome with `[LD]` plants, you can easily switch the detail levels as shown above, and it will still work. PF2B automatically modifies all of the necessary fields inside the `.biome` file during the build so that everything works correctly.
+
+            However, please note that you cannot change the plants or presets themselves, only the detail levels!
 
 
     !!! info2 ""
