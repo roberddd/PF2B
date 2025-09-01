@@ -21,6 +21,9 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 - **Improved Functionality**
     - **Queue Save & Load**: Added `Add Selected Plants to Queue` option that adds all selected plants in the scene to the queue. [More info](workflow/browse_via_blender.md#queue)
     - **Verity Textures** tool under **Plant Troubleshoot Tools** has been improved by also printing out the image name used inside blender and not only the 'physical filename' to make it clearer to find images. Also option to print out the image file size.
+    - When using the **Mark as Asset** in tandem with 'Import Overrides' the Asset description will be modified slightly from the default as well as a extra 'Import Overrides used' tag added to differentiate regular preset plants vs custom.
+- **Other**
+    - Internal changes to the `.pf2bqueue` files that are used when using the save/load queue functionality. This change is made to accommodate for the biomes system and  makes queue files from earlier releases not fully compatible.
 
 --- -->
 

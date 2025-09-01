@@ -130,15 +130,69 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
         - If you only built the biome with **LD** plants, rename the original queue file to include the detail level in brackets: `my_biome.pf2bqueue` → `my_biome[LD].pf2bqueue`
 
-        - Opening the queue file in a text editor should look like this:
-
-            ![Queue file](../images/support/biome/queue-file-content_ld.webp){ .img-box .on-glb width=75% }
-
         - To create the **HD** version, copy the LD queue file and rename it: `my_biome[HD].pf2bqueue`.
 
             Then, manually edit the file in a text editor: update `plant_name`, `plant_detail_filter`, and `plant_path` values by replacing **LD** with **HD**. It should look similar to this:
 
-            ![Queue file](../images/support/biome/queue-file-content_hd.webp){ .img-box .on-glb width=75% }
+
+            === "LD"
+                ``` json
+                [
+                    {
+                        "main_category": "PlantCatalog",
+                        "plant_name": "Aesculus pavia LD",
+                        "plant_type": "Broadleaf Trees",
+                        "plant_detail": "LD",
+                        "plant_path": "PlantCatalog\\Broadleaf Trees\\Aesculus pavia LD.tpf",
+                        "preset_name": "Standard mat 25",
+                        "preset_display_name": "Standard (25)",
+                        "preset_number": 1,
+                        "quantity": 1
+                    },
+                    {
+                        "main_category": "PlantCatalog",
+                        "plant_name": "Dryopteris filix-mas LD",
+                        "plant_type": "Ferns",
+                        "plant_detail": "LD",
+                        "plant_path": "PlantCatalog\\Ferns\\Dryopteris filix-mas LD.tpf",
+                        "preset_name": "Standard mat 0",
+                        "preset_display_name": "Standard (0)",
+                        "preset_number": 0,
+                        "quantity": 1
+                    }
+                ]
+                ```
+
+            === "HD"
+                ``` json
+                [
+                    {
+                        "main_category": "PlantCatalog",
+                        "plant_name": "Aesculus pavia HD",
+                        "plant_type": "Broadleaf Trees",
+                        "plant_detail": "HD",
+                        "plant_path": "PlantCatalog\\Broadleaf Trees\\Aesculus pavia HD.tpf",
+                        "preset_name": "Standard mat 25",
+                        "preset_display_name": "Standard (25)",
+                        "preset_number": 1,
+                        "quantity": 1
+                    },
+                    {
+                        "main_category": "PlantCatalog",
+                        "plant_name": "Dryopteris filix-mas HD",
+                        "plant_type": "Ferns",
+                        "plant_detail": "HD",
+                        "plant_path": "PlantCatalog\\Ferns\\Dryopteris filix-mas HD.tpf",
+                        "preset_name": "Standard mat 0",
+                        "preset_display_name": "Standard (0)",
+                        "preset_number": 0,
+                        "quantity": 1
+                    }
+                ]
+                ```
+
+        So now you should have both `my_biome[LD].pf2bqueue` and `my_biome[HD].pf2bqueue` in the folder.
+
 
 
     !!! info2 ""
@@ -163,8 +217,13 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
         - Create a new folder in the following path: `%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\user_default\pf2b\biomes`
 
+            !!! info2 "Tip"
+                You can quickly open this folder by going to `PF2B Preferences > Plant Library > Biomes` and enabling the `Biome Contributor Tools`, which **will display** additional buttons such as **Open Internal PF2B Biome Folder**.
+
+
         - The root folder contains biome categories, such as `coniferous`.
             - You can place your biome in an existing category or create a new one.
             - The folder for your biome **must be named exactly the same as your biome**, e.g., `my_biome`.
 
-            This will allow PF2B to recognize and load your custom biome properly.
+
+        This will allow PF2B to recognize and load your custom biome properly. Once it's detected, you can try the **Build Biome** button, and afterwards go to `Geo-Scatter > Biome Scatter > Open Biomes` to test the biome in action.
