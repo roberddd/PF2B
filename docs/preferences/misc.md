@@ -27,6 +27,13 @@ Read more about it under the [PF2B: Under the Hood](../support/pf2b_under_the_ho
         1. **Verify Textures**: Prints out texture details to the console. Opens a popup for additional options.
             - :blender_icon_console:: Opens the console.
 
+            <!-- WIP: TO BE PUBLISHED WITH 1.1.7 -->
+            <!-- ![Verify Textures popup](../images/verify-textures-popup.webp){ .img-box }
+
+            !!! inline abstract "Verify Textures Example"
+                ![Verify Textures Example](../images/verify-textures.webp){ .img-box .on-glb } -->
+
+
 #### Plants & Thumbnails
 
 - **Re-Index Plants**: Re-indexes plants by checking what plants are available in your library. Use this to update your plant list if any new plants are missing.

@@ -51,7 +51,9 @@ nav:
       - workflow/browse_via_plantfactory.md
       - workflow/import_settings.md
       - workflow/material_settings.md
-    - Post Processing: workflow/post_processing.md
+    - Post Import:
+      - workflow/post_processing.md
+    # - Biomes: workflow/biomes.md
   - Preferences:
     - preferences/general.md
     - preferences/plant_library.md

@@ -12,6 +12,18 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+<!-- ### 1.1.7 <small>2025-09-XX</small>
+
+- **New Functionality**
+    - **Biomes**:
+- **New Functionality**
+    - When using the **Mark as Asset** feature now the Asset automatically retrieves an Asset Preview thumbnail, the same image from the Plant Browser will be used.
+- **Improved Functionality**
+    - **Queue Save & Load**: Added `Add Selected Plants to Queue` option that adds all selected plants in the scene to the queue. [More info](workflow/browse_via_blender.md#queue)
+    - **Verity Textures** tool under **Plant Troubleshoot Tools** has been improved by also printing out the image name used inside blender and not only the 'physical filename' to make it clearer to find images. Also option to print out the image file size.
+
+--- -->
+
 ### 1.1.6 <small>2025-08-26</small>
 
 - **New Functionality**
