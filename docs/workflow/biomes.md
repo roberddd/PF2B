@@ -1,5 +1,5 @@
 !!! warning ""
-    Biomes feature is not yet released. Coming soon...
+    The Biomes & Collections features are not yet released. Coming soon...
 
 ## What are Biomes?
 
@@ -32,7 +32,8 @@ When you click **Build Biome**, PF2B will:
 
 Once the process is complete, the biome becomes available inside the scattering plugin of your choice. This means you can immediately scatter the biome in your Blender scene to generate rich, natural environments.
 
-As a bonus, the `.blend` files are stored in your Asset Library, so each individual plant can also be accessed directly from the **Asset Browser**, outside of the biome system.
+!!! info2 ""
+    **Bonus**: The `.blend` files are stored in your Asset Library, so each individual plant can also be accessed directly from the **Asset Browser** outside of the biome system.
 
 ---
 

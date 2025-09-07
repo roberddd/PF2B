@@ -1,5 +1,5 @@
 !!! warning ""
-    Biomes feature is not yet released. Coming soon...
+    The Biomes & Collections features are not yet released. Coming soon...
 
     The below documentation is valid for `beta2` version of the addon.
 
