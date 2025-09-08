@@ -49,16 +49,16 @@ nav:
     - Import:
       - workflow/browse_via_blender.md
       - workflow/browse_via_plantfactory.md
-      # - Biomes & Collections:
-      #   - Overview: workflow/biomes_and_collections.md
-      #   - workflow/biomes.md
-      #   - workflow/collections.md
+      - Biomes & Collections:
+        - Overview: workflow/biomes_and_collections.md
+        - workflow/biomes.md
+        - workflow/collections.md
     - Settings:
       - workflow/import_settings.md
       - workflow/material_settings.md
     - Post Import:
       - workflow/post_processing.md
-      # - workflow/utilities.md
+      - workflow/utilities.md
   - Preferences:
     - preferences/general.md
     - preferences/plant_library.md

@@ -94,3 +94,30 @@ To avoid rebuilding the entire cache, you can import or export an existing cache
 
 
 
+## Biomes & Collections
+
+!!! warning ""
+    The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
+
+
+### Scatter add-on
+
+Displays a verification indicating whether Geo-Scatter or Biome-Reader is installed and provides links if they are not found.
+
+
+
+### Blend Storage
+
+Specifies the location for storing exported plant `.blend` files so that Biome-Reader or Geo-Scatter can find them. These files can usually be stored in any of the Asset Library locations you have set in Blender preferences.
+
+
+### Biome Contributor Tools
+
+Enable this mode if you want to contribute new biomes to PF2B. It provides additional options such as:
+
+- Adding example biomes to the biome collection.
+- A shortcut to the internal biome folder.
+- Links to [specific documentation](../support/create_your_own_biome.md) for building your own biomes to distribute with PF2B.
+
+![Biome Contributor Tools](../images/preferences_plant-library_biome_biome-contributor-tools.webp){ .img-box }
+

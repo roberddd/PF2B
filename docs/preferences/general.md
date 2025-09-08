@@ -18,7 +18,7 @@
 - **Use Preset Thumbnails**: Enable to display presets with thumbnails. Disable this option to show presets as a simple list.
 - **Hide 'Browse via PlantFactory' mode**: If you only plan to use the [Browse via Blender](../workflow/browse_via_blender.md) mode, you can enable this to hide the mode selection at the top and declutter the interface.
 
-## PlantFactory Location
+## PlantFactory Application Location
 
  The location of the PlantFactory application, typically found at `C:\Program Files\e-on software\PlantFactory\Application`.
 

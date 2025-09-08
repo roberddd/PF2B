@@ -21,6 +21,7 @@
     - :blender_icon_preset:: Opens the preset gallery, see [gallery view](#gallery-view) below.
     - :octicons-triangle-left-24:: Navigates to the previous plant or preset.
     - :octicons-triangle-right-24:: Navigates to the next plant or preset
+    - :blender_icon_bold:: Opens the Biomes & Collections browser. Hold **Shift** while clicking to open the Biome Manager interface from **Geo-Scatter** or **Biome-Reader**. Read more about Biomes & Collections [here](biomes_and_collections.md).
     - :octicons-info-16:: Opens a popup displaying information about the plant. Read more in the [Plant Info Popup](#plant-info-popup) section.
     <!-- ![plant gallery top panel](../images/plant-info-popup_plant.webp){ .img-box .on-glb align=right width=27% data-description="Plant Info Popup"} -->
     - **Browse Mode**: Plants or Presets.
@@ -240,13 +241,13 @@ Common information shown includes:
 - Function buttons
 
 === "Plant"
-    ![plant gallery top panel](../images/plant-info-popup_plant.webp){ .img-box }
+    ![Plant Info Popup](../images/plant-info-popup_plant.webp){ .img-box }
 
 === "Preset"
-    ![plant gallery top panel](../images/plant-info-popup_preset.webp){ .img-box }
+    ![Plant Info Popup](../images/plant-info-popup_preset.webp){ .img-box }
 
 === "Preset with Image"
-    ![plant gallery top panel](../images/plant-info-popup_preset-with-image.webp){ .img-box }
+    ![Plant Info Popup](../images/plant-info-popup_preset-with-image.webp){ .img-box }
 
 - **Function buttons**:
     - **Plant-Fixes available**: This button will appear if there are [Plant-Fixes](../support/pf2b_under_the_hood.md#plant-fixes-system) available for the plant. When clicked, it will display all the fixes applied during the import of this plant.

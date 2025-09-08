@@ -1,45 +1,115 @@
 !!! warning ""
-    The Biomes & Collections features are not yet released. Coming soon...
+    The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
 
-## What are Biomes?
+!!! info2 "Biomes?"
+    Biomes are **curated plant ecosystems** ready to scatter in Blender using [Geo-Scatter](https://www.geoscatter.com/download.html#geo-scatter) or [Biome-Reader](https://www.geoscatter.com/download.html#biome-reader).
 
-In PF2B, a **biome** is a ready-made collection of plants that can be used to quickly build natural environments.
-Biomes are more than just plant lists, they are structured setups designed to work exclusively with third-party scattering plugins developed by **bd3d**:
+    👉 For an overview of how Biomes compare to Collections, see: [Biomes & Collections Overview](biomes_and_collections.md).
 
-- **[Geo-Scatter](https://www.geoscatter.com/download.html#geo-scatter)** (commercial)
-- **[Biome-Reader](https://www.geoscatter.com/download.html#biome-reader)** (free)
 
-These plugins handle the actual scattering of plants in your scene, making it easy to generate meadows, forests, wetlands, and other natural landscapes.
 
-!!! info2 ""
-    **Biome-Reader** is a free, simplified version best suited for hobbyists and beginners, while **Geo-Scatter** is the full professional toolset with advanced controls, optimizations, and support.
+## Where to find Biomes
 
-    Since **Biome-Reader** is free, you can use it to get started with PF2B biomes right away, it works perfectly for exploring and scattering your first biomes.
+![biomes](../images/biome_where-to-find.webp){ .img-box align=left }
 
----
+Click the :blender_icon_bold: icon in the main interface to open the **Biomes browser**, where you can preview and manage available biomes.
 
-## How Biomes Work in PF2B
+<div style="clear:both"></div>
 
-Inside PF2B, the **Biomes button** acts as a **browser** where you can preview and manage available biomes.
-For each biome, you are presented with a **Build Biome** button.
 
-### Building a Biome
+
+
+## Browse Biomes
+
+At the top of the browser, you can select a **category** of biomes.
+
+You also have the **Detail** selection, which lets you choose either **Low** or **High** detail level. Low Detail biomes should primarily use LD plants, while High Detail biomes should primarily use HD plants. Some variation is allowed, but this serves as a general guideline.
+
+If a biome is already built and available in your library, the **Build Biome** button will be replaced by a **Biome Built** label.
+
+![biomes](../images/biomes.webp){ .img-box .on-glb }
+
+<h5>Available Actions</h5>
+
+- **Build Biome**: See [Building a Biome](#building-a-biome).
+- **INFO**: Displays information about the biome. See [Info Popup](#info-popup).
+- :material-menu: **Menu**:
+    - **Add plants to queue**: Adds these plants to your [queue](browse_via_blender.md#queue). This will erase all current items in your queue.
+    - **Check Installed Plants**: Checks which plants you already have imported in your library. See [Installed Plants Popup](#installed-plants-popup).
+    - **Open Biome Folder**: Available once the biome is built. Opens the specific biome folder located at: `C:\Users\%userprofile%\AppData\Roaming\Blender Foundation\Blender\data\scatter library\_biomes_\PF2B`
+
+### Info Popup
+
+The **Info Popup** provides details about the selected biome.
+It shows the plants included in the biome, and you can click the :octicons-question-24: **info button** next to a plant to view more details about it.
+
+![Biomes Info Popup](../images/biome_info_popup.gif){ .img-box align=left }
+
+!!! inline end info2 "Plant Details"
+    Opens a popup with extra information about the plant.
+
+    ![Plant Info Popup](../images/plant-info-popup_preset-with-image.webp){ .img-box .on-glb data-description="Plant Info Popup"}
+
+    Read more about this popup [here](browse_via_blender.md#plant-info-popup)
+
+<div style="clear:both"></div>
+
+
+### Installed Plants Popup
+
+Similar to the regular **Info Popup**, but this one checks whether the actual plants are present in your library. There are two options:
+
+=== "Check Plants in Blend Files"
+    Verifies which plants from the biome are already imported and stored in your biome `.blend` library files.
+
+    ![Biomes Info Popup](../images/biome_installed-plants_blend.gif){ .img-box align=left }
+
+    !!! warning ""
+        Note: This check only looks at the root folder defined in `PF2B Preferences > Plant Library > Blend Storage`. If you have moved your blend files elsewhere or into subdirectories, they may appear in red in this popup. However, they will still work in the biome as long as the blend files are inside your Asset Library, where Geo-Scatter or Biome-Reader can find them.
+
+=== "Check PlantCatalog Library"
+    Checks whether the plants in the biome are installed in your PlantCatalog library on disk, regardless of whether they are in the biome `.blend` files.
+
+    ![Biomes Info Popup](../images/biome_installed-plants_tpf.gif){ .img-box align=left  }
+
+    !!! info2 ""
+        If a plant is missing, run [Re-Index Plants](../preferences/misc.md#plants-thumbnails) under `PF2B Preferences > Misc`.
+
+
+
+## Building a Biome
+
+!!! warning "Before You Start"
+    When building biomes, you must start from a **new/empty scene**. The scene is used as a temporary location for the imported plants, so do not run **Build Biome** in a project with existing work you want to keep.
+
 When you click **Build Biome**, PF2B will:
 
 1. **Export plants** from PlantFactory based on the biome definition.
-2. **Store the exported models** inside `.blend` files for Blender.
+2. **Store the exported models in** `.blend` files within your Asset Library.
 3. **Prepare biome-specific files** required by Geo-Scatter or Biome-Reader.
 
-Once the process is complete, the biome becomes available inside the scattering plugin of your choice. This means you can immediately scatter the biome in your Blender scene to generate rich, natural environments.
+Once the process is complete, the biome becomes available in the scattering plugin of your choice. You can then scatter it in your Blender scene to generate rich, natural environments:
 
-!!! info2 ""
-    **Bonus**: The `.blend` files are stored in your Asset Library, so each individual plant can also be accessed directly from the **Asset Browser** outside of the biome system.
+=== "Geo-Scatter"
+    ![Biomes Info Popup](../images/biome_browse_geo-scatter.webp){ .img-box }
 
----
+=== "Biome-Reader"
+    ![Biomes Info Popup](../images/biome_browse_biome-reader.webp){ .img-box }
 
-## Summary
+> 👉 For instructions on using Geo-Scatter or Biome-Reader, please check [www.geoscatter.com](https://www.geoscatter.com/index.html)
 
-- **Biomes** in PF2B = collections of plants bundled with setup files.
-- PF2B itself is primarily a **biome browser**: it organizes, prepares, and exports assets.
-- The actual scattering in your scene is handled by **Geo-Scatter** or **Biome-Reader**.
-- The **Build Biome** button automates the process of exporting plants and preparing the files needed to make the biome available in those plugins.
+
+!!! info2 "Where the Biomes are Stored"
+    Your `.blend` files are organized in the Asset Library location defined in `Preferences > Plant Library > Biomes & Collections > Blend Storage`.
+
+    After importing the biomes you want, you should see something like this:
+
+    === "One imported Biome"
+        ![Blend files](../images/biome_blend-files.webp){ .img-box }
+
+    === "Multiple Biome & Collection imports"
+        ![Blend files](../images/biome_collection_blend-files.webp){ .img-box }
+
+    …and inside your Asset Browser, where everything is categorized, tagged, and presented with clear thumbnails:
+
+    ![Blend files](../images/biome_collection_library-example.webp){ .img-box .on-glb }

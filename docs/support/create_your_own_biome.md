@@ -1,7 +1,7 @@
 !!! warning ""
-    The Biomes & Collections features are not yet released. Coming soon...
+    The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
 
-    The below documentation is valid for `beta2` version of the addon.
+    The below documentation is valid for `beta3` version of the addon.
 
 
 If you want to contribute biomes to PF2B, here is some important information and a set of guidelines to follow.
@@ -9,7 +9,9 @@ If you want to contribute biomes to PF2B, here is some important information and
 
 ## Guidelines
 
-### Plant Naming
+### PF2B
+
+#### Plant Naming
 
 When creating the biome with PF2B plants always use the following settings for plant naming:
 
@@ -21,8 +23,11 @@ When creating the biome with PF2B plants always use the following settings for p
 
 If you follow the above steps, the result should look like this: `PlantName [Preset] [Detail-Level]`, example: `Reed Canary Grass [Wild H100 S20] [HD]`.
 
+!!! info2 ""
+    If you accidentally imported plants with the wrong naming scheme and don’t want to re-import them just to change the names, use the [Plant Renamer](../workflow/utilities.md#plant-renamer) utility.
 
-### Plant Detail Levels
+
+#### Plant Detail Levels
 
 1. **Same Plant, Same Preset (Not Allowed)**
 
@@ -44,14 +49,27 @@ If you follow the above steps, the result should look like this: `PlantName [Pre
     - Even in a "Low Detail" biome, not every plant needs to be from the "LD" category, just the majority.
     - The same applies to "High Detail" biomes.
 
----
-
-#### Summary
+<h5>Summary</h5>
 
 - ✅ Do: mix different plants with different detail levels.
 - ❌ Don’t: mix different detail levels of the **same plant** in a biome (risk of material merge + UV mismatches).
 
+---
 
+### Geo-Scatter
+
+As the artist, you can decide how to build the biome and configure its settings.
+As a general guideline, the following settings should be adjusted for each layer:
+
+- **Density**
+- **Rotation**
+    - Align Normal
+    - Random Rotation
+- **Scale**
+    - Default Scale
+    - Random Scale
+- **Pattern**
+- **Display**: Set up the display solution.
 
 
 
@@ -274,4 +292,4 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
             - The folder for your biome **must be named exactly the same as your biome**, e.g., `my_biome`.
 
 
-        This will allow PF2B to recognize and load your custom biome properly. Once it's detected, you can try the **Build Biome** button, and afterwards go to `Geo-Scatter > Biome Scatter > Open Biomes` to test the biome in action.
+        This will allow PF2B to recognize and load your custom biome properly. Once it's detected, you can try the **[Build Biome](../workflow/biomes.md#building-a-biome)** button, and afterwards go to `Geo-Scatter > Biome Scatter > Open Biomes` to test the biome in action.
