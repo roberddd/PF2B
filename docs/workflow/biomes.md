@@ -12,7 +12,7 @@
 
 ![biomes](../images/biome_where-to-find.webp){ .img-box align=left }
 
-Click the :blender_icon_bold: icon in the main interface to open the **Biomes browser**, where you can preview and manage available biomes.
+Click the :blender_icon_bold: icon in the main interface to open the **Biomes & Collections browser**, where you can preview and manage available biomes.
 
 <div style="clear:both"></div>
 

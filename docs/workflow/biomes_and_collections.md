@@ -14,7 +14,7 @@ Both systems help you quickly bring plants from PlantFactory into Blender, but t
 Both systems write to the same `.blend` asset files, giving you a **unified library**.
 
 - Plants imported with **Collections** are instantly available to **Biomes** and can also be accessed directly in the **Asset Browser**.
-- Plants imported by **Biomes** are similarly available in the **Asset Browser** for direct use outside of a biomes.
+- Plants imported by **Biomes** are similarly available in the **Asset Browser** for direct use outside of biomes.
 
 
 
@@ -31,7 +31,7 @@ These plugins handle the actual scattering of plants in your scene, making it ea
 !!! info2 "Choosing a Scattering Plugin"
     **Biome-Reader** is a free, simplified version best suited for hobbyists and beginners. **Geo-Scatter** is the full professional toolset with advanced controls, optimizations, and support.
 
-    Since **Biome-Reader** is free, you can start using PF2B biomes immediately — it works perfectly for exploring and scattering your first biomes.
+    Since **Biome-Reader** is free, you can start using PF2B biomes immediately, it works perfectly for exploring and scattering your first biomes.
 
 !!! info2 ""
     The number of available biomes will continue to grow over time as new ones are added.

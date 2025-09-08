@@ -8,7 +8,7 @@
     👉 For an overview of how Collections compare to Biomes, see: [Biomes & Collections Overview](biomes_and_collections.md).
 
 
-## Where to find Biomes
+## Where to find Collections
 
 ![biomes](../images/biome_where-to-find.webp){ .img-box align=left }
 
