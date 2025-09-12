@@ -1,62 +1,62 @@
 !!! warning ""
     The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
 
-    The below documentation is valid for `beta3` version of the addon.
+If you want to contribute [biomes](../workflow/biomes.md) to PF2B, here is some important information and a set of guidelines to follow.
 
 
-If you want to contribute biomes to PF2B, here is some important information and a set of guidelines to follow.
+## Guidelines: PF2B
+
+### Plant Selection
+
+Only plants from the **PlantCatalog Library** are supported.
+
+You are free to build your biome using HD plants, LD plants, or a mix of both. However, try to lean toward one detail level so that an opposite version can later be created with a higher or lower poly count.
 
 
-## Guidelines
+---
 
-### PF2B
 
-#### Plant Naming
+### Plant Detail Levels
+
+<h4>❌ Not Allowed</h4>
+
+- **Same Plant, Different Detail Levels**:<br>A biome **must not** mix multiple detail levels (e.g., RT, LD, HD) of the **same plant**.
+
+    ??? warning "Why?"
+        - In some cases (same preset), this won't work at all because the build process will fail when PF2B tries to match the plant definitions.
+        - In other cases (different presets), it will technically import, but causes **material merging issues**. For example, if the Low Detail version uses a leaf material called `XXX` and the High Detail version also uses `XXX` (but with higher texture resolution), PF2B will merge them into a single material during import. As a result, both variants will use whichever material was imported first. Since the UV maps for the Low Detail and High Detail versions of the leaves are often different, the textures will be mapped incorrectly, making the leaves look wrong.
+
+
+<h4>✅ Allowed</h4>
+
+- **Mixing Different Plants**:<br>It is encouraged to mix different detail levels across **different plants** within a biome.
+    - Even in a "Low Detail" biome, not every plant needs to be from the "LD" category, just the majority.
+    - The same applies to "High Detail" biomes.
+
+
+---
+
+
+### Plant Naming
 
 When creating the biome with PF2B plants always use the following settings for plant naming:
 
 - **English Name**
 - **Preset**
 - **Detail Level**
-- Use **Brackets `[]`** as wrappers
+- Enable **User Group Wrapper** and select **Brackets `[]`** as wrappers and **pipe `|`** as the divider.
 - Enable **Add Spaces Between Elements**
 
-If you follow the above steps, the result should look like this: `PlantName [Preset] [Detail-Level]`, example: `Reed Canary Grass [Wild H100 S20] [HD]`.
+If you follow the above steps, the result should look like this: `PlantName [Preset|Detail-Level]`, example: `Reed Canary Grass [Wild H100 S20|HD]`.
 
 !!! info2 ""
-    If you accidentally imported plants with the wrong naming scheme and don’t want to re-import them just to change the names, use the [Plant Renamer](../workflow/utilities.md#plant-renamer) utility.
+    If you accidentally imported plants with the wrong naming scheme and don't want to re-import them just to change the names, use the [Plant Renamer](../workflow/utilities.md#plant-renamer) utility.
 
-
-#### Plant Detail Levels
-
-1. **Same Plant, Same Preset (Not Allowed)**
-
-    A biome **cannot** contain multiple detail levels (e.g., RT, LD, HD) of the **same plant** if they use the **same preset**.
-
-2. **Same Plant, Different Presets (Not Recommended)**
-
-    A biome **can** contain multiple detail levels of the same plant if they use **different presets**, **but this is strongly discouraged**.
-
-    ??? warning "Why?"
-        This often causes **material merging issues**. For example, if the Low Detail version uses a leaf material called `XXX` and the High Detail version also uses `XXX` (but with higher texture resolution), PF2B will merge them into a single material during import. As a result, both variants will use whichever material was imported first. Since the UV maps for the Low Detail and High Detail versions of the leaves are often different, the textures will be mapped incorrectly, making the leaves look wrong.
-
-        Because of this, it is **not recommended** to use different detail levels of the same plant within the same biome.
-
-3. **Mixing Different Plants (Encouraged)**
-
-    It **is encouraged** to mix different detail levels across **different plants** within a biome.
-
-    - Even in a "Low Detail" biome, not every plant needs to be from the "LD" category, just the majority.
-    - The same applies to "High Detail" biomes.
-
-<h5>Summary</h5>
-
-- ✅ Do: mix different plants with different detail levels.
-- ❌ Don’t: mix different detail levels of the **same plant** in a biome (risk of material merge + UV mismatches).
 
 ---
 
-### Geo-Scatter
+
+## Guidelines: Geo-Scatter
 
 As the artist, you can decide how to build the biome and configure its settings.
 As a general guideline, the following settings should be adjusted for each layer:
@@ -71,6 +71,8 @@ As a general guideline, the following settings should be adjusted for each layer
 - **Pattern**
 - **Display**: Set up the display solution.
 
+
+---
 
 
 ## Creating the Biome
@@ -227,9 +229,9 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
                 ``` json
                 "asset_file": "my_library",
                 "instances": [
-                    "Hong Kong Orchid Tree [Standard mat 0] [HD]",
-                    "Dead Lodgepole Pine [Standard 1a mat 0] [HD]",
-                    "Mountain Hemlock [Standard mat 0] [HD]"
+                    "Hong Kong Orchid Tree [Standard mat 0|HD]",
+                    "Dead Lodgepole Pine [Standard 1a mat 0|HD]",
+                    "Mountain Hemlock [Standard mat 0|HD]"
                 ]
                 ```
 
@@ -239,15 +241,15 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
                 "asset_file": "INSTANCES_DEFINED",
                 "instances": [
                     [
-                        "Hong Kong Orchid Tree [Standard mat 0] [LD]",
+                        "Hong Kong Orchid Tree [Standard mat 0|LD]",
                         "pf2b-biome_Broadleaf_Trees[LD]"
                     ],
                     [
-                        "Dead Lodgepole Pine [Standard 1a mat 0] [LD]",
+                        "Dead Lodgepole Pine [Standard 1a mat 0|LD]",
                         "pf2b-biome_Coniferous[LD]"
                     ],
                     [
-                        "Mountain Hemlock [Standard mat 0] [HD]",
+                        "Mountain Hemlock [Standard mat 0|HD]",
                         "pf2b-biome_Coniferous[HD]"
                     ]
                 ]
@@ -259,10 +261,9 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
                 - Points it to the correct `.blend` file
                 - Adjusts detail levels where necessary
 
-
-
     !!! info2 ""
         Now continue with the [Finishing Touches](#creating-the-biome-finishing-touches)
+
 
 === "Finishing Touches"
 
@@ -274,7 +275,7 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
         The image below shows the final biome folder structure, including the rendered image and queue files, as they should appear.
 
-        ![Queue file](../images/support/biome/biome-files-final.webp){ .img-box .on-glb }
+        ![Queue file](../images/support/biome/biome-files-final.webp){ .img-box }
 
 
     - **Testing the biome**

@@ -12,7 +12,7 @@
 
 ![biomes](../images/biome_where-to-find.webp){ .img-box align=left }
 
-Click the :blender_icon_bold: icon in the main interface to open the **Biomes browser**.
+Click the :blender_icon_bold: icon in the main interface to open the **Biomes & Collections browser**.
 
 Once the browser is open, use the menu in the top-left corner to switch between browsing **Biomes** and **Collections**.
 
