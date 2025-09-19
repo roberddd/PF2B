@@ -21,7 +21,7 @@ Both systems write to the same `.blend` asset files, giving you a **unified libr
 
 ## [Biomes](biomes.md)
 
-In PF2B, a **biome** is a ready-made collection of plants designed to quickly build natural environments. Biomes are more than just plant lists, they are structured setups designed to work exclusively with third-party scattering plugins developed by **bd3d**:
+In PF2B, a **biome** is a ready-made collection of plants designed to quickly build natural environments. Biomes are more than just plant lists, they are structured setups designed to work exclusively with third-party scattering add-ons developed by **bd3d**:
 
 - **[Geo-Scatter](https://www.geoscatter.com/download.html#geo-scatter)** (commercial)
 - **[Biome-Reader](https://www.geoscatter.com/download.html#biome-reader)** (free)
@@ -39,7 +39,7 @@ These plugins handle the actual scattering of plants in your scene, making it ea
 
 ## [Collections](collections.md)
 
-Collections are **plant groups for bulk importing** into your Blender Asset Library. They let you quickly populate categories of plants for use in the Asset Browser, without waiting for on-demand imports.
+Collections are **plant groups for bulk importing** into your Blender Asset Library. They let you quickly populate categories of plants for use in the Asset Browser, without waiting for on-demand imports. For this functionality, no external third-party add-ons are required.
 
 
 !!! info2 ""

@@ -54,10 +54,10 @@ nav:
         - workflow/biomes.md
         - workflow/collections.md
     - Settings:
-      - workflow/import_settings.md
-      - workflow/material_settings.md
+      - Import Settings: workflow/import_settings.md
+      - Material Settings: workflow/material_settings.md
     - Post Import:
-      - workflow/post_processing.md
+      - Post Processing: workflow/post_processing.md
       - workflow/utilities.md
   - Preferences:
     - preferences/general.md

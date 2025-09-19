@@ -68,7 +68,7 @@ Similar to the regular **Info Popup**, but this one checks whether the actual pl
         Note: This check only looks at the root folder defined in `PF2B Preferences > Plant Library > Blend Storage`. If you have moved your blend files elsewhere or into subdirectories, they may appear in red in this popup. However, they will still work in the biome as long as the blend files are inside your Asset Library, where Geo-Scatter or Biome-Reader can find them.
 
 === "Check PlantCatalog Library"
-    Checks whether the plants in the biome are installed in your PlantCatalog library on disk, regardless of whether they are in the biome `.blend` files.
+    Checks whether the plants in the biome are installed in your [PlantCatalog library](../plants.md#plantcatalog-library) on disk, regardless of whether they are in the biome `.blend` files.
 
     ![Biomes Info Popup](../images/biome_installed-plants_tpf.gif){ .img-box align=left  }
 
@@ -96,8 +96,6 @@ Once the process is complete, the biome becomes available in the scattering plug
 === "Biome-Reader"
     ![Biomes Info Popup](../images/biome_browse_biome-reader.webp){ .img-box }
 
-> 👉 For instructions on using Geo-Scatter or Biome-Reader, please check [www.geoscatter.com](https://www.geoscatter.com/index.html)
-
 
 !!! info2 "Where the Biomes are Stored"
     Your `.blend` files are organized in the Asset Library location defined in `Preferences > Plant Library > Biomes & Collections > Blend Storage`.
@@ -113,3 +111,50 @@ Once the process is complete, the biome becomes available in the scattering plug
     …and inside your Asset Browser, where everything is categorized, tagged, and presented with clear thumbnails:
 
     ![Blend files](../images/biome_collection_library-example.webp){ .img-box .on-glb }
+
+
+## Using Biomes
+
+![Video](../images/video_placeholder.png)
+
+
+<!-- <div class="youtube-wrapper">
+    <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/TGN_FiNH3aw?rel=0" frameborder="0" allowfullscreen></iframe>
+</div> -->
+
+> 🎥 The video above gives a quick overview of Biome functionality.
+> 👉 For detailed step-by-step instructions on using Geo-Scatter or Biome-Reader, please check [www.geoscatter.com](https://www.geoscatter.com/index.html)
+
+
+
+### Using LODs with Geo-Scatter
+
+!!! warning ""
+    This section applies **only to Geo-Scatter**. Biome-Reader does not support LODs.
+
+If you need more performance in the viewport, you can use the **Level of Detail** functionality introduced in Geo-Scatter 5.6. You'll find it under `Viewport > Level of Detail`.
+
+<h5>Setup Steps</h5>
+
+1. **Import LODs in PF2B**
+    - Navigate to the [LOD Importer](utilities.md#lod-importer) utility in PF2B.
+    - Choose between:
+        - `All Plants in Scene` (import LODs for every plant)
+        - `Selected Plants` (import only for the plants you select in the **Geo-Scatter Import** collection via the Outliner).
+    - Enable the **Use Biome Naming** checkbox. This ensures plants are renamed using the standard format `PlantName [Preset|DetailLevel]LOD`, so that Geo-Scatter can correctly identify them for the **Auto Setup LODs** function.
+    - Check the LOD tickboxes for the levels you want to bring in.
+    - Click **Import**.
+
+- **Enable in Geo-Scatter**
+    - In the Geo-Scatter panel, **first select the layer** you want to optimize.
+    - With that layer selected, open `Viewport > Level of Detail` for the layer and click **Auto Setup** to link the imported LODs.
+
+- **Fine-Tune**
+    - Adjust the **Transition** settings to your preference for smoother LOD switching.
+
+Once configured, you’ll notice a more responsive viewport.
+
+!!! info2 "Note"
+    The LOD feature mainly benefits **viewport performance** and rarely improves render times.
+
+    For best results, set the **Visibility State** as shown below so that LODs are active only in the viewport and not during rendering: ![Visibility State](../images/geo-scatter_visibility-state_2.webp)

@@ -75,7 +75,7 @@ Here you can check whether the actual plants are present in your library. There 
         Note: This check only looks at the root folder defined in `PF2B Preferences > Plant Library > Blend Storage`. If you have moved your blend files elsewhere or into subdirectories, they may appear in red in this popup. However, they will still work in the biome as long as the blend files are inside your Asset Library, where Geo-Scatter or Biome-Reader can find them.
 
 === "Check PlantCatalog Library"
-    Checks whether the plants in the biome are installed in your PlantCatalog library on disk, regardless of whether they are in the biome `.blend` files.
+    Checks whether the plants in the biome are installed in your [PlantCatalog library](../plants.md#plantcatalog-library) on disk, regardless of whether they are in the biome `.blend` files.
 
     ![Biomes Info Popup](../images/biome_collection_installed-plants_tpf.gif){ .img-box align=left }
 
@@ -98,4 +98,8 @@ After importing the collections you want, you should see something like this. Th
 
 …and inside your Asset Browser, where everything is categorized, tagged, and presented with clear thumbnails:
 
-![Blend files](../images/biome_collection_library-example.webp){ .img-box .on-glb }
+![Asset Browser](../images/biome_collection_library-example.webp){ .img-box .on-glb }
+
+
+!!! info2 ""
+    Need to store additional plants in the Biome Library that aren't available as Collections? Check out the [Plant Storer](utilities.md#plant-storer) utility.

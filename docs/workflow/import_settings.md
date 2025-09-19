@@ -13,7 +13,7 @@ These settings are shared between both Import modes.
 
     <div style="clear:both"></div>
 
-- **Merge duplicate Materials**: When enabled, this option ensures that imported plants reuse existing materials in the scene if names match (e.g. Leaf, Bark). This prevents Blender from generating duplicates like Leaf.001, helping maintain a cleaner and more organized material list across multiple imports.
+- **Merge duplicate Materials**: When enabled, this option ensures that imported plants reuse existing materials in the scene if names match (e.g. `Leaf`, `Bark`). This prevents Blender from generating duplicates like `Leaf.001`, helping maintain a cleaner and more organized material list across multiple imports.
 - **Categorize into Collections**: Automatically place imported plants into sub-collections (e.g. Broadleaf Trees, Bushes, Grass) for easier scene organization.
 
     !!! inline abstract "Categories Example"

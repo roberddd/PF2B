@@ -9,7 +9,7 @@
     - PlantFactory
     - Personal: visible if enabled in the preferences.
 - **Category**: Shows plant categories for the selected library.
-- **Detail Filter**: Filter plant catalog items by detail level (Only available for the `PlantCatalog` library).
+- **Detail Filter**: Filter plant catalog items by detail level (Only available for the [PlantCatalog library](../plants.md#plantcatalog-library)).
     - **All**: Show all detail levels.
     - **FG Only**: Show full geometry only.
     - **HD Only**: Show high detail only.
@@ -198,7 +198,7 @@ If we look at an individual plant inside the gallery we have the following butto
 #### Presets
 
 ![preset Gallery top panel](../images/gallery_presets_top-panel.webp){ .img-box .on-glb }
-Here you will also find the Size & Search fields and if you are browsing the `PlantCatalog library` there are additional filters available:
+Here you will also find the Size & Search fields and if you are browsing the [PlantCatalog library](../plants.md#plantcatalog-library) there are additional filters available:
 
 - **Min Height** & **Max Height**: Lets you filter presets based on the plant height.
 - **Min Polygons** & **Max Polygons**: Lets you filter presets based on the plant polygon count.

@@ -4,8 +4,8 @@
 
 Here you can adjust the locations of your plant libraries. These usually don’t need to be changed if you’ve installed everything in the default location, but you can adjust them if needed. The interface will indicate if the libraries are found.
 
-- **PlantCatalog**: The location of the PlantCatalog library folder, which should contain categorized subfolders for each plant type. Within these subfolders, you should find the actual `.tpf` plant files. Read more [here](../getting_started.md#installation-plantcatalog-plant-library) about how to install this library.
-- **PlantFactory**: The location of the PlantFactory library folder, which should contain multiple subfolders, including the `Species` folder that holds the actual `.tpf` plant files. This library contains the plants that ship with the PlantFactory application itself.
+- **PlantCatalog**: The location of the [PlantCatalog library](../plants.md#plantcatalog-library) folder, which should contain categorized subfolders for each plant type. Within these subfolders, you should find the actual `.tpf` plant files. Read more [here](../getting_started.md#installation-plantcatalog-plant-library) about how to install this library.
+- **PlantFactory**: The location of the [PlantFactory library](../plants.md#plantfactory-library) folder, which should contain multiple subfolders, including the `Species` folder that holds the actual `.tpf` plant files. This library contains the plants that ship with the PlantFactory application itself.
 - **Personal**: Enable this option if you have custom plants to include, and select the folder containing them. This folder can contain subfolders to organize the plants into categories.
 
     !!! info2 ""
@@ -102,14 +102,16 @@ To avoid rebuilding the entire cache, you can import or export an existing cache
 
 ### Scatter add-on
 
-Displays a verification indicating whether Geo-Scatter or Biome-Reader is installed and provides links if they are not found.
+Displays a verification of whether Geo-Scatter or Biome-Reader is installed, and provides links if they are not found.
 
+- **PF2B Scatter-Library Location**: Only change this setting if you have modified the "Scatter-Library Location" in the Geo-Scatter or Biome-Reader add-on. Otherwise, leave it unchanged. If you did change the location, this path must point to a subfolder within the add-on’s selected path, and that subfolder must be named "PF2B".
 
 
 ### Blend Storage
 
-Specifies the location for storing exported plant `.blend` files so that Biome-Reader or Geo-Scatter can find them. These files can usually be stored in any of the Asset Library locations you have set in Blender preferences.
+Specifies the location for storing exported plant `.blend` files so that Biome-Reader or Geo-Scatter can find them. These files can usually be stored in any of the Asset Library locations set in Blender preferences.
 
+- **Keep blend1 files**: Blender automatically creates `.blend1` backup files whenever data is stored in biome blend files. These backups are not used by PF2B and can take up significant space in large libraries. Enable this option if you wish to keep them.
 
 ### Biome Contributor Tools
 
@@ -117,7 +119,7 @@ Enable this mode if you want to contribute new biomes to PF2B. It provides addit
 
 - Adding example biomes to the biome collection.
 - A shortcut to the internal biome folder.
-- Links to [specific documentation](../support/create_your_own_biome.md) for building your own biomes to distribute with PF2B.
+- Links to [specific documentation](../support/create_your_own_biome.md) for creating your own biomes to distribute with PF2B.
 
 ![Biome Contributor Tools](../images/preferences_plant-library_biome_biome-contributor-tools.webp){ .img-box }
 
