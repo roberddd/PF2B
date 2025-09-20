@@ -125,144 +125,135 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
 
 === "Creation of Queue files"
-    1. **Exporting your queue**
 
-        If you used the [queue](../workflow/browse_via_blender.md#queue) feature when creating the biome and still have the plants in your queue, you can export them as a `.pf2bqueue` file via the :material-menu: menu by selecting **Save Queue**.
+    1. **Create Queue files**
 
-        ![Queue file](../images/support/biome/save-queue.gif){ .img-box }
+        Select whether to automatically generate these files or create them manually for finer control.
 
-        !!! info2 ""
-            If you did not use the queue system, select all the plants in your scene that are used by the biome, then use the same :material-menu: menu and choose **Add Selected to Queue**. After that, use **Save Queue** to generate the file.
+        === "Automatic creation"
+            Use the **[Create Queue files](../preferences/plant_library.md#biome-contributor-tools)** tool inside `Preferences > Plant Library > Biomes & Collections > Biome Contributor Tools`. This tool lets you select a `.biome` file and generate one or more `.pf2bqueue` files.
+
+            !!! info2 "Note"
+                This tool creates new files; it does not modify the original `.biome` file.
+
+            <h5>Tool options</h5>
+
+            - **Create**:
+                - **HD & LD variants**:<br>
+                Generates two queue files from your Biome: one for HD and one for LD. All plants in the Biome will be adjusted so their detail level matches the selected file (HD or LD). This lets you quickly create both variants without manually duplicating or editing the files.
+                - **Keep as is**:<br>
+                Keeps the exact detail levels defined in your Biome file when creating the queue file. This is useful if your Biome contains a mix of detail levels and you want precise control. After saving the queue, you will need to manually create additional detail-level files by duplicating and adjusting the generated file. When selecting this option, you must specify whether the source biome file is HD or LD.
 
 
-    - **Place the queue file**
+            <h4>Choosing your workflow:</h4>
 
-        Move the queue file to the same directory as your biome and name it the same as your biome, for example: `my_biome.pf2bqueue`.
+            - If you want your biomes strictly as either HD or LD, choose **Create HD & LD variants**.
 
-        ![Queue file](../images/support/biome/biome-files-and-queue.webp){ .img-box }
+            - If you have mixed detail levels and want granular control, select **Keep as is**. The next section, **Creating additional queue files for different detail levels**, explains how to handle mixed-detail biomes.
+
+            - If you choose **HD & LD variants**, you can skip the additional queue files section.
+
+
+        === "Manual creation"
+            If you used the [queue](../workflow/browse_via_blender.md#queue) feature when creating the biome and still have the plants in your queue, you can export them as a `.pf2bqueue` file via the :material-menu: menu by selecting **Save Queue**.
+
+            ![Queue file](../images/support/biome/save-queue.gif){ .img-box align=left }
+
+            Save the queue file to the same directory as your biome and name it the same as your biome, for example: `my_biome.pf2bqueue`.
+
+            !!! info2 ""
+                If you did not use the queue system, select all plants in your scene used by the biome, then use the same :material-menu: menu and choose **Add Selected to Queue**. After that, use **Save Queue** to generate the file.
+
+            <div style="clear:both"></div>
+
+            Now your biome folder will look something like:
+
+            ![Queue file](../images/support/biome/biome-files-and-queue.webp){ .img-box }
 
 
     - **Creating additional queue files for different detail levels**
 
-        PF2B currently looks for LD (Low Detail) and HD (High Detail) versions of your biome.
+        !!! warning "Note"
+            This section is only relevant if you used **Keep as is** in automatic creation or the **Manual creation** workflow.
 
-        - If you only built the biome with **LD** plants, rename the original queue file to include the detail level in brackets: `my_biome.pf2bqueue` → `my_biome[LD].pf2bqueue`
+        ??? abstract "Instructions"
+            PF2B looks for two queue files in a biome folder: one for HD (High Detail) and one for LD (Low Detail). These files are expected to follow this naming convention:
 
-        - To create the **HD** version, copy the LD queue file and rename it: `my_biome[HD].pf2bqueue`.
+            - `my_biome[HD].pf2bqueue`
+            - `my_biome[LD].pf2bqueue`
 
-            Then, manually edit the file in a text editor: update `plant_name`, `plant_detail`, and `plant_path` values by replacing **LD** with **HD**. It should look similar to this:
+            !!! info2 "Tip"
+                A queue file labeled as LD or HD does not need to contain only plants of that detail level. As a rule of thumb, the majority of plants should match the file’s detail level, but mixing different detail levels across individual plants is encouraged.
 
+            - If you exported the queue manually and the file name does not include the detail level, rename it to indicate the detail level of the plants it contains. For example, if the file contains mostly **LD** plants: `my_biome.pf2bqueue` → `my_biome[LD].pf2bqueue`.
 
-            === "LD"
-                ``` json
-                [
-                    {
-                        "main_category": "PlantCatalog",
-                        "plant_name": "Aesculus pavia LD",
-                        "plant_type": "Broadleaf Trees",
-                        "plant_detail": "LD",
-                        "plant_path": "PlantCatalog\\Broadleaf Trees\\Aesculus pavia LD.tpf",
-                        "preset_name": "Standard mat 25",
-                        "preset_display_name": "Standard (25)",
-                        "preset_number": 1,
-                        "quantity": 1
-                    },
-                    {
-                        "main_category": "PlantCatalog",
-                        "plant_name": "Dryopteris filix-mas LD",
-                        "plant_type": "Ferns",
-                        "plant_detail": "LD",
-                        "plant_path": "PlantCatalog\\Ferns\\Dryopteris filix-mas LD.tpf",
-                        "preset_name": "Standard mat 0",
-                        "preset_display_name": "Standard (0)",
-                        "preset_number": 0,
-                        "quantity": 1
-                    }
-                ]
-                ```
+            - To create the **HD** version, copy the LD queue file and rename it: `my_biome[HD].pf2bqueue`.
 
-            === "HD"
-                ``` json
-                [
-                    {
-                        "main_category": "PlantCatalog",
-                        "plant_name": "Aesculus pavia HD",
-                        "plant_type": "Broadleaf Trees",
-                        "plant_detail": "HD",
-                        "plant_path": "PlantCatalog\\Broadleaf Trees\\Aesculus pavia HD.tpf",
-                        "preset_name": "Standard mat 25",
-                        "preset_display_name": "Standard (25)",
-                        "preset_number": 1,
-                        "quantity": 1
-                    },
-                    {
-                        "main_category": "PlantCatalog",
-                        "plant_name": "Dryopteris filix-mas HD",
-                        "plant_type": "Ferns",
-                        "plant_detail": "HD",
-                        "plant_path": "PlantCatalog\\Ferns\\Dryopteris filix-mas HD.tpf",
-                        "preset_name": "Standard mat 0",
-                        "preset_display_name": "Standard (0)",
-                        "preset_number": 0,
-                        "quantity": 1
-                    }
-                ]
-                ```
+                Then, open the file in a text editor and update the `plant_name`, `plant_detail`, and `plant_path` values by replacing **LD** with **HD** as needed. You are encouraged to adjust and mix detail levels across plants to suit your biome, creating a custom balance of HD and LD plants. If you do not need mixed detail levels and prefer a strict HD or LD variant, it is recommended to use the **automatic workflow** instead.
+
+                Example LD and HD queue files for reference; you can adjust detail levels as needed:
+
+                === "LD"
+                    ``` json
+                    [
+                        {
+                            "main_category": "PlantCatalog",
+                            "plant_name": "Aesculus pavia LD",
+                            "plant_type": "Broadleaf Trees",
+                            "plant_detail": "LD",
+                            "plant_path": "PlantCatalog\\Broadleaf Trees\\Aesculus pavia LD.tpf",
+                            "preset_name": "Standard mat 25",
+                            "preset_display_name": "Standard (25)",
+                            "preset_number": 1,
+                            "quantity": 1
+                        },
+                        {
+                            "main_category": "PlantCatalog",
+                            "plant_name": "Dryopteris filix-mas LD",
+                            "plant_type": "Ferns",
+                            "plant_detail": "LD",
+                            "plant_path": "PlantCatalog\\Ferns\\Dryopteris filix-mas LD.tpf",
+                            "preset_name": "Standard mat 0",
+                            "preset_display_name": "Standard (0)",
+                            "preset_number": 0,
+                            "quantity": 1
+                        }
+                    ]
+                    ```
+
+                === "HD"
+                    ``` json
+                    [
+                        {
+                            "main_category": "PlantCatalog",
+                            "plant_name": "Aesculus pavia HD",
+                            "plant_type": "Broadleaf Trees",
+                            "plant_detail": "HD",
+                            "plant_path": "PlantCatalog\\Broadleaf Trees\\Aesculus pavia HD.tpf",
+                            "preset_name": "Standard mat 25",
+                            "preset_display_name": "Standard (25)",
+                            "preset_number": 1,
+                            "quantity": 1
+                        },
+                        {
+                            "main_category": "PlantCatalog",
+                            "plant_name": "Dryopteris filix-mas HD",
+                            "plant_type": "Ferns",
+                            "plant_detail": "HD",
+                            "plant_path": "PlantCatalog\\Ferns\\Dryopteris filix-mas HD.tpf",
+                            "preset_name": "Standard mat 0",
+                            "preset_display_name": "Standard (0)",
+                            "preset_number": 0,
+                            "quantity": 1
+                        }
+                    ]
+                    ```
+    - **Queue files ready**
 
         So now you should have both `my_biome[LD].pf2bqueue` and `my_biome[HD].pf2bqueue` in the folder.
 
-        !!! info2 "Details"
-            PF2B uses the `.pf2bqueue` file as the **Master Record**, so to speak. It dictates which plants are exported into the biome.
-
-            During the build process, PF2B uses the **plant name** and **preset name** to cross-check which plants should go inside the biome. This means you can switch plant detail levels in the queue file without needing to manually create multiple biomes for different detail levels.
-            <br>For example, even if you build your biome with `[LD]` plants, you can easily switch the detail levels as shown above, and it will still work. PF2B automatically modifies all of the necessary fields inside the `.biome` file during the build so that everything works correctly.
-
-            However, please note that you cannot change the plants or presets themselves, only the detail levels!
-
-            ??? info2 "Even more Details"
-                Here's an example of what happens to the `.biome` file during processing:
-
-                **Raw output** directly from Geo-Scatter after exporting a biome (different example than shown in the guide above):
-
-                *This block represents one layer inside the `.biome` file*
-
-                ``` json
-                "asset_file": "my_library",
-                "instances": [
-                    "Hong Kong Orchid Tree [Standard mat 0|HD]",
-                    "Dead Lodgepole Pine [Standard 1a mat 0|HD]",
-                    "Mountain Hemlock [Standard mat 0|HD]"
-                ]
-                ```
-
-                During **Build Biome**, PF2B transforms this into:
-
-                ``` json
-                "asset_file": "INSTANCES_DEFINED",
-                "instances": [
-                    [
-                        "Hong Kong Orchid Tree [Standard mat 0|LD]",
-                        "pf2b-biome_Broadleaf_Trees[LD]"
-                    ],
-                    [
-                        "Dead Lodgepole Pine [Standard 1a mat 0|LD]",
-                        "pf2b-biome_Coniferous[LD]"
-                    ],
-                    [
-                        "Mountain Hemlock [Standard mat 0|HD]",
-                        "pf2b-biome_Coniferous[HD]"
-                    ]
-                ]
-                ```
-
-                PF2B automatically:
-
-                - Identifies the plant type
-                - Points it to the correct `.blend` file
-                - Adjusts detail levels where necessary
-
-    !!! info2 ""
-        Now continue with the [Finishing Touches](#creating-the-biome-finishing-touches)
+        !!! info2 ""
+            Now continue with the [Finishing Touches](#creating-the-biome-finishing-touches)
 
 
 === "Finishing Touches"
@@ -294,3 +285,60 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
 
         This will allow PF2B to recognize and load your custom biome properly. Once it's detected, you can try the **[Build Biome](../workflow/biomes.md#building-a-biome)** button, and afterwards go to `Geo-Scatter > Biome Scatter > Open Biomes` to test the biome in action.
+
+
+
+---
+
+
+
+### Understanding Biome Builds
+
+PF2B uses the `.pf2bqueue` file as the **Master Record**, so to speak. It dictates which plants are exported into the biome.
+
+During the build process, PF2B uses the **plant name** and **preset name** to cross-check which plants should go inside the biome. This means you can switch plant detail levels in the queue file without needing to manually create multiple biome versions. A single biome file is sufficient.
+<br>For example, even if you build your biome with `[LD]` plants, you can easily switch the detail levels as shown above, and it will still work. PF2B automatically modifies all of the necessary fields inside the `.biome` file during the build so that everything works correctly.
+
+However, please note that you cannot change the plants or presets themselves, only the detail levels!
+
+??? info2 "Even more Details"
+    Here's an example of what happens to the `.biome` file during processing:
+
+    **Raw output** directly from Geo-Scatter after exporting a biome (different example than shown in the guide above):
+
+    *This block represents one layer inside the `.biome` file*
+
+    ``` json
+    "asset_file": "my_library",
+    "instances": [
+        "Hong Kong Orchid Tree [Standard mat 0|HD]",
+        "Dead Lodgepole Pine [Standard 1a mat 0|HD]",
+        "Mountain Hemlock [Standard mat 0|HD]"
+    ]
+    ```
+
+    During **Build Biome**, PF2B transforms this into:
+
+    ``` json
+    "asset_file": "INSTANCES_DEFINED",
+    "instances": [
+        [
+            "Hong Kong Orchid Tree [Standard mat 0|LD]",
+            "pf2b-biome_Broadleaf_Trees[LD]"
+        ],
+        [
+            "Dead Lodgepole Pine [Standard 1a mat 0|LD]",
+            "pf2b-biome_Coniferous[LD]"
+        ],
+        [
+            "Mountain Hemlock [Standard mat 0|HD]",
+            "pf2b-biome_Coniferous[HD]"
+        ]
+    ]
+    ```
+
+    PF2B automatically:
+
+    - Identifies the plant type
+    - Points it to the correct `.blend` file
+    - Adjusts detail levels where necessary
