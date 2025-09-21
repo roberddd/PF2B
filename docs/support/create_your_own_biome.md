@@ -84,10 +84,12 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
     1. **Export the biome from Geo-Scatter**:
 
+        ![Biome Export Instruction](../images/support/biome/geo-scatter_export.webp){ .img-box align=left }
+
         For example, via the `System(s) List` using the :octicons-chevron-down-12: icon.
         **Important:** Make sure to select **all of the layers**.
 
-        ![Biome Export Instruction](../images/support/biome/geo-scatter_export.webp){ .img-box }
+        <div style="clear:both"></div>
 
 
     - **Choose a name and note the save location**
@@ -98,20 +100,26 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
 
     - **Set the storage options**
+
+        ![Biome Export Instruction](../images/support/biome/biome-export_2.webp){ .img-box align=left }
+
         - Under **Models Storage**, select `Models already exists`.
         - For **Storage Method**, choose `One central .blend`.
         - The **What's the name of the .blend?** field can be left as is; PF2B will overwrite it when building the biome.
         - Enable **Encode display settings**
 
-        ![Biome Export Instruction](../images/support/biome/biome-export_2.webp){ .img-box }
+        <div style="clear:both"></div>
 
 
     - **Biome Options**
+
+        ![Biome Export Instruction](../images/support/biome/biome-export_3.webp){ .img-box align=left }
+
         - **Preset Generation Options**: Tick **all** the available options.
         - Fill in the **Biome Informations** section with your details.
             - The `Instances as keywords` option is optional.
 
-        ![Biome Export Instruction](../images/support/biome/biome-export_3.webp){ .img-box }
+        <div style="clear:both"></div>
 
 
     - **Verify exported files**
@@ -301,7 +309,7 @@ During the build process, PF2B uses the **plant name** and **preset name** to cr
 
 However, please note that you cannot change the plants or presets themselves, only the detail levels!
 
-??? info2 "Even more Details"
+??? info2 "More Details"
     Here's an example of what happens to the `.biome` file during processing:
 
     **Raw output** directly from Geo-Scatter after exporting a biome (different example than shown in the guide above):

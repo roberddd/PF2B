@@ -125,6 +125,8 @@ Once the process is complete, the biome becomes available in the scattering plug
 > 🎥 The video above gives a quick overview of Biome functionality.
 > 👉 For detailed step-by-step instructions on using Geo-Scatter or Biome-Reader, please check [www.geoscatter.com](https://www.geoscatter.com/index.html)
 
+!!! info2 "Tips"
+    - When adding biomes to the scene, check the **Future Display** setting under **Settings** (Biome-Reader) or **ScatterOptions** (Geo-Scatter). Set it to `Set biome(s) "Display As"` so the biome uses the display settings defined by the biome creator.
 
 
 ### Using LODs with Geo-Scatter

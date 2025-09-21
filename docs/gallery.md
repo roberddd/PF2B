@@ -3,6 +3,11 @@ hide:
   - toc
 ---
 
+<!-- ### Biomes
+
+![plant](images/plants/biomes/broadleaf_forest.webp) -->
+
+
 ### PlantCatalog
 
 > All 191 High Poly variants of the plant species are available in the 'PlantCatalog' library.
