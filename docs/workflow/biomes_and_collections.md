@@ -8,7 +8,6 @@ Both systems help you quickly bring plants from PlantFactory into Blender, but t
 
 
 
-
 ## Shared Library
 
 Both systems write to the same `.blend` asset files, giving you a **unified library**.
@@ -18,13 +17,13 @@ Both systems write to the same `.blend` asset files, giving you a **unified libr
 
 
 
-
 ## [Biomes](biomes.md)
 
 In PF2B, a **biome** is a ready-made collection of plants designed to quickly build natural environments. Biomes are more than just plant lists, they are structured setups designed to work exclusively with third-party scattering add-ons developed by **bd3d**:
 
-- **[Geo-Scatter](https://www.geoscatter.com/download.html#geo-scatter)** (commercial)
-- **[Biome-Reader](https://www.geoscatter.com/download.html#biome-reader)** (free)
+- **[Geo-Scatter](https://superhivemarket.com/products/scatter)** (commercial; see [documentation](https://www.geoscatter.com/))
+- **[Biome-Reader](https://bd3d.gumroad.com/l/biome-reader)** (free)
+
 
 These plugins handle the actual scattering of plants in your scene, making it easy to generate meadows, forests, wetlands, and other natural landscapes.
 
@@ -33,8 +32,13 @@ These plugins handle the actual scattering of plants in your scene, making it ea
 
     Since **Biome-Reader** is free, you can start using PF2B biomes immediately, it works perfectly for exploring and scattering your first biomes.
 
+    !!! tip "Special Offer"
+        **Upgrade to Geo-Scatter** for full professional control. PF2B includes a **10% discount coupon**, available directly inside the addon.
+
 !!! info2 ""
     The number of available biomes will continue to grow over time as new ones are added.
+
+
 
 
 ## [Collections](collections.md)
@@ -53,7 +57,6 @@ Collections are **plant groups for bulk importing** into your Blender Asset Libr
 |--------------|----------|---------------|
 | **Biomes**   | Ready-made scattering setups | Curated ecosystems integrated with Geo-Scatter or Biome-Reader |
 | **Collections** | Bulk asset import | Direct access to plants in Blender’s Asset Browser |
-
 
 
 

@@ -253,6 +253,9 @@ Total number of unique plants by category:
         - Yucca elephantipes ***(Spineless Yucca)*** **[HD, LD]** *[30 presets]*
         - Yucca rostrata ***(Beaked Yucca)*** **[HD, LD]** *[30 presets]*
 
+
+> Looking for previews? See the [Plant Gallery](gallery.md)
+
 ---
 
 ## PlantFactory Library

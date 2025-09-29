@@ -258,6 +258,15 @@ tags:
 :   If you have not installed the full [PlantCatalog library](../plants.md#plantcatalog-library) and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
 
 
+<!-- ---
+
+
+### Does PF2B work with Geo-Scatter?
+
+:   Yes, PF2B is fully compatible with [Geo-Scatter](https://www.geoscatter.com/) right out of the box. All plants work seamlessly, and there are also ready-made biomes available for easy setup.
+Learn more on the [Biomes](../workflow/biomes.md) page. -->
+
+
 ---
 
 
