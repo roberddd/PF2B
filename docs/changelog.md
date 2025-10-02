@@ -12,20 +12,73 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
-<!-- ### 1.1.7 <small>2025-09-XX</small>
+### 1.1.7 <small>2025-10-XX</small>
+
+!!! warning ""
+    This version is not yet released and the changelog is not yet finalized. Coming soon!
 
 - **New Functionality**
-    - **Biomes**:
-- **New Functionality**
+    - **Biomes & Collections**: [More info](workflow/biomes_and_collections.md)
+        - Introduction to a brand new way to work with grouped plants: **Biomes** and **Collections**. Both systems help you quickly bring plants from PlantFactory into Blender, but each serves a slightly different purpose.
+        - **Biomes** are ready-made, structured plant setups designed for natural environments like forests, meadows, and wetlands.
+        - **Collections** are curated groups of plants designed for **bulk importing** into your Blender Asset Library. Unlike biomes, they are not structured scattering setups, but convenient bundles for building up your library quickly.
+    - **Resume Functionality**: If an import fails after plants have already been exported from PlantFactory, you no longer need to re-export them. A new **Resume Import** button will appear, allowing you to continue the process directly with the already exported files.
+	- **Import Naming Options**: [More info](workflow/import_settings.md#name-settings)
+		- New **Advanced Mode** available for full customization of names.
+		- **Skip LOD0 Label** option now available. When enabled, the base LOD0 version of the plant will not include 'LOD0' in its name. Higher LODs (LOD1, LOD2, etc.) are unaffected.
+        - **Group Wrappers** added. This enables you to wrap the parameters inside one wrapper, such as: `Baobab Tree [Standard mat 0 | Seed 761869182 | HD]`.
+		- Wrapper `|` added.
+        - Wrapper `_` has been modified to ignore spaces.
+        - Height option now has **Include unit** setting available.
+		- Formatting options added for LOD.
+        - These settings are also available in the new **Plant Renamer** utility.
+    - **Utilities Panel**: New panel added with tools: [More info](workflow/utilities.md)
+        - **LOD Importer**: Import selected plants with specific LODs while maintaining identical seeds to preserve their appearance.
+        - **Plant Storer**: This utility lets you save selected plants from your scene into the structured biome `.blend` files. This allows you to access them directly from your Asset Library.
+        - **Plant Renamer**: Renames selected plant objects in the scene after import. The naming follows the same settings used during import but is applied retroactively.
+        - **Reset Asset Thumbnails**: This utility allows you to restore the original thumbnails (asset previews) for any plant assets imported through the PF2B addon.
+    - New **Open in PF** button available in the **Plant Info Popup**. This allows you to open a specific plant directly in PlantFactory for inspection. Note that this does not use the PF2B Bridge and runs as a standalone session, meaning the plant cannot be imported back into Blender through this action.
     - When using the **Mark as Asset** feature now the Asset automatically retrieves an Asset Preview thumbnail, the same image from the Plant Browser will be used.
 - **Improved Functionality**
+    - The main interface panel is now faster and more responsive due to optimized background processes.
+    - Materials for specific plant variations are now selectively renamed with variation-specific prefixes to ensure uniqueness and prevent unintended merging, even when base names are shared. This should result in fewer material merging issues during import for certain plants.
     - **Queue Save & Load**: Added `Add Selected Plants to Queue` option that adds all selected plants in the scene to the queue. [More info](workflow/browse_via_blender.md#queue)
-    - **Verity Textures** tool under **Plant Troubleshoot Tools** has been improved by also printing out the image name used inside blender and not only the 'physical filename' to make it clearer to find images. Also option to print out the image file size.
+    - **Verify Textures** tool under **Plant Troubleshoot Tools** has been improved: [More info](preferences/misc.md#troubleshooting)
+        - Now also prints the Blender image name (not only the file on disk).
+        - Displays the image file size.
     - When using the **Mark as Asset** in tandem with 'Import Overrides' the Asset description will be modified slightly from the default as well as a extra 'Import Overrides used' tag added to differentiate regular preset plants vs custom.
+    - When using the **Mark as Asset** now the plant category will also be added to the metadata tags, such as "Broadleaf Trees".
+- **Interface**
+	- The **The Plant Gallery Browser** size is no longer related to the size of your **3D View** and should now always be the same size.
+    - Main Interface layout has been improved with an additional dropdown list of the presets for the current plant. This lets you switch presets more quickly, alongside the two existing methods: using the arrow buttons or browsing via the Presets Gallery.
+    - The **Plant Details** section in the **Post Processing** panel now has **copy to clipboard** button for the seed value of the plant. [More info](workflow/post_processing.md#plant-details)
+    - The **Plant Info Popup**: [More info](workflow/browse_via_blender.md#plant-info-popup)
+		- Now always shows the **Search for plant info** button regardless context.
+        - Includes **copy to clipboard** buttons when **Debug To Console** is active, aiding troubleshooting.
+		- Now also displays the preset number of the selected plant.
+	- The `Preferences > General > Interface` section has been slightly organized and new options for the **Plant Gallery Browser** has been added: `Fill Rows First`, `Max Width` `Max Height` &  `Ignore resolution scaling` settings for the popup.
+    - The **Browse Presets** button is now disabled in the main plant browser for plants without presets.
+    - **PlantFactory Library** plants now display their **English name** in the interface when only a Latin name was previously available.
+    - The **Plant Troubleshoot Tools** (that can be enabled via `Preferences -> Misc`) has been moved from the **Post Processing** panel to the new **Utilities** panel.
+    - Confirm dialog has been added to the **Reset Import** function.
 - **Other**
-    - Internal changes to the `.pf2bqueue` files that are used when using the save/load queue functionality. This change is made to accommodate for the biomes system and  makes queue files from earlier releases not fully compatible.
+    - Internal changes to the `.pf2bqueue` files were made to support the new biomes system. Queue files from earlier releases may not be fully compatible with this version.
+- **Bug Fixes**
+    - **The Plant Gallery Browser** popup could spawn larger than the screen resolution, making it unusable on some setups.
+    - **Create Missing Thumbnail Cache** for `PlantFactory Library` plants was creating thumbnails in the wrong location.
+    - **Plant Info Popup** had issues displaying thumbnails for some PlantCatalog plants containing forward slashes in their names.
+    - **Import Naming Options**: Wrapper `-` behaved incorrectly.
+- **Plant-Fixes**:
+	- **Updated**:
 
---- -->
+        *Materials now use the same tiling mode as in PlantFactory, fixing visible texture seams for the following plants:*
+
+		- `PlantCatalog > Broadleaf Trees > Eucalyptus camaldulensis HD`
+		- `PlantCatalog > Broadleaf Trees > Eucalyptus camaldulensis LD`
+		- `PlantCatalog > Broadleaf Trees > Eucalyptus viminalis HD`
+		- `PlantCatalog > Broadleaf Trees > Eucalyptus viminalis LD`
+
+---
 
 ### 1.1.6 <small>2025-08-26</small>
 
@@ -168,7 +221,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 - **Plant-Fixes**:
     - **New**:
         - `PlantCatalog > Palms > Adonidia merrillii HD.`
-- **Bugfixes**
+- **Bug Fixes**
     - Fixed an issue where, for some users, the library cache was not detected when starting a new file in Blender. Previously, you had to manually go to the preferences and click "Verify" or update the path to resolve this. This should no longer be necessary.
 
 ---
@@ -198,7 +251,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 ### 1.0.7 <small>2025-03-26</small>
 
-- **Bugfixes**
+- **Bug Fixes**
     - Fixed issues with plant libraries that were not installed in the default location, where their paths were not being used correctly, which prevented you from using the plants.
 
 ---
@@ -211,14 +264,14 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
     - **New**:
         - `PlantCatalog > Broadleaf Trees > Adansonia digitata HD`
         - `PlantCatalog > Broadleaf Trees > Adansonia digitata LD`
-- **Bugfixes**
+- **Bug Fixes**
     - Fixed an issue where the `PlantFactory` library plants were incorrectly indexed by the re-index function (also affecting the 'verify' cache function), which prevented you from using the plants.
 
 ---
 
 ### 1.0.5 <small>2025-03-24</small>
 
-- **Bugfixes**
+- **Bug Fixes**
     - The previous `Separate Plant Library Paths` change caused issues when plant libraries were installed in custom folders, preventing the cache and indexing from working properly. This issue has now been fixed.
 
 ---
@@ -257,7 +310,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 - **Interface**:
     - Miscellaneous minor interface tweaks.
-- **Bugfixes**:
+- **Bug Fixes**:
     - The `Open` button in the "Post Processing > Plant Details" now works with plants without presets.
 - **Other**
     - The Python library **psutil** bundled with the addon did not load properly on some systems due to Blender incorrectly interpreting the Python version number for this package. The version has now been renamed to reflect that it is intended for Python 3.11, as used in Blender.
@@ -282,7 +335,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
         - `PlantFactory > Trees > Quercus Rubra Mature`
         - `PlantFactory > Trees > Quercus Rubra Old`
         - `PlantFactory > Trees > Quercus Rubra Young`
-- **Bugfixes**:
+- **Bug Fixes**:
     - The `Plant Troubleshoot tools > Verify Textures` utility now works with plants that do not have presets.
 
 ---

@@ -41,9 +41,18 @@ All settings also include a **Wrapper** option, which controls how parameters ar
     - `[]` → Square brackets
     - `()` → Parentheses
     - `<>` → Angle brackets
+    <!-- - `|` → Prefix with a pipe --> <!-- 1.1.7 update -->
     - `-` → Prefix with a dash
     - `_` → Prefix with an underscore
     - `None` → No wrapper
+
+<!-- - **Group Wrappers**:
+    Instead of wrapping each parameter individually, you can wrap several together inside one group.
+    Example:
+    ```
+    Baobab Tree [Standard mat 0 | Seed 761869182 | HD]
+    ```
+    Here, the **preset**, **seed**, and **detail level** are grouped within one set of square brackets, separated by a divider. --> <!-- 1.1.7 update -->
 
 <!-- - Some Examples:
     - With square brackets: `Boletus edulis HD [Standard Mat 75]`
@@ -64,7 +73,7 @@ The animated GIF below shows an example of adding the "Maturity" parameter and h
     - **Add Seed**
     - **Detail Level**: Appends the detail level (`FG, HD, LD, RT`) to the plant name.  *Note: Only applies when using English plant names and plants from the PlantCatalog library.*
     - **Add LOD**: Only available when using the [Import Extra LODs](browse_via_blender.md#lods) feature.
-
+        <!-- - **Skip LOD0 Label** option: when enabled, the base LOD0 plant will not include `LOD0` in its name, but higher LODs (`LOD1`, `LOD2`, etc.) will. --> <!-- 1.1.7 update -->
     - **Add Spaces Between Elements**: Insert spaces between elements in the plant name. For example, `Boletus edulis HD[Standard Mat 75][Spring]` will become `Boletus edulis HD [Standard Mat 75] [Spring]`.
 
 
@@ -77,3 +86,54 @@ The animated GIF below shows an example of adding the "Maturity" parameter and h
     - **Add Height**
 
     - **Add Spaces Between Elements**: Insert spaces between elements in the plant name. For example, `Boletus edulis HD[Standard Mat 75][Spring]` will become `Boletus edulis HD [Standard Mat 75] [Spring]`.
+
+
+
+<!--
+    <h4>Advanced Mode</h4>
+    ![Import Name Settings Advanced Mode](../images/import_name_settings_advanced-via_blender.webp){ .img-box align=left }
+    For power users, an **Advanced Mode** is available to fully customize how plant names are generated.
+
+    When enabled, you can use **placeholders** like `{EnglishName}`, `{Preset}`, `{LOD}`, `{Height}`, `{HeightUnit}`, and more to control the exact format of the name.
+
+    Example: `{Name} [{Preset} | {Detail}] {Height:.2f}{HeightUnit}` → Produces: `Boletus edulis HD [Standard Mat 75 | HD]  3.79m`
+
+    - **Preset templates** are available from a dropdown for quick starting points.
+    - A built-in **help panel** lists all available placeholders and examples.
+
+    info2 "Formatting Help"
+    You can use the following placeholders inside your naming template.
+    They will be replaced with plant-specific values during import.
+
+    <h4>Available placeholders:</h4>
+
+    - `{EnglishName}` → English plant name
+    - `{LatinName}` → Latin plant name
+    - `{Preset}` → Preset name
+    - `{PresetNumber}` → Preset number
+    - `{PresetDescription}` → Preset description
+    - `{Maturity}` → Maturity
+    - `{Health}` → Health
+    - `{Season}` → Season name
+    - `{Height}` → Plant height
+    - `{HeightUnit}` → Height unit (`m`/`cm`/`mm` depending on scene scale)
+    - `{Seed}` → Seed
+    - `{Detail}` → Detail level
+    - `{LOD}` → LOD level
+
+
+    <h4>Height formatting examples:</h4>
+
+    - `{Height}` → full value (e.g. `12.345678`)
+    - `{Height:.0f}` → no decimals (e.g. `12`)
+    - `{Height:.1f}` → 1 decimal (e.g. `12.3`)
+    - `{Height:.2f}` → 2 decimals (e.g. `12.35`)
+    - `{Height:.3f}` → 3 decimals (e.g. `12.346`)
+
+
+    <h4>Advanced text formatting examples</h4>
+
+    - `{Preset:.5}` → truncate to first 5 characters --> <!-- 1.1.7 update -->
+
+<!-- TIP:
+To modify a plant’s name after import, use the [Plant Renamer Utility](utilities.md#plant-renamer). --> <!-- 1.1.7 update -->

@@ -102,7 +102,7 @@ To avoid rebuilding the entire cache, you can import or export an existing cache
 
 ### Scatter add-on
 
-Displays a verification of whether Geo-Scatter or Biome-Reader is installed, and provides links if they are not found.
+Displays a verification of whether Geo-Scatter or Biome-Reader is installed, and provides links if they are not found. You can read more about these add-ons in the [biomes overview](../workflow/biomes_and_collections.md#biomes)
 
 - **PF2B Scatter-Library Location**: Only change this setting if you have modified the "Scatter-Library Location" in the Geo-Scatter or Biome-Reader add-on. Otherwise, leave it unchanged. If you did change the location, this path must point to a subfolder within the add-on’s selected path, and that subfolder must be named "PF2B".
 

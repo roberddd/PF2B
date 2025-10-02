@@ -264,7 +264,7 @@ tags:
 ### Does PF2B work with Geo-Scatter?
 
 :   Yes, PF2B is fully compatible with [Geo-Scatter](https://www.geoscatter.com/) right out of the box. All plants work seamlessly, and there are also ready-made biomes available for easy setup.
-Learn more on the [Biomes](../workflow/biomes.md) page. -->
+Learn more on the [Biomes](../workflow/biomes.md) page. --> <!-- 1.1.7 update -->
 
 
 ---

@@ -33,6 +33,7 @@ If a biome is already built and available in your library, the **Build Biome** b
 
 - **Build Biome**: See [Building a Biome](#building-a-biome).
 - **INFO**: Displays information about the biome. See [Info Popup](#info-popup).
+- **Preview Biome**: Click the biome name to open a larger preview image.
 - :material-menu: **Menu**:
     - **Add plants to queue**: Adds these plants to your [queue](browse_via_blender.md#queue). This will erase all current items in your queue.
     - **Check Installed Plants**: Checks which plants you already have imported in your library. See [Installed Plants Popup](#installed-plants-popup).
