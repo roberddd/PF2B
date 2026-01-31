@@ -288,6 +288,13 @@ h3 small {
   font-weight: normal;
   font-style: normal;
 }
+.library table tbody td {
+  padding: 0.5em !important;
+}
+.library table tbody tr td:first-child img {
+  display: block;
+  margin: 0 auto;
+}
 /* .library table {
   width: 100%;
   border-collapse: collapse;

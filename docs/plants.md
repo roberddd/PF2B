@@ -1,6 +1,6 @@
 <!-- NOTE TO SELF: When updating plant lists below update landings-page site -->
 
-<div class="library" markdown>
+
 
 Both libraries below are free to download. For installation instructions, see [this guide](getting_started.md#installation).
 
@@ -41,6 +41,8 @@ Total number of unique plants by category:
 
 
 ### Plant List {#plantcatalog-library-plant-list}
+
+<div class="library" markdown>
 
 !!! info2 ""
     - **Presets**: Count shown is per detail level. A plant with 20 presets and two detail levels (HD, LD) has 40 total presets (20 for each level).
@@ -283,7 +285,7 @@ Total number of unique plants by category:
     | [![plant](images/plants/PlantCatalog/thumbs/190._Yucca_elephantipes_HD.webp)](images/plants/PlantCatalog/190._Yucca_elephantipes_HD.webp){ .glightbox data-description="Spineless Yucca" } | Spineless Yucca | Yucca elephantipes | HD, LD | 30 | 1.0 - 6.0m | 2.5K - 440K |
     | [![plant](images/plants/PlantCatalog/thumbs/191._Yucca_rostrata_HD.webp)](images/plants/PlantCatalog/191._Yucca_rostrata_HD.webp){ .glightbox data-description="Beaked Yucca" } | Beaked Yucca | Yucca rostrata | HD, LD | 30 | 0.7 - 4.5m | 6.9K - 150K |
 
-
+</div> <!-- /Library -->
 ---
 
 ## PlantFactory Library
@@ -373,4 +375,3 @@ While the library includes some non-plant objects, PF2B filters them out.
 
 </div> <!-- /compact-table -->
 
-</div> <!-- /Library -->
