@@ -113,6 +113,11 @@ This is a big update with lots of new features & improvements. Most notably: **[
 		- `PlantCatalog > Broadleaf Trees > Eucalyptus viminalis HD`
 		- `PlantCatalog > Broadleaf Trees > Eucalyptus viminalis LD`
 
+        *Fixed incorrectly assigned color & Alpha textures for leaf materials:*
+
+        - `PlantCatalog > Bushes > Hedera helix 'Erecta' HD`
+        - `PlantCatalog > Bushes > Hedera helix 'Erecta' LD`
+
 ---
 
 ### 1.1.6 <small>2025-08-26</small>
