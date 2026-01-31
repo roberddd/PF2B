@@ -552,10 +552,10 @@ These biomes let you transform empty terrain into rich, natural environments in 
 
 Comprehensive documentation can be found at [pf2b.roberd.net](https://pf2b.roberd.net/){ target="_blank" }. Start with the [Getting Started](https://pf2b.roberd.net/getting_started/){ target="_blank" } section for setup instructions, then explore detailed settings and troubleshooting information.
 
-<!--
+
 ??? info "Changelog"
     {% include-markdown "../changelog.md.ignore" %}
--->
+
 
 
 ---
