@@ -1,7 +1,19 @@
-!!! warning ""
-    These features are not yet released and will be available in version 1.1.7. Coming soon!
-
 There are several utilities, accessible from the **Utilities** panel, that can be useful after import in certain situations.
+
+
+## Plant Details
+
+Displays information about the selected plant.
+
+![Post Processing](../images/utility_plant-details.webp){ .img-box align=left }
+
+- **Open in Plant Browser**: Opens this plant in the Plant Browser. Useful if you want to import additional instances of the same plant type into the scene.
+
+!!! info2 "Tip"
+    You can also access this utility from [Post Processing](./post_processing.md). Clicking the plant name at the top will display it in a popup.
+
+<div style="clear:both"></div>
+
 
 
 ## LOD Importer
@@ -39,6 +51,12 @@ These plants are stored in the same way as those imported via the [Collections](
 - Each plant is marked as an asset and includes metadata to make it easier to find in the Asset Browser.
 - Plants stored using this utility are also available for the [Biomes](biomes.md) function, so any biomes that use these plants can access them directly from the library.
 
+<h5>Options</h5>
+
+- **Selection**
+    - **Selected Plants**
+    - **All Plants in Scene**
+
 !!! info2 "Example of Stored Plants"
     The plants are stored in structured `.blend` files and can also be accessed in your Asset Browser, where everything is categorized, tagged, and presented with clear thumbnails.
 
@@ -49,7 +67,7 @@ These plants are stored in the same way as those imported via the [Collections](
 ### Notes
 
 - Only plants from the [PlantCatalog Library](../plants.md#plantcatalog-library) can be stored.
-- Plants that are **not LOD0** (base plants) or that use **Import Overrides** cannot be stored.
+- Plants that are **not LOD0** (base plants), that use **Import Overrides**, **Snow**, or that use **Wind** cannot be stored.
 - When stored, the plant names are automatically set to: `PlantName [Preset|DetailLevel]`.
 
     !!! info2 ""
@@ -91,3 +109,20 @@ This utility allows you to restore the original thumbnails (asset previews) for 
     - **All Plants in Scene**
 
 ![Reset Asset Thumbnails](../images/utility_reset-asset-thumbnail_example.webp){ .img-box }
+
+!!! info2 ""
+    If an asset has snow applied, a snowflake icon is added to the top-left corner of its thumbnail to indicate that snow is present.
+
+
+## Setup PlantFactory Shortcuts
+
+![Setup PlantFactory Shortcuts](../images/utility_setup-pf-shortcuts.webp){ .img-box align=right }
+
+This utility replaces PlantFactory's default shortcut configuration with a custom version that matches Blender's navigation controls. Orbit, Pan, and Zoom will behave the same way as in Blender, creating a more consistent workflow between the two applications.
+
+The configuration file being replaced is `Default.cfg`, located in: `C:\Users\%USERNAME%\AppData\Roaming\e-on software\PlantFactory\Config`
+
+![Setup PlantFactory Shortcuts Popup](../images/utility_setup-pf-shortcuts_popup.webp){ .img-box align=right }
+
+A backup of the original configuration file is automatically created the first time this utility is run. You can later restore this backup directly from the same dialog if needed.
+

@@ -1,0 +1,1 @@
+python '.\GITHUB\Images & Video\create_spritesheet_from_images.py' "SOURCE" --frames 12  --bg "#1d1d1d" --trim --reverse --layout grid --columns 4 

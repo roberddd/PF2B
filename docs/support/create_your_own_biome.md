@@ -1,6 +1,3 @@
-!!! warning ""
-    The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
-
 If you want to contribute [biomes](../workflow/biomes.md) to PF2B, here is some important information and a set of guidelines to follow.
 
 
@@ -8,9 +5,30 @@ If you want to contribute [biomes](../workflow/biomes.md) to PF2B, here is some 
 
 ### Plant Selection
 
-Only plants from the **PlantCatalog Library** are supported.
+- Only plants from the [PlantCatalog Library](../plants.md#plantcatalog-library) are supported.
 
-You are free to build your biome using HD plants, LD plants, or a mix of both. However, try to lean toward one detail level so that an opposite version can later be created with a higher or lower poly count.
+- You are free to build your biome using **HD**, **LD**, or **RT** plants, or a mix of all three. However, try to lean toward one detail level so that an opposite version can later be created with a higher or lower poly count.
+
+- [Import overrides](../workflow/browse_via_blender.md#import-overrides) are not supported. Please use only the existing presets.
+
+
+!!! info2 "Other Objects"
+    You can include additional **non-PF2B objects** such as rocks or other environmental elements. These can be included from **Polyhaven.com** or other **CC0** asset sources.
+
+    For each detail level, these assets are stored in dedicated blend files provided with the add-on:
+
+    - `pf2b-biome_Other[HD].blend` for HD assets (typically using 4K textures)
+    - `pf2b-biome_Other[LD].blend` for LD assets (typically using 2K textures)
+
+    To include these assets in your biome:
+
+    1. Add your objects to the appropriate **Other** blend file (`pf2b-biome_Other[HD].blend` or `pf2b-biome_Other[LD].blend`). These files are located in the folder defined under `Preferences > Plant Library > Biomes & Collections > Blend Storage`.
+    2. In your biome, place instances of these objects on a separate layer named according to the asset type and detail level, for example:
+        - `Rocks [HD]`
+        - `Rocks [LD]`
+    3. PF will automatically detect these layers and link them to the correct asset file for that detail level during the build.
+
+    **Currently supported non-PF2B layer names:** `Rocks`
 
 
 ---
@@ -18,7 +36,7 @@ You are free to build your biome using HD plants, LD plants, or a mix of both. H
 
 ### Plant Detail Levels
 
-<h4>❌ Not Allowed</h4>
+<h4 style="margin-bottom:-1.25em">❌ Not Allowed</h4>
 
 - **Same Plant, Different Detail Levels**:<br>A biome **must not** mix multiple detail levels (e.g., RT, LD, HD) of the **same plant**.
 
@@ -27,7 +45,7 @@ You are free to build your biome using HD plants, LD plants, or a mix of both. H
         - In other cases (different presets), it will technically import, but causes **material merging issues**. For example, if the Low Detail version uses a leaf material called `XXX` and the High Detail version also uses `XXX` (but with higher texture resolution), PF2B will merge them into a single material during import. As a result, both variants will use whichever material was imported first. Since the UV maps for the Low Detail and High Detail versions of the leaves are often different, the textures will be mapped incorrectly, making the leaves look wrong.
 
 
-<h4>✅ Allowed</h4>
+<h4 style="margin-bottom:-0.75em">✅ Allowed</h4>
 
 - **Mixing Different Plants**:<br>It is encouraged to mix different detail levels across **different plants** within a biome.
     - Even in a "Low Detail" biome, not every plant needs to be from the "LD" category, just the majority.
@@ -72,7 +90,6 @@ As a general guideline, the following settings should be adjusted for each layer
 - **Display**: Set up the display solution.
 
 
----
 
 
 ## Creating the Biome
@@ -148,7 +165,7 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
             - **Create**:
                 - **HD & LD variants**:<br>
-                Generates two queue files from your Biome: one for HD and one for LD. All plants in the Biome will be adjusted so their detail level matches the selected file (HD or LD). This lets you quickly create both variants without manually duplicating or editing the files.
+                Generates two queue files from your Biome: one for HD and one for LD. All plants in the Biome will be adjusted so their detail level matches the selected file (HD or LD). This lets you quickly create both variants without manually duplicating or editing the files. Use the `Lock RT Detail Level` setting to keep RT detail-level plants unchanged, preventing them from being replaced by LD or HD versions.
                 - **Keep as is**:<br>
                 Keeps the exact detail levels defined in your Biome file when creating the queue file. This is useful if your Biome contains a mix of detail levels and you want precise control. After saving the queue, you will need to manually create additional detail-level files by duplicating and adjusting the generated file. When selecting this option, you must specify whether the source biome file is HD or LD.
 
@@ -294,9 +311,6 @@ After you have finished creating your biome inside Blender using Geo-Scatter, fo
 
         This will allow PF2B to recognize and load your custom biome properly. Once it's detected, you can try the **[Build Biome](../workflow/biomes.md#building-a-biome)** button, and afterwards go to `Geo-Scatter > Biome Scatter > Open Biomes` to test the biome in action.
 
-
-
----
 
 
 

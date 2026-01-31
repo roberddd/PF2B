@@ -1,8 +1,4 @@
-!!! warning ""
-    The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
-
-
-!!! info2 "Collections?"
+!!! info2 ""
     Collections are **plant groups for batch importing** into your Blender Asset Library.
 
     👉 For an overview of how Collections compare to Biomes, see: [Biomes & Collections Overview](biomes_and_collections.md).
@@ -16,8 +12,6 @@ Click the :blender_icon_bold: icon in the main interface to open the **Biomes & 
 
 Once the browser is open, use the menu in the top-left corner to switch between browsing **Biomes** and **Collections**.
 
-![biomes](../images/biome_switch_to_collections.gif){ .img-box }
-
 <div style="clear:both"></div>
 
 
@@ -25,17 +19,21 @@ Once the browser is open, use the menu in the top-left corner to switch between 
 
 ## Browse Collections
 
-At the top, you can select a **category**. Currently, there are two categories: **Base Asset Library** and **Extended Asset Library**, as shown in the screenshots below. Additional categories may be added in the future.
+At the top left, you can select a **category**. Currently, there are two categories: **Base Asset Library** and **Extended Asset Library**, as shown in the screenshots below. Additional categories may be added in the future.
 
-You also have the **Detail** selection, which determines the detail level of plants to be imported. Selecting **Low** imports only the LD variants of plants, while **High** imports only the HD variants. You can import whichever variants you need on a per-collection basis, and it is possible to import both LD and HD variants for a single collection if required.
+You also have the **Detail** selection, which determines the detail level of plants to be imported. Selecting **LD** imports only the LD variants of plants, while **HD** imports only the HD variants. You can import whichever variants you need on a per-collection basis, and it is possible to import both LD and HD variants for a single collection if required.
 
 <h5>Available Actions</h5>
 
-- **Add to Asset Library**: See [Importing Collections](#importing-collections).
-- **INFO**: Displays information about the Collection. See [Info Popup](#info-popup).
+- :blender_icon_import: **Add to Asset Library**: See [Importing Collections](#importing-collections).
+- :octicons-info-16: **INFO**: Displays information about the Collection. See [Info Popup](#info-popup).
 - :material-menu: **Menu**:
-    - **Add plants to queue**: Adds these plants to your [queue](browse_via_blender.md#queue). This will erase all current items in your queue.
-    - **Check Installed Plants**: Checks which plants you already have imported in your library. See [Installed Plants Popup](#installed-plants-popup).
+    - :material-plus-circle: **Add plants to queue**: Adds these plants to your [queue](browse_via_blender.md#queue). This will erase all current items in your queue.
+    - :fontawesome-solid-arrows-rotate: **Check Installed Plants**: Checks which plants you already have imported in your library. See [Installed Plants Popup](#installed-plants-popup).
+- :octicons-x-16:**Exit**: Restores the native Blender Preferences interface. To close the browser entirely, use the native :octicons-x-16: button.
+
+    !!! info2 ""
+        Clicking the red button only restores the native Blender Preferences window that is temporarily used by the PF2B Browser.
 
 === "Base Asset Library"
     ![biomes](../images/biome_collections_base.webp){ .img-box .on-glb }
@@ -91,15 +89,11 @@ Here you can check whether the actual plants are present in your library. There 
 
 Importing collections is straightforward. Simply click the **"Add to Asset Library"** button, and all plants in the collection except those already in your library will be automatically imported from PlantFactory and organized into the Asset Library location you configured in `Preferences > Plant Library > Biomes & Collections > Blend Storage`.
 
-After importing the collections you want, you should see something like this. This example shows the full `Base Asset Library` category of collections, including both LD and HD variants:
-
-
-![Blend files](../images/biome_collection_blend-files.webp){ .img-box }
-
-…and inside your Asset Browser, where everything is categorized, tagged, and presented with clear thumbnails:
+After importing the collections you want, you should see something like this in your Asset Library:
 
 ![Asset Browser](../images/biome_collection_library-example.webp){ .img-box .on-glb }
 
+For further details about the PF2B Asset Library, see [Biomes & Collections > Shared Library](biomes_and_collections.md#shared-library).
 
 !!! info2 ""
     Need to store additional plants in the Biome Library that aren't available as Collections? Check out the [Plant Storer](utilities.md#plant-storer) utility.

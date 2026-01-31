@@ -35,7 +35,8 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-redirects
-
+      - run: pip install mkdocs-include-markdown-plugin #Used for including the changelog on the landing-page site.
+      - run: pip install mkdocs-simple-hooks #Used to run python script to copy changelog.md to landing-page site.
 
       # Build the main site
       - name: Build main site

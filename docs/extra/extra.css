@@ -5,10 +5,13 @@
   --main-accent-color-orange: #ffa500;
   --main-box-bg: #f1f1f1;
   --main-box-border-color: #e0e0e0;
+
+  /* Borders / outlines */
+  --border-round: 4px;
 }
 
 .md-grid {
-  max-width: 1440px;
+  max-width: 1540px;
   /* max-width: 75%; */
 }
 
@@ -20,7 +23,7 @@ h5 {
 /* ######## < IMAGE > ######## */
 .img-box{
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
+  border-radius: var(--border-round);
 }
 /* ######## </ IMAGE > ######## */
 
@@ -153,31 +156,108 @@ h5 {
 /* ######## </ ADMONITION > ########  */
 
 
+
 /* ######## < CHANGELOG > ######## */
-/* Compact */
-.md-typeset .changelog>blockquote>p{ /* Blockquote for blender version compability */
-  margin-bottom:-0.9em;
-  margin-top:-0.5em;
-}
-.md-typeset .changelog>ul>li { /* Main List items */
-  list-style-type: none;
-  margin-bottom:0.9em;
-  margin-top: -0.1em;
-  margin-left: 0.75em;
-}
-.md-typeset .changelog>ul>li>ul {
-  margin-top:-0.1em;
-  line-height: 1.5; /* 1.6 is default */
-}
-h3 small { /* Date */
-  margin-left: 0.7em;
-  font-size: 75%;
-}
+/* Note to self: Remember to update the same css for landing page  */
+
+/* Version number */
 .changelog h3{
   margin-top:-0.1em;
   margin-bottom:-0.3em;
+  font-weight: bold;
 }
+
+/* Date styling */
+h3 small {
+  margin-left: 0.7em;
+  font-size: 75%;
+  font-weight: 400;
+}
+
+/* Blockquote for blender version compatibility */
+.md-typeset .changelog>blockquote>p {
+  margin-bottom:-0.25em;
+  margin-top:-0.5em;
+}
+
+/* Extra info paragraph at top */
+/* .changelog > p {
+  margin-top: 1em;
+} */
+
+/* Top-level list */
+.md-typeset .changelog > ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Top-level li (category container) */
+.md-typeset .changelog > ul > li {
+  list-style-type: none;
+  margin-bottom: 0.9em;
+  margin-top: -0.1em;
+  margin-left: 0;
+}
+
+/* Category title */
+.md-typeset .changelog > ul > li > strong {
+  display: block;
+  color: var(--main-accent-color-red);
+  margin-left: 0;
+}
+
+/* Sub-items (second-level li) */
+.md-typeset .changelog > ul > li > ul > li {
+  margin-left: 1em;
+  padding-left: 0;
+  list-style-type: disc;
+  padding: 0.1em 0.3em;
+}
+
+/* Sub-item ul spacing */
+.md-typeset .changelog>ul>li>ul {
+  margin-top:-0.1em;
+  line-height: 1.5; /* spacing between sub-items */
+}
+
+/* Hover on second-level li */
+/* Light theme */
+.md-typeset .changelog > ul > li > ul > li:hover {
+  background-color: rgba(255, 200, 0, 0.175);
+  border-radius: 0.25em;
+}
+/* Dark theme */
+[data-md-color-scheme="slate"] .md-typeset .changelog > ul > li > ul > li:hover {
+  background-color: rgba(255, 200, 0, 0.075);
+}
+.md-typeset .changelog > ul > li > ul > li,
+.md-typeset .changelog > ul > li > ul > li ul > li {
+    transition: background-color 0.15s;
+}
+
+/* Third-level sub-items */
+.md-typeset .changelog > ul > li > ul > li > ul > li {
+  list-style-type: circle;
+  /* margin-top: -0.1em; */
+}
+
+
 /* ######## </ CHANGELOG > ######## */
+
+
+/* ######## < COMPACT TABLE > ######## */
+.compact-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top:-1em;
+}
+.compact-table table tr {
+  line-height: 0.5;
+}
+/* .md-typeset__table {
+  margin-bottom:0;
+} */
+/* ######## </ COMPACT TABLE > ######## */
 
 
 /* ######## < LIBRARY > ######## */
@@ -186,36 +266,41 @@ h3 small { /* Date */
   margin-top: 0;
   margin-bottom: 0;
 }
-.library .plant strong { /* Target the detail level in bold */
+/* Target the detail level in bold */
+/* .library .plant strong {
   color: var(--md-default-fg-color--light);
   margin-left: 0.5em;
   letter-spacing: 0.02em;
   font-weight: normal;
-}
-.library .plant em { /* Target the presets in italic */
+} */
+/* Target the presets in italic */
+/* .library .plant em {
   color: var(--md-default-fg-color--light);
   margin-left: 0.5em;
   letter-spacing: 0.02em;
   font-style: normal;
-}
+} */
+/* Target bold & italic */
 .library .plant strong em,
-.library .plant em strong { /* Target the presets in bold & italic */
+.library .plant em strong {
   color: var(--main-accent-color-green);
   margin-left: 0em;
   font-weight: normal;
   font-style: normal;
 }
-.library table {
+/* .library table {
   width: 100%;
   border-collapse: collapse;
   margin-top:-1em;
-}
-.library table tr {
-  line-height: 0.5;
-}
+} */
+
+/* .library table tr {
+  line-height: 1.5;
+} */
+/*
 .md-typeset__table {
   margin-bottom:0;
-}
+} */
 /* ######## </ LIBRARY > ######## */
 
 
@@ -225,6 +310,7 @@ h3 small { /* Date */
 
 
 /* ######## < Material Page > ######## */
+/* 'Duplicate' class, TODO */
 .compact table {
   width: 100%;
   border-collapse: collapse;
@@ -235,12 +321,11 @@ h3 small { /* Date */
   object-fit: contain;
 } */
 .compact table img {
-  border-radius: 4px;
+  border-radius: var(--border-round);
 }
 .compact table tr {
   line-height: 0.5;
   padding: 0;
-
 }
 @media (max-width: 768px) {
   .compact table tr { /* Fix issue with linebreak on mobile */
@@ -260,7 +345,7 @@ h3 small { /* Date */
 /* ######## < IMAGE & Video > ######## */
 .img-box, video{
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
+  border-radius: var(--border-round);
 }
 video {
   height: auto; /* Keep the aspect ratio intact */
@@ -311,3 +396,15 @@ video {
   content: '';
 } */
 /* ######## </ IMAGE & Video > ######## */
+
+
+/* box around tabbed content */
+.md-typeset .tabbed-set {
+  border: .05rem solid var(--md-typeset-table-color); /* --md-default-fg-color--lightest */
+  border-radius: 0.15rem;
+}
+.md-typeset .tabbed-content {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+

@@ -1,7 +1,5 @@
-!!! warning ""
-    The Biomes & Collections features are not yet released and will be available in version 1.1.7. Coming soon!
 
-!!! info2 "Biomes?"
+!!! info2 ""
     Biomes are **curated plant ecosystems** ready to scatter in Blender using [Geo-Scatter](https://www.geoscatter.com/download.html#geo-scatter) or [Biome-Reader](https://www.geoscatter.com/download.html#biome-reader).
 
     👉 For an overview of how Biomes compare to Collections, see: [Biomes & Collections Overview](biomes_and_collections.md).
@@ -21,7 +19,7 @@ Click the :blender_icon_bold: icon in the main interface to open the **Biomes & 
 
 ## Browse Biomes
 
-At the top of the browser, you can select a **category** of biomes.
+At the top left of the browser, you can select the biome **category**.
 
 You also have the **Detail** selection, which lets you choose either **Low** or **High** detail level. Low Detail biomes should primarily use LD plants, while High Detail biomes should primarily use HD plants. Some variation is allowed, but this serves as a general guideline.
 
@@ -31,13 +29,18 @@ If a biome is already built and available in your library, the **Build Biome** b
 
 <h5>Available Actions</h5>
 
-- **Build Biome**: See [Building a Biome](#building-a-biome).
-- **INFO**: Displays information about the biome. See [Info Popup](#info-popup).
+- :blender_icon_import: **Build Biome**: See [Building a Biome](#building-a-biome).
+- :octicons-info-16: **INFO**: Displays information about the biome. See [Info Popup](#info-popup).
 - **Preview Biome**: Click the biome name to open a larger preview image.
 - :material-menu: **Menu**:
-    - **Add plants to queue**: Adds these plants to your [queue](browse_via_blender.md#queue). This will erase all current items in your queue.
-    - **Check Installed Plants**: Checks which plants you already have imported in your library. See [Installed Plants Popup](#installed-plants-popup).
-    - **Open Biome Folder**: Available once the biome is built. Opens the specific biome folder located at: `C:\Users\%userprofile%\AppData\Roaming\Blender Foundation\Blender\data\scatter library\_biomes_\PF2B`
+    - :material-plus-circle: **Add plants to queue**: Adds these plants to your [queue](browse_via_blender.md#queue). This will erase all current items in your queue.
+    - :fontawesome-solid-arrows-rotate: **Check Installed Plants**: Checks which plants you already have imported in your library. See [Installed Plants Popup](#installed-plants-popup).
+    - :material-folder-open: **Open Biome Folder**: Available once the biome is built. Opens the specific biome folder located at: `C:\Users\%userprofile%\AppData\Roaming\Blender Foundation\Blender\data\scatter library\_biomes_\PF2B`
+    - :fontawesome-regular-trash-can: **Remove Biome**: Remove all biome files. *NOTE: This only removes the biome files. It does NOT remove the plants themselves stored in your biome .blend files.*
+- :octicons-x-16:**Exit**: Restores the native Blender Preferences interface. To close the browser entirely, use the native :octicons-x-16: button.
+
+    !!! info2 ""
+        Clicking the red button only restores the native Blender Preferences window that is temporarily used by the PF2B Browser.
 
 ### Info Popup
 
@@ -96,22 +99,6 @@ Once the process is complete, the biome becomes available in the scattering plug
 
 === "Biome-Reader"
     ![Biomes Info Popup](../images/biome_browse_biome-reader.webp){ .img-box }
-
-
-!!! info2 "Where the Biomes are Stored"
-    Your `.blend` files are organized in the Asset Library location defined in `Preferences > Plant Library > Biomes & Collections > Blend Storage`.
-
-    After importing the biomes you want, you should see something like this:
-
-    === "One imported Biome"
-        ![Blend files](../images/biome_blend-files.webp){ .img-box }
-
-    === "Multiple Biome & Collection imports"
-        ![Blend files](../images/biome_collection_blend-files.webp){ .img-box }
-
-    …and inside your Asset Browser, where everything is categorized, tagged, and presented with clear thumbnails:
-
-    ![Blend files](../images/biome_collection_library-example.webp){ .img-box .on-glb }
 
 
 ## Using Biomes

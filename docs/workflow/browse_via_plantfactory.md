@@ -4,7 +4,7 @@ In this mode, PF2B connects Blender to a running instance of PlantFactory, enabl
 
 ![Browse via PlantFactory](../images/browse-via-plantfactory_bridge-disconnected_cropped.webp){ .img-box align=left }
 
-- **Start Bridge**: launch the PF2B Bridge along with PlantFactory that lets you import plants from PlantFactory.
+- :blender_icon_linked: **Start Bridge**: launch the PF2B Bridge along with PlantFactory that lets you import plants from PlantFactory.
 
 <div style="clear:both"></div>
 
@@ -22,14 +22,14 @@ At the top, the scene or plant name is displayed (shown as `My Plant` in the exa
     - **Quantity**
 - **Seed**:
     - **Random**: Generates a new seed for the import. *NOTE: this updates the seed of your current plant.*
-    - **Current**: Keeps the current seed of your plant
+    - **Current**: Keeps the current seed of your plant.
     - **Custom**
 - :blender_icon_import: **Import Plant**: Starts importing the selected plant.
 
 <div style="clear:both"></div>
 
 
-#### Bridge
+### Bridge
 
 Below the main PF2B panel is the Bridge panel, which displays information about the bridge status.
 
@@ -45,3 +45,11 @@ Below the main PF2B panel is the Bridge panel, which displays information about 
 - :blender_icon_file_refresh:: Check Bridge status.
 - **Close Bridge**: Closes the PF2B Bridge between Blender and PlantFactory. To import plants again, you will need to restart the bridge along with a new instance of PlantFactory.
 - **Close PlantFactory**: Force close all PlantFactory instances.
+
+
+
+
+### Tips
+
+!!! info2 ""
+    -  Use the [Setup PlantFactory Shortcuts](utilities.md#setup-plantfactory-shortcuts) utility to make PlantFactory's navigation shortcuts more familiar. It sets Orbit, Pan, and Zoom to match Blender’s keybindings.

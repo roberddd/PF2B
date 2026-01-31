@@ -35,4 +35,9 @@ In this mode, PF2B connects Blender to a running instance of PlantFactory, enabl
 
 ### [Post Processing](./workflow/post_processing.md)
 
-After importing your plants, you can use the ´Post Processing´ panel to edit the visuals of your plants.
+After importing your plants, you can use the **Post Processing** panel to edit the visuals of your plants.
+
+
+### [Utilities](./workflow/utilities.md)
+
+A collection of utilities that can be useful after import in certain situations.

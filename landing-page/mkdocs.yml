@@ -6,19 +6,26 @@ theme:
   language: en
   features:
     - navigation.top
-  # palette:
-  #   - media: "(prefers-color-scheme: dark)"
-  #     scheme: slate
-  #     toggle:
-  #       icon: material/brightness-4
-  #       name: Switch to light mode
-  #     primary: green
-  #     accent: orange
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: orange
 
 extra_css:
   - extra.css
+  - parallax.css
+
+extra_javascript:
+  - changelog-icons.js
 
 nav: []
+
+plugins:
+  - include-markdown
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_build: "scripts.copy_changelog:run_copy" #Copies over changelog from mainsite
 
 extra:
   generator: false #Hide footer

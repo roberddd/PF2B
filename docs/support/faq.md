@@ -60,17 +60,40 @@ tags:
 ---
 
 
-### Why is my Plant Gallery View so small when using the "Browse Via Blender" mode?
+<!-- ### Why is my Plant Gallery View so small when using the "Browse Via Blender" mode?
 
 :   Check that your `3D View` is large enough, as the gallery size depends on it. If you have the view split (for example, with the `Shader Editor`), it may cause the gallery to appear smaller.
 
 
----
+--- -->
 
 
 ### What Normal Map format does PlantFactory use?
 
 :   PlantFactory uses the **OpenGL** normal map format, which is the same as the one used in Blender, so no conversion is required.
+
+
+
+---
+
+
+### I receive a PIL / Pillow error when trying to install the addon
+
+:   This issue happens when Blender has previously built a conflicting version of the **PIL/Pillow** library inside its temporary Python environment. Removing these cached files forces Blender to rebuild them correctly.
+
+    **Steps to fix:**
+
+    1. Uninstall the PF2B add-on (if it appears in Blender's installed addons list). If not, continue.
+    - Close **all** Blender windows.
+    - Open the folder below by pasting it into Windows Explorer.<br>
+       Remember to replace `5.0` with your actual Blender version.
+        ```
+        C:\Users\%USERNAME%\AppData\Roaming\Blender Foundation\Blender\5.0\extensions\.local\lib\python3.11\site-packages
+        ```
+
+    - Delete the folders named **PIL** and **Pillow**, including any duplicates.<br>
+       The `.local` folder is a temporary Blender folder, and it is safe to remove everything inside it. Blender will rebuild it automatically.
+    - Restart Blender and install the addon again.
 
 
 ---
@@ -103,7 +126,7 @@ tags:
 
     !!! abstract inline end "Example"
         ![Transparency light bounce example](../images/troubleshooting/troubleshoot_light-paths_example-4bounces.webp){ .on-glb width=49% data-description="Example of a value being too low, in this case, 4." }
-        ![Transparency light bounce example](../images/troubleshooting/troubleshoot_light-paths_example-32bounces.webp){ .on-glb width=49% data-description="Example of a value being high enough. In this case, it is set to 32, which is more than required for most needs." }
+        ![Transparency light bounce example](../images/troubleshooting/troubleshoot_light-paths_example-32bounces.webp){ .on-glb width=49% data-description="Example of a value being high enough. In this case, it is set to 32." }
 
     1. Navigate to the **Render Properties** tab.
     - Scroll down to the **Light Paths** section.
@@ -258,13 +281,13 @@ tags:
 :   If you have not installed the full [PlantCatalog library](../plants.md#plantcatalog-library) and do not wish to do so (as it is optional), you can run the [Re-Index Plants](../preferences/misc.md#plants-thumbnails) tool to ensure only available plants are shown in your library.
 
 
-<!-- ---
+---
 
 
 ### Does PF2B work with Geo-Scatter?
 
 :   Yes, PF2B is fully compatible with [Geo-Scatter](https://www.geoscatter.com/) right out of the box. All plants work seamlessly, and there are also ready-made biomes available for easy setup.
-Learn more on the [Biomes](../workflow/biomes.md) page. --> <!-- 1.1.7 update -->
+Learn more on the [Biomes](../workflow/biomes.md) page.
 
 
 ---

@@ -4,10 +4,12 @@ tags:
 ---
 ## Requirements
 
-- Blender 4.2 or newer
+- Blender 4.5 or newer
 - PlantFactory 2024
 - Operating System: Windows
 
+!!! info2 ""
+    PF2B 1.x (compatible with Blender 4.2+) remains available for download but does not include features from version 2.0 onward.
 
 ## Notes Before Purchasing
 
@@ -148,7 +150,9 @@ After installing everything above, make sure to **read the sections below**, as 
 
 
 
-## Finding PF2B and Using the Documentation
+## After the Installation
+
+### Finding PF2B and Using the Documentation
 
 PF2B is located in the N-Panel inside the `3D Viewport` under a tab named `PF2B`, as shown in the image below.
 
@@ -165,7 +169,7 @@ For more comprehensive guidance, you can access the full documentation by clicki
 
 
 
-## First time use & Importing cache
+### First time use & Importing cache
 
 ![Addon Location](images/import-cache-example.webp){ .img-box .on-glb align=right width=40%  }
 
@@ -186,8 +190,55 @@ To get the most out of the PF2B addon and browse plants directly within the addo
 
 
 
+### Setting up Biomes & Collections
+
+=== "1. Setting the Blend Storage Path"
+    Before using [Biomes & Collections](workflow/biomes_and_collections.md), you must specify a directory where PF2B will store asset files.
+
+    1. Navigate to `PF2B Preferences > Plant Library > Biomes & Collections > Blend Storage`.
+    2. Click the folder icon and browse to choose a location for your PF2B asset library.
+    3. Confirm your selection.
+
+    !!! info2 ""
+        Choose a location with adequate storage space. This directory will contain all imported plants and biome assets.
+
+
+=== "2. Installing Required Biome Assets"
+    If you intend to use the [Biomes](workflow/biomes_and_collections.md) functionality, you must also install the extra asset blend files that are bundled with PF2B since version 2.0.
+
+    The extra assets are in the zip file named `PF2B_biome_other-assets.zip` that is distributed with the add-on.
+
+    1. Browse to the Blend Storage location you set in the previous step.
+    2. Extract the contents of the zip file to this location. There should be 2 blend files.
+        ![Biome Extra Assets](images/PF2B_biome_other-assets.webp){ .img-box  }
+
+    !!! info2 ""
+        These blend files contain additional non-plant assets such as rocks and boulders that are used by the various Biomes. Skipping this step will cause errors when trying to use Biomes that depend on these assets.
+
+
+=== "3. Setting up an Asset Library Path"
+    To get the most out of the [Biomes & Collections](workflow/biomes_and_collections.md) functionality, it is recommended to set up an Asset Library path pointing to the PF2B directory you specified in the Blend Storage setting.
+
+    This step is **optional** but provides important benefits: it allows you to access imported plants with **full categorization** directly in Blender's Asset Browser (see [how this looks in practice](workflow/biomes_and_collections.md#shared-library)).
+
+    !!! info2 ""
+        If your PF2B directory is already a subfolder of an existing Asset Library path, the assets will be accessible but **without the PF2B category structure**. To enable the categorized view from the `blender_assets.cats.txt` file, you need to add the PF2B directory as its own Asset Library path.
+
+    **To set up the Asset Library path:**
+
+    ![Asset Library Path Setup](images/pf2b-asset-library-path.webp){ .img-box .on-glb align=right width=40% }
+
+    1. Go to `Preferences > File Paths` and locate the `Asset Libraries` section.
+    2. Click the :material-plus:(plus) button to add a new library.
+    3. Browse to the same folder you set in `Blend Storage`.
+    4. (Optional) Rename the Asset Library to something recognizable, such as "PF2B Assets".
+    5. (Recommended) Set the **Import Method** to `Append (Reuse Data)`.
+
+
+
+
 ## Tips
 
 ![Addon Location](images/pf_welcome-screen.webp){ .img-box .on-glb align=right width=20% }
 
-- To ensure a smoother workflow, it’s **recommended** to disable the "**Welcome**" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "Don’t show again" in the bottom-left corner.
+- To ensure a smoother workflow, it’s **recommended** to disable the "**Welcome**" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "*Don’t show again*" in the bottom-left corner.

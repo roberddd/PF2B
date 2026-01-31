@@ -96,11 +96,18 @@ The materials are categorized into `Leaf`, `Stalk`, `Flower`, `Fruit`, and `Bark
     These settings affect all material types.
 
     - **Color Variation By Location**: Introduces subtle hue variations based on plant location to reduce uniformity and enhance realism when multiple plants of the same species are nearby.
-    - **Import Translucency Map**: Uses the translucency texture (if found) instead of a static translucency value. If you want more control over translucency, you can disable this option and adjust the static value slider instead. Note: If the output looks odd, see [The translucency for my plant looks off](../support/faq.md#the-translucency-looks-off) in the FAQ.
 
     <div style="clear:both"></div>
 
+    - **Import Translucency Map**: Uses the translucency texture (if found) instead of a static translucency value. If you want more control over translucency, you can disable this option and adjust the static value slider instead. Note: If the output looks odd, see [The translucency for my plant looks off](../support/faq.md#the-translucency-looks-off) in the FAQ.
     - **Use 'Add Shader'**: Use a Add Shader node to combine translucency with the main shader, instead of using a standard Mix Shader. This approach can provide more artistic control by directly adding light contributions from both shaders. However, it may sacrifice physical accuracy and break energy conservation, potentially resulting in unrealistic brightness or lighting behavior. This affects Leafs, Stalks and Flowers.
+
+
+=== "Vertex Colors"
+    ![Material Settings](../images/material-settings_vertex-colors.webp){ .img-box align=left }
+
+    <div style="clear:both"></div>
+
     - **Handle Vertex Colors**: When enabled, this checks for any 'Vertex Colors' and adds a 'Color Attribute' node to the identified materials.
 
         !!! abstract inline end "Example"
@@ -108,12 +115,31 @@ The materials are categorized into `Leaf`, `Stalk`, `Flower`, `Fruit`, and `Bark
         - **Add Vertex Color Node Groups**: Adds node groups to assist with color randomization based on Vertex Colors.
         - **Smart Vertex Identification**: Enable smarter vertex color identification by detecting meaningful (non-uniform) vertex colors. When disabled, a simpler algorithm checks for any use of vertex colors, which may include single-color meshes.
 
-        !!! warning "Vertex Colors"
-            Note that none of the plants in the PlantCatalog and PlantFactory libraries have vertex colors applied by default. If you're only using plants from these libraries, you can leave these settings disabled. However, you can enable vertex colors on a per-plant basis by using the [Browse via PlantFactory](../workflow/browse_via_plantfactory.md) mode.
+    ---
 
-            If you're using custom plants, these settings may be useful to customize the appearance of your assets.
+    - **Create & Import**:
 
-            For more details, see the [example usage](#vertex-colors) below on how to use these features.
+        - **Material Color**: Import material color vertex data (RGB channel).
+            <br>The material color is meant for colorizing the material directly. All you need to do is to plug the vertex color node directly into the color or diffuse slot of each material whose color you want to control with the vertex color set.
+        - **Blending**: Import material blending vertex data (RGB channel).
+            <br>Material blending is a greyscale mask that allows to smoothly blend between two different materials or texture maps on the plant, e.g. between a trunk material and a branch material.
+        - **Ambient Occlusion**: Import ambient occlusion vertex data (RGB channel).
+            <br>Ambient Occlusion contains pre-baked shadows in crevices and parts of the mesh which cannot be reached by light so easily. It emphasizes the overall shape of the plant and can produce improved lighting results, especially in real-time projects.
+
+            !!! warning "Ambient Occlusion"
+                Please note that this feature requires additional processing to bake the colors and can be significantly slower depending on the complexity of the plant.
+
+        - **Hierarchical Level**: Import hierarchical level vertex data (RGB channel)
+        - **Leaf Color Shift (HLS)**: Import leaf color shift vertex data (RGB channel).
+            <br>The leaf color shift contains color correction data in the form of hue (R), lightness (G) and saturation (B) values from the leaf node in PlantFactory which create random color variations across all leaves. See the PlantFactory Reference Manual (page 890) for details.
+            <br>To use the actual vertex data in the Shader Editor, access the PF2B menu via the [right-click context menu](../preferences/general.md#shader-editor) and add the 'Color Shift' node group. This node group handles the color shift as described in the PlantFactory manual and is a recreation of the OSL script provided by PlantFactory.
+
+    !!! warning "Vertex Colors"
+        The plants in the PlantCatalog and PlantFactory libraries do not make practical use of most vertex color channels. Material Color, Material Blending, and Ambient Occlusion can be generated during import if enabled, but the library plants are not authored to use these channels in any meaningful way. Hierarchical Level and Leaf Color Shift are also not configured in the library plants and will only contain useful data if they are manually defined.
+
+        As a result, if you are only using plants from the PlantCatalog or PlantFactory libraries, these settings can generally be left disabled. All vertex color channels can be created and imported, but they will only produce meaningful results when working with custom plants that are explicitly authored to use them.
+
+        For practical examples and setup guidance, see the [example usage](#vertex-colors) section below.
 
 
 !!! info2  "Tips"
@@ -333,12 +359,12 @@ By default, **PF2B** uses a **Mix Shader** with translucency set to **0.3**, str
 !!! warning ""
     Note that none of the plants in the PlantCatalog & PlantFactory libraries use/have vertex colors applied by default. However, you can enable vertex colors on a per-plant basis by using the [Browse via PlantFactory](../workflow/browse_via_plantfactory.md) mode.
 
+For more information on using Vertex Colors from PlantFactory, refer to page 887 of the PlantFactory manual (accessible via PlantFactory > Help > Reference Manual).
 
 Here is a video from Bentley that demonstrates how to set up Vertex Colors:
 <div class="youtube-wrapper">
     <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/JhcHUNDKzdE?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
-
 
 <br>
 <h5>Add Vertex Color Node Groups</h5>
@@ -355,13 +381,15 @@ Once imported into Blender, it should look like this:
 
 <div style="clear:both"></div>
 
+
+
+
+
 ## Shaders
 
 The materials use carefully crafted custom Node Groups that are highly customizable.
 
 ![Shaders](../images/shaders.webp){ .img-box .on-glb width=50% }
-
-
 
 
 #### Logic
@@ -385,11 +413,8 @@ The shader nodes has logic built in to handle various different scenarios with v
 
     - Double sided leaf shader:
         - If nothing is connected into "Backface Color" it will use the frontface "Color" texture on the backside.
-
         - Roughness handling:
             - The `Roughness texture` input is used for both the front & backface and follows the same logic above with either dynamic/static value will be used if no roughness texture is connected.
-
-
 
 
 #### Previews
@@ -399,3 +424,22 @@ The shader nodes has logic built in to handle various different scenarios with v
 Each shader features multiple outputs designed to help you efficiently build and preview your materials. At the top of each shader, you'll find dedicated outputs for Color, Roughness, and Normals, allowing you to view each channel separately.
 !!! info2 ""
     Preview these channels by holding **Shift + Ctrl** and left-clicking on the shader to switch between the outputs. Note that this functionality requires the built-in '[Node Wrangler](https://docs.blender.org/manual/en/latest/addons/node/node_wrangler.html)' addon to be enabled.
+
+
+#### Shader Editor Right-Click Menu
+
+The **Shader Editor Right-Click Menu** allows you to insert PF2B node groups and shaders directly into existing materials. This feature is intended for advanced users who want finer control over material construction and customization.
+
+![Shader Editor Right Click Menu](../images/shader-editor-right-click-menu.webp){ .img-box align=right }
+
+PF2B node groups can be added to:
+
+- Existing PF2B materials
+- Non-PF2B materials
+- Custom materials used in external or personal projects (for example, leaf or foliage shaders)
+
+This makes it possible to reuse PF2B shading components without relying on the automated material setup workflow.
+
+**Available Nodes:**
+
+![Shaders](../images/shader-editor-right-click-menu_shaders.webp){ .img-box .on-glb }

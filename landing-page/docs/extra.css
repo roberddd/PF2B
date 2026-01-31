@@ -3,18 +3,83 @@
   --md-primary-fg-color:#ec6628;
   --md-accent-fg-color: #EE0F0F;
 
-  /* PF2B specific */
-  --main-accent-color-red: #E0425D;
-  --main-accent-color-green: #15ac59;
-  --main-accent-color-blue: #4952d3;
-  --main-accent-color-orange: #ffa500;
+  /* ==== PF2B specific palette ==== */
   --main-box-bg: #f1f1f1;
   --main-box-border-color: #e0e0e0;
+
+  /* Accents */
+  --main-accent-color-red: #E0425D;
+  --main-accent-color-green: #3EA55B;
+  --main-accent-color-blue: #4A7EE0;
+  --main-accent-color-orange: #FFA94D;
+
+  /* Sections */
+  --main-section-color-import: var(--main-accent-color-orange);
+  --main-section-color-plantbrowser: #3eadad;
+  --main-section-color-adjust: #2f4775;
+  --main-section-color-plants: var(--main-accent-color-green);
+  --main-section-color-biome: #648030;
+
+  /* Not used */
+  --main-accent-color-purple: #A57BEA;
+  --main-accent-color-yellow: #FFD500;
+  --main-accent-color-teal: #1CA6A6;
+
+  /* Borders / outlines */
+  --border-round: 4px;
 }
+
+.top-header {
+  margin-bottom: 2em;
+}
+.top-header h1 {
+  letter-spacing: 0.04em;
+  /* background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(var(--md-primary-fg-color-rgb), 0.08) 15%,
+    rgba(var(--md-primary-fg-color-rgb), 0.12) 50%,
+    rgba(var(--md-primary-fg-color-rgb), 0.08) 85%,
+    transparent 100%
+  );
+  padding: 0.5em 2em;
+  border-left: 40px solid var(--md-primary-fg-color);
+  border-right: 40px solid var(--md-primary-fg-color);
+  border-radius: var(--border-round);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+}
+
+/* ######## < HEADERS > ######## */
+.md-typeset h1 {
+  margin-top:.75em;
+  margin-bottom: calc(1em - 35px);
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.md-typeset h2 {
+  /* margin-bottom: calc(1em - 45px); */
+  margin-top: .15em;
+  margin-bottom: .15em;
+  font-size: 2em;
+  font-weight: 350;
+}
+.md-typeset h3 {
+  margin-top: .25em;
+  margin-bottom: -.5em;
+}
+.md-typeset h4 {
+  margin-bottom: -1em;
+}
+/* ######## </ HEADERS > ######## */
+
 
 .md-main {
   margin: 0 auto;
   max-width: 100%;
+  font-family: Inter, sans-serif;
+
 }
 
 /* Mobile adjustments */
@@ -30,9 +95,13 @@
      float: right;
   }
 }
-/* Overall Margin */
+/* Overall Margin & Padding */
 .md-content__inner {
   margin: 0;
+  padding-top:0;
+}
+.md-main__inner {
+  margin-top: 2em;
 }
 .md-typeset hr {
   margin-top: 0;
@@ -58,18 +127,21 @@
 
 
 /* ######## < SECTION BOX > ######## */
+/* Usage: <div class="section-box" style="--accent-color: green;" markdown> */
 .section-box {
   background-color: var(--main-box-bg);
   border: 1px solid var(--main-box-border-color);
-  border-radius: .4rem;
+  border-radius: var(--border-round);
   display: block;
   padding: .1em .5em .1em .9em;
   position: relative;
   margin: 2em 0;
 }
+
 .section-box h2 {
   text-align: center;
   margin-bottom: 0em;
+  letter-spacing: 0.02em;
 }
 .section-box p:not(.admonition p){
   margin-top: 0em;
@@ -82,10 +154,24 @@
   left: 0;
   width: 6px;
   height: 100%;
-  /* border-radius: .1rem; */
+  border-radius: var(--border-round) 0 0 var(--border-round);
+
+  /* Only show if --accent-color is set */
+  background-color: var(--accent-color);
+  display: block;
+
 }
+/* Hide before if --accent-color is not defined */
+.section-box:not([style*="--accent-color"])::before {
+  display: none;
+}
+/* Remove left border only for accented boxes */
+.section-box[style*="--accent-color"] {
+  border-left: 0;
+}
+
 /* Modifiers for different accent colors */
-.section-box.accent-red::before {
+/* .section-box.accent-red::before {
   background-color: var(--main-accent-color-red);
 }
 .section-box.accent-orange::before {
@@ -97,39 +183,105 @@
 .section-box.accent-blue::before {
   background-color: var(--main-accent-color-blue);
 }
+.section-box.accent-teal::before {
+  background-color: var(--main-accent-color-teal);
+} */
+/* Remove left border for accented boxes */
+/* .section-box.accent-red,
+.section-box.accent-orange,
+.section-box.accent-green,
+.section-box.accent-blue,
+.section-box.accent-teal {
+  border-left: 0;
+} */
+
 /* ######## </ SECTION BOX > ######## */
 
 
+/* BIOME SECTION */
+.biome-section .biome-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--border-round);
+  margin-bottom: 0.5em;
+  line-height: 0;
+}
+.biome-section .biome-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: center center;
+  /* animation: biomeZoom 3s ease-in-out infinite alternate; */
+  /* animation: biomeZoom 30s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate; */
+  animation: biomeZoom cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  will-change: transform;
+}
+@keyframes biomeZoom {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+/* Desync the animation */
+.biome-section .biome-img-wrapper:nth-child(odd) img {
+  animation-duration: 28s;
+  animation-delay: 0s;
+}
+.biome-section .biome-img-wrapper:nth-child(even) img {
+  animation-duration: 32s;
+  animation-delay: 5s;
+}
 
-/* ######## < HEADERS > ######## */
-.md-typeset h1 {
-  margin-top:.75em;
-  margin-bottom: calc(1em - 35px);
-  font-size: 3em;
-  font-weight: 700;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+/* Batchgenie image */
+.batchgenie-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: var(--border-round);
 }
-.md-typeset h2 {
-  /* margin-bottom: calc(1em - 45px); */
-  margin-top: .1em;
-  margin-bottom: .1em;
-  font-size: 2em;
-  font-weight: 350;
+.batchgenie-wrapper img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-.md-typeset h3 {
-  margin-top: .25em;
-  margin-bottom: -.5em;
+.batchgenie-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(255,255,255,0.1) 50%,
+    rgba(0,0,0,0) 100%
+  );
+  transform: skewX(-20deg);
+  z-index: 2;
+  pointer-events: none;
+  filter: blur(5px);
+  mix-blend-mode: screen;
+  animation: shimmerFlow 4.5s linear infinite;
 }
-.md-typeset h4 {
-  margin-bottom: -1em;
+@keyframes shimmerFlow {
+  0% { left: -50%; }
+  100% { left: 100%; }
 }
-/* ######## </ HEADERS > ######## */
+.batchgenie-wrapper img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+
+
+  border-radius: var(--border-round);
+
+}
+
+
 
 /* ######## < IMAGE & Video > ######## */
 .img-box, video{
-  border-radius: 4px;
+  border-radius: var(--border-round);
 }
 /* .img-box-top, video{
   border-radius: 4px 4px 0px 0px;
@@ -151,43 +303,71 @@ video {
   margin-bottom: 0.3rem !important;
 }
 
-/* Custom 'info2' admonition */
+/* ######## < ADMONITION > ########  */
+/* Custom 'info2' */
 :root {
   --md-admonition-icon--info2: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');
 }
 .md-typeset .admonition.info2,
 .md-typeset details.info2 {
-  border-color: rgb(43, 155, 70);
+  border-color: var(--main-accent-color-green);
 }
 .md-typeset .info2 > .admonition-title,
 .md-typeset .info2 > summary {
-  background-color: rgba(43, 155, 70, 0.1);
+  background-color: color-mix(in srgb, var(--main-accent-color-green) 13%, rgba(0, 0, 0, 0));
+
 }
 .md-typeset .info2 > .admonition-title::before,
 .md-typeset .info2 > summary::before {
-  background-color: rgb(43, 155, 70);
+  background-color: var(--main-accent-color-green);
   -webkit-mask-image: var(--md-admonition-icon--info2);
           mask-image: var(--md-admonition-icon--info2);
 }
+
+/* Custom 'plant' with variants */
+:root {
+  --plant-icon: url('icons/leaf.svg');
+}
+.md-typeset details.plant.broadleaf {--plant-icon: url('icons/tree.svg');}
+.md-typeset details.plant.bushes {--plant-icon: url('icons/grass.svg');}
+.md-typeset details.plant.climbers {--plant-icon: url('icons/grass.svg');}
+.md-typeset details.plant.coniferous {--plant-icon: url('icons/pine-tree.svg');}
+.md-typeset details.plant.ferns {--plant-icon: url('icons/grass.svg');}
+.md-typeset details.plant.grass {--plant-icon: url('icons/grass.svg');}
+.md-typeset details.plant.groundcovers {--plant-icon: url('icons/grass.svg');}
+.md-typeset details.plant.mushrooms {--plant-icon: url('icons/mushroom.svg');}
+.md-typeset details.plant.palms {--plant-icon: url('icons/palm-tree.svg');}
+.md-typeset details.plant.perennials {--plant-icon: url('icons/flower-tulip.svg');}
+.md-typeset details.plant.succulents {--plant-icon: url('icons/cactus.svg');}
+/* Base style shared by all plant variants */
+.md-typeset details.plant {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset details.plant > summary {
+  background-color: color-mix(in srgb, var(--main-accent-color-green) 13%, transparent);
+}
+.md-typeset details.plant > summary::before {
+  background-color: var(--main-accent-color-green);
+  -webkit-mask-image: var(--plant-icon);
+          mask-image: var(--plant-icon);
+}
+/* ######## </ ADMONITION > ########  */
+
 
 .md-content{ /* Remove the main top margin */
   margin-top: -4em !important;
 }
 
-
-
-
 .feature-list {
   padding: 0;
   margin:0;
+  font-size: 1.025em;
 }
 .feature-list li {
   position: relative;
   padding-left: 1.75em; /* space for checkmark */
   list-style: none;
-
 }
-
 .feature-list li::before {
   content: "✔";
   color: #4CAF50;
@@ -196,4 +376,188 @@ video {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+
+/* ######## < LIBRARY > ######## */
+.library .plant li,
+.library ul li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* Target bold & italic - Used by PlantFactory library */
+.library .plant strong em,
+.library .plant em strong {
+  color: var(--main-accent-color-green);
+  margin-left: 0em;
+  font-weight: normal;
+  font-style: normal;
+}
+.library table {
+  /* width: 100%; */
+  border-collapse: collapse;
+  margin-top:0.75em;
+}
+.library table tr {
+  line-height: 1.4;
+}
+.library table tbody td {
+  padding: 0.4em !important;
+}
+
+/* ######## </ LIBRARY > ######## */
+
+
+/* ######## < CHANGELOG > ######## */
+/* Version number */
+.changelog h3{
+  margin-top:-0.1em;
+  margin-bottom:-0.3em;
+  font-weight: bold;
+}
+
+/* Date styling */
+h3 small {
+  margin-left: 0.7em;
+  font-size: 75%;
+  font-weight: 400;
+}
+
+/* Blockquote for blender version compatibility */
+.md-typeset .changelog>blockquote>p {
+  margin-bottom:-0.25em;
+  margin-top:-0.5em;
+}
+
+/* Extra info paragraph at top */
+/* .changelog > p {
+  margin-top: 1em;
+} */
+
+/* Top-level list */
+.md-typeset .changelog > ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Top-level li (category container) */
+.md-typeset .changelog > ul > li {
+  list-style-type: none;
+  margin-bottom: 0.9em;
+  margin-top: -0.1em;
+  margin-left: 0;
+}
+
+/* Category title */
+.md-typeset .changelog > ul > li > strong {
+  display: block;
+  color: var(--main-accent-color-red);
+  margin-left: 0;
+}
+
+/* Sub-items (second-level li) */
+.md-typeset .changelog > ul > li > ul > li {
+  margin-left: 1em;
+  padding-left: 0;
+  list-style-type: disc;
+  padding: 0.1em 0.3em;
+}
+
+/* Sub-item ul spacing */
+.md-typeset .changelog>ul>li>ul {
+  margin-top:-0.1em;
+  line-height: 1.5; /* spacing between sub-items */
+}
+
+/* Hover on second-level li */
+/* Light theme */
+.md-typeset .changelog > ul > li > ul > li:hover {
+  background-color: rgba(255, 200, 0, 0.175);
+  border-radius: 0.25em;
+}
+/* Dark theme */
+[data-md-color-scheme="slate"] .md-typeset .changelog > ul > li > ul > li:hover {
+  background-color: rgba(255, 200, 0, 0.075);
+}
+.md-typeset .changelog > ul > li > ul > li,
+.md-typeset .changelog > ul > li > ul > li ul > li {
+    transition: background-color 0.15s;
+}
+
+/* Third-level sub-items */
+.md-typeset .changelog > ul > li > ul > li > ul > li {
+  list-style-type: circle;
+  /* margin-top: -0.1em; */
+}
+
+
+
+
+
+/* ######## </ CHANGELOG > ######## */
+
+
+
+/* ######## < CONTENT TABS > ######## */
+/* Base tab label appearance */
+.md-typeset .tabbed-labels > label {
+  background-color: var(--md-code-bg-color--light);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: var(--border-round) var(--border-round) 0 0;
+  margin: 0 0.15rem;
+  padding: 0.4em 1em;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+/* Hover effect for inactive tabs */
+.md-typeset .tabbed-labels > label:hover {
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 20%, transparent);
+  color: var(--md-primary-fg-color);
+}
+/* Active tab (the selected one) */
+.md-typeset .tabbed-set > input:first-child:checked ~ .tabbed-labels > :first-child,
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2),
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3),
+.md-typeset .tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > :nth-child(4),
+.md-typeset .tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > :nth-child(5),
+.md-typeset .tabbed-set > input:nth-child(6):checked ~ .tabbed-labels > :nth-child(6),
+.md-typeset .tabbed-set > input:nth-child(7):checked ~ .tabbed-labels > :nth-child(7),
+.md-typeset .tabbed-set > input:nth-child(8):checked ~ .tabbed-labels > :nth-child(8),
+.md-typeset .tabbed-set > input:nth-child(9):checked ~ .tabbed-labels > :nth-child(9),
+.md-typeset .tabbed-set > input:nth-child(10):checked ~ .tabbed-labels > :nth-child(10),
+.md-typeset .tabbed-set > input:nth-child(11):checked ~ .tabbed-labels > :nth-child(11),
+.md-typeset .tabbed-set > input:nth-child(12):checked ~ .tabbed-labels > :nth-child(12),
+.md-typeset .tabbed-set > input:nth-child(13):checked ~ .tabbed-labels > :nth-child(13),
+.md-typeset .tabbed-set > input:nth-child(14):checked ~ .tabbed-labels > :nth-child(14),
+.md-typeset .tabbed-set > input:nth-child(15):checked ~ .tabbed-labels > :nth-child(15),
+.md-typeset .tabbed-set > input:nth-child(16):checked ~ .tabbed-labels > :nth-child(16),
+.md-typeset .tabbed-set > input:nth-child(17):checked ~ .tabbed-labels > :nth-child(17),
+.md-typeset .tabbed-set > input:nth-child(18):checked ~ .tabbed-labels > :nth-child(18),
+.md-typeset .tabbed-set > input:nth-child(19):checked ~ .tabbed-labels > :nth-child(19),
+.md-typeset .tabbed-set > input:nth-child(20):checked ~ .tabbed-labels > :nth-child(20) {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-fg-color);
+  border-bottom-color: transparent; /* Blend with content */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Keeps active tab above content box */
+}
+/* Add a rounded border to the tab content box */
+.md-typeset .tabbed-content {
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0 var(--border-round) var(--border-round) var(--border-round);
+  background-color: var(--md-code-bg-color--light);
+  padding: 1em;
+  margin-top: -1px; /* Align content with tabs */
+}
+/* Hover color for kbd elements */
+.md-typeset {
+  --md-typeset-kbd-color: rgb(80, 80, 80);
+  --md-typeset-kbd-border-color: rgb(175, 175, 175);
+  --md-typeset-kbd-accent-color: hsla(0, 0%, 50%, 0.4);
+}
+.md-typeset kbd {
+  color: #ffffff;
 }

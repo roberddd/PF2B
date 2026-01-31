@@ -37,6 +37,10 @@ theme:
 extra_css:
   - extra/extra.css
 
+extra_javascript:
+  - extra/360-viewer.min.js
+  - extra/changelog-icons.js
+
 nav:
   - Home:
     - Welcome: index.md
