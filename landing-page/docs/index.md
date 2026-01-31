@@ -153,27 +153,7 @@ Fully customizable and easy to integrate into your scene
 
 
 
-<div class="section-box" style="--accent-color: var(--main-accent-color-green);" markdown>
 
-## :material-leaf:{style="color:var(--main-section-color-plants);"}   Plants & Presets
-
-### Free Libraries
-
-- The **PlantCatalog** library includes **194** unique plant species across **11** categories, offering a total of **10,377** presets. When factoring in multiple detail levels, this expands to **450** plants and **23,193** presets, providing you with an incredible range of options for your projects!
-
-- The regular **PlantFactory** library features **41** plant species with **22** unique presets, primarily in Low Poly detail level.
-
-=== "Plant Species"
-    A selection of available plant species:
-    ![PlantCatalog](images/plantcatalog.webp){ style="display:block; margin:auto;" }
-
-=== "Example Presets"
-    Each plant species comes with numerous presets, allowing for customization and versatility. Below is an example showcasing all **115 presets** for the 'Quercus robur forest HD' plant:
-    ![Presets](images/presets.webp){ style="display:block; margin:auto;" }
-
-
-
-</div> <!-- section end -->
 
 
 
