@@ -51,6 +51,7 @@
 ### Shader Editor
 
 - **Add Right-Click Menu**: Adds PF2B to the right-click menu inside the Shader Editor, where you can access utilities such as adding node groups and shaders. [More info](../workflow/material_settings.md#shader-editor-right-click-menu)
+
     ![Shader Editor Right Click Menu](../images/shader-editor-right-click-menu.webp){ .img-box  }
 
 

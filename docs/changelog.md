@@ -51,7 +51,7 @@ This is a big update with lots of new features & improvements. Most notably: **[
     - New **Open in PF** button available in the **Plant Info Popup**. This allows you to open a specific plant directly in PlantFactory for inspection. [More info](workflow/browse_via_blender.md#plant-info-popup)
     - When using the **Mark as Asset** feature now the Asset automatically retrieves an Asset Preview thumbnail, the same image from the Plant Browser will be used.
     - The **Edit Plant Materials** buttons in the **Post Processing** panel now display the number of materials assigned to the plant when **Shift + Click** is used.
-    - Added a **Shader Editor right-click menu** for inserting PF2B node groups and shaders into existing materials. [More info](../workflow/material_settings.md#shader-editor-right-click-menu)
+    - Added a **Shader Editor right-click menu** for inserting PF2B node groups and shaders into existing materials. [More info](workflow/material_settings.md#shader-editor-right-click-menu)
     - New **Retry on Geometry Timeout** option in `Preferences > Misc > Troubleshooting > Import` to help resolve import issues with large batches.
 - **Improved Functionality**
     - Materials for specific plant variations are now selectively renamed with variation-specific prefixes to ensure uniqueness and prevent unintended merging, even when base names are shared. This should result in fewer material merging issues during import for certain plants.
