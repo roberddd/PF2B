@@ -1,0 +1,152 @@
+section {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 0.4rem;
+}
+
+.paralax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("images/parallax/background0001.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.paralax .layer {
+  position: absolute;
+  width: 400%;
+}
+
+/* Foreground (closest) */
+.paralax .foreground {
+  height: 50%;
+  bottom: 0;
+  background: url("images/parallax/foreground.webp") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 70s linear infinite;
+}
+
+/* Secondary Foreground behind the main foreground to add depth */
+.paralax .foreground2 {
+  height: 50%;
+  bottom: 5%;
+  background: url("images/parallax/foreground.webp") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 85s linear infinite;
+  background-position-x: -2000px;
+}
+
+/* Fog */
+.paralax .fog {
+  height: 65%;
+  bottom: 15%;
+  background: url("images/parallax/fog.webp") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 100s linear infinite;
+}
+
+/* Hills */
+.paralax .hills {
+  height: 42%;
+  bottom: 10%;
+  background: url("images/parallax/hills.webp") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 120s linear infinite;
+}
+
+/* Cloud */
+.paralax .cloud {
+  height: 95%;
+  bottom: 5%;
+  background: url("images/parallax/clouds0001.webp") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 160s linear infinite;
+  mix-blend-mode: difference;
+  opacity: 0.35;
+}
+
+/* Mountain (furthest)  */
+.paralax .mountain {
+  height: 65%;
+  bottom: 0%;
+  background: url("images/parallax/mountains0001.webp") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 180s linear infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.paralax .overlay {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  background-color: rgba(56, 146, 81, 0.4);
+  border-radius: 0.55rem;
+  padding: 0.6em;
+  border: 4px solid rgba(0, 40, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px) saturate(115%);
+  -webkit-backdrop-filter: blur(2px) saturate(115%);
+}
+
+.paralax .overlay .logo {
+  display: block;
+  width: auto;
+  max-height: 160px;
+  opacity: 1;
+}
+
+.pf2b-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  max-height: 160px;
+}
+
+/* Huge PF2B headline */
+.logo-main {
+  font-size: 8em;
+  font-weight: 400;
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.logo-line {
+  width: 95.5%;
+  height: 0.3em;
+  background: white;
+}
+
+.logo-sub {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 300;
+  white-space: nowrap;
+  height: 1.2em;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=parallax.css.map */
