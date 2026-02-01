@@ -1,0 +1,2093 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pf2b.roberd.net/support/guides/">
+      
+      
+        <link rel="prev" href="../faq/">
+      
+      
+        <link rel="next" href="../pf2b_under_the_hood/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../icons/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Guides - PF2B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <!-- <meta name="google-site-verification" content="O0wNpVGK1i5I9XqbDfB6psT7uzZy-ERQr56n8fnmEow" /> -->
+  
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: none; }
+            .glightbox-clean .gslide-media { -webkit-box-shadow: none; box-shadow: none; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missing-or-incorrect-textures" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PF2B Documentation" class="md-header__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PF2B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guides
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting_started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../workflow/" class="md-tabs__link">
+          
+  
+  
+  Workflow
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../preferences/general/" class="md-tabs__link">
+          
+  
+  
+  Preferences
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PF2B Documentation" class="md-nav__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    PF2B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/browse_via_blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via Blender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/browse_via_plantfactory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via PlantFactory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes &amp; Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biomes &amp; Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/biomes_and_collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/biomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/import_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/material_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Post Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/post_processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/utilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferences
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preferences
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/plant_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plant Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#missing-or-incorrect-textures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing or incorrect textures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Missing or incorrect textures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-textures-inside-plantfactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify textures inside PlantFactory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify textures inside PlantFactory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-check-texture-names-inside-plantfactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: Check texture names inside PlantFactory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-textures-inside-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify textures inside Blender
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-exported-textures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Exported textures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-info-can-gether-from-all-of-the-above" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What info can gether from all of the above?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pf2b_under_the_hood/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PF2B: Under the Hood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#missing-or-incorrect-textures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing or incorrect textures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Missing or incorrect textures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-textures-inside-plantfactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify textures inside PlantFactory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify textures inside PlantFactory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-check-texture-names-inside-plantfactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: Check texture names inside PlantFactory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-textures-inside-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify textures inside Blender
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-exported-textures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Exported textures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-info-can-gether-from-all-of-the-above" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What info can gether from all of the above?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Guides</h1>
+
+<div class="admonition warning">
+<p class="admonition-title">NOTE</p>
+<p>This page is under construction.</p>
+</div>
+<p>This page contains guides helpful for troubleshooting.</p>
+<h2 id="missing-or-incorrect-textures">Missing or incorrect textures<a class="headerlink" href="#missing-or-incorrect-textures" title="Permanent link">¶</a></h2>
+<p>This section will help you to troubleshoot texture issues. See the <a href="../pf2b_under_the_hood/">PF2B: Under the Hood</a> for more info.</p>
+<p>For this demonstration we will use the <code>Bauhinia blakeana HD V2</code> plant and we will verify if the Leaf materials are using all of the required textures. This plant has 5 different leaf materials.</p>
+<hr>
+<h3 id="verify-textures-inside-plantfactory">Verify textures inside PlantFactory<a class="headerlink" href="#verify-textures-inside-plantfactory" title="Permanent link">¶</a></h3>
+<p>Lets check the plant inside PlantFactory to see how what the textures are sbeing used.</p>
+<ol>
+<li>Open the plant inside PlantFactory.</li>
+<li>
+<p>Locate the materials with the issues. For our demonstration lets look at the <strong>leaf</strong> materials:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/troubleshoot-materials-inside-pf_1.webp" data-desc-position="bottom"><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box on-glb" src="../../images/troubleshoot-materials-inside-pf_1.webp" width="70%"></a></p>
+<p>This plant has the following leaf materials:</p>
+<ul>
+<li><code>Bauhinia leaf atlas 01</code></li>
+<li><code>Bauhinia leaf atlas 02</code></li>
+<li><code>Bauhinia leaf atlas 03</code></li>
+<li><code>Bauhinia leaf atlas 04</code></li>
+<li><code>Bauhinia leaf atlas 04_1</code></li>
+</ul>
+</li>
+<li>
+<p>Doubleclick on one of the materials to open the material editor.</p>
+<p>Here we have the <code>Bauhinia leaf atlas 04_1</code> material opened and we can see this is <strong>Two-sided material</strong>, so we need to expand this selection to see both the front &amp; back sides of the leaf:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/troubleshoot-materials-inside-pf_2.gif" data-desc-position="bottom"><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box on-glb" src="../../images/troubleshoot-materials-inside-pf_2.gif"></a></p>
+</li>
+<li>
+<p>Verify what textures are being used.</p>
+<p>Since this is a <strong>Two-sided material</strong> we need to look both at the front, back &amp; the material slot itself that contains the alpha texture:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/troubleshoot-materials-inside-pf_3.gif" data-desc-position="bottom"><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box on-glb" src="../../images/troubleshoot-materials-inside-pf_3.gif"></a></p>
+<p>So for this material we have textures for:</p>
+<ul>
+<li>Alpha</li>
+<li><strong>Front</strong>: Color, Normal, Backlight(Translucency) &amp; Roughness.</li>
+<li><strong>Back</strong>: Color, Normal &amp; Backlight(Translucency).</li>
+</ul>
+</li>
+</ol>
+<h4 id="optional-check-texture-names-inside-plantfactory">Optional: Check texture names inside PlantFactory<a class="headerlink" href="#optional-check-texture-names-inside-plantfactory" title="Permanent link">¶</a></h4>
+<details class="abstract">
+<summary>Check texture names inside PlantFactory</summary>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>The exported texture names are often <strong>changed</strong> when exporting which means that the below names that are internally used within PlantFactory do not always correspond to the names of the exported texture files.</p>
+</div>
+<ol>
+<li>
+<p>To check the name of the texture hover over the texture path:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/troubleshoot-materials-inside-pf_4.gif" data-desc-position="bottom"><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box on-glb" src="../../images/troubleshoot-materials-inside-pf_4.gif"></a></p>
+</li>
+<li>
+<p>So for our example the textures are:</p>
+<ul>
+<li><code>Bauhinia leaf atlas 04_1</code> material:<ul>
+<li><strong>Alpha Texture</strong>: <code>Bauhinia_leaf_atlas_01_a.png</code></li>
+<li><strong>Front</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_04.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_front_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+<li><strong>Roughness</strong>: <code>Bauhinia_leaf_atlas_01_a_rough.png</code></li>
+</ul>
+</li>
+<li><strong>Back</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_04.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_back_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<details class="abstract">
+<summary>Rest of the leaf materials</summary>
+<ul>
+<li><code>Bauhinia leaf atlas 01</code> material:<ul>
+<li><strong>Alpha</strong>: <code>Bauhinia_leaf_atlas_01_a.png</code></li>
+<li><strong>Front</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_01.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_front_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+<li><strong>Roughness</strong>: <code>Bauhinia_leaf_atlas_01_a_rough.png</code></li>
+</ul>
+</li>
+<li><strong>Back</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_01.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_back_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Bauhinia leaf atlas 02</code> material:<ul>
+<li><strong>Alpha</strong>: <code>Bauhinia_leaf_atlas_01_a.png</code></li>
+<li><strong>Front</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_02.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_front_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+<li><strong>Roughness</strong>: <code>Bauhinia_leaf_atlas_01_a_rough.png</code></li>
+</ul>
+</li>
+<li><strong>Back</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_02.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_back_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Bauhinia leaf atlas 03</code> material:<ul>
+<li><strong>Alpha</strong>: <code>Bauhinia_leaf_atlas_01_a.png</code></li>
+<li><strong>Front</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_03.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_front_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+<li><strong>Roughness</strong>: <code>Bauhinia_leaf_atlas_01_a_rough.png</code></li>
+</ul>
+</li>
+<li><strong>Back</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_03.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_back_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Bauhinia leaf atlas 04</code> material:<ul>
+<li><strong>Alpha</strong>: <code>Bauhinia_leaf_atlas_01_a.png</code></li>
+<li><strong>Front</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_04.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_front_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+<li><strong>Roughness</strong>: <code>Bauhinia_leaf_atlas_01_a_rough.png</code></li>
+</ul>
+</li>
+<li><strong>Back</strong>:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_leaf_atlas_04.png</code></li>
+<li><strong>Normal</strong>: <code>Bauhinia_leaf_atlas_01_back_n.png</code></li>
+<li><strong>Backlight</strong>: <code>Bauhinia_leaf_atlas_01_bl.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+</li>
+</ol>
+</details>
+<hr>
+<h3 id="verify-textures-inside-blender">Verify textures inside Blender<a class="headerlink" href="#verify-textures-inside-blender" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Now lets go inside Blender to verify if all of these textures are being used.</p>
+<p>If we look at the <code>Bauhinia leaf atlas 04_1</code> material:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/troubleshooting/leaf-material-example.webp" data-desc-position="bottom"><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box on-glb" src="../../images/troubleshooting/leaf-material-example.webp" width="50%"></a></p>
+<p>Textures:</p>
+<ul>
+<li><strong>Color</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_04_Color.png</code> <br>(Connected to: Color)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_front_Normal.png</code> <br>(Connected to: Normal Color)</li>
+<li><strong>Alpha</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_Opacity.png</code> <br>(Connected to: Alpha)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_back_Bauhinia_leaf_atlas_01_back_Normal.png</code> <br>(Connected to: Backface Normal Color)</li>
+<li><strong>Translucency</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_bl_BackLight.png</code> <br>(Connected to: Translucent Map)</li>
+<li><strong>Roughness</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_a_rough_Roughness.png</code> <br>(Connected to: Roughness Color)</li>
+</ul>
+<details class="abstract">
+<summary>Rest of the leaf materials</summary>
+<ul>
+<li><code>Bauhinia leaf atlas 01</code> material:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_01_Bauhinia_leaf_atlas_01_Color.png</code> <br>(Connected to: Color)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_front_Normal.png</code> <br>(Connected to: Normal Color)</li>
+<li><strong>Alpha</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_Opacity.png</code> <br>(Connected to: Alpha)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_back_Bauhinia_leaf_atlas_01_back_Normal.png</code> <br>(Connected to: Backface Normal Color)</li>
+<li><strong>Translucency</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_bl_BackLight.png</code> <br>(Connected to: Translucent Map)</li>
+<li><strong>Roughness</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_a_rough_Roughness.png</code> <br>(Connected to: Roughness Color)</li>
+</ul>
+</li>
+<li><code>Bauhinia leaf atlas 02</code> material:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_02_Bauhinia_leaf_atlas_02_Color.png</code> <br>(Connected to: Color)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_front_Normal.png</code> <br>(Connected to: Normal Color)</li>
+<li><strong>Alpha</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_Opacity.png</code> <br>(Connected to: Alpha)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_back_Bauhinia_leaf_atlas_01_back_Normal.png</code> <br>(Connected to: Backface Normal Color)</li>
+<li><strong>Translucency</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_bl_BackLight.png</code> <br>(Connected to: Translucent Map)</li>
+<li><strong>Roughness</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_a_rough_Roughness.png</code> <br>(Connected to: Roughness Color)</li>
+</ul>
+</li>
+<li><code>Bauhinia leaf atlas 03</code> material:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_03_Bauhinia_leaf_atlas_03_Color.png</code> <br>(Connected to: Color)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_front_Normal.png</code> <br>(Connected to: Normal Color)</li>
+<li><strong>Alpha</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_Opacity.png</code> <br>(Connected to: Alpha)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_back_Bauhinia_leaf_atlas_01_back_Normal.png</code> <br>(Connected to: Backface Normal Color)</li>
+<li><strong>Translucency</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_bl_BackLight.png</code> <br>(Connected to: Translucent Map)</li>
+<li><strong>Roughness</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_a_rough_Roughness.png</code> <br>(Connected to: Roughness Color)</li>
+</ul>
+</li>
+<li><code>Bauhinia leaf atlas 04</code> material:<ul>
+<li><strong>Color</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_04_Color.png</code> <br>(Connected to: Color)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_front_Normal.png</code> <br>(Connected to: Normal Color)</li>
+<li><strong>Alpha</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_Opacity.png</code> <br>(Connected to: Alpha)</li>
+<li><strong>Normal</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_back_Bauhinia_leaf_atlas_01_back_Normal.png</code> <br>(Connected to: Backface Normal Color)</li>
+<li><strong>Translucency</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_bl_BackLight.png</code> <br>(Connected to: Translucent Map)</li>
+<li><strong>Roughness</strong>: <code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_a_rough_Roughness.png</code> <br>(Connected to: Roughness Color)</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="abstract">
+<summary>How to get a list of all textures used by materials</summary>
+<p>If you want to see a overview of all textures used by each material as shown above:</p>
+<ol>
+<li>
+<p>Enable the <a href="../../preferences/misc/">debug to console</a> option in the preferences you will have this extra button visible in the <a href="../../workflow/post_processing/">post processing</a> panel:</p>
+<p><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box" src="../../images/plant-troubleshooting-tools.webp"></p>
+</li>
+<li>
+<p>Select the plant you want to retrieve texture info for in the <code>3D View</code> and click on "Debug Textures".</p>
+</li>
+<li>Check the console (<code>Window &gt; Toggle System Console</code>) and you should see something like:</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/troubleshooting/debug-textures-button_output.webp" data-desc-position="bottom"><img alt="Troubleshoot - Locate materials inside PlantFactory" class="img-box on-glb" src="../../images/troubleshooting/debug-textures-button_output.webp"></a></p>
+</details>
+<div class="admonition info2">
+<p class="admonition-title">Verdict</p>
+<p>In this case it looks like everything is connected correctly so we don't need to do anything.</p>
+<p><strong>Notes</strong>:<br>As you might have noticed the '<strong>color texture</strong>' is only connected to the '<strong>frontface color</strong>' socket and not the '<strong>backface color</strong>' = This is not an issue as the PF2B shaders has logic to handle this and uses the front-color for the back texture if nothing is connected to the backface color. See more details about the shader logic <a href="../../workflow/material_settings/#shaders">here</a>.</p>
+</div>
+<p><strong>if</strong> there are any missing textures here in your case you can also follow the next step <a href="#check-exported-textures">Check Exported textures</a> to try to locate these.</p>
+</li>
+</ol>
+<h3 id="check-exported-textures">Check Exported textures<a class="headerlink" href="#check-exported-textures" title="Permanent link">¶</a></h3>
+<p>If you need to verify what textures exist after the import (meaning checking what PlantFactory actually outputs) follow these steps:</p>
+<ol>
+<li>Prepare to do a new import of the plant with the issue.</li>
+<li>Enable <a href="../../workflow/import_settings/">custom export path</a> in the '<strong>Import Settings</strong>'. With this option enabled we can see the exported textures from PlantFactory.</li>
+<li>Import the plant.</li>
+<li>Go to the folder you selected under '<strong>custom export path</strong>.</li>
+<li>
+<p>Do a manual inspection of the textures and see if there are any discrepancies.</p>
+<p>The exported textures for our <code>Bauhinia blakeana HD V2</code> plant (filtered for relevant to our leaf materials):</p>
+<div class="language-text highlight"><pre><span></span><code>Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_01_Bauhinia_leaf_atlas_01_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_02_Bauhinia_leaf_atlas_02_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_03_Bauhinia_leaf_atlas_03_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_back_Bauhinia_leaf_atlas_01_back_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_a_rough_Roughness.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_bl_BackLight.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_front_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_01_Opacity.png
+Bauhinia_blakeana_HD_V2_Bauhinia_leaf_atlas_04_Bauhinia_leaf_atlas_04_Color.png
+</code></pre></div>
+<details class="abstract">
+<summary>Rest of the textures</summary>
+<div class="language-text highlight"><pre><span></span><code>Bauhinia_blakeana_HD_V2_Bauhinia_blak_bark_Bauhinia_black_bark_01_AmbientOcclusion.png
+Bauhinia_blakeana_HD_V2_Bauhinia_blak_bark_Bauhinia_black_bark_01_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_blak_bark_Bauhinia_black_bark_01_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_blak_twig_Bauhinia_black_twig_AmbientOcclusion.png
+Bauhinia_blakeana_HD_V2_Bauhinia_blak_twig_Bauhinia_black_twig_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_blak_twig_Bauhinia_black_twig_n_Bump.png
+Bauhinia_blakeana_HD_V2_Bauhinia_blak_twig_Bauhinia_black_twig_rough_Roughness.png
+Bauhinia_blakeana_HD_V2_Bauhinia_flw_stalk_01_Bauhinia_black_flw_stalk_01_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_flw_stalk_02_Bauhinia_black_flw_stalk_02_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_organs_Bauhinia_black_organs_01_AmbientOcclusion.png
+Bauhinia_blakeana_HD_V2_Bauhinia_organs_Bauhinia_black_organs_01_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_organs_Bauhinia_black_organs_01_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_organs_Bauhinia_black_organs_01_Opacity.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_01_back_Bauhinia_black_pet_01_back_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_01_back_Bauhinia_black_pet_1_back_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_01_Bauhinia_black_pet_01_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_01_Bauhinia_black_pet_01_Opacity.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_01_Bauhinia_black_pet_1_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_02_Bauhinia_black_pet_02_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_02_Bauhinia_black_pet_02_Opacity.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_02_Bauhinia_black_pet_2_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_petal_03_Bauhinia_black_pet_03_Normal.png
+Bauhinia_blakeana_HD_V2_Bauhinia_recept_01_Bauhinia_black_recept_01_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_recept_01_head_Bauhinia_black_recept_01_head_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_recept_02_Bauhinia_black_recept_02_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_recept_03_Bauhinia_black_recept_03_Color.png
+Bauhinia_blakeana_HD_V2_Bauhinia_recept_03_Bauhinia_black_recept_03_Normal.png
+</code></pre></div>
+</details>
+<p><strong>What info can gether from this</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code>- Only the the color texture is unique for each material and the
+</code></pre></div>
+</li>
+</ol>
+<hr>
+<h3 id="what-info-can-gether-from-all-of-the-above">What info can gether from all of the above?<a class="headerlink" href="#what-info-can-gether-from-all-of-the-above" title="Permanent link">¶</a></h3>
+<p>So for the <code>Bauhinia blakeana HD V2</code> plant and its 5 leaf textures:</p>
+<div class="language-text highlight"><pre><span></span><code>Bauhinia leaf atlas 01
+Bauhinia leaf atlas 02
+Bauhinia leaf atlas 03
+Bauhinia leaf atlas 04
+Bauhinia leaf atlas 04_1
+</code></pre></div>
+<ul>
+<li>There are 4 <strong>unique</strong> color textures.<ul>
+<li>So each of the materials has one unique color texture except <strong>4_1</strong> which uses the same texture as <strong>4</strong>.</li>
+</ul>
+</li>
+<li>The rest of the textures are <strong>not unique</strong> and are shared among all of the leaf materials. So for example the same roughness texture is used for all 5 leaf materials and so on for all the rest of the textures as well.</li>
+<li>Same <strong>color texture</strong> is used both for the front and back.</li>
+<li>Roughness exists for front but not back. This seems to be case for all materials as well, so the built in shader only has a input for front roughness</li>
+<li>Front &amp; back normals exist.</li>
+<li>Backlight(Translucency) texture exists. While inside PlantFactory this is mapped to both sides we don't need to do this inside blender as we can just use this to drive the translucency with one copy of the texture.</li>
+<li>The naming scheme is not optimal:<ul>
+<li>Each material has a unique ID: <strong>01</strong>, <strong>02</strong>, <strong>03</strong>, <strong>04</strong>, <strong>04_1</strong> but all textures do not follow the naming scheme (as mentioned above) as they are shared. From an effeciency standpoint this makes sense to name them like this, but this can make it harder for the addon to understand what is connected where (as not all of this info is exported from PlantFactory as mentioned under <a href="../pf2b_under_the_hood/#automated-setup">PF2B: Under the Hood</a>.).</li>
+<li>For example the material <code>Bauhinia leaf atlas 04_1</code> has ID '<strong>04_1</strong>' while only the color texture somewhat follows this naming with '<strong>04</strong>' and the rest are identified as '<strong>01</strong>'.</li>
+</ul>
+</li>
+</ul>
+<p>From this we can already see a discrepancy in the naming scheme. The material itself has "04" as its ID while only the color texture follows this naming while the rest are identified as "01" which is not optimal. The rest of the leaf materials for this plant also follow the same pattern where the Color texture is unique for each material and the rest of the textures are shared (see below info box for details)</p>
+<p>If there are textures that are not connected for a specific plant please <a href="../">get in touch</a> with me and provide the plant details, and I'll investigate further to see if</p>
+<p>to see if this is something you can easily fix yourself otherwise</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024-2025 <a href="https://roberd.net" target="_blank" rel="noopener">Roberd Palm</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="pf2b_footer_container">
+
+    <a href="../../changelog" title="Changelog" class="pf2b_footer_link">Changelog</a>
+    <a href="../../about" title="About" class="pf2b_footer_link">About</a>
+
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.instant", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../extra/360-viewer.min.js"></script>
+      
+        <script src="../../extra/changelog-icons.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "none"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

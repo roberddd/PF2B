@@ -1,0 +1,2064 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pf2b.roberd.net/getting_started/">
+      
+      
+        <link rel="prev" href="../changelog/">
+      
+      
+        <link rel="next" href="../workflow/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../icons/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Getting Started - PF2B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <!-- <meta name="google-site-verification" content="O0wNpVGK1i5I9XqbDfB6psT7uzZy-ERQr56n8fnmEow" /> -->
+  
+
+
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: none; }
+            .glightbox-clean .gslide-media { -webkit-box-shadow: none; box-shadow: none; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PF2B Documentation" class="md-header__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PF2B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../workflow/" class="md-tabs__link">
+          
+  
+  
+  Workflow
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../preferences/general/" class="md-tabs__link">
+          
+  
+  
+  Preferences
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../support/" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PF2B Documentation" class="md-nav__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    PF2B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-before-purchasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes Before Purchasing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After the Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-pf2b-and-using-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding PF2B and Using the Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-time-use-importing-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First time use &amp; Importing cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-biomes-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up Biomes &amp; Collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/browse_via_blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via Blender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/browse_via_plantfactory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via PlantFactory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes &amp; Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biomes &amp; Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/biomes_and_collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/biomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/import_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/material_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Post Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/post_processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/utilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferences
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preferences
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preferences/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preferences/plant_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plant Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preferences/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/pf2b_under_the_hood/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PF2B: Under the Hood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-before-purchasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes Before Purchasing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After the Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-pf2b-and-using-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding PF2B and Using the Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-time-use-importing-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First time use &amp; Importing cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-biomes-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up Biomes &amp; Collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Getting Started</h1>
+
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<ul>
+<li>Blender 4.5 or newer</li>
+<li>PlantFactory 2024</li>
+<li>Operating System: Windows</li>
+</ul>
+<div class="admonition info2">
+<p>PF2B 1.x (compatible with Blender 4.2+) remains available for download but does not include features from version 2.0 onward.</p>
+</div>
+<h2 id="notes-before-purchasing">Notes Before Purchasing<a class="headerlink" href="#notes-before-purchasing" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p>Before purchasing, please ensure you fully understand what this addon does and its requirements. This addon relies on third-party software called <strong>PlantFactory</strong> (approximately 1.6 GB) to function. While PlantFactory is free, setting it up requires some additional steps, which are clearly outlined in the sections below. For full functionality, it is also recommended to install the <strong>PlantCatalog</strong> library (approximately 20 GB), which significantly enhances the range of plants available for use but may take some time to download and install.</p>
+</div>
+<div class="admonition warning">
+<p>PF2B does <strong>not</strong> guarantee 100% compatibility with all plants. With over <a href="../plants/">23,000</a> presets, it is not possible to manually test and verify each one. However, compatibility is very high, and approximately 99% of plants should import correctly without manual intervention.</p>
+<p>If you encounter issues, such as incorrect texture settings or geometry problems, <a href="../support/">please reach out</a>. I will do my best to resolve them by adding plant-specific configurations to the addon.</p>
+<p><strong>For more details, see the <a href="../support/pf2b_under_the_hood/">PF2B: Under the Hood</a> page.</strong></p>
+</div>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<p>Since the addon relies on the PlantFactory application for importing plants, it must be installed. Additionally, there are free plant libraries that can be installed. While these libraries are optional, they provide a significant portion of the available functionality, and skipping them may limit your experience.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="installation-addon" name="__tabbed_1" type="radio"><input id="installation-plantfactory-application" name="__tabbed_1" type="radio"><input id="installation-plantcatalog-plant-library" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="installation-addon">Addon</label><label for="installation-plantfactory-application">PlantFactory Application</label><label for="installation-plantcatalog-plant-library">PlantCatalog Plant Library</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>To install PF2B inside Blender. Follow these steps:</p>
+<ol>
+<li>Download the PF2B add-on zip file from the store you purchased it from.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/addon-install.webp" data-desc-position="bottom"><img align="right" alt="Addon Location" class="img-box on-glb" src="../images/addon-install.webp" width="31%"></a></li>
+<li>Open Blender and go to <code>Edit &gt; Preferences</code>.</li>
+<li>In the Preferences window, navigate to the <code>Add-ons</code> tab.</li>
+<li>Locate the <code>Add-ons Settings</code> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1s.8-.3 1.1 0l2.7 2.7 2.7-2.7c.3-.3.8-.3 1.1 0s.3.8 0 1.1l-3.2 3.2q-.3.3-.6.3"></path></svg></span> icon) in the top right corner.</li>
+<li>Click on <code>Install from Disk</code> and select the downloaded PF2B zip file.</li>
+</ol>
+<div class="admonition info2">
+<p class="admonition-title">Updates</p>
+<p>To update to a newer version, follow <a href="../support/faq/#how-do-i-update-to-a-new-version">these instructions</a>.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Follow these steps to install PlantFactory:</p>
+<ol>
+<li>
+<p>Download PlantFactory (approximately 1.6 GB in size) from <a href="https://www.bentley.com/software/e-on-software-free-downloads/" target="_blank">Bentley’s official website</a>. For additional information about PlantFactory, check out Bentley's FAQ section <a href="https://www.bentley.com/software/e-on-software-free-downloads/#faq" target="_blank">here</a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installation/plantfactory_installer.webp" data-desc-position="bottom"><img alt="PlantFactory installation" class="img-box on-glb" src="../images/installation/plantfactory_installer.webp" width="40%"></a></p>
+</li>
+<li>
+<p>After downloading, you should have a <code>.zip</code> file containing the installer.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installation/plantfactory_installer_zip.webp" data-desc-position="bottom"><img alt="PlantFactory installation" class="img-box on-glb" src="../images/installation/plantfactory_installer_zip.webp"></a></p>
+</li>
+<li>
+<p>Extract the contents of the <code>.zip</code> file. To do this, right-click on the file and choose "Extract" (or use a third-party program such as 7-Zip if you prefer).</p>
+</li>
+<li>
+<p>After extracting, you should see the installer file named "<strong>Setup (Win).exe</strong>". Run this installer and follow the on-screen instructions to complete the installation.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installation/plantfactory_installer_extracted.webp" data-desc-position="bottom"><img alt="PlantFactory installation" class="img-box on-glb" src="../images/installation/plantfactory_installer_extracted.webp"></a></p>
+<details class="info2">
+<summary>Detailed Installer Instructions</summary>
+<p>When running the installer, you will be presented with the following steps. Any steps without options can be skipped by simply clicking "Next."</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installation/installer_step1.webp" data-desc-position="bottom"><img alt="PlantFactory installation" class="img-box on-glb" src="../images/installation/installer_step1.webp"></a></p>
+<p><br></p>
+<p><strong>Installation Folders</strong>:<br>
+Here, you can select where to install the <strong>PlantFactory application</strong>. At the bottom (inside the red box), you’ll see the location of the <strong>PlantFactory plant library</strong> (shown as "Content folder" in the screenshot below), which contains the plants that come with the application. And below that, you need to set the installation location for the <strong>"PlantCatalog"</strong> library (explained in the next step on how to install the full library). It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.</p>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p><strong>If you choose to change the installation paths for either the application or the libraries</strong>:</p>
+<ul>
+<li>After installation, you must update the paths in the addon preferences to point to the correct installation locations. See the bottom of these instructions for more details on how to do this.</li>
+<li><strong>If you choose to change the installation path for the Libraries</strong>:<ul>
+<li><strong>Content folder (PlantFactory library):</strong> The installation destination folder <strong>must be named "Plantfactory"</strong> (case does not matter; both "PlantFactory" and "plantfactory" will work).</li>
+<li><strong>PlantCatalog folder</strong>: The installation destination folder <strong>must be named "Plantcatalog"</strong> (case does not matter; both "PlantCatalog" and "plantcatalog" will work).</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installation/installer_pf-library-path.webp" data-desc-position="bottom"><img alt="PlantFactory installation" class="img-box on-glb" src="../images/installation/installer_pf-library-path.webp"></a></p>
+<p><br></p>
+<p><strong>Plug-ins</strong>:<br>
+At this stage, you’ll be presented with options to install PlantFactory plug-ins for other 3D software such as 3DS Max, Cinema 4D, Maya, or Unreal Engine. If you use any of these programs, you can select the appropriate options, and the installer will add Eon Software's plug-ins for integration with those applications. Note that Blender is not listed here, as it is handled by the PF2B add-on. Installing or selecting any of these plugins will not affect PF2B, so feel free to choose the options that suit your needs.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installation/installer_plugins.webp" data-desc-position="bottom"><img alt="PlantFactory installation" class="img-box on-glb" src="../images/installation/installer_plugins.webp"></a></p>
+<p><br></p>
+<p>After these steps, there may be a few more "Next" clicks, and then the installation will begin.</p>
+</details>
+</li>
+<li>
+<p>Once installation is completed, proceed to the next section to install the <a href="#installation-plantcatalog-plant-library">PlantCatalog Plant Library</a>.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p>If you install PlantFactory or the libraries in a <strong>non-default location</strong>, you need to adjust the paths in the preferences:</p>
+<ul>
+<li><code>Preferences &gt; General &gt; PlantFactory Location</code> – Set the path to the PlantFactory application.</li>
+<li><code>Preferences &gt; Plant Library &gt; Libraries</code> – Set the path to the root folder containing both the PlantCatalog and PlantFactory libraries.</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<p>The PlantCatalog is the primary plant library used in PF2B and contains most of the plants. You can read more about the library <a href="../plants/#plantcatalog-library">here</a> and see this FAQ question: <a href="../support/faq/#do-i-have-to-install-the-entire-plantcatalog-library">Do I have to install the entire PlantCatalog library?</a>. Follow these steps to install the PlantCatalog plant library:</p>
+<ol>
+<li>
+<p>Download the <code>PlantCatalog</code> Library files from <a href="https://www.bentley.com/software/e-on-software-free-downloads/" target="_blank">Bentley’s official website</a>. The library is divided into multiple parts, requiring 19.6 GB of space. To ensure full functionality, download all <strong>13 parts</strong> of the library.<br>
+<img alt="PlantCatalog Library installation" class="img-box" src="../images/installation/plantcatalog_installers.webp" width="40%"></p>
+</li>
+<li>
+<p>After downloading, you should have multiple <code>.zip</code> files. Each <code>.zip</code> contains an installer for the library.<br>
+<img alt="PlantFactory installation" class="img-box" src="../images/installation/plantcatalog_installer_zip.webp"></p>
+</li>
+<li>
+<p><strong>Extract the contents</strong> of each <code>.zip</code> file. Right-click on each <code>.zip</code> file and choose "Extract" (or use a third-party program like 7-Zip, if preferred).</p>
+</li>
+<li>
+<p><strong>Repeat</strong> this extraction process for all 13 <code>.zip</code> files. After extracting, you will find the installer file named "<strong>Setup (Win).exe</strong>" in each folder.</p>
+</li>
+<li>
+<p><strong>Run each installer</strong> individually by double-clicking on the "<strong>Setup (Win).exe</strong>" file and follow the on-screen instructions to complete the installation. You will need to repeat this for each <code>.zip</code> file.
+<img alt="PlantFactory installation" class="img-box" src="../images/installation/plantcatalog_installer_extracted.webp"></p>
+<details class="info2">
+<summary>Detailed Installer Instructions</summary>
+<p>When running the installer, you will be presented with the following steps. Any steps without options can be skipped by simply clicking "Next."</p>
+<p><img alt="PlantFactory installation" class="img-box" src="../images/installation/plantcatalog_installer_step1.webp"></p>
+<p><br></p>
+<p><strong>Installation Folders</strong>:<br>
+Here, you can select where to install the <strong>PlantCatalog Library</strong>. It is generally recommended to leave these paths as default, but if you need to change them, you can do so here.</p>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p><strong>If you choose to change the installation path</strong>:</p>
+<ul>
+<li>The installation destination folder <strong>must be named "Plantcatalog"</strong> (case does not matter; both "PlantCatalog" and "plantcatalog" will work).</li>
+<li>Ensure that <strong>all remaining parts of the library are installed in the same directory</strong> to keep everything properly organized.</li>
+<li>After installation, you must update the path in the addon preferences to point to the correct installation location. See the bottom of these instructions for more details on how to do this.</li>
+</ul>
+</div>
+<p><img alt="PlantFactory installation" class="img-box" src="../images/installation/plantcatalog_installer_library-path.webp"></p>
+</details>
+</li>
+<li>
+<p>Once installation is completed for all the <code>.zip</code> files, proceed to the next section as you are now done with all installation steps.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p>If you install PlantFactory or the libraries in a <strong>non-default location</strong>, you need to adjust the paths in the preferences:</p>
+<ul>
+<li><code>Preferences &gt; General &gt; PlantFactory Location</code> – Set the path to the PlantFactory application.</li>
+<li><code>Preferences &gt; Plant Library &gt; Libraries</code> – Set the path to the root folder containing both the PlantCatalog and PlantFactory libraries.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>After installing everything above, make sure to <strong>read the sections below</strong>, as they contain important information about required cache files for the addon.</p>
+<h2 id="after-the-installation">After the Installation<a class="headerlink" href="#after-the-installation" title="Permanent link">¶</a></h2>
+<h3 id="finding-pf2b-and-using-the-documentation">Finding PF2B and Using the Documentation<a class="headerlink" href="#finding-pf2b-and-using-the-documentation" title="Permanent link">¶</a></h3>
+<p>PF2B is located in the N-Panel inside the <code>3D Viewport</code> under a tab named <code>PF2B</code>, as shown in the image below.</p>
+<p><img align="left" alt="Addon Location" class="img-box" src="../images/addon-location.webp"></p>
+<p>Every feature includes hover-over tooltips, providing quick and detailed explanations directly within the add-on interface, making it easy to understand functionality without needing to leave the workspace.</p>
+<p>Some areas also have an extra <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4 4 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.95.95 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265M13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1M2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12"></path></svg></span> icon, which opens a popup with additional information and a link to the relevant section of the documentation for further instructions.</p>
+<p>For more comprehensive guidance, you can access the full documentation by clicking the <span class="twemoji"><svg inkscape:export-ydpi="96" inkscape:export-xdpi="96" inkscape:export-filename="blender_icons.png" style="display:inline;enable-background:new" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:docname="blender_icons.svg" version="1.0" inkscape:version="1.2 (dc2aeda, 2022-05-15)" sodipodi:version="0.32" id="svg2" height="14.000073" width="12.007121" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata id="metadata34337">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <sodipodi:namedview inkscape:pagecheckerboard="true" inkscape:document-rotation="0" pagecolor="#808080" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1728" inkscape:window-height="1051" id="namedview34335" showgrid="false" inkscape:zoom="1.7115805" inkscape:cx="217.6351" inkscape:cy="369.54148" inkscape:window-x="767" inkscape:window-y="92" inkscape:window-maximized="0" inkscape:current-layer="layer4" inkscape:showpageshadow="2" inkscape:deskcolor="#808080"></sodipodi:namedview>
+  <defs id="defs4"></defs>
+  <g inkscape:groupmode="layer" id="layer8" inkscape:label="icons" style="display:inline" transform="translate(-7,-578)">
+    <g style="display:inline;enable-background:new" id="g13609" transform="translate(-187,-90)" inkscape:export-filename="blender_icons.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96" inkscape:label="BA-1">
+      <path style="stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="M 9.5,578 C 7.96808,578 7,579.29203 7,580.5 v 9 c 0,1.20797 0.96808,2.5 2.5,2.5 h 9 c 0.67616,0.01 0.67616,-1.00956 0,-1 h -9 C 8.53192,591 8,590.17765 8,589.5 8,588.82235 8.53192,588 9.5,588 h 9 c 0.27613,-3e-5 0.49997,-0.22387 0.5,-0.5 v -9 c -3e-5,-0.27613 -0.22387,-0.49997 -0.5,-0.5 z m 4,1 c 1.37479,0 2.5,1.12521 2.5,2.5 0,1.18026 -0.86027,2.25 -2,2.44531 V 585 h -1 v -1.5 c 3e-5,-0.27613 0.22387,-0.49997 0.5,-0.5 0.83435,0 1.5,-0.66565 1.5,-1.5 0,-0.83435 -0.66565,-1.5 -1.5,-1.5 -0.83435,0 -1.5,0.66565 -1.5,1.5 v 0.5 h -1 v -0.5 c 0,-1.37479 1.12521,-2.5 2.5,-2.5 z m -0.5,7 h 1 v 1 h -1 z m -3.5,3 a 0.50005,0.50005 0 1 0 0,1 h 9 a 0.50005,0.50005 0 1 0 0,-1 z" transform="translate(187,90)" id="path13602" inkscape:connector-curvature="0"></path>
+    </g>
+  </g>
+</svg>
+</span>icon in the main panel.</p>
+<div style="clear:both"></div>
+
+<h3 id="first-time-use-importing-cache">First time use &amp; Importing cache<a class="headerlink" href="#first-time-use-importing-cache" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/import-cache-example.webp" data-desc-position="bottom"><img align="right" alt="Addon Location" class="img-box on-glb" src="../images/import-cache-example.webp" width="40%"></a></p>
+<p>To get the most out of the PF2B addon and browse plants directly within the addon, you need to import the thumbnail and presets cache.</p>
+<ol>
+<li>Download the cache files provided alongside the addon from the store where you purchased it.</li>
+<li>Inside Blender, navigate to the addon preferences by clicking the <span class="twemoji"><svg inkscape:export-ydpi="96" inkscape:export-xdpi="96" inkscape:export-filename="blender_icons.png" style="display:inline;enable-background:new" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:docname="blender_icons.svg" version="1.0" inkscape:version="1.2 (dc2aeda, 2022-05-15)" sodipodi:version="0.32" id="svg2" height="14" width="14" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata id="metadata34337">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <sodipodi:namedview inkscape:pagecheckerboard="true" inkscape:document-rotation="0" pagecolor="#808080" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1728" inkscape:window-height="1051" id="namedview34335" showgrid="false" inkscape:zoom="1.7115805" inkscape:cx="217.6351" inkscape:cy="369.54148" inkscape:window-x="767" inkscape:window-y="92" inkscape:window-maximized="0" inkscape:current-layer="layer4" inkscape:showpageshadow="2" inkscape:deskcolor="#808080"></sodipodi:namedview>
+  <defs id="defs4"></defs>
+  <g inkscape:groupmode="layer" id="layer8" inkscape:label="icons" style="display:inline" transform="translate(-279,-536)">
+    <g style="display:inline;enable-background:new" id="g13226" transform="translate(-189,84)" inkscape:label="Z-14">
+      <path style="display:inline;overflow:visible;visibility:visible;opacity:1;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;enable-background:accumulate" d="m 285,536 -0.15625,1.90625 c -0.6231,0.14227 -1.07677,0.25145 -1.59375,0.59375 l -1.75,-1.5 -1.5,1.5 1.5,1.75 c -0.34229,0.51699 -0.45148,0.97065 -0.59375,1.59375 L 279,542 v 1 1 l 1.90625,0.15625 c 0.14227,0.6231 0.25145,1.07677 0.59375,1.59375 l -1.5,1.75 1.5,1.5 1.75,-1.5 c 0.51699,0.34229 0.97065,0.45148 1.59375,0.59375 L 285,550 h 1 1 l 0.15625,-1.90625 c 0.6231,-0.14227 1.07677,-0.25145 1.59375,-0.59375 l 1.75,1.5 1.5,-1.5 -1.5,-1.75 c 0.34229,-0.51699 0.45148,-0.97065 0.59375,-1.59375 L 293,544 v -1 -1 l -1.90625,-0.15625 C 290.95148,541.22065 290.8423,540.76698 290.5,540.25 l 1.5,-1.75 -1.5,-1.5 -1.75,1.5 c -0.51699,-0.34229 -0.97065,-0.45148 -1.59375,-0.59375 L 287,536 h -1 z m 1,5 c 1.11641,0 2,0.88359 2,2 0,1.11641 -0.88359,2 -2,2 -1.11641,0 -2,-0.88359 -2,-2 0,-1.11641 0.88359,-2 2,-2 z" transform="translate(189,-84)" id="path52982-3" inkscape:connector-curvature="0"></path>
+    </g>
+  </g>
+</svg>
+</span> icon in the PF2B panel. Alternatively, go to <code>Edit &gt; Preferences</code>, find PF2B under the Add-ons tab.</li>
+<li>In the <code>Plant Library</code> tab, click the "<strong>Import Cache</strong>" button.</li>
+<li>Locate and select the downloaded cache file, which should be named <code>PF2B Cache - Complete Base.pf2b</code>.</li>
+<li>Once the import is complete, click the 'Verify' button on all caches to ensure everything is properly cached.</li>
+<li>Now you're ready to start using the addon!</li>
+</ol>
+<p><em>For more details about the cache, see <a href="../support/faq/#what-is-the-pf2b-cache">What is the PF2B cache?</a>.</em></p>
+<div style="clear:both"></div>
+
+<h3 id="setting-up-biomes-collections">Setting up Biomes &amp; Collections<a class="headerlink" href="#setting-up-biomes-collections" title="Permanent link">¶</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="setting-up-biomes-collections-1-setting-the-blend-storage-path" name="__tabbed_2" type="radio"><input id="setting-up-biomes-collections-2-installing-required-biome-assets" name="__tabbed_2" type="radio"><input id="setting-up-biomes-collections-3-setting-up-an-asset-library-path" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="setting-up-biomes-collections-1-setting-the-blend-storage-path">1. Setting the Blend Storage Path</label><label for="setting-up-biomes-collections-2-installing-required-biome-assets">2. Installing Required Biome Assets</label><label for="setting-up-biomes-collections-3-setting-up-an-asset-library-path">3. Setting up an Asset Library Path</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Before using <a href="../workflow/biomes_and_collections/">Biomes &amp; Collections</a>, you must specify a directory where PF2B will store asset files.</p>
+<ol>
+<li>Navigate to <code>PF2B Preferences &gt; Plant Library &gt; Biomes &amp; Collections &gt; Blend Storage</code>.</li>
+<li>Click the folder icon and browse to choose a location for your PF2B asset library.</li>
+<li>Confirm your selection.</li>
+</ol>
+<div class="admonition info2">
+<p>Choose a location with adequate storage space. This directory will contain all imported plants and biome assets.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>If you intend to use the <a href="../workflow/biomes_and_collections/">Biomes</a> functionality, you must also install the extra asset blend files that are bundled with PF2B since version 2.0.</p>
+<p>The extra assets are in the zip file named <code>PF2B_biome_other-assets.zip</code> that is distributed with the add-on.</p>
+<ol>
+<li>Browse to the Blend Storage location you set in the previous step.</li>
+<li>Extract the contents of the zip file to this location. There should be 2 blend files.
+    <img alt="Biome Extra Assets" class="img-box" src="../images/PF2B_biome_other-assets.webp"></li>
+</ol>
+<div class="admonition info2">
+<p>These blend files contain additional non-plant assets such as rocks and boulders that are used by the various Biomes. Skipping this step will cause errors when trying to use Biomes that depend on these assets.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>To get the most out of the <a href="../workflow/biomes_and_collections/">Biomes &amp; Collections</a> functionality, it is recommended to set up an Asset Library path pointing to the PF2B directory you specified in the Blend Storage setting.</p>
+<p>This step is <strong>optional</strong> but provides important benefits: it allows you to access imported plants with <strong>full categorization</strong> directly in Blender's Asset Browser (see <a href="../workflow/biomes_and_collections/#shared-library">how this looks in practice</a>).</p>
+<div class="admonition info2">
+<p>If your PF2B directory is already a subfolder of an existing Asset Library path, the assets will be accessible but <strong>without the PF2B category structure</strong>. To enable the categorized view from the <code>blender_assets.cats.txt</code> file, you need to add the PF2B directory as its own Asset Library path.</p>
+</div>
+<p><strong>To set up the Asset Library path:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/pf2b-asset-library-path.webp" data-desc-position="bottom"><img align="right" alt="Asset Library Path Setup" class="img-box on-glb" src="../images/pf2b-asset-library-path.webp" width="40%"></a></p>
+<ol>
+<li>Go to <code>Preferences &gt; File Paths</code> and locate the <code>Asset Libraries</code> section.</li>
+<li>Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"></path></svg></span>(plus) button to add a new library.</li>
+<li>Browse to the same folder you set in <code>Blend Storage</code>.</li>
+<li>(Optional) Rename the Asset Library to something recognizable, such as "PF2B Assets".</li>
+<li>(Recommended) Set the <strong>Import Method</strong> to <code>Append (Reuse Data)</code>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/pf_welcome-screen.webp" data-desc-position="bottom"><img align="right" alt="Addon Location" class="img-box on-glb" src="../images/pf_welcome-screen.webp" width="20%"></a></p>
+<ul>
+<li>To ensure a smoother workflow, it’s <strong>recommended</strong> to disable the "<strong>Welcome</strong>" screen that appears at startup in PlantFactory. If left enabled, you’ll need to manually close this window each time you perform an import into Blender. You can disable it easily by clicking "<em>Don’t show again</em>" in the bottom-left corner.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024-2025 <a href="https://roberd.net" target="_blank" rel="noopener">Roberd Palm</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="pf2b_footer_container">
+
+    <a href="../changelog" title="Changelog" class="pf2b_footer_link">Changelog</a>
+    <a href="../about" title="About" class="pf2b_footer_link">About</a>
+
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.instant", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../extra/360-viewer.min.js"></script>
+      
+        <script src="../extra/changelog-icons.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "none"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

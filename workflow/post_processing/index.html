@@ -1,0 +1,2880 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pf2b.roberd.net/workflow/post_processing/">
+      
+      
+        <link rel="prev" href="../material_settings/">
+      
+      
+        <link rel="next" href="../utilities/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../icons/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Post Processing - PF2B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <!-- <meta name="google-site-verification" content="O0wNpVGK1i5I9XqbDfB6psT7uzZy-ERQr56n8fnmEow" /> -->
+  
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: none; }
+            .glightbox-clean .gslide-media { -webkit-box-shadow: none; box-shadow: none; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#material-editing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PF2B Documentation" class="md-header__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PF2B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Post Processing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting_started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Workflow
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../preferences/general/" class="md-tabs__link">
+          
+  
+  
+  Preferences
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PF2B Documentation" class="md-nav__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    PF2B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse_via_blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via Blender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse_via_plantfactory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via PlantFactory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes &amp; Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biomes &amp; Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomes_and_collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../material_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Post Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Processing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Editing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Material Editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-editing-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demonstration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-editing-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-usage-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-instructions-adding-a-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a system
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-instructions-using-toggle-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Toggle Preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry-Node Snow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometry-Node Snow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-material-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-baking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snow Shader
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snow Shader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-shader-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frost-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frost Shader
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferences
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preferences
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/plant_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plant Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/pf2b_under_the_hood/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PF2B: Under the Hood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Editing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Material Editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-editing-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demonstration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-editing-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-usage-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-instructions-adding-a-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a system
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-instructions-using-toggle-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Toggle Preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry-Node Snow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometry-Node Snow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-material-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-node-snow-baking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snow-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snow Shader
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snow Shader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snow-shader-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frost-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frost Shader
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Post Processing</h1>
+
+<p><img align="right" alt="Post Processing" class="img-box" src="../../images/post-processing.webp"></p>
+<p>This panel allows you to adjust the visual appearance of already imported plants by modifying their materials or by applying additional effects, such as snow.</p>
+<div style="clear:both"></div>
+
+<h2 id="material-editing">Material Editing<a class="headerlink" href="#material-editing" title="Permanent link">¶</a></h2>
+<p><img align="right" alt="Post Processing" class="img-box" src="../../images/post-processing_materials.webp"></p>
+<p>This section provides a faster and more centralized way to adjust specific material settings compared to editing materials individually. Instead of modifying each material slot manually, changes are applied to all material slots that share the same material type.</p>
+<p>For example, an imported plant may contain multiple leaf materials. Editing the <code>Leaf</code> material settings in the <code>Post Processing</code> panel will update all of those leaf materials simultaneously.</p>
+<p>Materials are grouped into the following categories: <code>Leaf</code>, <code>Stalk</code>, <code>Flower</code>, <code>Fruit</code>, <code>Bark</code>, and <code>Other</code>. The <code>Other</code> category acts as a fallback for materials that do not match any of the predefined types. Only material types that are present on the selected plant can be edited. As shown in the screenshot, unavailable categories such as <code>Fruit</code> and <code>Other</code> are displayed as disabled.</p>
+<h3 id="material-editing-demonstration">Demonstration<a class="headerlink" href="#material-editing-demonstration" title="Permanent link">¶</a></h3>
+<video loop muted controls>
+    <source src="../../videos/postprocessing_material.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<h3 id="material-editing-instructions">Instructions<a class="headerlink" href="#material-editing-instructions" title="Permanent link">¶</a></h3>
+<p>Select a plant in the <code>3D Viewport</code>, and the detected material types will be displayed, as shown below. Clicking on a material type, such as "Leaf," opens a popup where you can edit its material properties. You can also hold Shift when clicking to quickly see which materials use this type.</p>
+<p><img alt="Post Processing" class="img-box" src="../../images/post-processing.webp"></p>
+<p><img align="left" alt="Post Processing" class="img-box" src="../../images/post-processing_leaf-example.webp"></p>
+<p>The checkboxes to the left of each property allow you to enable or disable updates for that specific value when applying changes. For example, if you only want to update <strong>Translucency</strong>, you can uncheck all other boxes and click <strong>OK</strong> to apply only that change.</p>
+<p>For details about all material settings, see <a href="../material_settings/#settings">Material Settings</a> documentation."</p>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>Changes made with the sliders are not applied in real-time. They are applied to all affected materials at once when you click OK</p>
+</div>
+<div style="clear:both"></div>
+
+<div class="admonition info2">
+<p class="admonition-title">Tips</p>
+<ul>
+<li>
+<p>Hold Shift when clicking on the material types to quickly see which materials use this type.</p>
+<p><img alt="Material Usage" class="img-box" src="../../images/post-processing_leaf-material_usage-example.webp"></p>
+</li>
+<li>
+<p>Clicking on the plant name opens a popup with <a href="../utilities/#plant-details">plant-details</a> for quickly access.</p>
+</li>
+</ul>
+</div>
+<h2 id="snow">Snow<a class="headerlink" href="#snow" title="Permanent link">¶</a></h2>
+<h3 id="snow-overview">Overview<a class="headerlink" href="#snow-overview" title="Permanent link">¶</a></h3>
+<p>The <strong>Snow</strong> feature allows you to add winter effects such as snow accumulation and frost to existing assets. PF2B provides multiple approaches, including geometry-based and shader-based solutions, allowing you to balance visual fidelity and performance depending on the use case.</p>
+<p>While optimized for PF2B plants, these systems can also be applied to non-PF2B assets.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="snow-overview-geometry-node-snow" name="__tabbed_1" type="radio"><input id="snow-overview-snow-shader" name="__tabbed_1" type="radio"><input id="snow-overview-frost-shader" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="snow-overview-geometry-node-snow">Geometry Node Snow</label><label for="snow-overview-snow-shader">Snow Shader</label><label for="snow-overview-frost-shader">Frost Shader</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<blockquote>
+<p><strong>Best for:</strong> Hero assets, foreground objects, close-up shots.</p>
+</blockquote>
+<p>This approach adds <strong>actual mesh geometry</strong> to simulate snow buildup, providing detailed results but with a higher performance cost.</p>
+<p>In addition to the geometry cost, the <strong>snow material used by this setup</strong> can significantly affect performance. The material’s <strong>Detailed</strong> mode includes:</p>
+<ul>
+<li>Subsurface scattering</li>
+<li>Displacement</li>
+</ul>
+<p><strong>Snow Material Recommendations:</strong></p>
+<ul>
+<li>Use <strong>Detailed</strong> mode for hero or foreground assets</li>
+<li>Use <strong>Simple</strong> mode for background vegetation</li>
+</ul>
+<details class="info2">
+<summary>More details</summary>
+<p>The Geometry Nodes setup used by this option is shown below. It is responsible for generating the snow geometry and controlling how it is distributed across the mesh:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/snow_geometry-node_nodes.webp" data-description="Geometry-Node nodes" data-desc-position="bottom"><img alt="Geometry-Node Nodes" class="img-box on-glb" data-description="Geometry-Node nodes" src="../../images/snow_geometry-node_nodes.webp"></a></p>
+<p>The nodes reference a dedicated snow material, which is applied to the generated geometry. This material can be replaced or edited if needed:</p>
+<p><img alt="Main Snow Material" class="img-box" src="../../images/snow_pf2b-snow-material.webp"></p>
+</details>
+</div>
+<div class="tabbed-block">
+<blockquote>
+<p><strong>Best for:</strong> Midground and background assets.</p>
+</blockquote>
+<p>The <strong>Snow Shader Module</strong> is a <strong>shader-based effect</strong> that uses surface orientation (Z-normals) to determine snow placement. It does not add geometry and is therefore much more efficient.</p>
+<p>The snow shader can be applied to bark materials and selectively enabled for:</p>
+<ul>
+<li>Trunks</li>
+<li>Branches</li>
+<li>Twigs</li>
+</ul>
+<p>And as a recomendation only apply to only materials that are visible in the scene, so for example applying it on twigs might not always be useful.</p>
+<!-- so its most useful on materials such as: tree-trunks, branches or other objects, not recomended to be used with leaf as might be computasionally high for that usecase. -->
+<details class="info2">
+<summary>More details</summary>
+<p>This is a Pass-thru Shader module that is inserted between your current main shader and the material output node. The module insertion into your material handled automatically by PF2B, but you can also access this and the other snow related nodes via the right-click menu in the shader editor if you want to add them to other things.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/snow_shader-snow-module.webp" data-description="Snow Module example" data-desc-position="bottom"><img alt="Shader Snow" class="img-box on-glb" data-description="Snow Module example" src="../../images/snow_shader-snow-module.webp"></a></p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Eevee Performance</p>
+<p>On highly detailed meshes, this shader can be slow in Eevee, especially when increasing the <strong>Noise Detail</strong> setting in the Snow Shader Module.
+<br>Always test performance and consider <strong>Geometry Node Snow</strong> as an alternative for hero assets.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<blockquote>
+<p><strong>Best for:</strong> Subtle surface detail, foliage, and large scenes where performance is critical.</p>
+</blockquote>
+<p>The <strong>Frost Shader Module</strong> is a <strong>lightweight shader effect</strong> that adds a subtle icy or frosted surface appearance. It is designed to <strong>complement</strong> either snow approach, but can also be used on its own.</p>
+<p>Frost can be applied independently to:</p>
+<ul>
+<li>Leaf materials</li>
+<li>Bark materials</li>
+</ul>
+<p>While intended for subtle frost, increasing its strength allows it to function as a lightweight snow alternative, particularly for foliage.</p>
+<details class="info2">
+<summary>More details</summary>
+<p>This is a Pass-thru Color module that is inserted between the main Diffuse/Albedo color-texture and your main shader. The module insertion into your material handled automatically by PF2B, but you can also access this and the other snow related nodes via the right-click menu in the shader editor if you want to add them to other things.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/snow_shader-frost-overlay-module.webp" data-description="Frost Module example" data-desc-position="bottom"><img alt="Shader Snow" class="img-box on-glb" data-description="Frost Module example" src="../../images/snow_shader-frost-overlay-module.webp"></a></p>
+</details>
+</div>
+</div>
+</div>
+<h4 id="snow-usage-guidelines">Usage Guidelines<a class="headerlink" href="#snow-usage-guidelines" title="Permanent link">¶</a></h4>
+<div class="admonition info2">
+<p>A recommended setup is:</p>
+<ul>
+<li><strong>Geometry Node Snow</strong> OR <strong>Snow Shader</strong></li>
+<li>Optional <strong>Frost Module</strong> layered on top</li>
+</ul>
+<p>For an ultra-lightweight approach, use <strong>only the Frost Module</strong> with increased strength to suggest snow on leaves.</p>
+</div>
+<div class="admonition warning">
+<p><strong>Redundant Snow Effects</strong></p>
+<p>In most cases, applying both <strong>Geometry Node Snow</strong> and the <strong>Snow Shader</strong> to the same object is unnecessary, as both represent primary snow coverage and increase cost with limited visual benefit.
+However, in specific situations, such as hero plants or close-up shots, layering them can be useful to add extra detail or artistic control.</p>
+</div>
+<h4 id="snow-examples">Examples<a class="headerlink" href="#snow-examples" title="Permanent link">¶</a></h4>
+<p>Below are several examples demonstrating how different effect stacks can be combined. The effects are highly flexible and can be adjusted to place snow precisely where needed. In some examples, snow appears on areas such as roots; this can be easily masked out if required but has been intentionally left visible for demonstration purposes. Depending on a plant’s structure, certain effect stacks and settings may be better suited to specific plant types than others.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="snow-examples-tree-trunk" name="__tabbed_2" type="radio"><input id="snow-examples-spruce" name="__tabbed_2" type="radio"><input id="snow-examples-broadleaf-tree" name="__tabbed_2" type="radio"><input id="snow-examples-bush" name="__tabbed_2" type="radio"><input id="snow-examples-suzanne" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="snow-examples-tree-trunk">Tree Trunk</label><label for="snow-examples-spruce">Spruce</label><label for="snow-examples-broadleaf-tree">Broadleaf Tree</label><label for="snow-examples-bush">Bush</label><label for="snow-examples-suzanne">Suzanne</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div></div><p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="snow-examples-combined" name="__tabbed_3" type="radio"><input id="snow-examples-geometry-node" name="__tabbed_3" type="radio"><input id="snow-examples-bark-snow" name="__tabbed_3" type="radio"><input id="snow-examples-bark-frost" name="__tabbed_3" type="radio"><input id="snow-examples-no-snow" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="snow-examples-combined">Combined</label><label for="snow-examples-geometry-node">Geometry-Node</label><label for="snow-examples-bark-snow">Bark Snow</label><label for="snow-examples-bark-frost">Bark Frost</label><label for="snow-examples-no-snow">No Snow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node + Snow Shader + Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/trunk/geonode-snow_bark-snow_bark-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+<p>Geometry-Node + Bark Snow + Bark Frost</p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/trunk/geonode-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Snow Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/trunk/bark-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/trunk/bark-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="No Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/trunk/no-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div></div><p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="snow-examples-combined_1" name="__tabbed_4" type="radio"><input id="snow-examples-geometry-node_1" name="__tabbed_4" type="radio"><input id="snow-examples-leaf-frost" name="__tabbed_4" type="radio"><input id="snow-examples-no-snow_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="snow-examples-combined_1">Combined</label><label for="snow-examples-geometry-node_1">Geometry-Node</label><label for="snow-examples-leaf-frost">Leaf Frost</label><label for="snow-examples-no-snow_1">No Snow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node + Snow Shader + Frost Shader" data-sync-group="spruce">
+    <img src="../../images/snow/spruce/geonode-snow_leaf-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+<p>Geometry-Node + Leaf Frost</p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node Snow" data-sync-group="spruce">
+    <img src="../../images/snow/spruce/geonode-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Snow Shader" data-sync-group="spruce">
+    <img src="../../images/snow/spruce/leaf-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="No Snow" data-sync-group="spruce">
+    <img src="../../images/snow/spruce/no-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div></div><p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:6"><input checked="checked" id="snow-examples-combined_2" name="__tabbed_5" type="radio"><input id="snow-examples-geometry-node_2" name="__tabbed_5" type="radio"><input id="snow-examples-bark-snow_1" name="__tabbed_5" type="radio"><input id="snow-examples-bark-frost_1" name="__tabbed_5" type="radio"><input id="snow-examples-leaf-frost_1" name="__tabbed_5" type="radio"><input id="snow-examples-no-snow_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="snow-examples-combined_2">Combined</label><label for="snow-examples-geometry-node_2">Geometry-Node</label><label for="snow-examples-bark-snow_1">Bark Snow</label><label for="snow-examples-bark-frost_1">Bark Frost</label><label for="snow-examples-leaf-frost_1">Leaf Frost</label><label for="snow-examples-no-snow_2">No Snow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node + Snow Shader + Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/broadleaf_tree/geonode-snow_bark-frost_leaf-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+<p>Geometry-Node + Bark Snow + Bark Frost + Leaf Frost</p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/broadleaf_tree/snow_geonode_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Snow Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/broadleaf_tree/snow_shader_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/broadleaf_tree/bark-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/broadleaf_tree/leaf-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="No Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/broadleaf_tree/snow_no-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+<div class="tabbed-block">
+<p>Note: All 360° images are lit using an HDRI setup. In this particular image, the absence of a mesh ground plane makes unobstructed light from below more apparent, resulting in illumination beneath the leaves that does not represent a real-world lighting scenario.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="snow-examples-combined_3" name="__tabbed_6" type="radio"><input id="snow-examples-geometry-node_3" name="__tabbed_6" type="radio"><input id="snow-examples-leaf-frost_2" name="__tabbed_6" type="radio"><input id="snow-examples-no-snow_3" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="snow-examples-combined_3">Combined</label><label for="snow-examples-geometry-node_3">Geometry-Node</label><label for="snow-examples-leaf-frost_2">Leaf Frost</label><label for="snow-examples-no-snow_3">No Snow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node + Snow Shader + Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/bush/geonode-snow_leaf-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+<p>Geometry-Node + Leaf Frost</p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/bush/geonode-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/bush/leaf-frost_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="No Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/bush/no-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div></div><p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:4"><input checked="checked" id="snow-examples-combined_4" name="__tabbed_7" type="radio"><input id="snow-examples-geometry-node_4" name="__tabbed_7" type="radio"><input id="snow-examples-snow-shader" name="__tabbed_7" type="radio"><input id="snow-examples-no-snow_4" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="snow-examples-combined_4">Combined</label><label for="snow-examples-geometry-node_4">Geometry-Node</label><label for="snow-examples-snow-shader">Snow Shader</label><label for="snow-examples-no-snow_4">No Snow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node + Snow Shader + Frost Shader" data-sync-group="tree-trunk">
+<img src="../../images/snow/suzanne/geonode-snow_snow-shader_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+<p>Geometry-Node + Snow Shader</p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Geometry-Node Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/suzanne/geonode-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="Frost Shader" data-sync-group="tree-trunk">
+    <img src="../../images/snow/suzanne/snow-shader_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p></p><div data-360-viewer data-frames="12" data-layout="grid" data-sensitivity="50" data-title="No Snow" data-sync-group="tree-trunk">
+    <img src="../../images/snow/suzanne/no-snow_spritesheet_12frames.webp" alt="360 view">
+</div><p></p>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+</div>
+</div>
+<h3 id="snow-instructions">Instructions<a class="headerlink" href="#snow-instructions" title="Permanent link">¶</a></h3>
+<h4 id="snow-instructions-adding-a-system">Adding a system<a class="headerlink" href="#snow-instructions-adding-a-system" title="Permanent link">¶</a></h4>
+<p><img alt="Post Processing" class="img-box" src="../../images/snow_panel-empty.webp"></p>
+<p>When adding snow you can decide what systems to activate</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="snow-instructions-adding-a-system-pf2b-plants" name="__tabbed_8" type="radio"><input id="snow-instructions-adding-a-system-non-pf2b-assets" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="snow-instructions-adding-a-system-pf2b-plants">PF2B Plants</label><label for="snow-instructions-adding-a-system-non-pf2b-assets">Non-PF2B Assets</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img align="left" alt="Add Snow" class="img-box" src="../../images/snow_add-snow.webp"></p>
+<p>Some of the systems have additional settings available under the <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span> icon:</p>
+<p></p><div style="clear:both"></div><p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="snow-instructions-adding-a-system-geometry-node" name="__tabbed_9" type="radio"><input id="snow-instructions-adding-a-system-leaf-materials" name="__tabbed_9" type="radio"><input id="snow-instructions-adding-a-system-bark-materials" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="snow-instructions-adding-a-system-geometry-node">Geometry Node</label><label for="snow-instructions-adding-a-system-leaf-materials">Leaf Materials</label><label for="snow-instructions-adding-a-system-bark-materials">Bark Materials</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Snow</strong> <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span>:<ul>
+<li><strong>Start Hidden</strong>: Makes the snow system hidden in the viewport when added. Useful for improving viewport performance, as the snow geometry will not be generated until it is shown.</li>
+<li><strong>Use Custom Material</strong>: Lets you select a custom material to be used.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Frost</strong>: No settings. Applied to all leaf materials.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Snow</strong> <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span>:<ul>
+<li><strong>Add to</strong>: Choose one or more bark components to apply the shader to:<ul>
+<li><strong>Trunk</strong></li>
+<li><strong>Branches</strong></li>
+<li><strong>Twigs</strong>: <em>Note: Only recommended if twigs are large enough for snow buildup to be visible; otherwise this may add unnecessary computation</em>.</li>
+</ul>
+</li>
+<li><strong>Material Settings</strong>: <em>These set the initial values and can be adjusted later</em><ul>
+<li><strong>Noise Detail</strong>: Controls the level of detail in the snow noise used by the shader. Higher values produce finer detail but increase render time.<ul>
+<li><strong>Low</strong></li>
+<li><strong>Medium</strong></li>
+<li><strong>High</strong></li>
+</ul>
+</li>
+<li><strong>Use Hard Edge On Snow</strong>: Increases contrast in the snow mask to create harder, more defined snow edges and breakup. When disabled, snow blends more softly into the underlying material.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Frost</strong> <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span>:<ul>
+<li><strong>Add To</strong>: Applied to all bark materials.</li>
+<li><strong>Material Settings</strong>: <em>These set the initial values and can be adjusted later</em><ul>
+<li><strong>Add Crevice Snow</strong>: Controls how much snow settles into dark, recessed areas of the material, such as cracks and grooves in bark. Higher values push snow into deeper crevices while keeping raised areas cleaner. This slider also slightly softens the overall frost opacity, helping the effect feel more natural on bark and other rough organic surfaces.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+<div class="tabbed-block">
+<p><img align="left" alt="Add Snow" class="img-box" src="../../images/snow_add-snow_non-pf2b-object.webp"></p>
+<p>Some of the systems have additional settings available under the <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span> icon:</p>
+<p></p><div style="clear:both"></div><p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="snow-instructions-adding-a-system-geometry-node_1" name="__tabbed_10" type="radio"><input id="snow-instructions-adding-a-system-materials---snow" name="__tabbed_10" type="radio"><input id="snow-instructions-adding-a-system-materials---frost" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="snow-instructions-adding-a-system-geometry-node_1">Geometry Node</label><label for="snow-instructions-adding-a-system-materials---snow">Materials - Snow</label><label for="snow-instructions-adding-a-system-materials---frost">Materials - Frost</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Snow</strong> <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span>:<ul>
+<li><strong>Start Hidden</strong>: Makes the snow system hidden in the viewport when added. Useful for improving viewport performance, as the snow geometry will not be generated until it is shown.</li>
+<li><strong>Use Custom Material</strong>: Lets you select a custom material to be used.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Snow</strong> <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span>:<ul>
+<li><strong>Add to</strong>: Lets you decide where to apply the shader. For non-PF2B assets, material types cannot be detected automatically, so snow effects must be assigned manually.<ul>
+<li><strong>All Materials</strong></li>
+<li><strong>First Slot</strong></li>
+<li><strong>Last Slot</strong></li>
+<li><strong>Name Match / Name Exclude</strong>: Apply snow shader to materials matching (Match) or excluding (Exclude) a name pattern. Both options share these settings:<ul>
+<li><strong>Filter</strong>: String to match/exclude from material names.</li>
+<li><strong>Case Sensitive</strong>: Make name filtering case-sensitive.</li>
+<li><strong>Use Regex</strong>: Treat filter string as a regex pattern. Examples:<ul>
+<li><code>^bark</code>: Starts with bark.</li>
+<li><code>leaf$</code>: Ends with leaf.</li>
+<li><code>bark|wood</code>: Contains bark OR wood.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Material Settings</strong>: <em>These set the initial values and can be adjusted later</em><ul>
+<li><strong>Noise Detail</strong>: Controls the level of detail in the snow noise used by the shader. Higher values produce finer detail but increase render time.<ul>
+<li><strong>Low</strong></li>
+<li><strong>Medium</strong></li>
+<li><strong>High</strong></li>
+</ul>
+</li>
+<li><strong>Use Hard Edge On Snow</strong>: Increases contrast in the snow mask to create harder, more defined snow edges and breakup. When disabled, snow blends more softly into the underlying material.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Frost</strong> <span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -38299.644 -53500.679)"><path d="m308.06055 557c-.65207.63639-1.06055 1.52103-1.06055 2.5 0 1.5.75 2.5 2 3.14453v.004 6.85156c-.0287 2.02848 3.02869 2.02848 3 0v-6.85156-.002c1.28948-.66521 2-1.64648 2-3.14648 0-.97897-.40848-1.86361-1.06055-2.5h-.02148-.91797v2.99995l-1 1h-1l-1-1 .00002-3zm1.93945 12h1v1h-1z" transform="translate(84 -21)"></path><path d="m387.00001 542-.00001-5.5c.004-.28226-.22555-.51223-.50781-.50781-.27614.004-.49651.23167-.49219.50781l.00001 5.5zm.75 2h.74999c.67616.01.67616-1.00956 0-1h-4c-.67616-.01-.67616 1.00956 0 1h.75001v1c-.75 0-1.25.5-1.25 1.25l-.00001 1.25c-.00001.78517.31169 1.44054.78516 1.86719.47346.42664 1.08725.63281 1.69726.63281s1.22902-.20449 1.71094-.62891c.48192-.42441.80663-1.08156.80664-1.87109l.00001-1.25c0-.75-.5-1.25-1.25-1.25z"></path></g></g></svg></span>:<ul>
+<li><strong>Add to</strong>: Lets you decide where to apply the shader. For non-PF2B assets, material types cannot be detected automatically, so snow effects must be assigned manually.<ul>
+<li><strong>All Materials</strong></li>
+<li><strong>First Slot</strong></li>
+<li><strong>Last Slot</strong></li>
+<li><strong>Name Match / Name Exclude</strong>: Apply frost shader to materials matching (Match) or excluding (Exclude) a name pattern. Both options share these settings:<ul>
+<li><strong>Filter</strong>: String to match/exclude from material names.</li>
+<li><strong>Case Sensitive</strong>: Make name filtering case-sensitive.</li>
+<li><strong>Use Regex</strong>: Treat filter string as a regex pattern. Examples:<ul>
+<li><code>^bark</code>: Starts with bark.</li>
+<li><code>leaf$</code>: Ends with leaf.</li>
+<li><code>bark|wood</code>: Contains bark OR wood.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Material Settings</strong>: <em>These set the initial values and can be adjusted later</em><ul>
+<li><strong>Add Crevice Snow</strong>: Controls how much snow settles into dark, recessed areas of the material, such as cracks and grooves in bark. Higher values push snow into deeper crevices while keeping raised areas cleaner. This slider also slightly softens the overall frost opacity, helping the effect feel more natural on bark and other rough organic surfaces. Not recommended for leaf or foliage materials. <em>This sets the initial setting and can be adjusted later</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p></p><div></div><p></p>
+</div>
+</div>
+</div>
+<p>Added systems will be visible in the Snow panel. Clicking on each of the active systems presents different options depending on its type. Below are few examples of various snow systems enabled at the same time:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="snow-instructions-adding-a-system-pf2b-plants_1" name="__tabbed_11" type="radio"><input id="snow-instructions-adding-a-system-non-pf2b-assets_1" name="__tabbed_11" type="radio"><div class="tabbed-labels"><label for="snow-instructions-adding-a-system-pf2b-plants_1">PF2B Plants</label><label for="snow-instructions-adding-a-system-non-pf2b-assets_1">Non-PF2B Assets</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><em>Example showing the maximum number of snow systems supported on PF2B plant assets.</em>
+<img alt="Snow Active Systems" class="img-box" src="../../images/snow_panel_pf2b-asset.webp"></p>
+</div>
+<div class="tabbed-block">
+<p><em>Example showing the maximum number of snow systems supported on non-PF2B assets.</em>
+<img alt="Snow Active Systems" class="img-box" src="../../images/snow_panel_non-pf2b-asset.webp"></p>
+</div>
+</div>
+</div>
+<h4 id="snow-instructions-using-toggle-preview">Using Toggle Preview<a class="headerlink" href="#snow-instructions-using-toggle-preview" title="Permanent link">¶</a></h4>
+<p>The <a href="#snow-shader">Snow Shader</a>, <a href="#frost-shader">Frost Shader</a>, and <a href="#snow-shader-masking">Shader Masking</a> each include a '<span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" stroke-width="1.14286" transform="matrix(87.5 0 0 87.5 -22387.636 -37525.1732)"><path d="m257 430h16v16h-16z" opacity="0"></path><path d="m496 535.9375c-2.73936 0-5.1213 1.56371-6.29102 3.84961-.49329.96401-.77148 2.05765-.77148 3.21289 0 3.89459 3.16791 7.0625 7.0625 7.0625s7.0625-3.16791 7.0625-7.0625-3.16791-7.0625-7.0625-7.0625zm0 1c3.35415 0 6.0625 2.70835 6.0625 6.0625s-2.70834 6.0625-6.0625 6.0625c-3.35415 0-6.0625-2.70835-6.0625-6.0625 0-.99492.23889-1.93072.66211-2.75781 1.00359-1.96124 3.04116-3.30469 5.40039-3.30469zm0 1.0625a.99999996.99999996 0 0 0 -1 1 .99999996.99999996 0 0 0 1 1 .99999996.99999996 0 0 0 1-1 .99999996.99999996 0 0 0 -1-1zm-2.82422 1.16211a1.0001001 1.0001001 0 0 0 -.6875.30469c-.61854.6208-1.06287 1.393-1.28906 2.24023a1.0001001 1.0001001 0 1 0 1.93164.51563c.13595-.50922.40262-.97353.77344-1.34571a1.0001001 1.0001001 0 0 0 -.72852-1.71484z" fill-rule="evenodd" transform="matrix(1.14286 0 0 1.14286 -301.857 -182.571)"></path></g></g></svg></span> <strong>Toggle Preview</strong>' button. This allows you to preview the specific map you're editing to help adjust snow distribution.</p>
+<p>Switch to <strong>Rendered</strong> or <strong>Material Preview</strong> viewport shading mode to see the result. See the example below:</p>
+<video loop muted controls>
+    <source src="../../videos/snow_toggle-preview-example.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<h3 id="snow-types">Types<a class="headerlink" href="#snow-types" title="Permanent link">¶</a></h3>
+<h4 id="geometry-node-snow">Geometry-Node Snow<a class="headerlink" href="#geometry-node-snow" title="Permanent link">¶</a></h4>
+<p>Clicking on the header maximizes the sub-panel and presents you with all of the settings for the geometry-node as well as access to edit the material assigned to it.</p>
+<ul>
+<li><strong>Panel buttons</strong>:<ul>
+<li><span class="twemoji"><svg height="1300" viewBox="0 0 1500 1300" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m512 414.00018h9v5h-9zm-1.5-2c-.27613.00003-.49997.22387-.5.5v8c.00003.27613.22387.49997.5.5h5.5v1h-2.5c-.67616-.01-.67616 1.00956 0 1h6c.6573-.009.6573-.9907 0-1h-2.5v-1h5.5c.27613-.00003.49997-.22387.5-.5v-8c-.00003-.27613-.22387-.49997-.5-.5zm.5 1h11v7h-11z" transform="matrix(100 0 0 100 -50899.99999999999 -41100.0213)"></path></g></svg></span>: Hide/Show modifier in the viewport.</li>
+<li><span class="twemoji"><svg height="1300" viewBox="0 0 1500 1300" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m515.5 432c-.1326.00002-.25976.0527-.35352.14647l-1.85351 1.85353h-2.79297c-.27613.00003-.49997.22387-.5.5v8c.00003.27613.22387.49997.5.5h6.45312.004c.0131-.00082.0261-.002.0391-.004.004.00005.008.00005.0117 0 .0143.002.0286.003.043.004h.006 5.44336c.27613-.00003.49997-.22387.5-.5v-8c-.00003-.27613-.22387-.49997-.5-.5h-1.79297l-1.85351-1.85353c-.0938-.09379-.2211-.14652-.3538-.14647zm1.49781 1.99804c2.21589-.00032 4.00185 1.7855 4.00195 4.00196-.0009 2.19736-1.75841 3.97457-3.95508 4-.0131.00082-.0261.002-.0391.004-.0149-.002-.0299-.003-.0449-.004-.001 0-.003 0-.004 0-2.19824-.0228-3.95803-1.80057-3.95898-4 .00009-2.21578 1.78479-4.00131 4-4.00196zm.00024 1.00196c-1.65063 0-2.99805 1.34922-2.99805 3 0 1.65079 1.34742 3 2.99805 3s3-1.34921 3-3c0-1.65078-1.34937-3-3-3zm0 1c1.11009 0 2 .88955 2 2s-.88991 2-2 2-1.99805-.88955-1.99805-2 .88796-2 1.99805-2z" transform="matrix(100 0 0 100 -50900.014 -43100)"></path></g></svg></span>: Hide/Show modifier during render.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.939 8.72 2.22a.749.749 0 1 1 1.06 1.06L7.061 6 9.78 8.72a.749.749 0 1 1-1.06 1.06L6 7.061 3.28 9.78a.749.749 0 1 1-1.06-1.06L4.939 6 2.22 3.28a.75.75 0 0 1 0-1.06"></path></svg></span>: Remove the snow setup from the currently selected object.</li>
+</ul>
+</li>
+</ul>
+<p><img align="left" alt="Geometry-Node Snow Panel" class="img-box" src="../../images/snow_panel_geometry-node.webp"></p>
+<ul>
+<li><strong>Menu inside the panel</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span>:<ul>
+<li>At the top the current version of the GeoNode Snow</li>
+<li><strong>Presets</strong>: Submenu with Snow Presets.</li>
+<li><strong>User Presets</strong>: Submenu with Snow Presets saved by the user.</li>
+<li><strong>Save Preset</strong>: Save the current parameters as a preset. Shows a popup with further options.</li>
+<li><strong>Copy</strong>: Copy Snow parameters. Useful when applying the same settings across multiple plants.</li>
+<li><strong>Paste</strong>: Paste Snow parameters. Useful when applying the same settings across multiple plants.</li>
+<li><strong>Reset</strong>: Reset all geometry-node snow settings. Does not reset the material setting.</li>
+<li><strong>Bake</strong>: Bake the snow Geometry Nodes modifier into real geometry. See the <a href="#baking-geometry-node-snow-baking">Baking</a> section for details.</li>
+</ul>
+</li>
+</ul>
+<div style="clear:both"></div>
+
+<h5 id="geometry-node-snow-settings">Settings<a class="headerlink" href="#geometry-node-snow-settings" title="Permanent link">¶</a></h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:6"><input checked="checked" id="geometry-node-snow-settings-general" name="__tabbed_12" type="radio"><input id="geometry-node-snow-settings-accumulation" name="__tabbed_12" type="radio"><input id="geometry-node-snow-settings-distribution" name="__tabbed_12" type="radio"><input id="geometry-node-snow-settings-surface-variation" name="__tabbed_12" type="radio"><input id="geometry-node-snow-settings-masking" name="__tabbed_12" type="radio"><input id="geometry-node-snow-settings-optimization" name="__tabbed_12" type="radio"><div class="tabbed-labels"><label for="geometry-node-snow-settings-general">General</label><label for="geometry-node-snow-settings-accumulation">Accumulation</label><label for="geometry-node-snow-settings-distribution">Distribution</label><label for="geometry-node-snow-settings-surface-variation">Surface Variation</label><label for="geometry-node-snow-settings-masking">Masking</label><label for="geometry-node-snow-settings-optimization">Optimization</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Amount</strong>: Controls the overall amount of snow applied to the object.</li>
+<li><strong>Thickness</strong>: Controls the depth of the snow layer.</li>
+<li><strong>Thickness Mode</strong>: Determines how snow thickness is distributed across the surface.<ul>
+<li><strong>Adaptive</strong>: Adjusts snow thickness based on surface orientation. Surfaces facing upward receive thicker snow, while vertical and downward-facing surfaces receive less.</li>
+<li><strong>Static</strong>: Applies a uniform snow thickness across all surfaces, regardless of orientation.</li>
+</ul>
+</li>
+<li><strong>Voxel Size</strong>: Controls the overall resolution of the snow shape. Smaller values create more detailed snow, while larger values produce a smoother, chunkier look. Very small values may introduce uneven or lumpy surfaces and often benefit from additional smoothing.</li>
+<li><strong>Smoothing</strong>: Smooths the snow shape by softening sharp or uneven areas. Higher values apply more smoothing passes, helping clean up noise and artifacts, especially when using a small Voxel Size.</li>
+<li><strong>Material</strong>: Selects the material assigned to the generated snow geometry.</li>
+<li><strong>Seed</strong>: Controls the random variation used across the snow system.</li>
+<li><strong>Preview Mode</strong>: Displays only the generated snow geometry and temporarily hides the original object mesh. This mode is intended for inspection and optimization. By isolating the snow mesh, it becomes much easier to evaluate mesh density, surface continuity, and the effect of optimization settings such as Smart Merge and Remove Loose Snow. Tip: Enable Wireframe view in the viewport to clearly inspect topology and vertex density while adjusting optimization parameters.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Simulates snow falling from above using raycasting to detect exposed surfaces. Snow will mainly appear on surfaces that are exposed from the top, while sheltered or covered areas receive less or no snow. When disabled, snow is applied uniformly without surface detection.</p>
+<ul>
+<li><strong>Enable</strong>: Enables or disables this panel and its controls.</li>
+<li><strong>Snowfall Spread</strong>: Adds positional variation to the snowfall origin, breaking up uniform accumulation patterns and creating a more natural distribution.</li>
+<li><strong>Use Wind</strong>: Adds directional wind that increases snow accumulation on one side of the object based on wind direction.<ul>
+<li><strong>Wind Direction</strong>: Direction wind blows toward. Snow accumulates on the OPPOSITE side (e.g., North wind = accumulation on South side).<ul>
+<li><strong>North</strong></li>
+<li><strong>North East</strong></li>
+<li><strong>East</strong></li>
+<li><strong>South East</strong></li>
+<li><strong>South</strong></li>
+<li><strong>South West</strong></li>
+<li><strong>West</strong></li>
+<li><strong>North West</strong></li>
+</ul>
+</li>
+<li><strong>Coverage Reduction</strong>: Reduces overall snow coverage by probabilistically discarding snow after it lands. Higher values result in sparser accumulation.</li>
+<li><strong>Wind Turbulence</strong>: Adds variation to the wind influence, creating more irregular and less directional snow deposition.</li>
+<li><strong>Snow Fall Angle</strong>: Controls how slanted the snowfall is when wind is enabled. Lower values produce gently drifting snow, while higher values cause snow to arrive at steeper angles and accumulate more on wind-facing surfaces. Internally, this modifies the raycast direction used for snow placement.<ul>
+<li><strong>Very Low</strong></li>
+<li><strong>Low</strong></li>
+<li><strong>Medium</strong></li>
+<li><strong>High</strong></li>
+<li><strong>Very High</strong></li>
+<li><strong>Extreme</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Snow Buildup</strong>: Enables layered snow accumulation on upward-facing surfaces. When enabled, additional snow layers are built up on top-facing areas to simulate natural accumulation over time.<ul>
+<li><strong>Buildup Layers</strong>: Controls how many accumulation layers are added to the snow. Higher values increase snow height and volume by stacking additional buildup layers.</li>
+<li><strong>Buildup Layer Height</strong>: Controls the vertical height contribution of each buildup layer.</li>
+<li><strong>Buildup Layer Shift</strong>: Adds horizontal variation between buildup layers to break uniform shapes. Positive values push layers outward, negative values pull them inward, helping avoid overly symmetrical or artificial snow profiles.</li>
+<li><strong>Buildup Erosion</strong>: Controls how much the edges of the snow buildup are eroded. Higher values break up sharp edges and reduce buildup near boundaries for a more weathered appearance.</li>
+<li><strong>Buildup Erosion Scale</strong>: Controls the scale of the noise used to erode the snow buildup. Lower values create broad erosion patterns, while higher values produce finer, more detailed breakup.</li>
+</ul>
+</li>
+<li><strong>Visualize Snow Direction</strong>: Displays a viewport guide indicating the direction from which snow is falling, shown as a wireframe indicator with arrows above the object, and does not affect the final geometry or materials.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Melt</strong>: Gradually reduces snow coverage based on exposure, simulating a general loss of snow.</li>
+<li><strong>Melt Outer Threshold</strong>: Controls how quickly snow is reduced near exposed edges or outer regions. Higher values increase the affected area.</li>
+<li><strong>Prefer Top Surfaces</strong>: Biases snow toward upward-facing surfaces. Higher values concentrate snow on tops of objects while reducing coverage on undersides and steep faces.</li>
+<li><strong>Surface Offset</strong>: Moves the snow slightly away from the surface. Use this if the snow appears embedded inside leaves or geometry, helping it sit more naturally on top.</li>
+<li><strong>Remove Loose Snow</strong>: Removes small, disconnected snow mesh islands. This setting cleans up isolated or floating pieces of snow that are not meaningfully connected to the main snow surface. Increasing the value removes progressively larger mesh islands.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Adds breakup and irregularity to the snow surface.</p>
+<ul>
+<li><strong>Enable</strong>: Enables or disables this panel and its controls.</li>
+<li><strong>Surface Variation Strength</strong>: Controls the intensity of breakup and irregularity applied to the snow surface. Higher values exaggerate bumps, ridges, and unevenness, while lower values keep the snow smoother.</li>
+<li><strong>Noise Scale</strong>: Scale of the base noise octave.</li>
+<li><strong>Min Thickness</strong>: Attempts to preserve a minimum snow thickness.</li>
+<li><strong>Expansion</strong>: Controls how much the noise displaces the snow surface.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Explicitly removes snow using an object or height-based masking. This panel provides direct artistic control over where snow is cleared.</p>
+<ul>
+<li><strong>Enable</strong>: Enables or disables this panel and its controls.</li>
+<li><strong>Masking Mode</strong>: Defines which masking methods are used to remove snow.<ul>
+<li><strong>Mask &amp; Z-Threshold</strong>: Combines object-based masking with height-based removal. Snow is cleared both where the mask object influences the surface and where the Z-threshold condition is met.</li>
+<li><strong>Mask Only</strong>: Removes snow exclusively based on the mask object’s position and influence. The Z height is ignored. Use this mode when you want precise, object-driven control.</li>
+<li><strong>Z-Threshold Only</strong>: Removes snow based solely on height, independent of any mask object. Snow is cleared from the base upward according to the threshold value.</li>
+</ul>
+</li>
+<li><strong>Mask Object</strong>: Object used to control where snow is removed. The selected object defines a spatial influence that clears snow within its range. An Empty is recommended for easy positioning and adjustment.</li>
+<li><strong>Threshold</strong>: Controls height-based snow removal along the Z axis. Snow is removed progressively from the base upward as this value increases. Lower values limit removal to lower areas, while higher values clear snow higher up the surface.</li>
+<li><strong>Use Noise</strong>: Adds natural variation to the snow removal. This breaks up hard edges and creates a more organic, uneven transition.<ul>
+<li><strong>Noise Scale</strong>: Scale of the base noise octave.</li>
+<li><strong>Noise Roughness</strong>: Blend factor between an octave and its previous one. A value of zero corresponds to zero detail.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>These controls optimize the snow system for performance by reducing mesh complexity and viewport shading cost.</p>
+<ul>
+<li><strong>Enable</strong>: Enables or disables this panel and its controls.</li>
+<li><strong>Adaptivity</strong>: Reduces polygon density in flatter areas of the snow. Higher values create a lighter, simpler mesh, while lower values preserve more detail.</li>
+<li><strong>Smart Cleanup</strong>: Enables an automatic optimization that reduces unnecessary geometry in areas where snow sits flush against underlying surfaces. The system targets regions that contribute minimally to the visible result, then processes these areas to reduce mesh density while preserving exposed and silhouette-critical details. This optimization significantly improves performance while maintaining visual quality in important areas.<ul>
+<li><strong>Smart Cleanup Mode</strong>: Selects the method used to reduce geometry in targeted areas.<ul>
+<li><strong>Merge</strong>: Combines nearby vertices within the cleanup threshold using a 'Merge by Distance' operation. This method maintains the snow as a continuous, unified mesh. Best for maintaining mesh continuity and when you need the snow to remain as a single, watertight object.</li>
+<li><strong>Dissolve</strong>: Removes geometry entirely from the targeted cleanup areas, cutting away hidden portions of the snow mesh. This method can achieve more aggressive optimization but results in a mesh with open edges where geometry has been removed. Best for maximum performance when mesh continuity at the bottom is not required.</li>
+</ul>
+</li>
+<li><strong>Smart Cleanup Threshold</strong>: Controls how much of the snow surface is considered eligible for Smart Cleanup optimization. This parameter adjusts the size and sensitivity of targeted areas using a combination of surface orientation (Z-axis normals) and curvature to identify regions that are flatter, less visible, or more tightly pressed against underlying geometry. Higher values expand the affected area, allowing more of the snow to be simplified. Lower values restrict processing to only the most suitable regions. This setting affects both Merge and Dissolve modes. Tune this setting in tandem with Cleanup Distance while visually inspecting the snow.</li>
+<li><strong>Smart Cleanup Merge Distance</strong>: (Merge mode only) Controls how aggressively nearby vertices are merged during the Smart Merge process. This value defines the maximum distance within which vertices can be merged together. Larger values result in stronger simplification and fewer vertices, while smaller values preserve more detail. This setting should be adjusted together with 'Smart Cleanuo Threshold'. Use visual inspection of the snow surface to find a balance between performance and visual fidelity.</li>
+<li><strong>Smart Cleanup Logic</strong>: Selects the method used to analyze surface curvature and determine which areas of the snow mesh are optimized. Both modes aim to optimize snow geometry intelligently; the difference lies in how precisely curvature is evaluated. The Simple mode prioritizes compatibility and performance, while the Advanced mode prioritizes accuracy and visual quality. This option is only available in Blender 5.0 or newer.</li>
+</ul>
+</li>
+<li><strong>Global Merge</strong>: Performs a final vertex merge across the entire snow mesh to reduce overall geometry. This happens after all targeted optimizations like Smart Merge. It affects the entire mesh uniformly, simplifying geometry while potentially softening fine details. Use this to further reduce polygon count after other optimizations have run.<ul>
+<li><strong>Global Merge Distance</strong>: Controls the distance threshold for the global merge. Vertices closer than this value are merged together. Higher values simplify the mesh more aggressively, reducing geometry density but potentially softening details or introducing minor artifacts.</li>
+</ul>
+</li>
+<li><strong>Extra Viewport Optimization</strong>: Applies additional viewport-only optimizations to the snow system to improve performance without affecting renders.<ul>
+<li><strong>Viewport Mode</strong>: Selects a viewport-only optimization preset that controls how snow materials and geometry are simplified for performance.<ul>
+<li><strong>Material Only</strong>: Applies viewport-only optimizations to the default PF2B snow material by forcing Simple mode, disabling displacement and subsurface scattering, and reducing noise detail, without modifying geometry.</li>
+<li><strong>Geometry Merge</strong>: Applies the default snow material optimizations and performs a medium-strength vertex merge to simplify the snow geometry in the viewport.</li>
+<li><strong>Hidden (Snowflake Indicator)</strong>: Hides the snow geometry in the viewport and displays a wireframe snowflake marker to indicate that the object has snow applied.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition info2">
+<p>Settings available here might change / be updated in future versions as the geometry-node gets updated.</p>
+</div>
+<h5 id="geometry-node-snow-material-settings">Material Settings<a class="headerlink" href="#geometry-node-snow-material-settings" title="Permanent link">¶</a></h5>
+<p><img align="right" alt="Geometry-Node Snow Material Panel" class="img-box" src="../../images/snow_panel_geometry-node-material.webp"></p>
+<p>This panel shows the material currently assigned to the geometry node and allows you to edit it directly from this panel. Its contents are context-based and depend on the selected material.</p>
+<div style="clear:both"></div>
+
+<h5 id="geometry-node-snow-masking">Masking<a class="headerlink" href="#geometry-node-snow-masking" title="Permanent link">¶</a></h5>
+<p><img align="right" alt="Geometry-Node Masking" class="img-box" src="../../images/snow_panel_geometry-node_masking-panel.webp"></p>
+<p>In the <strong>Masking</strong> panel, you can use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> button to add a mask directly, so you don’t have to manually create the object. This creates an empty-type object and automatically parents it to the target object, allowing you to move and scale it to remove snow from your asset.</p>
+<video width="100%" loop autoplay muted controls>
+    <source src="../../videos/snow_geometry-node-mask-example.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<p>Once a mask has been added using this button, the following buttons will also appear:</p>
+<ul>
+<li><span class="twemoji"><svg height="1500" viewBox="0 0 1500 1500" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" stroke="none" transform="matrix(0 -100.17897 100 0 -57795.1844 41972.0971)"><path d="m405.46978 579.95581c-.0786.005 1.01466.006 2.75112.002-2.39046 1.17179-3.76136 4.49271-2.99824 7.27846s3.11603 4.49155 5.7784 4.71875l-.00084-1c-2.59859-.27264-4.17102-1.63685-4.81356-3.98242s.50423-5.20147 2.81719-6.15552c.009.80023-.0108 2.01265.00093 2.69464-.008.60881 1.01884.5718.99185-.0157-.002-.49551.001-3.60295.007-4.5362-1.4729.00082-2.81924-.00048-4.52617-.008-.62523.0109-.61936.99943-.009 1.00441z" transform="matrix(-1 0 0 -1 822.986 1170.90388)"></path><path d="m405.45285 579.95581c-.0786.005 1.05365-.002 2.79011-.006-2.39046 1.17179-3.8662 4.53149-2.99824 7.28627.8992 2.85391 3.08617 4.49155 5.74854 4.71875l-.00084-1c-2.49653-.35216-4.00508-1.56869-4.7837-3.98242-.74659-2.31444.47303-5.20147 2.78599-6.15552.009.80023-.0108 2.01265.00093 2.69464-.008.60881 1.01884.5718.99185-.0157-.002-.49551.001-3.60295.007-4.5362-1.4729.00082-2.82703-.00048-4.53396-.008-.62523.0109-.61936.99943-.009 1.00441z"></path></g></g></svg></span> <strong>Refresh Object Data</strong>: Useful for refreshing masks that are not updating in the viewport. Hold <strong>Shift</strong> to perform an extended refresh.</li>
+<li><span class="twemoji"><svg height="1300" viewBox="0 0 1500 1300" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m512 414.00018h9v5h-9zm-1.5-2c-.27613.00003-.49997.22387-.5.5v8c.00003.27613.22387.49997.5.5h5.5v1h-2.5c-.67616-.01-.67616 1.00956 0 1h6c.6573-.009.6573-.9907 0-1h-2.5v-1h5.5c.27613-.00003.49997-.22387.5-.5v-8c-.00003-.27613-.22387-.49997-.5-.5zm.5 1h11v7h-11z" transform="matrix(100 0 0 100 -50899.99999999999 -41100.0213)"></path></g></svg></span> <strong>Toggle Mask Visibility</strong>: Hide or show the mask object itself in the viewport. This does not affect the masking itself.</li>
+</ul>
+<div style="clear:both"></div>
+
+<h5 id="geometry-node-snow-baking">Baking<a class="headerlink" href="#geometry-node-snow-baking" title="Permanent link">¶</a></h5>
+<p>Bake the Snow Geometry Nodes modifier into real geometry. You can either create a new, separate object containing the baked snow or apply the result directly to the current object.</p>
+<div class="admonition info2">
+<p>Baking can significantly improve performance, especially when moving or transforming snow-covered objects, since the baked snow geometry is static.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="geometry-node-snow-baking-new-object" name="__tabbed_13" type="radio"><input id="geometry-node-snow-baking-current-object" name="__tabbed_13" type="radio"><div class="tabbed-labels"><label for="geometry-node-snow-baking-new-object">New Object</label><label for="geometry-node-snow-baking-current-object">Current Object</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If the snow is baked to a new object, a new system will appear for the baked snow while the original Geometry Nodes system will be hidden. You can re-enable the original system at any time if further edits are required.</p>
+<p><img alt="Geometry Node Snow Baked" class="img-box" src="../../images/snow_geometry-node_baked-snow.webp"></p>
+</div>
+<div class="tabbed-block">
+<p>If the snow is baked into the original object, the Geometry Nodes modifier is applied permanently. The snow system can no longer be edited and will appear as shown below:</p>
+<p><img alt="Geometry Node Snow Baked" class="img-box" src="../../images/snow_geometry-node_baked-snow-same-object.webp"></p>
+</div>
+</div>
+</div>
+<hr>
+<h4 id="snow-shader">Snow Shader<a class="headerlink" href="#snow-shader" title="Permanent link">¶</a></h4>
+<p>The Snow Shader provides the same functionality for all supported assets, but its interface adapts based on the asset type:</p>
+<ul>
+<li><strong>PF2B Plants</strong>: The shader automatically targets bark materials and is labeled as "Bark Snow".</li>
+<li><strong>Non-PF2B Assets</strong>: The shader is labeled simply as "Snow Shader," and you must manually apply it to appropriate materials.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="snow-shader-pf2b-asset" name="__tabbed_14" type="radio"><input id="snow-shader-non-pf2b-asset" name="__tabbed_14" type="radio"><div class="tabbed-labels"><label for="snow-shader-pf2b-asset">PF2B Asset</label><label for="snow-shader-non-pf2b-asset">Non-PF2B Asset</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Shader Snow" class="img-box" src="../../images/snow_shader-snow_bark.webp"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Shader Snow" class="img-box" src="../../images/snow_shader-snow_general.webp"></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Panel buttons</strong>:<ul>
+<li><span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" stroke-width="1.14286" transform="matrix(87.5 0 0 87.5 -22387.636 -37525.1732)"><path d="m257 430h16v16h-16z" opacity="0"></path><path d="m496 535.9375c-2.73936 0-5.1213 1.56371-6.29102 3.84961-.49329.96401-.77148 2.05765-.77148 3.21289 0 3.89459 3.16791 7.0625 7.0625 7.0625s7.0625-3.16791 7.0625-7.0625-3.16791-7.0625-7.0625-7.0625zm0 1c3.35415 0 6.0625 2.70835 6.0625 6.0625s-2.70834 6.0625-6.0625 6.0625c-3.35415 0-6.0625-2.70835-6.0625-6.0625 0-.99492.23889-1.93072.66211-2.75781 1.00359-1.96124 3.04116-3.30469 5.40039-3.30469zm0 1.0625a.99999996.99999996 0 0 0 -1 1 .99999996.99999996 0 0 0 1 1 .99999996.99999996 0 0 0 1-1 .99999996.99999996 0 0 0 -1-1zm-2.82422 1.16211a1.0001001 1.0001001 0 0 0 -.6875.30469c-.61854.6208-1.06287 1.393-1.28906 2.24023a1.0001001 1.0001001 0 1 0 1.93164.51563c.13595-.50922.40262-.97353.77344-1.34571a1.0001001 1.0001001 0 0 0 -.72852-1.71484z" fill-rule="evenodd" transform="matrix(1.14286 0 0 1.14286 -301.857 -182.571)"></path></g></g></svg></span> <strong>Toggle Preview</strong>: Preview the noise map to help adjust snow distribution. Switch to <strong>Rendered</strong> or <strong>Material Preview</strong> view modes to see the result. See <a href="#snow-instructions-using-toggle-preview">Using Toggle Preview</a> for details.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg></span> <strong>Enable/Disable</strong>: Fully enable or disable the snow effect in both the viewport and final render.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.939 8.72 2.22a.749.749 0 1 1 1.06 1.06L7.061 6 9.78 8.72a.749.749 0 1 1-1.06 1.06L6 7.061 3.28 9.78a.749.749 0 1 1-1.06-1.06L4.939 6 2.22 3.28a.75.75 0 0 1 0-1.06"></path></svg></span> <strong>Remove</strong>: Remove the snow setup from the currently selected object.</li>
+</ul>
+</li>
+</ul>
+<p>Clicking the module header expands the sub-panel and reveals the <strong>Edit Material</strong> and <strong><a href="#snow-shader-masking">Add Mask</a></strong> buttons.</p>
+<p>Example of editing the frost module for leaf materials:</p>
+<p><img align="left" alt="Shader Snow Edit Material" class="img-box" src="../../images/snow_shader-snow_edit-material.webp"></p>
+<div class="admonition abstract inline end">
+<p class="admonition-title">Snow node-group</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/snow_shader-snow-module.webp" data-description="Shader Snow: Node-group." data-desc-position="bottom"><img alt="Shader Snow node-group" class="img-box on-glb" data-description="Shader Snow: Node-group." src="../../images/snow_shader-snow-module.webp"></a></p>
+</div>
+<div style="clear:both"></div>
+
+<h5 id="snow-shader-masking">Masking<a class="headerlink" href="#snow-shader-masking" title="Permanent link">¶</a></h5>
+<p>Add a new mask to control snow placement.</p>
+<p>The mask's position, rotation, and scale are controlled directly by transforming the mask object in the viewport (as shown in the video above). Editing the mask's internal behavior is done via the Edit control.</p>
+<video width="100%" loop autoplay muted controls>
+    <source src="../../videos/snow_shader-mask-example.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<p>Once a mask is enabled, the following controls become available:</p>
+<p><img alt="Shader Snow Mask" class="img-box" src="../../images/snow_shader-snow_mask.webp"></p>
+<ul>
+<li><span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m342.5 158c-.27613.00003-.49997.22387-.5.5v13c.00003.27613.22387.49997.5.5h13c.27613-.00003.49997-.22387.5-.5v-13c-.00003-.27613-.22387-.49997-.5-.5zm6.5 3c2.20237 0 4 1.79764 4 4 0 2.20237-1.79763 4-4 4-2.20236 0-4-1.79763-4-4 0-2.20236 1.79764-4 4-4z" transform="matrix(100 0 0 100 -34100 -15700)"></path></g></svg></span> <strong>Edit</strong>: Edit the mask node group. This controls how the mask is generated, not its position or scale in the scene.</li>
+<li><span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" stroke-width="1.14286" transform="matrix(87.5 0 0 87.5 -22387.636 -37525.1732)"><path d="m257 430h16v16h-16z" opacity="0"></path><path d="m496 535.9375c-2.73936 0-5.1213 1.56371-6.29102 3.84961-.49329.96401-.77148 2.05765-.77148 3.21289 0 3.89459 3.16791 7.0625 7.0625 7.0625s7.0625-3.16791 7.0625-7.0625-3.16791-7.0625-7.0625-7.0625zm0 1c3.35415 0 6.0625 2.70835 6.0625 6.0625s-2.70834 6.0625-6.0625 6.0625c-3.35415 0-6.0625-2.70835-6.0625-6.0625 0-.99492.23889-1.93072.66211-2.75781 1.00359-1.96124 3.04116-3.30469 5.40039-3.30469zm0 1.0625a.99999996.99999996 0 0 0 -1 1 .99999996.99999996 0 0 0 1 1 .99999996.99999996 0 0 0 1-1 .99999996.99999996 0 0 0 -1-1zm-2.82422 1.16211a1.0001001 1.0001001 0 0 0 -.6875.30469c-.61854.6208-1.06287 1.393-1.28906 2.24023a1.0001001 1.0001001 0 1 0 1.93164.51563c.13595-.50922.40262-.97353.77344-1.34571a1.0001001 1.0001001 0 0 0 -.72852-1.71484z" fill-rule="evenodd" transform="matrix(1.14286 0 0 1.14286 -301.857 -182.571)"></path></g></g></svg></span> <strong>Toggle Preview</strong>: Preview the mask map generated by the mask. Switch to <strong>Rendered</strong> or <strong>Material Preview</strong> view modes to see the result. See <a href="#snow-instructions-using-toggle-preview">Using Toggle Preview</a> for details.</li>
+<li><span class="twemoji"><svg height="1300" viewBox="0 0 1500 1300" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m512 414.00018h9v5h-9zm-1.5-2c-.27613.00003-.49997.22387-.5.5v8c.00003.27613.22387.49997.5.5h5.5v1h-2.5c-.67616-.01-.67616 1.00956 0 1h6c.6573-.009.6573-.9907 0-1h-2.5v-1h5.5c.27613-.00003.49997-.22387.5-.5v-8c-.00003-.27613-.22387-.49997-.5-.5zm.5 1h11v7h-11z" transform="matrix(100 0 0 100 -50899.99999999999 -41100.0213)"></path></g></svg></span> <strong>Toggle Mask Object Visibility</strong>: Show or hide the mask object in the viewport. This does not affect the mask’s influence.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg></span> <strong>Enable/Disable</strong>: Fully enable or disable the mask’s effect in both the viewport and final render.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.939 8.72 2.22a.749.749 0 1 1 1.06 1.06L7.061 6 9.78 8.72a.749.749 0 1 1-1.06 1.06L6 7.061 3.28 9.78a.749.749 0 1 1-1.06-1.06L4.939 6 2.22 3.28a.75.75 0 0 1 0-1.06"></path></svg></span> <strong>Remove</strong>: Remove the mask from the currently selected object.</li>
+</ul>
+<p>Editing the mask opens a dedicated popup that controls the mask's underlying node-group inside the material:</p>
+<p><img align="left" alt="Shader Snow Mask Edit" class="img-box" src="../../images/snow_shader-snow_mask-edit.webp"></p>
+<div class="admonition abstract inline end">
+<p class="admonition-title">Mask node-group</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/snow_shader-snow_mask-edit-node-group.webp" data-description="Shader Snow: Mask node-group seen to the left." data-desc-position="bottom"><img alt="Shader Snow Mask node-group" class="img-box on-glb" data-description="Shader Snow: Mask node-group seen to the left." src="../../images/snow_shader-snow_mask-edit-node-group.webp"></a></p>
+</div>
+<div style="clear:both"></div>
+
+<div class="admonition info2">
+<p class="admonition-title">Tip</p>
+<p>You can invert the mask to reverse its influence, so snow is applied inside the masked area instead of being excluded by it.</p>
+</div>
+<hr>
+<h4 id="frost-shader">Frost Shader<a class="headerlink" href="#frost-shader" title="Permanent link">¶</a></h4>
+<p>The Frost Shader provides the same functionality for all supported assets, but its interface adapts based on the asset type:</p>
+<ul>
+<li><strong>PF2B Plants</strong>: The shader can target bark materials, leaf materials, or both, and is labeled accordingly as "Bark Frost" or "Leaf Frost".</li>
+<li><strong>Non-PF2B Assets</strong>: The shader is labeled simply as "Frost Shader," and you must manually apply it to appropriate materials.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="frost-shader-pf2b-asset" name="__tabbed_15" type="radio"><input id="frost-shader-non-pf2b-asset" name="__tabbed_15" type="radio"><div class="tabbed-labels"><label for="frost-shader-pf2b-asset">PF2B Asset</label><label for="frost-shader-non-pf2b-asset">Non-PF2B Asset</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Shader Snow" class="img-box" src="../../images/snow_shader-frost-pf2b-asset.webp"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Shader Snow" class="img-box" src="../../images/snow_shader-frost-general.webp"></p>
+</div>
+</div>
+</div>
+<p>Clicking on the panel header will show a popup to edit the shader module directly on all materials on the selected plant (in the same way as described in the <a href="#material-editing">Material Editing</a> section previously).</p>
+<ul>
+<li><strong>Panel buttons</strong>:<ul>
+<li><span class="twemoji"><svg height="1600" viewBox="0 0 1600 1600" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" stroke-width="1.14286" transform="matrix(87.5 0 0 87.5 -22387.636 -37525.1732)"><path d="m257 430h16v16h-16z" opacity="0"></path><path d="m496 535.9375c-2.73936 0-5.1213 1.56371-6.29102 3.84961-.49329.96401-.77148 2.05765-.77148 3.21289 0 3.89459 3.16791 7.0625 7.0625 7.0625s7.0625-3.16791 7.0625-7.0625-3.16791-7.0625-7.0625-7.0625zm0 1c3.35415 0 6.0625 2.70835 6.0625 6.0625s-2.70834 6.0625-6.0625 6.0625c-3.35415 0-6.0625-2.70835-6.0625-6.0625 0-.99492.23889-1.93072.66211-2.75781 1.00359-1.96124 3.04116-3.30469 5.40039-3.30469zm0 1.0625a.99999996.99999996 0 0 0 -1 1 .99999996.99999996 0 0 0 1 1 .99999996.99999996 0 0 0 1-1 .99999996.99999996 0 0 0 -1-1zm-2.82422 1.16211a1.0001001 1.0001001 0 0 0 -.6875.30469c-.61854.6208-1.06287 1.393-1.28906 2.24023a1.0001001 1.0001001 0 1 0 1.93164.51563c.13595-.50922.40262-.97353.77344-1.34571a1.0001001 1.0001001 0 0 0 -.72852-1.71484z" fill-rule="evenodd" transform="matrix(1.14286 0 0 1.14286 -301.857 -182.571)"></path></g></g></svg></span> <strong>Toggle Preview</strong>: Preview the noise map to help adjust frost distribution. Switch to <strong>Rendered</strong> or <strong>Material Preview</strong> view modes to see the result. See <a href="#snow-instructions-using-toggle-preview">Using Toggle Preview</a> for details.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg></span> <strong>Enable/Disable</strong>: Fully enable or disable the Frost effect in both the viewport and final render.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.939 8.72 2.22a.749.749 0 1 1 1.06 1.06L7.061 6 9.78 8.72a.749.749 0 1 1-1.06 1.06L6 7.061 3.28 9.78a.749.749 0 1 1-1.06-1.06L4.939 6 2.22 3.28a.75.75 0 0 1 0-1.06"></path></svg></span> <strong>Remove</strong>: Remove the snow setup from the currently selected object.</li>
+</ul>
+</li>
+</ul>
+<p>Example of editing the frost module for leaf materials:</p>
+<p><img alt="Snow Edit Module" class="img-box" src="../../images/snow_edit-snow-leaf.webp"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024-2025 <a href="https://roberd.net" target="_blank" rel="noopener">Roberd Palm</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="pf2b_footer_container">
+
+    <a href="../../changelog" title="Changelog" class="pf2b_footer_link">Changelog</a>
+    <a href="../../about" title="About" class="pf2b_footer_link">About</a>
+
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.instant", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../extra/360-viewer.min.js"></script>
+      
+        <script src="../../extra/changelog-icons.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "none"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

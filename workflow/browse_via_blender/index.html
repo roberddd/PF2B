@@ -1,0 +1,2252 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pf2b.roberd.net/workflow/browse_via_blender/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../browse_via_plantfactory/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../icons/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Browse via Blender - PF2B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <!-- <meta name="google-site-verification" content="O0wNpVGK1i5I9XqbDfB6psT7uzZy-ERQr56n8fnmEow" /> -->
+  
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: none; }
+            .glightbox-clean .gslide-media { -webkit-box-shadow: none; box-shadow: none; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#browse-via-blender" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PF2B Documentation" class="md-header__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PF2B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Browse via Blender
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting_started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Workflow
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../preferences/general/" class="md-tabs__link">
+          
+  
+  
+  Preferences
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PF2B Documentation" class="md-nav__button md-logo" aria-label="PF2B Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m7 17h2v-2h5l-4-4h3l-4-4h3l-4-4-4 4h3l-4 4h3l-4 4h5z"></path></svg>
+
+    </a>
+    PF2B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via Blender
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via Blender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Overrides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-overrides-plant-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plant Specific
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LODs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wind
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gallery-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gallery View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gallery View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plant-info-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plant Info Popup
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse_via_plantfactory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse via PlantFactory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes &amp; Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biomes &amp; Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomes_and_collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../material_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Import
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Post Import
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post_processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferences
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preferences
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/plant_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plant Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preferences/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support and Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/pf2b_under_the_hood/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PF2B: Under the Hood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Overrides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-overrides-plant-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plant Specific
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LODs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wind
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gallery-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gallery View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gallery View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plant-info-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plant Info Popup
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="browse-via-blender">Browse via Blender<a class="headerlink" href="#browse-via-blender" title="Permanent link">¶</a></h1>
+<p><img align="left" alt="Browse via Blender" class="img-box" src="../../images/browse-via-blender-panel.webp"></p>
+<h5 id="general-settings">General Settings<a class="headerlink" href="#general-settings" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Library</strong>:<ul>
+<li>PlantCatalog</li>
+<li>PlantFactory</li>
+<li>Personal: visible if enabled in the preferences.</li>
+</ul>
+</li>
+<li><strong>Category</strong>: Shows plant categories for the selected library.</li>
+<li><strong>Detail Filter</strong>: Filter plant catalog items by detail level (Only available for the <a href="../../plants/#plantcatalog-library">PlantCatalog library</a>).<ul>
+<li><strong>All</strong>: Show all detail levels.</li>
+<li><strong>FG Only</strong>: Show full geometry only.</li>
+<li><strong>HD Only</strong>: Show high detail only.</li>
+<li><strong>LD Only</strong>: Show low detail only.</li>
+<li><strong>RT Only</strong>: Show real-time detail only.</li>
+</ul>
+</li>
+<li>
+<p><strong>Plant Browser</strong>:
+    <br>Above the thumbnail, the plant name is displayed (<code>Plumeria rubra pink HD</code>) along with its English name (<code>Pink Frangipani</code>). Below the thumbnail, the preset name is shown (<code>Standard (0)</code>), which you can <strong>click</strong> to see a dropdown list of all available presets (only active when <strong>Browse Mode</strong> is set to "Presets").</p>
+<ul>
+<li><span class="twemoji"><svg height="1400" viewBox="0 0 1400 1400" width="1400" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m175.5 159c-.27613.00003-.49997.22387-.5.5v3c.00003.27613.22387.49997.5.5h3c.27613-.00003.49997-.22387.5-.5v-3c-.00003-.27613-.22387-.49997-.5-.5zm8 0c-.27613.00003-.49997.22387-.5.5v3c.00003.27613.22387.49997.5.5h3c.27613-.00003.49997-.22387.5-.5v-3c-.00003-.27613-.22387-.49997-.5-.5zm-8 8c-.27613.00003-.49997.22387-.5.5v3c.00003.27613.22387.49997.5.5h3c.27613-.00003.49997-.22387.5-.5v-3c-.00003-.27613-.22387-.49997-.5-.5zm8 0c-.27613.00003-.49997.22387-.5.5v3c.00003.27613.22387.49997.5.5h3c.27613-.00003.49997-.22387.5-.5v-3c-.00003-.27613-.22387-.49997-.5-.5z" transform="matrix(100 0 0 100 -17400 -15800)"></path></g></svg></span>: Opens the plant gallery, see <a href="#gallery-view">gallery view</a> below.</li>
+<li><span class="twemoji"><svg id="svg4" height="1500" viewBox="0 0 1600 1500" width="1600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g id="g1" transform="matrix(0 100 -100 0 146650.33 28251.031)"><g id="g4"><path id="path2" d="m-272.5 1451.4947c-.8225 0-.99505.011-.98765 2.0053.007 2.0019.15813 1.9983.98063 1.9983s.99067.01.98064-1.9983c-.01-1.9805-.15112-2.0053-.97362-2.0053zm-5 5.0069c-.8225 0-1.01366.014-1.01222 1.9984.001 2.0016.18972 2.0018 1.01222 2.0018s.99055 0 .99116-2.0018c.00061-1.9911-.16866-1.9984-.99116-1.9984zm3 5.0021c-.8225 0-1.01572 0-1.00871 1.9972.007 1.9937.17628 1.997.99878 1.997s.99758 0 .99553-1.9979c-.002-1.9937-.1631-1.9963-.9856-1.9963z"></path></g><g><g id="g2"><path id="path6" d="m-281.50781 1458c-.6573.01-.6573.9907 0 1h1.5v-1z" opacity=".4"></path><path id="path4" d="m-281.50781 1453c-.6573.01-.6573.9907 0 1h6.49095v-1z" opacity=".4"></path><path id="path1" d="m-276.98878 1463v1h-4.51903c-.6573-.01-.6573-.9907 0-1z" opacity=".4"></path></g><g id="g3"><path id="path7" d="m-276.25991 1458v1h7.75991c.6573-.01.6573-.9907 0-1z" opacity=".8"></path><path id="path5" d="m-271.24205 1453v1h2.74205c.6573-.01.6573-.9907 0-1z" opacity=".8"></path><path id="path3" d="m-268.5 1463c.6573.01.6573.9907 0 1h-4.74588v-1z" opacity=".8"></path></g></g></g></svg></span>: Opens the preset gallery, see <a href="#gallery-view">gallery view</a> below.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.854 11.646 5.792-5.792a.5.5 0 0 1 .854.353v11.586a.5.5 0 0 1-.854.353l-5.792-5.792a.5.5 0 0 1 0-.708"></path></svg></span>: Navigates to the previous plant or preset.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.146 12.354-5.792 5.792a.5.5 0 0 1-.854-.353V6.207a.5.5 0 0 1 .854-.353l5.792 5.792a.5.5 0 0 1 0 .708"></path></svg></span>: Navigates to the next plant or preset</li>
+<li><span class="twemoji"><svg height="1400" viewBox="0 0 1100 1400" width="1100" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><path d="m177 305.99437c-.55226.00005-.99994.44774-1 1v4.83766c-.0179.10799-.0179.21818 0 .32617v4.82533c.00006.55227.44774.99995 1 1h4.00563c2.19729 0 4-1.16189 4-3.35918 0-1.76747-.45037-2.32201-1.78516-3.04484.45751-.65017.78516-1.31019.78516-2.15967 0-2.19729-1.80271-3.42547-4-3.42547zm1 2h2.00563c1.11641 0 2 .30906 2 1.42547s-.88359 1.58016-2 1.58016h-2.00563zm0 5.00563h2.00563 1c1.11641 0 2 .50794 2 1.62435s-.88359 1.35918-2 1.35918h-3.00563z" transform="matrix(100 0 0 100 -17499.61 -30498.895)"></path></g></svg></span>: Opens the <strong><a href="../biomes_and_collections/">Biomes &amp; Collections</a></strong> browser. Hold <strong>Shift</strong> while clicking to open the Biome Manager interface from <strong>Geo-Scatter</strong> or <strong>Biome-Reader</strong>.</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg></span>: Opens a <a href="#plant-info-popup">Plant Info Popup</a> to display information about the plant.</p>
+</li>
+<li>
+<p><strong>Browse Mode</strong>: Plants or Presets.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div style="clear:both"></div>
+
+<ul>
+<li><strong>Import</strong>:<ul>
+<li><strong>Current Preset</strong></li>
+<li><strong>All Presets</strong>: Import all available preset variations for the selected plant. When enabled, the number of presets will be displayed below.</li>
+<li><strong>Quantity</strong></li>
+</ul>
+</li>
+<li><strong>Seed</strong>:<ul>
+<li><strong>Random</strong>: Generates a new random seed each time, producing a unique plant on every import.</li>
+<li><strong>Custom</strong></li>
+</ul>
+</li>
+<li><strong>Import Overrides</strong> These settings allow you to manually define parameters such as Age/Maturity, Health and Season of imported plants. See the <a href="#import-overrides">Import Overrides</a> section below for details.</li>
+<li><strong>LODs</strong>: Choose which Levels of Detail to import. See the <a href="#lods">LODs</a> section below for details.</li>
+<li><strong>Wind</strong>: Wind settings. See the <a href="#wind">Wind</a> section below for details.</li>
+<li>
+<p><span class="twemoji"><svg height="1500" viewBox="0 0 1500 1500" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -8900.0006 -5300.286)"><path d="m216.49219 104.99219a.50005.50005 0 0 0 -.49219.50781v3a.50005.50005 0 0 0 .5.5h12a.50005.50005 0 0 0 .5-.5v-3a.50005.50005 0 1 0 -1 0v2.5h-11v-2.5a.50005.50005 0 0 0 -.50781-.50781z" opacity=".6" transform="matrix(-1 0 0 1 319 -42.00007)"></path><path d="m96.499447 54.005859c-.27538.0043-.49542.230473-.49219.50586v7.792969l-2.13002-2.130019c-.47125-.490807-1.19784.235776-.70703.707031l2.98353 2.983534c.19527.195185.51177.195185.70704 0l2.98353-3.005631c.490803-.471255-.23578-1.197838-.70703-.707031l-2.13002 2.152116v-7.792969c.003-.281503-.22632-.510249-.50781-.50586z"></path></g></g></svg></span> <strong>Import Plant</strong>: Starts importing the selected plant(s).</p>
+<div class="admonition info2">
+<p>While an import is in progress, this message is shown:</p>
+<p><img alt="plant gallery top panel" class="img-box" src="../../images/import-in-progress.webp"></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M1.757 10.243a6.001 6.001 0 1 1 8.488-8.486 6.001 6.001 0 0 1-8.488 8.486M6 4.763l-2-2L2.763 4l2 2-2 2L4 9.237l2-2 2 2L9.237 8l-2-2 2-2L8 2.763Z"></path></svg></span> <strong>Reset Import</strong>: soft-resets the import if it gets stuck, re-enabling the <em>Import Plant</em> button. It does <strong>not</strong> stop any PlantFactory process running in the background, you must cancel that manually.</li>
+</ul>
+</div>
+<div class="admonition info2">
+<p>If an import fails, you will be prompted with the following message. From here, you can choose to resume the import process.</p>
+<p><img alt="plant gallery top panel" class="img-box" src="../../images/import-resume.webp"></p>
+</div>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.063 1.456a1.75 1.75 0 0 1 1.874 0l8.383 5.316a1.75 1.75 0 0 1 0 2.956l-8.383 5.316a1.75 1.75 0 0 1-1.874 0L2.68 9.728a1.75 1.75 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"></path><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.75 1.75 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035"></path><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.75 1.75 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035"></path></svg></span>: <strong>Use import Queue</strong>, see the <a href="#queue">Queue</a> section for details.</p>
+</li>
+</ul>
+<h3 id="import-overrides">Import Overrides<a class="headerlink" href="#import-overrides" title="Permanent link">¶</a></h3>
+<p>These settings allow you to manually define various parameters that influence how plants are generated and appear when imported. Each property has its own <strong>checkbox</strong> and <strong>slider</strong>. To activate an override for a specific property, tick the checkbox next to it and adjust the slider to your desired value.</p>
+<p><img align="left" alt="Import Overrides" class="img-box" src="../../images/import-overrides.webp"></p>
+<p>When an override is enabled, it will replace the plant's default preset value for that property during import. If left unticked, the original preset value will be used instead.</p>
+<ul>
+<li>
+<p><strong>Settings</strong>:</p>
+<ul>
+<li><strong>Maturity</strong>: Controls the plant's maturity, representing its current age as a ratio of its maximum potential age. A value of 0 represents a young plant, while 100 indicates the plant has reached its maximum age.</li>
+<li><strong>Health</strong>: Controls the plant's health from 0 to 100. A value of 0 represents a dying plant, while 100 indicates a thriving, fully healthy plant.</li>
+<li><strong>Season</strong>: Select the day of the year (1-365) to determine the season based on northern hemisphere meteorological standards.</li>
+<li><strong>Mesh Resolution</strong>: Adjusts the <code>Global Mesh Resolution</code> setting in PlantFactory, which controls the overall geometry quality. Most plants use 0.4 by default, but you can lower it for lighter meshes or increase it for higher detail, especially useful for '<strong>hero</strong>' assets like close-up trees where trunk detail matters.</li>
+<li><strong>Plant Specific</strong>: The plant-specific overrides correspond to individual nodes that exist within the plant's original PlantFactory graph.</li>
+</ul>
+</li>
+<li>
+<p><strong>Actions</strong>:</p>
+<ul>
+<li><strong>Preview in PlantFactory</strong>: Opens the selected plant in PlantFactory using the current override values.</li>
+</ul>
+</li>
+</ul>
+<p>The override settings are stored in the <a href="../post_processing/#plant-details">Plant Details</a> section after import, in case you need to reference them later.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Override Examples</p>
+<p>Here is the <strong>Ficus carica (Common Fig Tree)</strong> plant exported with different override settings, all using the same seed for consistency. These are just examples, since you have fine-grained control over the override values, you can generate any variation in between.</p>
+<p><strong>Maturity:</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/overrides/Maturity.webp" data-description="Import Override: Maturity" data-desc-position="bottom"><img alt="Import Override example" class="on-glb" data-description="Import Override: Maturity" src="../../images/plants/overrides/Maturity.webp"></a></p>
+<p><strong>Health:</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/overrides/Health.webp" data-description="Import Override: Health" data-desc-position="bottom"><img alt="Import Override example" class="on-glb" data-description="Import Override: Health" src="../../images/plants/overrides/Health.webp"></a></p>
+<p><strong>Season:</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/overrides/Season.webp" data-description="Import Override: Season" data-desc-position="bottom"><img alt="Import Override example" class="on-glb" data-description="Import Override: Season" src="../../images/plants/overrides/Season.webp"></a></p>
+<p><strong>Mesh Resolution:</strong><br>
+This example demonstrates a simple tree trunk to highlight how adjusting the <strong>Mesh Resolution</strong> affects the level of detail in the plant model. Increasing the resolution enhances surface detail, which is especially valuable for <strong>hero assets</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="import-overrides-rendered" name="__tabbed_1" type="radio"><input id="import-overrides-viewport" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="import-overrides-rendered">Rendered</label><label for="import-overrides-viewport">Viewport</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/overrides/Mesh_resolution.webp" data-description="Import Override: Mesh Resolution" data-desc-position="bottom"><img alt="Import Override example" class="on-glb" data-description="Import Override: Mesh Resolution" src="../../images/plants/overrides/Mesh_resolution.webp"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/overrides/Mesh_resolution_viewport.webp" data-description="Import Override: Mesh Resolution as seen in viewport" data-desc-position="bottom"><img alt="Import Override example" class="on-glb" data-description="Import Override: Mesh Resolution as seen in viewport" src="../../images/plants/overrides/Mesh_resolution_viewport.webp"></a></p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="import-overrides-plant-specific">Plant Specific<a class="headerlink" href="#import-overrides-plant-specific" title="Permanent link">¶</a></h4>
+<p>The plant-specific overrides correspond to individual nodes that exist within the plant's original PlantFactory graph. These nodes control various aspects of the plant's structure and appearance, such as branching, trunk shape, or foliage density.</p>
+<p>The displayed default values for these overrides are placeholders (set to 0.5) because the actual node defaults cannot be retrieved through the available API. Therefore, the shown values should not be interpreted as the true defaults used by the plant. Because these node names come directly from the source plant definition, they may not always be self-explanatory or clearly indicate their effect. If a node's purpose is unclear, hover over it to view its tooltip for additional context.</p>
+<div class="admonition info2">
+<p class="admonition-title">Tip</p>
+<p>To better understand what each node does and view its real default values, you can use the '<strong>Preview in PlantFactory</strong>' button to open the plant for inspection. Within PlantFactory, the <code>Search Node</code> feature can also be used to locate and review each node in the graph.</p>
+</div>
+<p>The image below shows an example of plant-specific override nodes available for a particular plant.</p>
+<p><img align="left" alt="Plant Specific Overrides" class="img-box" src="../../images/import-overrides_plant-specific.gif"></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <strong>Actions menu</strong>:<ul>
+<li><strong>Select</strong>:<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h10V3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8h-2m-11.09-.92L6.5 11.5 11 16 21 6l-1.41-1.42L11 13.17z"></path></svg></span> <strong>Enable All</strong>: Enable all override toggles.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5z"></path></svg></span> <strong>Disable All</strong>: Disable all override toggles.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.72 3.72a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.56 7h10.88l-2.22-2.22a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018l3.5 3.5a.75.75 0 0 1 0 1.06l-3.5 3.5a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734l2.22-2.22H2.56l2.22 2.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-3.5-3.5a.75.75 0 0 1 0-1.06Z"></path></svg></span> <strong>Invert</strong>: Invert override toggles.</li>
+</ul>
+</li>
+<li><span class="twemoji"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 118.91 122.88" style="enable-background:new 0 0 118.91 122.88" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M6.41,23.43l49.53,20.15c1.57,0.64,4.17,1.04,5.74,0.4l52.42-21.41c1.57-0.64-0.02-3.49-1.62-4.05L59.62,0 c-0.4-0.14-10.33,3.48-11.72,3.97L4.79,19.38C3.12,19.97,4.26,22.55,6.41,23.43L6.41,23.43z M116.87,94.34l-51.73,28.06 c-1.49,0.81-3.56,0.69-3.56-1.01l-0.01-66.03c0-1.7,0.14-3.36,1.7-4.03l51.92-22.12c1.56-0.66,3.73-0.07,3.72,1.62l-0.34,59.48 C118.56,92,118.36,93.53,116.87,94.34L116.87,94.34z M104.99,71.09c3.52,1.5,4.55,6.77,2.28,11.78c-2.26,5-6.96,7.84-10.48,6.34 c-3.52-1.5-4.55-6.77-2.28-11.78C96.78,72.43,101.47,69.59,104.99,71.09L104.99,71.09z M86.22,57.28c3.65,1.55,4.7,7.01,2.36,12.19 c-2.34,5.18-7.2,8.12-10.85,6.57c-3.65-1.55-4.7-7.01-2.36-12.19C77.71,58.66,82.57,55.72,86.22,57.28L86.22,57.28z M1.81,93.89 l51.26,27.75c1.49,0.81,3.56,0.69,3.56-1.01l0.01-65.42c0-1.7-0.14-3.36-1.7-4.03L3.72,29.22C2.16,28.55,0,29.15,0,30.85 l0.11,59.02C0.11,91.56,0.32,93.08,1.81,93.89L1.81,93.89z M6.91,75.74c3.21-2.04,7.99,0.29,10.66,5.2s2.24,10.56-0.97,12.6 c-3.21,2.04-7.99-0.29-10.66-5.2C3.27,83.42,3.7,77.78,6.91,75.74L6.91,75.74z M22.06,64.37c3.4-2.06,8.45,0.29,11.28,5.26 c2.83,4.97,2.38,10.67-1.02,12.73c-3.4,2.06-8.45-0.29-11.28-5.26C18.2,72.14,18.66,66.44,22.06,64.37L22.06,64.37z M38.12,52.37 c3.42-2.07,8.51,0.29,11.36,5.26c2.85,4.97,2.39,10.68-1.03,12.74c-3.42,2.07-8.51-0.29-11.36-5.26 C34.24,60.14,34.7,54.44,38.12,52.37L38.12,52.37z M59.16,15.48c6.04,0,10.93,2.34,10.93,5.22c0,2.88-4.89,5.22-10.93,5.22 c-6.03,0-10.93-2.34-10.93-5.22C48.23,17.82,53.13,15.48,59.16,15.48L59.16,15.48z"></path></g></svg></span> <strong>Randomize Selected</strong>: Randomizes enabled plant-specific override values.</li>
+</ul>
+</li>
+</ul>
+<div style="clear:both"></div>
+
+<div class="admonition info2">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>When using overrides, values such as plant height and polygon count shown in the preset descriptions may not be accurate, as the override settings affect how the plant is generated.</li>
+<li>In some cases, certain override sliders may not affect the plant as expected. This occurs when the corresponding nodes are not connected or used within that particular plant's graph. However, for most plants, the available overrides will function normally.</li>
+</ul>
+</div>
+<div style="clear:both"></div>
+
+<h3 id="lods">LODs<a class="headerlink" href="#lods" title="Permanent link">¶</a></h3>
+<p>When enabled, you can choose which Levels of Detail to import.</p>
+<p><img align="left" alt="LODs" class="img-box" src="../../images/lods.webp">
+LOD 0 is the default, highest-detail geometry, while higher LOD numbers use progressively simpler geometry for performance optimization. You can enable or disable any combination of LODs, allowing you to import only the versions you need.</p>
+<div class="admonition info2">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>The available LODs depend on how the plant was set up in PlantFactory. Most plants provide LODs 0-3, but some may have fewer or more. Selecting a higher LOD does not guarantee it exists; only the plant's defined LODs will be imported.</li>
+<li>When the 'Extra LODs' feature is enabled, PlantFactory generates all available LODs internally, which requires additional processing time, regardless of which ones you select. PF2B will then only import the LODs you've chosen, but the processing time is the same no matter which or how many LODs you select.</li>
+</ul>
+</div>
+<h5>Examples</h5>
+
+<p>Example of LODs with the <code>Adansonia digitata (Baobap Tree)</code> plant using the <code>Standard mat 25</code> preset, exported in all three available detail levels: HD (High Detail), LD (Low Detail), and RT (Realtime, which also uses billboards):</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="lods-wireframe" name="__tabbed_2" type="radio"><input id="lods-rendered" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="lods-wireframe">Wireframe</label><label for="lods-rendered">Rendered</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/lods/wireframe/HD.webp" data-desc-position="bottom"><img alt="LOD example" class="on-glb" src="../../images/plants/lods/wireframe/HD.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/lods/wireframe/LD.webp" data-desc-position="bottom"><img alt="LOD example" class="on-glb" src="../../images/plants/lods/wireframe/LD.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/lods/wireframe/RT.webp" data-desc-position="bottom"><img alt="LOD example" class="on-glb" src="../../images/plants/lods/wireframe/RT.webp"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/lods/HD.webp" data-desc-position="bottom"><img alt="LOD example" class="on-glb" src="../../images/plants/lods/HD.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/lods/LD.webp" data-desc-position="bottom"><img alt="LOD example" class="on-glb" src="../../images/plants/lods/LD.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plants/lods/RT.webp" data-desc-position="bottom"><img alt="LOD example" class="on-glb" src="../../images/plants/lods/RT.webp"></a></p>
+</div>
+</div>
+</div>
+<div class="admonition info2">
+<p>Note that polygon counts can vary greatly depending on the plant and preset. In this example, the <code>Standard mat 25</code> preset is used, where the "mat 25" indicates the plant's <strong>maturity</strong>, representing its age as a percentage of its maximum potential. A value of <strong>0</strong> means the plant is very young, while <strong>100</strong> represents full maturity. For this tree, maturity has a huge impact on both height and polygon count: at 0% maturity it is roughly 5.5 m tall, while at full maturity it reaches about 16 m. At 25% maturity, as shown here, the plant is around 11 m tall. There are many other presets available for this plant, some of which reach even greater sizes.</p>
+</div>
+<h3 id="wind">Wind<a class="headerlink" href="#wind" title="Permanent link">¶</a></h3>
+<video width="100%" loop autoplay muted controls>
+    <source src="../../videos/wind.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<p>The wind system imports animated wind motion from <strong>PlantFactory</strong>, adding realistic movement to plants inside Blender. During import, an armature with baked keyframes is generated to simulate the plant's wind animation over time.</p>
+<p>Most plants include wind data, but some have fixed wind parameters that cannot be adjusted directly due to API limitations. For plants that support adjustable wind, you can fine-tune the <strong>intensity</strong> and <strong>atmosphere</strong> to achieve the desired motion strength and variation.</p>
+<ul>
+<li><strong>Wind Intensity</strong> – Controls how strong the wind effect is. Some plants support direct adjustment, while others use a fixed value.</li>
+<li><strong>Atmosphere</strong> – Defines general wind behavior such as overall strength and turbulence. This can indirectly influence plants with non-adjustable intensity.</li>
+</ul>
+<p>If a plant's wind cannot be adjusted, try changing the <strong>atmosphere</strong> to modify the overall movement. You can check whether a plant supports adjustable wind in the <strong><a href="#plant-info-popup">Plant Info</a></strong> popup by clicking the <strong>Info</strong> button in the interface.</p>
+<p><img align="left" alt="Wind" class="img-box" src="../../images/wind.webp"></p>
+<h5>Settings</h5>
+<ul>
+<li><strong>Baking Mode</strong>:<ul>
+<li><strong>Static Bones</strong>: Bones but no animation.</li>
+<li><strong>Animated Bones</strong>: Bones and animation.</li>
+</ul>
+</li>
+<li><strong>Duration</strong>: Set the start and end time of the wind animation (in seconds).</li>
+<li><strong>Use Scene Framerate</strong>: Disable this to specify a custom framerate.</li>
+<li><strong>Cyclic animation</strong>: Force the baked animation to be cyclic.</li>
+<li><strong>Wind Intensity</strong>:<ul>
+<li><strong>Use default Intensity</strong>: When enabled, the wind intensity defined as default inside PlantFactory for this plant will be used.</li>
+<li><strong>Custom intensity</strong>: Available when <strong>Use default intensity</strong> is disabled.</li>
+<li><strong>Atmosphere</strong>: Loads a atmosphere inside PlantFactory with specific <code>Atmospheric Breeze</code> settings. These settings can be found inside PlantFactory under <code>Wind &gt; Atmosphereic Breeze Settings</code>.<ul>
+<li><strong>Default</strong></li>
+<li><strong>Medium Wind</strong></li>
+<li><strong>Storm</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Misc:<ul>
+<li><strong>Show Armature as Bounds</strong>: When enabled, imported plant armatures will be displayed as bounding boxes instead of showing bone shapes in the <code>3D Viewport</code>.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p>Importing wind animations can be a time-consuming process, especially for high-detail plants, as it involves generating and baking keyframe animation for many bones.</p>
+<p>Once the PlantFactory application has launched and begun the import process, it may appear as though nothing is happening. The application remains responsive, but data is being processed in the background. This is normal.</p>
+</div>
+<h3 id="queue">Queue<a class="headerlink" href="#queue" title="Permanent link">¶</a></h3>
+<p>The queue system lets you add multiple plants to a queue, which you can then import in a single batch, simplifying the process of importing various species and presets.</p>
+<p>The queue can be activated by pressing the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.063 1.456a1.75 1.75 0 0 1 1.874 0l8.383 5.316a1.75 1.75 0 0 1 0 2.956l-8.383 5.316a1.75 1.75 0 0 1-1.874 0L2.68 9.728a1.75 1.75 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"></path><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.75 1.75 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035"></path><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.75 1.75 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035"></path></svg></span> icon to the right of the <code>Import</code> button. Once activated, the <code>Import</code> button changes to <code>Add to Queue</code>, and two new options appear below: an <code>Import All</code> button and the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Queue Actions</code> menu.</p>
+<p>You can now browse plants and use any of the <code>Add to Queue</code> buttons to add them to the queue.</p>
+<hr>
+<p><img align="right" alt="Queue" class="img-box" src="../../images/queue_empty.webp"></p>
+<ul>
+<li><strong>Settings</strong>:<ul>
+<li><strong>Avoid Duplicate Entries</strong>: Do not add plants to the queue if the same plant + preset already exists.</li>
+<li><strong>Show English Plant Names</strong>: Display plant names in the queue using English common names instead of Latin if available.</li>
+<li><strong>Group Queue by Category</strong>: Display queue items grouped by plant type.</li>
+</ul>
+</li>
+<li><span class="twemoji"><svg height="1500" viewBox="0 0 1500 1500" width="1500" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview pagecolor="#303030" showgrid="true"><inkscape:grid id="grid5" units="px" spacingx="100" spacingy="100" color="#4772b3" opacity="0.2" visible="true"></inkscape:grid></sodipodi:namedview><g><g enable-background="new" transform="matrix(100 0 0 100 -8900.0006 -5300.286)"><path d="m216.49219 104.99219a.50005.50005 0 0 0 -.49219.50781v3a.50005.50005 0 0 0 .5.5h12a.50005.50005 0 0 0 .5-.5v-3a.50005.50005 0 1 0 -1 0v2.5h-11v-2.5a.50005.50005 0 0 0 -.50781-.50781z" opacity=".6" transform="matrix(-1 0 0 1 319 -42.00007)"></path><path d="m96.499447 54.005859c-.27538.0043-.49542.230473-.49219.50586v7.792969l-2.13002-2.130019c-.47125-.490807-1.19784.235776-.70703.707031l2.98353 2.983534c.19527.195185.51177.195185.70704 0l2.98353-3.005631c.490803-.471255-.23578-1.197838-.70703-.707031l-2.13002 2.152116v-7.792969c.003-.281503-.22632-.510249-.50781-.50586z"></path></g></g></svg></span> <strong>Import All</strong>: Import all plants in the queue.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <strong>Queue Actions</strong>:<ul>
+<li><strong>Save Queue</strong>: Save the current plant import queue to an external <code>.pf2bqueue</code> file for backup or reuse. The file is small and easy to store.</li>
+<li><strong>Add Selected to Queue</strong>: Add all selected plants in the scene to the queue. Does not clear existing items from your queue.</li>
+<li><strong>Load Queue</strong>: Load a plant import queue from an external <code>.pf2bqueue</code> file.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M166.2-16c-13.3 0-25.3 8.3-30 20.8L120 48H24C10.7 48 0 58.7 0 72s10.7 24 24 24h400c13.3 0 24-10.7 24-24s-10.7-24-24-24h-96L311.8 4.8c-4.7-12.5-16.6-20.8-30-20.8zM32 144v304c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V144h-48v304c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V144zm160 72c0-13.3-10.7-24-24-24s-24 10.7-24 24v176c0 13.3 10.7 24 24 24s24-10.7 24-24zm112 0c0-13.3-10.7-24-24-24s-24 10.7-24 24v176c0 13.3 10.7 24 24 24s24-10.7 24-24z"></path></svg></span> <strong>Clear Queue</strong>: Remove all plants from the queue.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><img align="left" alt="Queue" class="img-box" src="../../images/queue.webp"></p>
+<p>Each queue item shows the following buttons:</p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg></span>: Opens a popup displaying information about the plant. Read more in the <a href="#plant-info-popup">Plant Info Popup</a> section.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/plant-info-popup_preset-with-image.webp" data-description="Plant Info Popup" data-desc-position="bottom"><img align="right" alt="plant gallery top panel" class="img-box on-glb" data-description="Plant Info Popup" src="../../images/plant-info-popup_preset-with-image.webp" width="27%"></a></li>
+<li><strong>Quantity</strong>: The number field lets you specify how many of this plant will be imported.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M166.2-16c-13.3 0-25.3 8.3-30 20.8L120 48H24C10.7 48 0 58.7 0 72s10.7 24 24 24h400c13.3 0 24-10.7 24-24s-10.7-24-24-24h-96L311.8 4.8c-4.7-12.5-16.6-20.8-30-20.8zM32 144v304c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V144h-48v304c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V144zm160 72c0-13.3-10.7-24-24-24s-24 10.7-24 24v176c0 13.3 10.7 24 24 24s24-10.7 24-24zm112 0c0-13.3-10.7-24-24-24s-24 10.7-24 24v176c0 13.3 10.7 24 24 24s24-10.7 24-24z"></path></svg></span>: Delete the plant from the queue.</li>
+</ul>
+<div style="clear:both"></div>
+
+<h3 id="gallery-view">Gallery View<a class="headerlink" href="#gallery-view" title="Permanent link">¶</a></h3>
+<p>In this view, you can see all available plants and presets. To exit the gallery view, click the <code>X</code> in the top right corner or press <code>Escape</code> on your keyboard.</p>
+<div class="admonition info2 inline">
+<p class="admonition-title">Plants</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/gallery_plants.webp" data-desc-position="bottom"><img align="left" alt="Plant Gallery" class="img-box on-glb" src="../../images/gallery_plants.webp"></a></p>
+</div>
+<div class="admonition info2 inline">
+<p class="admonition-title">Presets</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/gallery_presets.webp" data-desc-position="bottom"><img align="left" alt="Preset Gallery" class="img-box on-glb" src="../../images/gallery_presets.webp"></a></p>
+</div>
+<div style="clear:both"></div>
+
+<p>Below is a breakdown of every button and function inside the gallery.</p>
+<h4 id="plants">Plants<a class="headerlink" href="#plants" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/gallery_plants_top-panel.webp" data-desc-position="bottom"><img alt="plant gallery top panel" class="img-box on-glb" src="../../images/gallery_plants_top-panel.webp"></a>
+At the top, you'll find the same library and filtering section as in the main panel, along with these additional settings:</p>
+<ul>
+<li><strong>Size</strong>: Adjusts the thumbnail size of the plants and presets in the gallery.<ul>
+<li>Example of zoom set to a lower number:<br>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/gallery_plants_zoomed.webp" data-desc-position="bottom"><img alt="Preset Gallery" class="img-box on-glb" src="../../images/gallery_plants_zoomed.webp" width="35%"></a></li>
+</ul>
+</li>
+<li><strong>Search</strong>: Lets you perform a free-text search to filter items by Latin name, English name, or continent (Africa, Asia, Europe, North America, South America, Oceania).</li>
+</ul>
+<p><br></p>
+<p><img align="left" alt="plant gallery top panel" class="img-box" src="../../images/gallery_plants_plant-example.webp"></p>
+<p>If we look at an individual plant inside the gallery we have the following buttons below the thumbnail:</p>
+<ul>
+<li><strong>Presets</strong>: Opens the presets gallery for this plant.</li>
+<li><strong>Select</strong>: Selects the plant and closes down the plant gallery.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg></span>: Opens a popup displaying information about the plant. Read more in the <a href="#plant-info-popup">Plant Info Popup</a> section.
+    <img alt="plant gallery top panel" class="img-box" src="../../images/plant-info-popup_plant.webp"></li>
+</ul>
+<div style="clear:both"></div>
+
+<h4 id="presets">Presets<a class="headerlink" href="#presets" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/gallery_presets_top-panel.webp" data-desc-position="bottom"><img alt="preset Gallery top panel" class="img-box on-glb" src="../../images/gallery_presets_top-panel.webp"></a>
+Here you will also find the Size &amp; Search fields and if you are browsing the <a href="../../plants/#plantcatalog-library">PlantCatalog library</a> there are additional filters available:</p>
+<ul>
+<li><strong>Min Height</strong> &amp; <strong>Max Height</strong>: Lets you filter presets based on the plant height.</li>
+<li><strong>Min Polygons</strong> &amp; <strong>Max Polygons</strong>: Lets you filter presets based on the plant polygon count.</li>
+<li><strong>Reset Filters</strong></li>
+<li><strong>Use import Queue</strong>: Enables the queue functionality and adds an additional 'Add to Queue' button to each preset. For more information about the queue system, please see the <a href="#queue">Queue</a> section.</li>
+</ul>
+<p><br></p>
+<p>If we look at an individual presets inside the gallery we are presented with depending on if you have the <code>Use import Queue</code> active:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="presets-default" name="__tabbed_3" type="radio"><input id="presets-with-queue-button" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="presets-default">Default</label><label for="presets-with-queue-button">With 'Queue' button</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img align="left" alt="Preset example" class="img-box" src="../../images/gallery_presets_preset-example.webp"></p>
+<ul>
+<li><strong>Select</strong>: Selects the plant and closes down the plant gallery.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg></span>: Opens a popup displaying information about the plant. Read more in the <a href="#plant-info-popup">Plant Info Popup</a> section.
+    <img alt="plant gallery top panel" class="img-box" src="../../images/plant-info-popup_preset.webp"></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img align="left" alt="Preset example with queue button" class="img-box" src="../../images/gallery_presets_preset-example-with-queue-button.webp"></p>
+<ul>
+<li><strong>Add to Queue</strong>: Adds the preset to the queue. For more information about the queue system, please see the <a href="#queue">Queue</a> section.</li>
+<li><strong>Select</strong>: Selects the plant and closes down the plant gallery.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg></span>: Opens a popup displaying information about the plant. Read more in the <a href="#plant-info-popup">Plant Info Popup</a> section.
+    <img alt="plant gallery top panel" class="img-box" src="../../images/plant-info-popup_preset.webp"></li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="plant-info-popup">Plant Info Popup<a class="headerlink" href="#plant-info-popup" title="Permanent link">¶</a></h3>
+<p>The Plant Info popup, accessible via the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg></span> button, appears in multiple places in the interface. Its appearance may vary depending on location, as some of the displayed content is context-specific. See the examples in the screenshots below.</p>
+<p>Common information shown includes:</p>
+<ul>
+<li>Plant names</li>
+<li>Preset details</li>
+<li>Wind details</li>
+<li>Geographic distribution (continents and countries, with data from <a href="https://www.gbif.org/">GBIF.org</a>)</li>
+<li>Action buttons</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="plant-info-popup-plant" name="__tabbed_4" type="radio"><input id="plant-info-popup-preset" name="__tabbed_4" type="radio"><input id="plant-info-popup-preset-with-image" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="plant-info-popup-plant">Plant</label><label for="plant-info-popup-preset">Preset</label><label for="plant-info-popup-preset-with-image">Preset with Image</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Plant Info Popup" class="img-box" src="../../images/plant-info-popup_plant.webp"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Plant Info Popup" class="img-box" src="../../images/plant-info-popup_preset.webp"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Plant Info Popup" class="img-box" src="../../images/plant-info-popup_preset-with-image.webp"></p>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<p><strong>Actions</strong>:</p>
+<ul>
+<li><strong>Open in Plant Browser</strong>: Opens this plant in the Plant Browser. Useful if you want to import additional instances of the same plant type into the scene.</li>
+<li><strong>Open in PF</strong>: This allows you to open a specific plant directly in PlantFactory for inspection. Note that this does not use the PF2B Bridge and runs as a standalone session, meaning the plant cannot be imported back into Blender through this action.</li>
+<li><strong>Search Info</strong>: lets you search for information about a plant species online. Clicking it presents the following options:<ul>
+<li><strong><a href="https://www.wikipedia.org/">Wikipedia</a></strong></li>
+<li><strong><a href="https://species.wikimedia.org/">Wikimedia Species</a></strong></li>
+<li><strong><a href="https://powo.science.kew.org/">POWO</a></strong>: Plants of the World Online, provided by the Royal Botanic Gardens, Kew.</li>
+<li><strong><a href="https://www.gbif.org/">GBIF</a></strong>: Global Biodiversity Information Facility, providing free and open access to biodiversity data.</li>
+<li><strong><a href="https://duckduckgo.com/">DuckDuckGo</a></strong></li>
+<li><strong><a href="https://www.google.com/">Google</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Other buttons</strong>:</p>
+<ul>
+<li><strong>Plant-Fixes available</strong>: This button will appear if there are <a href="../../support/pf2b_under_the_hood/#plant-fixes-system">Plant-Fixes</a> available for the plant. When clicked, it will display all the fixes applied during the import of this plant.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024-2025 <a href="https://roberd.net" target="_blank" rel="noopener">Roberd Palm</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="pf2b_footer_container">
+
+    <a href="../../changelog" title="Changelog" class="pf2b_footer_link">Changelog</a>
+    <a href="../../about" title="About" class="pf2b_footer_link">About</a>
+
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.instant", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../extra/360-viewer.min.js"></script>
+      
+        <script src="../../extra/changelog-icons.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "none"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
