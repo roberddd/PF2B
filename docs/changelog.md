@@ -9,7 +9,6 @@ hide:
 Here, you can find a list of all updates, enhancements, and bug fixes made to PF2B over time. Date Format: `YYYY-MM-DD`.
 
 
-
 ## Versions
 
 <div class="changelog" markdown>
@@ -44,6 +43,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
         - `PlantCatalog > Grass > Typha latifolia HD`
         - `PlantCatalog > Grass > Typha latifolia LD`
 
+---
 
 ### 2.0.0 <small>2026-01-31</small>
 
