@@ -14,6 +14,37 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 2.0.1 <small>2026-02-08</small>
+
+- **Improved Functionality**
+    - Improved import logic for marking material types correctly, fixing cases where stalk materials were incorrectly marked.
+- **Other**
+    - **Vertex Color** import settings are now all disabled by default to avoid importing vertex colors by default.
+        - This improves compatibility, as some plants contain too many vertex groups, making them impossible to export if vertex color import is enabled.
+        - These settings are intended to be enabled on a per-plant basis only when needed.
+- **Plant-Fixes**
+    - **Updated**:
+        <br>*Improved usage of stalk shader rather than leaf, and other shader changes for better compatibility:*
+        - `PlantCatalog > Grass > Festuca arundinacea HD`
+        - `PlantCatalog > Grass > Festuca arundinacea LD`
+        - `PlantCatalog > Grass > Festuca rubra HD`
+        - `PlantCatalog > Grass > Festuca rubra LD`
+        - `PlantCatalog > Grass > Phragmites australis HD`
+        - `PlantCatalog > Grass > Phragmites australis LD`
+        - `PlantCatalog > Grass > Phalaris arundinacea HD`
+        - `PlantCatalog > Grass > Phalaris arundinacea LD`
+        - `PlantCatalog > Grass > Lolium perenne HD`
+        - `PlantCatalog > Grass > Lolium perenne LD`
+    - **Removed**:
+        <br>*Fixed with the improved material type logic above, so plant fixes are no longer needed:*
+        - `PlantCatalog > Grass > Festuca gautieri HD`
+        - `PlantCatalog > Grass > Festuca gautieri LD`
+        - `PlantCatalog > Grass > Festuca glauca HD`
+        - `PlantCatalog > Grass > Festuca glauca LD`
+        - `PlantCatalog > Grass > Typha latifolia HD`
+        - `PlantCatalog > Grass > Typha latifolia LD`
+
+
 ### 2.0.0 <small>2026-01-31</small>
 
 > Compatibility: This version requires Blender 4.5 or newer and has been verified with Blender 4.5 LTS and 5.0.
@@ -103,7 +134,6 @@ This is a big update with lots of new features & improvements. Most notably: **[
 - **Plant-Fixes**
     - **New**:
         - `PlantCatalog > Broadleaf Trees > Koelreuteria bipinnata HD` - Fixed wrong color texture for a leaf material.
-
 	- **Updated**:
 
         *Materials now use the same tiling mode as in PlantFactory, fixing visible texture seams for the following plants:*
