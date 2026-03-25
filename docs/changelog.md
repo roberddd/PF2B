@@ -13,6 +13,24 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 
 <div class="changelog" markdown>
 
+### 2.0.2 <small>2026-03-25</small>
+
+> **Compatibility:** Adds support for Blender 5.1.
+<br>**Note:** Blender 5.1 updates its internal Python version, which requires separate builds. PF2B 2.0.2 is therefore provided in two versions: one for Blender 4.5-5.0 and one for 5.1+.
+
+- **New Functionality**
+    - New **Generate Debug Report** button in Preferences to assist with troubleshooting. It can also be used to get a structured overview of your plant library. [More info](preferences/misc.md#troubleshooting)
+- **Improved Functionality**
+    - **Add Snow:** When applying snow to non-PF2B assets, it is now easier to target specific materials using the new **Preview Targeted Materials** button. [More info](workflow/post_processing.md#snow-instructions-adding-a-system-materials---snow)
+- **Other**
+    - Console debug output has been improved and standardized across actions.
+    - Updated Python libraries.
+- **Bug Fixes**
+    - Improved resilience of plant indexing when using libraries in non-standard locations or when libraries are missing, reducing edge-case errors.
+    - **Plant Renamer** utility: Placeholders from the "Formatting Help" could fail in certain cases depending on the current object selection; this issue has been resolved.
+
+---
+
 ### 2.0.1 <small>2026-02-08</small>
 
 - **Improved Functionality**

@@ -65,7 +65,14 @@ Read more about it under the [PF2B: Under the Hood](../support/pf2b_under_the_ho
 
 - **Debug To Console**: Outputs debug information to the console, useful for troubleshooting. To view the console, go to `Window > Toggle System Console`.
 
+    When enabled, this mode also adds helpful tools for troubleshooting:
+
+    - In the **Plant Info Popup**, each property gains a **Copy to Clipboard** button.
+    - In **Import Overrides > Plant Specific**, each node/property also gets a **Copy to Clipboard** button.
+    - A benchmark timer is added to many actions, showing how long it took to complete.
+
     !!! warning "Performance Note"
-        This should only be enabled if you need to troubleshoot, as it may have a slight performance hit.
+        Only enable this when actively troubleshooting, as it may have a slight performance impact and console output becomes more verbose, with each action displayed across multiple lines instead of one.
 
 - **Log to File**: When enabled, all debug information and error messages are saved to a log file for easier troubleshooting and analysis. Useful for tracking issues.
+- **Generate Debug Report**: Export a .txt debug report with system, addon and plant library details. Attach it to your support request to help troubleshoot issues faster. It can also be used to get a structured overview of your plant library.

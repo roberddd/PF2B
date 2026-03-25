@@ -11,7 +11,7 @@ tags:
 Hello, I'm Roberd, a seasoned photographer based in Sweden with a passion for digital art. With over 20 years of experience in photography, my journey into the world of digital art began as I started experimenting with various graphic software tools along the way. In 2015, I discovered Blender and was captivated by its versatility and power. It quickly became my go-to tool for satisfying my creative needs, offering endless possibilities for creating complex 3D art and animations.
 { data-search-exclude }
 
-Below, you'll find links to my social media profiles, where I share digital art projects and photography endeavors. Feel free to connect with me to explore more about my work and interests.
+Below, you'll find links to my social media profiles, where I share digital art projects and photography endeavors. Feel free to connect with me to explore more about my work.
 { data-search-exclude }
 
 <div class="grid" markdown>
@@ -29,10 +29,11 @@ Below, you'll find links to my social media profiles, where I share digital art 
 
 ## Other add-ons by me
 
-**BatchGenie**: An add-on designed to simplify and automate common Asset-related tasks.
+**BatchGenie**
+<br>Simplify and automate common asset workflows in Blender with batch tools for rendering previews, importing textures, exporting assets, and utility processing.
 
 ![BatchGenie Addon](images/other/batchgenie.webp){ .img-box align=left }
 
   - [Gumroad](https://roberd.gumroad.com/l/BatchGenie)
-  - [SuperHive (BlenderMarket)](https://blendermarket.com/products/batchgenie)
+  - [SuperHive (BlenderMarket)](https://superhivemarket.com/products/batchgenie)
   - [Documentation](https://batchgenie.roberd.net/)

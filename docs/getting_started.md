@@ -11,6 +11,23 @@ tags:
 !!! info2 ""
     PF2B 1.x (compatible with Blender 4.2+) remains available for download but does not include features from version 2.0 onward.
 
+
+### Compatibility Table
+
+- Y axis represents the PF2B versions, X axis represents Blender versions.
+- The checkmarks are highlighting PF2B versions compatible with Blender versions.
+
+| PF2B Version     | Blender 4.2-4.4 | Blender 4.5-5.0 | Blender 5.1+ |
+|------------------|----------------|----------------|-------------|
+| 2.0.2            | -               | ✅ *          | ✅ *       |
+| 2.0.0 - 2.0.1    | -               | ✅            | -           |
+| 1.0.0 - 1.1.6    | ✅              | ✅            | -           |
+
+\* Separate builds available for Blender 4.5-5.0 and 5.1+ (due to Python version change).
+
+
+
+
 ## Notes Before Purchasing
 
 !!! warning ""

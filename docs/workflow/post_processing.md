@@ -360,6 +360,7 @@ When adding snow you can decide what systems to activate
                 - **Last Slot**
                 - **Name Match / Name Exclude**: Apply snow shader to materials matching (Match) or excluding (Exclude) a name pattern. Both options share these settings:
                     - **Filter**: String to match/exclude from material names.
+                    - **Preview Targeted Materials** :blender_icon_zoom_all:: Shows which materials on the active object would be targeted by the current filter settings. Results are displayed in a popup listing each matching material name.
                     - **Case Sensitive**: Make name filtering case-sensitive.
                     - **Use Regex**: Treat filter string as a regex pattern. Examples:
                         - `^bark`: Starts with bark.
@@ -380,6 +381,7 @@ When adding snow you can decide what systems to activate
                 - **Last Slot**
                 - **Name Match / Name Exclude**: Apply frost shader to materials matching (Match) or excluding (Exclude) a name pattern. Both options share these settings:
                     - **Filter**: String to match/exclude from material names.
+                    - **Preview Targeted Materials** :blender_icon_zoom_all:: Shows which materials on the active object would be targeted by the current filter settings. Results are displayed in a popup listing each matching material name.
                     - **Case Sensitive**: Make name filtering case-sensitive.
                     - **Use Regex**: Treat filter string as a regex pattern. Examples:
                         - `^bark`: Starts with bark.
@@ -530,7 +532,7 @@ Clicking on the header maximizes the sub-panel and presents you with all of the 
         - **Global Merge Distance**: Controls the distance threshold for the global merge. Vertices closer than this value are merged together. Higher values simplify the mesh more aggressively, reducing geometry density but potentially softening details or introducing minor artifacts.
     - **Extra Viewport Optimization**: Applies additional viewport-only optimizations to the snow system to improve performance without affecting renders.
         - **Viewport Mode**: Selects a viewport-only optimization preset that controls how snow materials and geometry are simplified for performance.
-            - **Material Only**: Applies viewport-only optimizations to the default PF2B snow material by forcing Simple mode, disabling displacement and subsurface scattering, and reducing noise detail, without modifying geometry.
+            - **Material Only**: Applies viewport-only optimizations to the default snow material by forcing Simple mode, disabling displacement and subsurface scattering, and reducing noise detail, without modifying geometry.
             - **Geometry Merge**: Applies the default snow material optimizations and performs a medium-strength vertex merge to simplify the snow geometry in the viewport.
             - **Hidden (Snowflake Indicator)**: Hides the snow geometry in the viewport and displays a wireframe snowflake marker to indicate that the object has snow applied.
 
@@ -661,9 +663,9 @@ The Frost Shader provides the same functionality for all supported assets, but i
 - **Non-PF2B Assets**: The shader is labeled simply as "Frost Shader," and you must manually apply it to appropriate materials.
 
 === "PF2B Asset"
-    ![Shader Snow](../images/snow_shader-frost-pf2b-asset.webp){ .img-box }
+    ![Frost Shader](../images/snow_shader-frost-pf2b-asset.webp){ .img-box }
 === "Non-PF2B Asset"
-    ![Shader Snow](../images/snow_shader-frost-general.webp){ .img-box }
+    ![Frost Shader](../images/snow_shader-frost-general.webp){ .img-box }
 
 
 Clicking on the panel header will show a popup to edit the shader module directly on all materials on the selected plant (in the same way as described in the [Material Editing](#material-editing) section previously).
