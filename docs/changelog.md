@@ -6,7 +6,21 @@ hide:
 # NOTE TO SELF: Remember to update version in version.json
 ---
 <!--landingpage-start-->
-Here, you can find a list of all updates, enhancements, and bug fixes made to PF2B over time. Date Format: `YYYY-MM-DD`.
+
+This page lists all updates, enhancements, and bug fixes for PF2B. A compatibility table is included below to show which PF2B versions are supported for each Blender release. Date format: `YYYY-MM-DD`.
+
+### Compatibility Table
+
+- Y axis represents the PF2B versions, X axis represents Blender versions.
+- The checkmarks are highlighting PF2B versions compatible with Blender versions.
+
+| PF2B Version     | Blender 4.2-4.4 | Blender 4.5-5.0 | Blender 5.1+ |
+|------------------|----------------|----------------|-------------|
+| 2.0.2            | -               | ✅ *          | ✅ *       |
+| 2.0.0 - 2.0.1    | -               | ✅            | -           |
+| 1.0.0 - 1.1.6    | ✅              | ✅            | -           |
+
+\* Separate builds available for Blender 4.5-5.0 and 5.1+ (due to Python version change).
 
 
 ## Versions
@@ -19,7 +33,7 @@ Here, you can find a list of all updates, enhancements, and bug fixes made to PF
 <br>**Note:** Blender 5.1 updates its internal Python version, which requires separate builds. PF2B 2.0.2 is therefore provided in two versions: one for Blender 4.5-5.0 and one for 5.1+.
 
 - **New Functionality**
-    - New **Generate Debug Report** button in Preferences to assist with troubleshooting. It can also be used to get a structured overview of your plant library. [More info](preferences/misc.md#troubleshooting)
+    - New **Generate Debug Report** button in Preferences to assist with troubleshooting. It can also be used to get a structured overview of your plant library. [More info](preferences/misc.md#debug)
 - **Improved Functionality**
     - **Add Snow:** When applying snow to non-PF2B assets, it is now easier to target specific materials using the new **Preview Targeted Materials** button. [More info](workflow/post_processing.md#snow-instructions-adding-a-system-materials---snow)
 - **Other**
