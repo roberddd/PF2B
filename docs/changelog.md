@@ -27,6 +27,15 @@ This page lists all updates, enhancements, and bug fixes for PF2B. A compatibili
 
 <div class="changelog" markdown>
 
+### 2.0.3 <small>2026-03-26</small>
+
+> This is a corrective release addressing bugs.
+
+- **Bug Fixes**
+    - Fixed typos introduced during a recent code overhaul that caused issues with certain functionality, such as creating and verifying cache presets.
+
+---
+
 ### 2.0.2 <small>2026-03-25</small>
 
 > **Compatibility:** Adds support for Blender 5.1.
