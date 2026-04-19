@@ -1,0 +1,5 @@
+mkdocs-material
+mkdocs-glightbox
+mkdocs-redirects
+mkdocs-include-markdown-plugin
+mkdocs-simple-hooks
