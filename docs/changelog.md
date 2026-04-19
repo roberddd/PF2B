@@ -16,7 +16,7 @@ This page lists all updates, enhancements, and bug fixes for PF2B. A compatibili
 
 | PF2B Version     | Blender 4.2-4.4 | Blender 4.5-5.0 | Blender 5.1+ |
 |------------------|----------------|----------------|-------------|
-| 2.0.2            | -               | ✅ *          | ✅ *       |
+| 2.0.2 - 2.0.3    | -               | ✅ *          | ✅ *       |
 | 2.0.0 - 2.0.1    | -               | ✅            | -           |
 | 1.0.0 - 1.1.6    | ✅              | ✅            | -           |
 
