@@ -1,0 +1,1 @@
+Files with 0001 suffix is straight from blender and the ones without are processed to be seamless
