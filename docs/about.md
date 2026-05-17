@@ -19,8 +19,8 @@ Below, you'll find links to my social media profiles, where I share digital art 
 [:material-instagram: Instagram](https://instagram.com/roberddd/){ .md-button .md-button--social target="_blank" }
 [:fontawesome-brands-x-twitter: Twitter](https://x.com/rober_ddd){ .md-button .md-button--social target="_blank" }
 
-[:material-mastodon: Mastodon](https://blenderartists.org/u/roberddd){ .md-button .md-button--social target="_blank" }
-[:material-blender-software: BlenderArtists](https://mastodon.social/@roberddd){ .md-button .md-button--social target="_blank" }
+[:material-mastodon: Mastodon](https://mastodon.social/@roberddd){ .md-button .md-button--social target="_blank" }
+[:material-blender-software: BlenderArtists](https://blenderartists.org/u/roberddd){ .md-button .md-button--social target="_blank" }
 
 [:material-home: Website](https://roberd.net/){ .md-button .md-button--social target="_blank" }
 
